@@ -1,0 +1,12 @@
+\BOOKMARK [1][-]{section.1}{The presentation example with beam\137elastic element}{}% 1
+\BOOKMARK [1][-]{section.2}{ShearBeam Element for Pisano Materials}{}% 2
+\BOOKMARK [1][-]{section.3}{4NodeANDES cantilever beams under the force perpendicular to plane}{}% 3
+\BOOKMARK [1][-]{section.4}{4NodeANDES cantilever beams under the inplane force}{}% 4
+\BOOKMARK [1][-]{section.5}{27NodeBrick cantilever beam for different Poisson's ratio}{}% 5
+\BOOKMARK [1][-]{section.6}{27NodeBrick cantilever beams for dynamic input}{}% 6
+\BOOKMARK [1][-]{section.7}{4NodeANDES square plate with four edges clamped}{}% 7
+\BOOKMARK [1][-]{section.8}{Domain Reduction Method \(DRM\) in ESSI}{}% 8
+\BOOKMARK [2][-]{subsection.8.1}{One dimensional DRM model with 8NodeBrickLT element}{section.8}% 9
+\BOOKMARK [2][-]{subsection.8.2}{Three dimensional DRM model with 8NodeBrickLT element}{section.8}% 10
+\BOOKMARK [1][-]{section.9}{References}{}% 11
+\BOOKMARK [1][-]{section.10}{Appendix}{}% 12

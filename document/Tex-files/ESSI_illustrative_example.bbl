@@ -1,0 +1,32 @@
+\begin{thebibliography}{1}
+
+\bibitem{bielak2003domain}
+Jacobo Bielak, Kostas Loukakis, Yoshiaki Hisada, and Chiaki Yoshimura.
+\newblock Domain reduction method for three-dimensional earthquake modeling in
+  localized regions, part i: Theory.
+\newblock {\em Bulletin of the Seismological Society of America},
+  93(2):817--824, 2003.
+
+\bibitem{faccioli2005comment}
+E~Faccioli, M~Vanini, R~Paolucci, and M~Stupazzini.
+\newblock Comment on “domain reduction method for three-dimensional
+  earthquake modeling in localized regions, part i: Theory,” by j. bielak, k.
+  loukakis, y. hisada, and c. yoshimura, and “part ii: Verification and
+  applications,” by c. yoshimura, j. bielak, y. hisada, and a. fern{\'a}ndez.
+\newblock {\em Bulletin of the Seismological Society of America},
+  95(2):763--769, 2005.
+
+\bibitem{pisano2014simulating}
+Federico Pisan{\`o} and Boris Jeremi{\'c}.
+\newblock Simulating stiffness degradation and damping in soils via a simple
+  visco-elastic--plastic model.
+\newblock {\em Soil Dynamics and Earthquake Engineering}, 63:98--109, 2014.
+
+\bibitem{yoshimura2003domain}
+Chiaki Yoshimura, Jacobo Bielak, Yoshiaki Hisada, and Antonio Fern{\'a}ndez.
+\newblock Domain reduction method for three-dimensional earthquake modeling in
+  localized regions, part ii: Verification and applications.
+\newblock {\em Bulletin of the Seismological Society of America},
+  93(2):825--841, 2003.
+
+\end{thebibliography}

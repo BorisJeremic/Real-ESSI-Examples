@@ -1,0 +1,40 @@
+\contentsline {section}{\numberline {1}The presentation example with \emph {beam\_elastic} element}{2}{section.1}
+\contentsline {paragraph}{Problem description:}{2}{section*.2}
+\contentsline {paragraph}{ESSI model fei file: }{2}{section*.4}
+\contentsline {section}{\numberline {2}ShearBeam Element for Pisano Materials}{4}{section.2}
+\contentsline {paragraph}{Problem description:}{4}{section*.5}
+\contentsline {paragraph}{Results}{5}{section*.7}
+\contentsline {paragraph}{ESSI model fei file: }{5}{section*.9}
+\contentsline {section}{\numberline {3}4NodeANDES cantilever beams under the force perpendicular to plane}{7}{section.3}
+\contentsline {paragraph}{Problem description:}{7}{section*.10}
+\contentsline {paragraph}{Numerical model:}{7}{section*.12}
+\contentsline {paragraph}{ESSI model fei file: }{7}{section*.14}
+\contentsline {section}{\numberline {4}4NodeANDES cantilever beams under the inplane force}{9}{section.4}
+\contentsline {paragraph}{Problem description:}{9}{section*.15}
+\contentsline {paragraph}{Numerical model:}{9}{section*.17}
+\contentsline {paragraph}{ESSI model fei file: }{9}{section*.19}
+\contentsline {section}{\numberline {5}27NodeBrick cantilever beam for different Poisson's ratio}{11}{section.5}
+\contentsline {paragraph}{Problem description: }{11}{section*.20}
+\contentsline {paragraph}{Numerical model:}{11}{section*.22}
+\contentsline {paragraph}{ESSI model fei file: }{11}{section*.24}
+\contentsline {section}{\numberline {6}27NodeBrick cantilever beams for dynamic input}{14}{section.6}
+\contentsline {paragraph}{Problem description:}{14}{section*.25}
+\contentsline {paragraph}{Numerical model:}{14}{section*.27}
+\contentsline {paragraph}{ESSI model fei file: }{14}{section*.29}
+\contentsline {section}{\numberline {7}4NodeANDES square plate with four edges clamped}{18}{section.7}
+\contentsline {paragraph}{Problem description:}{18}{section*.30}
+\contentsline {paragraph}{Numerical model:}{19}{section*.32}
+\contentsline {paragraph}{ESSI model fei file: }{19}{section*.34}
+\contentsline {section}{\numberline {8}Domain Reduction Method (DRM) in ESSI}{21}{section.8}
+\contentsline {subsection}{\numberline {8.1}One dimensional DRM model with 8NodeBrickLT element}{21}{subsection.8.1}
+\contentsline {paragraph}{Problem description:}{21}{section*.35}
+\contentsline {paragraph}{Numerical model:}{21}{section*.37}
+\contentsline {paragraph}{ESSI model fei file: }{22}{section*.39}
+\contentsline {subsection}{\numberline {8.2}Three dimensional DRM model with 8NodeBrickLT element}{23}{subsection.8.2}
+\contentsline {paragraph}{Problem description:}{23}{section*.40}
+\contentsline {paragraph}{Numerical result:}{24}{section*.42}
+\contentsline {paragraph}{ESSI model fei file: }{25}{section*.44}
+\contentsline {section}{\numberline {9}References}{27}{section.9}
+\contentsline {section}{\numberline {10}Appendix}{28}{section.10}
+\contentsline {paragraph}{Appendix.A \\ How to make the DRM input in HDF5 format?}{28}{section*.46}
+\contentsline {paragraph}{Python and Matlab script to generate the DRM HDF5-based input}{29}{section*.48}
