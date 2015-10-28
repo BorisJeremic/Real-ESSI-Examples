@@ -4,7 +4,7 @@ DRMElement=int32([11]);
 boundary=int32([ 1 1 1 1 0 0 0 0]);
 n_b=int32(4);
 n_e=int32(4);
-time=int32(linspace(0.01,10,1000));
+time=linspace(0.01,10,1000);
 
 load('displ.data')
 load('acc.data')
