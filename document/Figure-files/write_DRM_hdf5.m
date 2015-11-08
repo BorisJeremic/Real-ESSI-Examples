@@ -6,8 +6,8 @@ h5create(filename,'/DRM Nodes',length(DRMNodes),'Datatype','int32');
 h5create(filename,'/Number of Exterior Nodes',length(ne),'Datatype','int32');
 h5create(filename,'/Number of Boundary Nodes',length(nb),'Datatype','int32');
 h5create(filename,'/Is Boundary Node',length(Is_b),'Datatype','int32');
-h5create(filename,'/Displacements',size(DRMu'));
-h5create(filename,'/Accelerations',size(DRMAcc'));
+h5create(filename,'/Displacements',size(DRMu'),'ChunkSize',[50 3]);
+h5create(filename,'/Accelerations',size(DRMAcc'),'ChunkSize',[50 3]);
 
 h5write(filename,'/Time',time');
 h5write(filename,'/Elements',DRMElements');
