@@ -1,3 +1,4 @@
+find . -name "*.tgz" -delete
 for folder in */;
 do
 	cd ${folder}
