@@ -145,7 +145,7 @@ December\fi,\space
 
 
 \newpage
-\section{The presentation example with \emph{beam\_elastic} element}
+\section{Elastic Beam Element for a Simple Frame Structure}
 
 \paragraph{Problem description:} ~
 
@@ -234,7 +234,7 @@ The ESSI model fei files for this example can be downloaded \href{https://github
 
 
 \newpage
-\section{4NodeANDES cantilever beams under the force perpendicular to plane}
+\section{4NodeANDES Cantilever Beams Under the Force Perpendicular to Plane}
 
 \paragraph{Problem description:} ~
 
@@ -284,7 +284,7 @@ The ESSI model fei files for this example can be downloaded \href{https://github
 
 
 \newpage
-\section{4NodeANDES cantilever beams under the inplane force}
+\section{4NodeANDES Cantilever Beams under the Inplane Force}
 
 \paragraph{Problem description:} ~
 
@@ -331,7 +331,7 @@ The ESSI model fei files for this example can be downloaded \href{https://github
 
 
 \newpage
-\section{27NodeBrick cantilever beam for different Poisson's ratio}
+\section{27NodeBrick Cantilever Beam for the static load}
 
 \paragraph{Problem description: } ~
 
@@ -341,23 +341,22 @@ The force direction was shown in Figure (\ref{fig Problem description for cantil
 \begin{figure}[H]
   \centering
   \includegraphics[width=7cm]{../Figure-files/cantilever_6.pdf}
-  \caption{Problem description for cantilever beams of different Poisson's ratios}
+  \caption{Problem description for cantilever beams}
   \label{fig Problem description for cantilever beams of different Poisson's 27}
 \end{figure}
 
 \paragraph{Numerical model:} ~
 
-The 27NodeBrick elements for cantilever beams of different Poisson's ratios were shown in Figure (\ref{fig 27NodeBrick elements for cantilever beams of different Poisson's ratios}):
+The 27NodeBrick elements for cantilever beams were shown in Figure (\ref{fig 27NodeBrick elements for cantilever beams of different Poisson's ratios}):
 \begin{figure}[H]
   \centering
   \includegraphics[width=9cm]{../Figure-files/beam_27brick_6div.pdf}
-  \caption{27NodeBrick elements for cantilever beams of different Poisson's ratios}
+  \caption{27NodeBrick elements for cantilever beams}
   \label{fig 27NodeBrick elements for cantilever beams of different Poisson's ratios}
 \end{figure}
 
 \paragraph{ESSI model fei file: } ~
 
-This is a model fei for just one Poisson's ratio value.
 
 \lstinputlisting[frame=single]{../Figure-files/5_27NodeBrick.fei}
 
@@ -372,7 +371,7 @@ The ESSI model fei files for this example can be downloaded \href{https://github
 
 
 \newpage
-\section{27NodeBrick cantilever beams for dynamic input}
+\section{27NodeBrick Cantilever Beams for Dynamic Input}
 
 
 
@@ -425,7 +424,7 @@ The ESSI model fei files for this example can be downloaded \href{https://github
 
 
 \newpage
-\section{4NodeANDES square plate with four edges clamped}
+\section{4NodeANDES Square Plate with Four Edges Clamped}
 
 
 
@@ -489,12 +488,11 @@ The ESSI model fei files for this example can be downloaded \href{https://github
 
 
 \newpage
-\section{Domain Reduction Method (DRM) in ESSI}
+\section{One Dimensional DRM Model}
 
 
 Domain Reduction Method (DRM) is a finite element methodology for modeling earthquake ground motion. Please look at the reference\footnote{Bielak, J., Loukakis, K., Hisada, Y., and Yoshimura, C. (2003). Domain reduction method for three-dimensional earthquake modeling in localized regions, Part I: Theory. Bulletin of the Seismological Society of America, 93(2), 817-824.} for more information. 
 
-\subsection{One dimensional DRM model with 8NodeBrickLT element}
 
 \paragraph{Problem description:} ~
 
@@ -528,15 +526,15 @@ One simple 1D DRM model is shown in Fig.(\ref{fig Program description for the 1D
 
 \lstinputlisting[frame=single]{../Figure-files/DRM_1D_script.fei}
 
-The ESSI model fei files for this example can be downloaded \href{https://github.com/yuan-energy/Real-ESSI-Examples/blob/master/model_fei_file/DRM_1D/DRM_1D.tgz?raw=true}{here}.
+The ESSI model fei files for this example can be downloaded \href{https://github.com/yuan-energy/Real-ESSI-Examples/blob/master/model_fei_file/8NodeBrick_DRM_1D/8NodeBrick_DRM_1D.tgz?raw=true}{here}.
 
-
+The same model for this example with 27NodeBrick can be downloaded \href{https://github.com/yuan-energy/Real-ESSI-Examples/blob/master/model_fei_file/27NodeBrick_DRM_1D/27NodeBrick_DRM_1D.tgz?raw=true}{here}.
 
 
 
 
 \vskip 20pt
-\subsection{Three dimensional DRM model with 8NodeBrickLT element}
+\section{Three Dimensional DRM Model}
 
 \paragraph{Problem description:} ~
 
@@ -576,9 +574,9 @@ As shown in Fig.(\ref{fig The diagram for Domain Reduction Method DRM }), the DR
 
 \lstinputlisting[frame=single]{../Figure-files/DRM_3D_script.fei}
 
-The ESSI model fei files for this example can be downloaded \href{https://github.com/yuan-energy/Real-ESSI-Examples/blob/master/model_fei_file/DRM_3D/DRM_3D.tgz?raw=true}{here}.
+The ESSI model fei files for this example can be downloaded \href{https://github.com/yuan-energy/Real-ESSI-Examples/blob/master/model_fei_file/8NodeBrick_DRM_3D/8NodeBrick_DRM_3D.tgz?raw=true}{here}.
 
-
+The same model for this example with 27NodeBrick can be downloaded \href{https://github.com/yuan-energy/Real-ESSI-Examples/blob/master/model_fei_file/27NodeBrick_DRM_3D/27NodeBrick_DRM_3D.tgz?raw=true}{here}.
 
 
 

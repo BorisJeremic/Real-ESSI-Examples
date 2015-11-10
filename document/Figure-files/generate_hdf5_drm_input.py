@@ -1,3 +1,4 @@
+#!/bin/usr/python
 # Created by Jose 
 # This file reads old-format DRM input files and translates them into new HDF5-based format.
 #
@@ -26,7 +27,7 @@ all_nodes = sp.hstack((boundary_nodes, exterior_nodes))
 is_boundary_node = sp.zeros(Nt, dtype=sp.int32)
 is_boundary_node[0:Nb] = 1
 
-h5file = h5py.File("small.h5.drminput","w")
+h5file = h5py.File("input.hdf5","w")
 
 h5file.create_dataset("Elements", data=elements)
 h5file.create_dataset("DRM Nodes", data=all_nodes)
@@ -60,8 +61,8 @@ a = -w**2*sp.sin(w*t)
 
 h5file.create_dataset("Time", data=t)
 
-acc = h5file.create_dataset("Accelerations", (3*Nt,len(t)), dtype=sp.double)
-dis = h5file.create_dataset("Displacements", (3*Nt,len(t)), dtype=sp.double)
+acc = h5file.create_dataset("Accelerations", (3*Nt,len(t)), dtype=sp.double,chunks=(3,50))
+dis = h5file.create_dataset("Displacements", (3*Nt,len(t)), dtype=sp.double,chunks=(3,50))
 
 for node_index in range(Nt):  
 	acc[3*node_index,:]   = a
