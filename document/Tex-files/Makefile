@@ -13,3 +13,4 @@ clean:
 	-rm *.fdb_latexmk 2>/dev/null
 	-rm *.bbl 2>/dev/null
 	-rm *.blg 2>/dev/null
+	-rm *.fls 2>/dev/null
