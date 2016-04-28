@@ -1,66 +1,55 @@
-model name "6cantilever8brick" ;
-// define material properties
-add material # 1 type linear_elastic_isotropic_3d_LT
-  mass_density = 0*kg/m^3
-  elastic_modulus = 1e8*N/m^2
-  poisson_ratio = 0.0;  
-// define node coordinates
-add node #      1 at (          0.000000*m,          1.000000*m,          0.000000*m) with 3 dofs;
-add node #      2 at (          0.000000*m,          0.000000*m,          0.000000*m) with 3 dofs;
-add node #      3 at (          6.000000*m,          1.000000*m,          0.000000*m) with 3 dofs;
-add node #      4 at (          5.000000*m,          1.000000*m,          0.000000*m) with 3 dofs;
-add node #      5 at (          4.000000*m,          1.000000*m,          0.000000*m) with 3 dofs;
-add node #      6 at (          3.000000*m,          1.000000*m,          0.000000*m) with 3 dofs;
-add node #      7 at (          2.000000*m,          1.000000*m,          0.000000*m) with 3 dofs;
-add node #      8 at (          1.000000*m,          1.000000*m,          0.000000*m) with 3 dofs;
-add node #      9 at (          6.000000*m,          0.000000*m,          0.000000*m) with 3 dofs;
-add node #     10 at (          1.000000*m,          0.000000*m,          0.000000*m) with 3 dofs;
-add node #     11 at (          2.000000*m,          0.000000*m,          0.000000*m) with 3 dofs;
-add node #     12 at (          3.000000*m,          0.000000*m,          0.000000*m) with 3 dofs;
-add node #     13 at (          4.000000*m,          0.000000*m,          0.000000*m) with 3 dofs;
-add node #     14 at (          5.000000*m,          0.000000*m,          0.000000*m) with 3 dofs;
-add node #     15 at (          0.000000*m,          0.000000*m,          1.000000*m) with 3 dofs;
-add node #     16 at (          6.000000*m,          0.000000*m,          1.000000*m) with 3 dofs;
-add node #     17 at (          1.000000*m,          0.000000*m,          1.000000*m) with 3 dofs;
-add node #     18 at (          2.000000*m,          0.000000*m,          1.000000*m) with 3 dofs;
-add node #     19 at (          3.000000*m,          0.000000*m,          1.000000*m) with 3 dofs;
-add node #     20 at (          4.000000*m,          0.000000*m,          1.000000*m) with 3 dofs;
-add node #     21 at (          5.000000*m,          0.000000*m,          1.000000*m) with 3 dofs;
-add node #     22 at (          6.000000*m,          1.000000*m,          1.000000*m) with 3 dofs;
-add node #     23 at (          0.000000*m,          1.000000*m,          1.000000*m) with 3 dofs;
-add node #     24 at (          5.000000*m,          1.000000*m,          1.000000*m) with 3 dofs;
-add node #     25 at (          4.000000*m,          1.000000*m,          1.000000*m) with 3 dofs;
-add node #     26 at (          3.000000*m,          1.000000*m,          1.000000*m) with 3 dofs;
-add node #     27 at (          2.000000*m,          1.000000*m,          1.000000*m) with 3 dofs;
-add node #     28 at (          1.000000*m,          1.000000*m,          1.000000*m) with 3 dofs;
-// define element-node relations
-add element #       1 type 8NodeBrickLT with nodes(      2,      1,      8,     10,     15,     23,     28,     17) use material #   1;
-add element #       2 type 8NodeBrickLT with nodes(     10,      8,      7,     11,     17,     28,     27,     18) use material #   1;
-add element #       3 type 8NodeBrickLT with nodes(     11,      7,      6,     12,     18,     27,     26,     19) use material #   1;
-add element #       4 type 8NodeBrickLT with nodes(     12,      6,      5,     13,     19,     26,     25,     20) use material #   1;
-add element #       5 type 8NodeBrickLT with nodes(     13,      5,      4,     14,     20,     25,     24,     21) use material #   1;
-add element #       6 type 8NodeBrickLT with nodes(     14,      4,      3,      9,     21,     24,     22,     16) use material #   1;
-// define displacement boundary conditions
-fix node #      1 dofs ux    ;
-fix node #      1 dofs uy    ;
-fix node #      1 dofs uz    ;
-fix node #      2 dofs ux    ;
-fix node #      2 dofs uy    ;
-fix node #      2 dofs uz    ;
-fix node #     15 dofs ux    ;
-fix node #     15 dofs uy    ;
-fix node #     15 dofs uz    ;
-fix node #     23 dofs ux    ;
-fix node #     23 dofs uy    ;
-fix node #     23 dofs uz    ;
+model name "beam_1element" ;
 
-new loading stage "Fz";
-// define vertical loading at the tip
-add load # 1 to node #   3 type linear Fz=25*N;
-add load # 2 to node #   9 type linear Fz=25*N;
-add load # 3 to node #  16 type linear Fz=25*N;
-add load # 4 to node #  22 type linear Fz=25*N;
+// add node
+add node #  1 at (   0.0*m ,    0.0*m,     0.0*m)  with 6 dofs;
+add node #  2 at (   1.0*m ,    0.0*m,     0.0*m)  with 6 dofs;
+	
+// Geometry: width and height
+b=0.2*m;
+h=0.2*m;
 
+// Materials: properties
+elastic_constant  = 1e9*N/m^2; 
+possion_ratio=0.3;
+I=b*h^3/12.0;
+
+// add elements
+add element # 1 type beam_elastic with nodes (1,2) 
+	cross_section =   b*h 
+	elastic_modulus =  elastic_constant
+	shear_modulus =  elastic_constant/2/(1+possion_ratio)
+	torsion_Jx =  0.33*b*h^3
+	bending_Iy =  I
+	bending_Iz =  I
+	mass_density = 0*kg/m^3
+	xz_plane_vector = ( 1, 0, 1) 
+	joint_1_offset = (0*m, 0*m, 0*m) 
+	joint_2_offset = (0*m, 0*m, 0*m);
+
+// add boundary condition
+fix node #      1 dofs all;
+
+// add different loading 
+new loading stage "axial";
+add load # 1 to node #   3 type linear Fx=25*N;
+define algorithm With_no_convergence_check ;
+define solver UMFPack;
+define load factor increment 1;
+simulate 1 steps using static algorithm;
+
+// bending in one direction
+new loading stage "bending1";
+remove load #1;
+add load # 2 to node #   3 type linear Fz=25*N;
+define algorithm With_no_convergence_check ;
+define solver UMFPack;
+define load factor increment 1;
+simulate 1 steps using static algorithm;
+
+// bending in the other direction
+new loading stage "bending2";
+remove load # 2;
+add load # 3 to node #   3 type linear Fy=25*N;
 define algorithm With_no_convergence_check ;
 define solver UMFPack;
 define load factor increment 1;
