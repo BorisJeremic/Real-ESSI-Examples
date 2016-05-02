@@ -7,7 +7,7 @@ cr      = 500;
 vp=1000*m/s;
 vs=500*m/s; 
 rho=2000*kg/m^3;
-p0 = 500*kPa;
+p0 = 250*kPa;
 
 G = rho*vs^2;
 Mp = rho*vp^2;
@@ -95,7 +95,7 @@ simulate Nsteps steps using static algorithm;
 // ------------------------------------------------------------------------
 // Stage 2: shear
 new loading stage "shear";
-shearforce=150*kN;
+shearforce=90*kN;
 add load #  9 to node # 1 type path_time_series Fy= shearforce series_file = "path.txt" ; 
 add load # 10 to node # 3 type path_time_series Fy=-shearforce series_file = "path.txt" ; 
 add load # 11 to node # 5 type path_time_series Fy= shearforce series_file = "path.txt" ; 

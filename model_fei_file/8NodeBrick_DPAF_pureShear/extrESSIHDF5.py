@@ -76,7 +76,7 @@ for x in xrange(0,upsize):
 
 # mystrain=np.delete(tstrain_plot,0)
 plt.figure()
-plt.plot(mystrain[:upsize] ,GGmax)
+plt.semilogx(mystrain[:upsize] ,GGmax)
 plt.grid()
 plt.xlabel("Strain ")
 plt.ylabel("G/Gmax ")

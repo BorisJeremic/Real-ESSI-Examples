@@ -152,11 +152,11 @@ simulate 1000 steps using transient algorithm
 // add load # 6 to node # 6 type path_time_series 
 // 	Fz =  10.*kN
 // 	series_file = "freeVibration.txt" ;
-// define dynamic integrator Newmark with gamma = 0.6 beta = 0.3025;
+// define dynamic integrator Newmark with gamma = 0.5 beta = 0.25;
 // define algorithm With_no_convergence_check ;
 // define solver ProfileSPD;
 // simulate 100 steps using transient algorithm 
-// 	time_step = 0.2*s;
+// 	time_step = 0.3*s;
 
 
 // // ----------------------------------------------------------------------------
@@ -177,11 +177,11 @@ simulate 1000 steps using transient algorithm
 // add load # 6 to node # 6 type path_time_series 
 // 	Fz =  10.*kN
 // 	series_file = "freeVibration.txt" ;
-// define dynamic integrator Newmark with gamma = 0.6 beta = 0.3025;
+// define dynamic integrator Newmark with gamma = 0.5 beta = 0.25;
 // define algorithm With_no_convergence_check ;
 // define solver ProfileSPD;
 // simulate 100 steps using transient algorithm 
-// 	time_step = 0.2*s;
+// 	time_step = 0.3*s;
 
 
 bye;
