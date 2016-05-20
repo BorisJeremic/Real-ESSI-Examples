@@ -1,48 +1,30 @@
 model name "GGmax" ;
-
 // Parameters:
-phi   = 5;
-ha      = 500;
-cr      = 500;
-vp=1000*m/s;
-vs=500*m/s; 
-rho=2000*kg/m^3;
-p0 = 250*kPa;
-
-G = rho*vs^2;
-Mp = rho*vp^2;
-
-//From wiki (https://en.wikipedia.org/wiki/Elastic_modulus)
-E = G*(3*Mp-4*G)/(Mp-G);
-nu = (Mp-2*G)/(2*Mp-2*G);
-
+phi   = 0.06;
+ha      = 9;
+cr      = 87;
+p0 = 50*kPa;
 phirad = pi*phi/180;
 M = 6*sin(phirad)/(3-sin(phirad));
-
 // Define the material:
 add material # 1 type DruckerPragerArmstrongFrederickLT
-    mass_density = 0*kg/m^3 
-    elastic_modulus =  E
-    poisson_ratio =  nu
+    mass_density = 2000*kg/m^3 
+    elastic_modulus =  2e6*Pa
+    poisson_ratio =  0.3
     druckerprager_k = M
     armstrong_frederick_ha = ha*Pa 
     armstrong_frederick_cr = cr*Pa
     isotropic_hardening_rate =  0*Pa
-    initial_confining_stress = 1*Pa;
-
-height=sqrt(2);
+    initial_confining_stress = p0;
 add node #        1 at (   1.0000 *m,   0.0000 *m,  0.0000 *m) with 3 dofs;
 add node #        2 at (   0.0000 *m,   1.0000 *m,  0.0000 *m) with 3 dofs;
 add node #        3 at (   1.0000 *m,   2.0000 *m,  0.0000 *m) with 3 dofs;
 add node #        4 at (   2.0000 *m,   1.0000 *m,  0.0000 *m) with 3 dofs;
-add node #        5 at (   1.0000 *m,   0.0000 *m,  height *m) with 3 dofs;
-add node #        6 at (   0.0000 *m,   1.0000 *m,  height *m) with 3 dofs;
-add node #        7 at (   1.0000 *m,   2.0000 *m,  height *m) with 3 dofs;
-add node #        8 at (   2.0000 *m,   1.0000 *m,  height *m) with 3 dofs;
-
-
+add node #        5 at (   1.0000 *m,   0.0000 *m,  1.0000 *m) with 3 dofs;
+add node #        6 at (   0.0000 *m,   1.0000 *m,  1.0000 *m) with 3 dofs;
+add node #        7 at (   1.0000 *m,   2.0000 *m,  1.0000 *m) with 3 dofs;
+add node #        8 at (   2.0000 *m,   1.0000 *m,  1.0000 *m) with 3 dofs;
 add element #   1 type 8NodeBrickLT with nodes(1,2,3,4,5,6,7,8) use material # 1; 
-
 // fix all the uz, since we want plane strain.
 i=1;
 while (i<9) { 
@@ -54,19 +36,17 @@ fix node # 2 dofs uy;
 fix node # 4 dofs uy;
 fix node # 6 dofs uy;
 fix node # 8 dofs uy;
-
 // fix the x direction for node 1,3,5,7
 fix node # 1 dofs ux;
 fix node # 3 dofs ux;
 fix node # 5 dofs ux;
 fix node # 7 dofs ux;
-
 // Stage 1: confinement
 new loading stage "confinement";
 add load # 1 to node # 1 type linear Fy=   p0*m^2; 
 add load # 2 to node # 3 type linear Fy= - p0*m^2; 
 add load # 3 to node # 5 type linear Fy=   p0*m^2; 
-add load # 4 to node # 7 type linear Fy= - p0*m^2; 
+add load # 4 to node # 7 type linear Fy= - p0*m^2;
 
 add load # 5 to node # 2 type linear Fx=   p0*m^2; 
 add load # 6 to node # 4 type linear Fx= - p0*m^2; 
@@ -74,9 +54,8 @@ add load # 7 to node # 6 type linear Fx=   p0*m^2;
 add load # 8 to node # 8 type linear Fx= - p0*m^2; 
 
 // add algorithm and solver
-Nsteps=100;
+Nsteps=1;
 define load factor increment 1/Nsteps;
-
 define solver  UMFPack;
 define convergence test Norm_Displacement_Increment  
     tolerance =  1e-5
@@ -84,18 +63,18 @@ define convergence test Norm_Displacement_Increment
     verbose_level = 4;
 // define algorithm With_no_convergence_check ;
 define algorithm Newton ;
-
 define NDMaterialLT constitutive integration algorithm Euler_One_Step
     yield_function_relative_tolerance =  0.00002
     stress_relative_tolerance =  0.0002
     maximum_iterations = 1000;
-
 simulate Nsteps steps using static algorithm;
-
 // ------------------------------------------------------------------------
 // Stage 2: shear
 new loading stage "shear";
-shearforce=90*kN;
+// shearforce cannot be too large, otherwise, not converge when 
+// we approach full saturation of armstrong_frederick hardening. 
+// Displacement control will be better for convergence test.
+shearforce=1.6*kN;
 add load #  9 to node # 1 type path_time_series Fy= shearforce series_file = "path.txt" ; 
 add load # 10 to node # 3 type path_time_series Fy=-shearforce series_file = "path.txt" ; 
 add load # 11 to node # 5 type path_time_series Fy= shearforce series_file = "path.txt" ; 
@@ -107,22 +86,19 @@ add load # 15 to node # 6 type path_time_series Fx=-shearforce series_file = "pa
 add load # 16 to node # 8 type path_time_series Fx= shearforce series_file = "path.txt" ; 
 
 // add algorithm and solver
-Nsteps=1e3;
-define load factor increment 1/Nsteps;
-
-define solver  UMFPack;
-define convergence test Norm_Unbalance
-    tolerance =  1e-5
-    maximum_iterations =  200
-    verbose_level = 4;
+Nsteps=1e4;
+// define load factor increment 1/Nsteps;
+define static integrator displacement_control using node # 1 dof uy increment 1e-2/Nsteps*m;
+define convergence test Norm_Displacement_Increment tolerance = 0.000001 maximum_iterations = 100 verbose_level = 0;
+define solver  ProfileSPD;
+// define convergence test Norm_Unbalance
+//     tolerance =  1e-5
+//     maximum_iterations =  200
+//     verbose_level = 4;
 define algorithm Newton ;
-
 define NDMaterialLT constitutive integration algorithm Euler_One_Step
-    yield_function_relative_tolerance =  0.0002
-    stress_relative_tolerance =  0.002
+    yield_function_relative_tolerance =  0.00002
+    stress_relative_tolerance =  0.0002
     maximum_iterations = 1000;
-
-simulate 5*Nsteps steps using static algorithm;
-
-
+simulate Nsteps steps using static algorithm;
 bye;

@@ -3,6 +3,7 @@ import h5py
 import matplotlib.pylab as plt
 import sys
 import numpy as np
+from numpy import linalg as LA
 file1name=sys.argv[1]
 file2name=sys.argv[2]
 # for thefile in files:
@@ -46,7 +47,7 @@ plt.figure()
 plt.plot(mystrain,mytau)
 plt.grid()
 plt.xlabel("Strain ")
-plt.ylabel("Stress ")
+plt.ylabel("Stress (Pa)")
 plt.savefig("stress-strain.pdf",  bbox_inches='tight')
 plt.show()
 
@@ -54,13 +55,16 @@ plt.show()
 # plot the G/Gmax
 # extract the up part only
 upsize=0
-while 1:
-	s1=tau_plot[upsize]
-	s2=tau_plot[upsize+1]
-	# s3=tau_plot[upsize+2]
-	upsize=upsize+1
-	if s2<s1:
-		break
+try:
+	while 1:
+		s1=tau_plot[upsize]
+		s2=tau_plot[upsize+1]
+		# s3=tau_plot[upsize+2]
+		upsize=upsize+1
+		if s2<s1:
+			break
+except:
+	upsize=num_loadstep-1
 
 # num_step=len(d_tstrain)
 theG=np.zeros(upsize)
@@ -74,21 +78,46 @@ for x in xrange(0,upsize):
 	GGmax[x]=theG[x]/Gmax
 
 
+
 # mystrain=np.delete(tstrain_plot,0)
 plt.figure()
-plt.semilogx(mystrain[:upsize] ,GGmax)
+plt.semilogx(mystrain[:upsize] ,GGmax,label = "DPAF")
+# plot Seed results for comparison
+Seed_strain_percent = [0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1.0];
+Seed_G = [1, 0.99, 0.96, 0.9, 0.76, 0.57, 0.3, 0.15, 0.06];
+Seed_strain=[x/100.0 for x in Seed_strain_percent];
+plt.semilogx(Seed_strain, Seed_G, label="Seed")
+# plot the difference
+theGGmax=[GGmax[int(x*upsize)-1] for x in Seed_strain_percent]
+differ=[theGGmax[x]-Seed_G[x] for x in range(9)]
+# plt.semilogx(Seed_strain[1:] , differ[1:] , label="differ")
+plt.legend()
 plt.grid()
 plt.xlabel("Strain ")
 plt.ylabel("G/Gmax ")
 plt.savefig("G-Gmax.pdf",  bbox_inches='tight')
 plt.show()
 
+# print LA.norm(differ[1:])
 
 
 
 
-
-
+# plot the G_Gmax results
+# fig2=plt.figure()
+# plt.semilogx(gamma,G_Gmax,label = "DPAF")
+# # plot Seed results for comparison
+# Seed_strain_percent = [0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1.0];
+# Seed_G = [1, 0.99, 0.96, 0.9, 0.76, 0.57, 0.3, 0.15, 0.06];
+# Seed_strain=[x/100.0 for x in Seed_strain_percent];
+# plt.semilogx(Seed_strain, Seed_G, label="Seed")
+# plt.legend()
+# # plt.xlim((0,0.011))
+# plt.autoscale(enable=True,axis='x',tight=True) #
+# plt.ylim((0,1.1))
+# plt.xlabel('$\gamma_c$',fontsize=25)
+# plt.ylabel('G/Gmax',fontsize=25)
+# plt.grid(True)
 
 
 
