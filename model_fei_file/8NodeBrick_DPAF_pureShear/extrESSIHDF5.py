@@ -69,9 +69,10 @@ except:
 # num_step=len(d_tstrain)
 theG=np.zeros(upsize)
 GGmax=np.zeros(upsize)
-for x in xrange(0,upsize):
-	theG[x]=mytau[x]/mystrain[x]
+for x in xrange(1,upsize):
+	theG[x]=(mytau[x]- mytau[0]) /(mystrain[x]-mystrain[0])
 
+theG[0]=theG[1]
 Gmax=theG[0]
 
 for x in xrange(0,upsize):
@@ -83,13 +84,14 @@ for x in xrange(0,upsize):
 plt.figure()
 plt.semilogx(mystrain[:upsize] ,GGmax,label = "DPAF")
 # plot Seed results for comparison
-Seed_strain_percent = [0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1.0];
-Seed_G = [1, 0.99, 0.96, 0.9, 0.76, 0.57, 0.3, 0.15, 0.06];
-Seed_strain=[x/100.0 for x in Seed_strain_percent];
-plt.semilogx(Seed_strain, Seed_G, label="Seed")
+
+strain100 = [0.0001, 0.0010, 0.0050, 0.0100, 0.0500, 0.1000, 0.5000, 1.0000];
+strain=[x/100.0 for x in strain100];
+G=[0.98918097,0.92090862,0.73386277,0.54847658,0.16739546,0.08730411,0.01746082,0.00873041]
+plt.semilogx(strain, G, label="Real")
 # plot the difference
-theGGmax=[GGmax[int(x*upsize)-1] for x in Seed_strain_percent]
-differ=[theGGmax[x]-Seed_G[x] for x in range(9)]
+theGGmax=[GGmax[int(x*upsize)-1] for x in strain]
+differ=[theGGmax[x]-G[x] for x in range(8)]
 # plt.semilogx(Seed_strain[1:] , differ[1:] , label="differ")
 plt.legend()
 plt.grid()
