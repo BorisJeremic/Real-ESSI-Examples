@@ -1,0 +1,132 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4014,        123]
+NotebookOptionsPosition[      3459,        100]
+NotebookOutlinePosition[      3973,        120]
+CellTagsIndexPosition[      3930,        117]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+These are the equations to solve for the four coefficients in Caughy 3rd \
+damping from the 3 natural frequencies. 
+Natural frequencies are obtained from the eigen-solver in ESSI. 
+User can define the \[Xi] by themselves. \
+\>", "Text",
+ CellChangeTimes->{{3.671147945324254*^9, 3.6711479540577536`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Xi]", "=", "0.2"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"w1", "=", 
+   RowBox[{"2", "Pi", " ", "*", "0.407108"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"w2", "=", 
+   RowBox[{"2", "Pi", " ", "*", "0.552311"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"w3", "=", 
+   RowBox[{"2", "Pi", " ", "*", "1.6776"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.670941955751899*^9, 3.670942014670269*^9}, {
+   3.67094246541205*^9, 3.6709424663221016`*^9}, 3.6709425069834275`*^9, 
+   3.670942595580495*^9, 3.670942653308797*^9, {3.67094271822151*^9, 
+   3.67094272032763*^9}, {3.670942970424935*^9, 3.6709429748791895`*^9}, {
+   3.6709430062459836`*^9, 3.670943034135579*^9}, {3.670953026338376*^9, 
+   3.6709530361739388`*^9}, {3.671146139642975*^9, 3.671146152715722*^9}, 
+   3.6711464564040923`*^9, {3.671146586884556*^9, 3.671146598642228*^9}, 
+   3.671146680510911*^9, {3.671147969853657*^9, 3.6711479712257357`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\[Xi]", "==", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"a0", "/", "2"}], "/", "w1"}], "+", 
+        RowBox[{
+         RowBox[{"a1", "/", "2"}], "*", "w1"}], "+", 
+        RowBox[{
+         RowBox[{"a2", "/", "2"}], "*", 
+         RowBox[{"w1", "^", "3"}]}]}]}], " ", ",", " ", 
+      RowBox[{"\[Xi]", "==", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"a0", "/", "2"}], "/", "w2"}], "+", 
+        RowBox[{
+         RowBox[{"a1", "/", "2"}], "*", "w2"}], "+", 
+        RowBox[{
+         RowBox[{"a2", "/", "2"}], "*", 
+         RowBox[{"w2", "^", "3"}]}]}]}], " ", ",", " ", 
+      RowBox[{"\[Xi]", "==", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"a0", "/", "2"}], "/", "w3"}], "+", 
+        RowBox[{
+         RowBox[{"a1", "/", "2"}], "*", "w3"}], "+", 
+        RowBox[{
+         RowBox[{"a2", "/", "2"}], "*", 
+         RowBox[{"w3", "^", "3"}]}]}]}]}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"a0", ",", "a1", ",", "a2"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6709426551059*^9, 3.6709426923300285`*^9}, {
+   3.670942840888526*^9, 3.6709429020890265`*^9}, 3.6711479768050547`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"a0", "\[Rule]", "0.5605234519786585`"}], ",", 
+    RowBox[{"a1", "\[Rule]", "0.07307459121451275`"}], ",", 
+    RowBox[{"a2", "\[Rule]", 
+     RowBox[{"-", "0.0003615591098963302`"}]}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.6711479813693156`*^9}]
+}, Open  ]]
+},
+WindowSize->{594, 835},
+WindowMargins->{{-1230, Automatic}, {70, Automatic}},
+PrintingCopies->1,
+PrintingPageRange->{32000, 32000},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{595.3199999999999, 841.92}},
+FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 314, 6, 87, "Text"],
+Cell[875, 28, 955, 19, 92, "Input"],
+Cell[CellGroupData[{
+Cell[1855, 51, 1259, 36, 92, "Input"],
+Cell[3117, 89, 326, 8, 88, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

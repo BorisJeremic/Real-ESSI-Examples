@@ -1,0 +1,116 @@
+model name "imposed" ;
+
+add material # 1 type VonMises
+    mass_density = 2000*kg/m^3
+    elastic_modulus = 2E7*N/m^2
+    poisson_ratio = 0.0
+    von_mises_radius = 1E3*Pa
+    kinematic_hardening_rate = 0*Pa
+    isotropic_hardening_rate = 0*Pa;
+
+add material # 2 type VonMises
+    mass_density = 2000*kg/m^3
+    elastic_modulus = 2E7*N/m^2
+    poisson_ratio = 0.0
+    von_mises_radius = 1E3*Pa
+    kinematic_hardening_rate = 0*Pa
+    isotropic_hardening_rate = 0*Pa;
+
+add material # 3 type VonMises
+    mass_density = 2000*kg/m^3
+    elastic_modulus = 2E7*N/m^2
+    poisson_ratio = 0.0
+    von_mises_radius = 1E3*Pa
+    kinematic_hardening_rate = 0*Pa
+    isotropic_hardening_rate = 0*Pa;
+// //Material for soil
+// add material # 1 type linear_elastic_isotropic_3d
+//   mass_density = 2000*kg/m^3
+//   elastic_modulus = 1300*MPa
+//   poisson_ratio = 0.3;
+
+// //Material for DRM layer
+// add material # 2 type linear_elastic_isotropic_3d
+//   mass_density = 2000*kg/m^3
+//   elastic_modulus = 1300*MPa
+//   poisson_ratio = 0.3;
+
+// //Material for exterior layer
+// add material # 3 type linear_elastic_isotropic_3d
+//   mass_density = 2000*kg/m^3
+//   elastic_modulus = 1300*MPa
+//   poisson_ratio = 0.3;
+
+include "add_node.include";
+include "add_elementLT.include";
+include "add_constraint.include"';
+
+new loading stage "motion";
+
+
+add imposed motion # 100 to node # 45 dof ux 
+  displacement_scale_unit = 1*m 
+  displacement_file       = "dis.txt" 
+  velocity_scale_unit     = 1*m/s 
+  velocity_file           = "vel.txt" 
+  acceleration_scale_unit = 1*m/s^2 
+  acceleration_file       = "acc.txt";
+
+add imposed motion # 101 to node # 47 dof ux 
+  displacement_scale_unit = 1*m 
+  displacement_file       = "dis.txt" 
+  velocity_scale_unit     = 1*m/s 
+  velocity_file           = "vel.txt" 
+  acceleration_scale_unit = 1*m/s^2 
+  acceleration_file       = "acc.txt";
+
+add imposed motion # 102 to node # 49 dof ux 
+  displacement_scale_unit = 1*m 
+  displacement_file       = "dis.txt" 
+  velocity_scale_unit     = 1*m/s 
+  velocity_file           = "vel.txt" 
+  acceleration_scale_unit = 1*m/s^2 
+  acceleration_file       = "acc.txt";
+
+add imposed motion # 103 to node # 51 dof ux 
+  displacement_scale_unit = 1*m 
+  displacement_file       = "dis.txt" 
+  velocity_scale_unit     = 1*m/s 
+  velocity_file           = "vel.txt" 
+  acceleration_scale_unit = 1*m/s^2 
+  acceleration_file       = "acc.txt";
+
+
+define NDMaterial constitutive integration algorithm Backward_Euler 
+    yield_function_relative_tolerance = 1E-5   
+    stress_relative_tolerance = 1E-5    
+    maximum_iterations = 30;
+
+
+// define algorithm With_no_convergence_check ;
+// define algorithm <With_no_convergence_check|Newton|Modified_Newton>;
+
+
+
+define solver UMFPack;
+define dynamic integrator Newmark with 
+  gamma = 0.50
+  beta = 0.25;
+
+// define convergence test <Norm_Displacement_Increment|Energy_Increment|Norm_Unbalance|Relative_Norm_Displacement_Increment|Relative_Energy_Increment|Relative_Norm_Unbalance> tolerance = <.> maximum_iterations = <.> verbose_level = <0|1|2>;
+define convergence test  Norm_Unbalance
+  tolerance =  1
+  maximum_iterations =  20
+  verbose_level = 4;
+
+
+  
+define algorithm Newton;
+
+simulate 200 steps using transient algorithm 
+	time_step = 0.01*s;
+
+
+bye;
+
+
