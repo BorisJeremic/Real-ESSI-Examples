@@ -52,7 +52,7 @@ add load # 1 to node # 15 type linear Fz=100*N;
 // add load # 2 to node # 12 type linear Fz=50*N;
 
 define algorithm With_no_convergence_check ;
-define solver ProfileSPD;
+define solver UMFPack;
 
 define load factor increment 1;
 simulate 1 steps using static algorithm;

@@ -61,7 +61,7 @@ add load # 1 to element # 1 type surface at nodes (2, 3, 4, 1, 10, 11, 12, 9, 26
 
 define load factor increment 1.0;
 define algorithm With_no_convergence_check;
-define solver ProfileSPD;
+define solver UMFPack;
 
 simulate 1 steps using static algorithm;
 

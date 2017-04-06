@@ -41,7 +41,7 @@ add load # 4 to node # 4  type linear Fz=-1*N;
 
 define load factor increment 0.1;
 define algorithm with_no_convergence_check;
-define solver ProfileSPD;
+define solver UMFPack;
 
 simulate 1 steps using static algorithm;
 

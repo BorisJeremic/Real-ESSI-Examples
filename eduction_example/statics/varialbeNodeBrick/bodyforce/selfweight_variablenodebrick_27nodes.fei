@@ -64,7 +64,7 @@ add load # 1 to element # 1 type self_weight use acceleration field # 1;
 
 define load factor increment 0.1;
 define algorithm with_no_convergence_check;
-define solver ProfileSPD;
+define solver UMFPack;
 
 simulate 1 steps using static algorithm;
 

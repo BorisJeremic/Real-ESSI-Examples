@@ -58,7 +58,7 @@ add acceleration field # 1 ax=0.0*g ay=0.0*g az=-1.0*g;
 add load # 1 to element # 1 type self_weight use acceleration field # 1;
 
 
-define solver ProfileSPD;
+define solver UMFPack;
 define convergence test Norm_Displacement_Increment
 	tolerance = 0.001 
 	maximum_iterations =  10
