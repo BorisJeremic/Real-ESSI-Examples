@@ -1,0 +1,2662 @@
+Script started on Thu 06 Apr 2017 11:17:49 AM PDT
+                                                               
+                                                               
+  The Finite Element Interpreter                               
+                                                               
+  Real ESSI                                                  
+  Earthquake Soil Structure Interaction Simulator            
+                                                             
+  Sequential processing mode.                                
+                                                             
+Version Name   : Academic Version. Release date: Apr 5 2017 at 10:33:06. Tag: 1135863ed4
+Version Branch : yuan
+Compile Date   : Apr  5 2017 at 11:35:41
+Compile User   : yuan
+Compile Sysinfo: cml01 4.4.0-71-generic x86_64 GNU/Linux
+Runtime User   : yuan
+Runtime Sysinfo: cml01 4.4.0-71-generic x86_64 GNU/Linux
+Time Now       : Apr 06 2017 at 11:17:49
+                                                               
+Static startup tips:                                           
+ * Remember: Every command ends with a semicolon ';'.          
+ * Type 'quit;' or 'exit;' to finish.                          
+ * Run 'essi -h' to see available command line options.        
+                                                               
+Including: "main.fei"
+
+
+Model name is being set to "vm"
+
+
+
+Starting new stage: 1Confine
+
+changing previous_stage_name from  to 1Confine
+Setting set_constitutive_integration_method = 2
+
+Starting sequential static multistep analysis
+====================================================================================================
+Creating analysis model........................................................................Pass!
+Checking constraint handler....................................................................Pass!
+Checking numberer..............................................................................Pass!
+Checking analysis algorithm....................................................................Pass!
+Checking system of equation handler............................................................Pass!
+Checking static integration handler............................................................Pass!
+
+ 
+ Writing Initial Conditions and   (0) - Outputting mesh.
+
+Static Analysis: [    1/10   ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1e-08)
+	 	                   Norm deltaF: 1.0606e-11
+	 	                   Norm deltaX: 0.0069282
+
+Static Analysis: [2    /10   ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1e-08)
+	 	                   Norm deltaF: 1.2066e-11
+	 	                   Norm deltaX: 0.0069282
+
+Static Analysis: [3    /10   ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1e-08)
+	 	                   Norm deltaF: 1.7447e-11
+	 	                   Norm deltaX: 0.0069282
+
+Static Analysis: [4    /10   ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1e-08)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 0.0069282
+
+Static Analysis: [5    /10   ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1e-08)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 0.0069282
+
+Static Analysis: [6    /10   ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1e-08)
+	 	                   Norm deltaF: 3.3343e-11
+	 	                   Norm deltaX: 0.0069282
+
+Static Analysis: [7    /10   ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1e-08)
+	 	                   Norm deltaF: 3.8501e-11
+	 	                   Norm deltaX: 0.0069282
+
+Static Analysis: [8    /10   ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1e-08)
+	 	                   Norm deltaF: 4.3656e-11
+	 	                   Norm deltaX: 0.0069282
+
+Static Analysis: [9    /10   ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1e-08)
+	 	                   Norm deltaF: 5.0409e-11
+	 	                   Norm deltaX: 0.0069282
+
+Static Analysis: [10   /10   ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1e-08)
+	 	                   Norm deltaF: 4.6017e-11
+	 	                   Norm deltaX: 0.0069282
+
+> Analysis End -------------------------------------------------------------------------------
+
+
+Starting new stage: 2shearing
+
+changing previous_stage_name from 1Confine to 2shearing
+Setting set_constitutive_integration_method = 2
+
+Starting sequential static multistep analysis
+====================================================================================================
+Creating analysis model........................................................................Pass!
+Checking constraint handler....................................................................Pass!
+Checking numberer..............................................................................Pass!
+Checking analysis algorithm....................................................................Pass!
+Checking system of equation handler............................................................Pass!
+Checking static integration handler............................................................Pass!
+
+ 
+ Writing Initial Conditions and   (0) - Outputting mesh.
+
+Static Analysis: [1    /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 4.2305e-18
+
+Static Analysis: [2    /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 5.5417e-18
+
+Static Analysis: [3    /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 8.9937e-18
+
+Static Analysis: [4    /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.3753e-18
+
+Static Analysis: [5    /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 4.1735e-18
+
+Static Analysis: [6    /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 1.0124e-17
+
+Static Analysis: [7    /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 4.8444e-18
+
+Static Analysis: [8    /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.5438e-18
+
+Static Analysis: [9    /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 9.2483e-19
+
+Static Analysis: [10   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 6.9679e-18
+
+Static Analysis: [11   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 6.2521e-18
+
+Static Analysis: [12   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 8.4051e-19
+
+Static Analysis: [13   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 3.3885e-18
+
+Static Analysis: [14   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 5.5005e-18
+
+Static Analysis: [15   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 6.8295e-18
+
+Static Analysis: [16   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.9638e-18
+
+Static Analysis: [17   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 5.6812e-18
+
+Static Analysis: [18   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 1.2056e-17
+
+Static Analysis: [19   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 1.2774e-18
+
+Static Analysis: [20   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 7.3424e-18
+
+Static Analysis: [21   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.619e-18
+
+Static Analysis: [22   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 4.4448e-18
+
+Static Analysis: [23   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.2243e-18
+
+Static Analysis: [24   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.6549e-18
+
+Static Analysis: [25   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 2.7591e-18
+
+Static Analysis: [26   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 6.1377e-18
+
+Static Analysis: [27   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 6.1696e-18
+
+Static Analysis: [28   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 1.1742e-18
+
+Static Analysis: [29   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.8581e-18
+
+Static Analysis: [30   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.9647e-18
+
+Static Analysis: [31   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.4762e-18
+
+Static Analysis: [32   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.6679e-18
+
+Static Analysis: [33   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 1.2251e-18
+
+Static Analysis: [34   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.8308e-18
+
+Static Analysis: [35   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.0542e-18
+
+Static Analysis: [36   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 7.9997e-18
+
+Static Analysis: [37   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.9627e-18
+
+Static Analysis: [38   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 2.8498e-18
+
+Static Analysis: [39   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 2.3398e-18
+
+Static Analysis: [40   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 2.9133e-18
+
+Static Analysis: [41   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 9.075e-18
+
+Static Analysis: [42   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 1.1576e-18
+
+Static Analysis: [43   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 1.2748e-18
+
+Static Analysis: [44   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 2.3127e-18
+
+Static Analysis: [45   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.809e-18
+
+Static Analysis: [46   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.3162e-18
+
+Static Analysis: [47   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 9.1417e-18
+
+Static Analysis: [48   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 5.0865e-18
+
+Static Analysis: [49   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.5309e-18
+
+Static Analysis: [50   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 3.6319e-18
+
+Static Analysis: [51   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.6383e-18
+
+Static Analysis: [52   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.9167e-18
+
+Static Analysis: [53   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 1.335e-18
+
+Static Analysis: [54   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 3.0145e-18
+
+Static Analysis: [55   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.3716e-18
+
+Static Analysis: [56   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 3.7262e-18
+
+Static Analysis: [57   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 3.6214e-18
+
+Static Analysis: [58   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.7838e-18
+
+Static Analysis: [59   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.0387e-18
+
+Static Analysis: [60   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 5.4158e-18
+
+Static Analysis: [61   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 6.8289e-18
+
+Static Analysis: [62   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 4.9523e-18
+
+Static Analysis: [63   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 9.5332e-18
+
+Static Analysis: [64   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 3.6802e-18
+
+Static Analysis: [65   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 5.1604e-18
+
+Static Analysis: [66   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.8622e-18
+
+Static Analysis: [67   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.4894e-18
+
+Static Analysis: [68   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.8501e-11
+	 	                   Norm deltaX: 5.3809e-18
+
+Static Analysis: [69   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 1.5406e-18
+
+Static Analysis: [70   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 3.7922e-18
+
+Static Analysis: [71   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 7.6078e-18
+
+Static Analysis: [72   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.4883e-18
+
+Static Analysis: [73   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.0287e-18
+
+Static Analysis: [74   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 6.4159e-18
+
+Static Analysis: [75   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.7285e-18
+
+Static Analysis: [76   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 6.4052e-18
+
+Static Analysis: [77   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.7211e-18
+
+Static Analysis: [78   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 6.3877e-18
+
+Static Analysis: [79   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 3.686e-18
+
+Static Analysis: [80   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.7121e-18
+
+Static Analysis: [81   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.0138e-18
+
+Static Analysis: [82   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 6.8581e-18
+
+Static Analysis: [83   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.9317e-18
+
+Static Analysis: [84   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.5077e-18
+
+Static Analysis: [85   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.3323e-18
+
+Static Analysis: [86   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.5883e-18
+
+Static Analysis: [87   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 5.2269e-18
+
+Static Analysis: [88   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.7601e-18
+
+Static Analysis: [89   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.676e-18
+
+Static Analysis: [90   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.7329e-18
+
+Static Analysis: [91   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.8501e-11
+	 	                   Norm deltaX: 4.4072e-18
+
+Static Analysis: [92   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 7.4314e-18
+
+Static Analysis: [93   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 1.2371e-18
+
+Static Analysis: [94   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.2685e-18
+
+Static Analysis: [95   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 6.3534e-18
+
+Static Analysis: [96   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 6.4842e-18
+
+Static Analysis: [97   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 9.5843e-18
+
+Static Analysis: [98   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 6.5122e-18
+
+Static Analysis: [99   /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 3.6358e-18
+
+Static Analysis: [100  /100  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 2.3908e-18
+
+> Analysis End -------------------------------------------------------------------------------
+
+
+Starting new stage: 3unloading
+
+changing previous_stage_name from 2shearing to 3unloading
+Setting set_constitutive_integration_method = 2
+
+Starting sequential static multistep analysis
+====================================================================================================
+Creating analysis model........................................................................Pass!
+Checking constraint handler....................................................................Pass!
+Checking numberer..............................................................................Pass!
+Checking analysis algorithm....................................................................Pass!
+Checking system of equation handler............................................................Pass!
+Checking static integration handler............................................................Pass!
+
+ 
+ Writing Initial Conditions and   (0) - Outputting mesh.
+
+Static Analysis: [1    /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.9607e-18
+
+Static Analysis: [2    /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.5375e-18
+
+Static Analysis: [3    /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 7.9262e-18
+
+Static Analysis: [4    /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 1.3039e-17
+
+Static Analysis: [5    /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 3.9402e-18
+
+Static Analysis: [6    /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 2.8925e-18
+
+Static Analysis: [7    /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 9.0915e-18
+
+Static Analysis: [8    /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 5.0233e-18
+
+Static Analysis: [9    /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 2.3259e-19
+
+Static Analysis: [10   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 1.5254e-19
+
+Static Analysis: [11   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 5.0521e-18
+
+Static Analysis: [12   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.8501e-11
+	 	                   Norm deltaX: 6.559e-18
+
+Static Analysis: [13   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 3.0071e-18
+
+Static Analysis: [14   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 6.7188e-18
+
+Static Analysis: [15   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 6.6439e-18
+
+Static Analysis: [16   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 2.615e-19
+
+Static Analysis: [17   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 4.0622e-18
+
+Static Analysis: [18   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 7.2396e-18
+
+Static Analysis: [19   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.8972e-18
+
+Static Analysis: [20   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 5.7236e-18
+
+Static Analysis: [21   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 4.2625e-18
+
+Static Analysis: [22   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.9031e-18
+
+Static Analysis: [23   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 7.6615e-18
+
+Static Analysis: [24   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 5.9142e-18
+
+Static Analysis: [25   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 5.5144e-18
+
+Static Analysis: [26   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.8993e-18
+
+Static Analysis: [27   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 7.6263e-18
+
+Static Analysis: [28   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 7.1519e-18
+
+Static Analysis: [29   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 5.4184e-18
+
+Static Analysis: [30   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.6908e-18
+
+Static Analysis: [31   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.2491e-18
+
+Static Analysis: [32   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.8945e-18
+
+Static Analysis: [33   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 2.5267e-19
+
+Static Analysis: [34   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 6.9701e-18
+
+Static Analysis: [35   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 3.0937e-18
+
+Static Analysis: [36   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.812e-18
+
+Static Analysis: [37   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 3.0191e-18
+
+Static Analysis: [38   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 5.8785e-18
+
+Static Analysis: [39   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 9.2805e-18
+
+Static Analysis: [40   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 5.4303e-18
+
+Static Analysis: [41   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.6907e-18
+
+Static Analysis: [42   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.8544e-18
+
+Static Analysis: [43   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 5.3534e-18
+
+Static Analysis: [44   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 4.6017e-11
+	 	                   Norm deltaX: 5.6535e-18
+
+Static Analysis: [45   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 4.1159e-11
+	 	                   Norm deltaX: 8.0358e-18
+
+Static Analysis: [46   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 3.0348e-18
+
+Static Analysis: [47   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 4.0969e-18
+
+Static Analysis: [48   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 7.1584e-18
+
+Static Analysis: [49   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 7.6015e-18
+
+Static Analysis: [50   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.7897e-18
+
+Static Analysis: [51   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 7.3735e-18
+
+Static Analysis: [52   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 4.0475e-18
+
+Static Analysis: [53   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 4.1108e-18
+
+Static Analysis: [54   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 7.1103e-18
+
+Static Analysis: [55   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.3019e-19
+
+Static Analysis: [56   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 4.1159e-11
+	 	                   Norm deltaX: 5.8494e-18
+
+Static Analysis: [57   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 3.0256e-18
+
+Static Analysis: [58   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 6.4795e-18
+
+Static Analysis: [59   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 4.8786e-18
+
+Static Analysis: [60   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.6069e-19
+
+Static Analysis: [61   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 5.4513e-18
+
+Static Analysis: [62   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.8724e-18
+
+Static Analysis: [63   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 5.5331e-18
+
+Static Analysis: [64   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 6.9491e-18
+
+Static Analysis: [65   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 4.4772e-18
+
+Static Analysis: [66   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 5.0409e-11
+	 	                   Norm deltaX: 5.0926e-18
+
+Static Analysis: [67   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 2.9827e-19
+
+Static Analysis: [68   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.792e-19
+
+Static Analysis: [69   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.9391e-18
+
+Static Analysis: [70   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 4.2753e-18
+
+Static Analysis: [71   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 2.3269e-18
+
+Static Analysis: [72   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 2.91e-19
+
+Static Analysis: [73   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 3.9518e-18
+
+Static Analysis: [74   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 5.4019e-18
+
+Static Analysis: [75   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 5.1916e-18
+
+Static Analysis: [76   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 6.8249e-18
+
+Static Analysis: [77   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 3.0174e-18
+
+Static Analysis: [78   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 5.8888e-18
+
+Static Analysis: [79   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 8.4685e-18
+
+Static Analysis: [80   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 4.3656e-11
+	 	                   Norm deltaX: 6.2148e-18
+
+Static Analysis: [81   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 3.2289e-18
+
+Static Analysis: [82   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.1713e-18
+
+Static Analysis: [83   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 4.1821e-18
+
+Static Analysis: [84   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 7.5851e-18
+
+Static Analysis: [85   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 4.1159e-11
+	 	                   Norm deltaX: 5.6285e-18
+
+Static Analysis: [86   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 7.4698e-18
+
+Static Analysis: [87   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.9606e-18
+
+Static Analysis: [88   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 5.4443e-18
+
+Static Analysis: [89   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 8.0302e-18
+
+Static Analysis: [90   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.3077e-18
+
+Static Analysis: [91   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 5.4548e-18
+
+Static Analysis: [92   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 9.5221e-18
+
+Static Analysis: [93   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.7664e-19
+
+Static Analysis: [94   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 4.1159e-11
+	 	                   Norm deltaX: 5.6955e-18
+
+Static Analysis: [95   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 9.258e-18
+
+Static Analysis: [96   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 5.9105e-18
+
+Static Analysis: [97   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.0317e-18
+
+Static Analysis: [98   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.977e-18
+
+Static Analysis: [99   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 5.4139e-18
+
+Static Analysis: [100  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.8495e-18
+
+Static Analysis: [101  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.951e-18
+
+Static Analysis: [102  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 4.6245e-18
+
+Static Analysis: [103  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.0086e-18
+
+Static Analysis: [104  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 4.6017e-11
+	 	                   Norm deltaX: 2.5265e-18
+
+Static Analysis: [105  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 4.3872e-18
+
+Static Analysis: [106  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.936e-19
+
+Static Analysis: [107  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 8.1078e-18
+
+Static Analysis: [108  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 3.0917e-18
+
+Static Analysis: [109  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.7921e-18
+
+Static Analysis: [110  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 3.0871e-18
+
+Static Analysis: [111  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.8644e-18
+
+Static Analysis: [112  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 7.0385e-18
+
+Static Analysis: [113  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 9.7153e-18
+
+Static Analysis: [114  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 8.1618e-18
+
+Static Analysis: [115  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 9.72e-18
+
+Static Analysis: [116  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.4777e-18
+
+Static Analysis: [117  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.0165e-18
+
+Static Analysis: [118  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 5.0865e-18
+
+Static Analysis: [119  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 5.8701e-18
+
+Static Analysis: [120  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 6.6403e-18
+
+Static Analysis: [121  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 5.9509e-18
+
+Static Analysis: [122  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 5.7335e-18
+
+Static Analysis: [123  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 7.6388e-18
+
+Static Analysis: [124  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 7.1435e-18
+
+Static Analysis: [125  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.2482e-18
+
+Static Analysis: [126  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 4.8051e-19
+
+Static Analysis: [127  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.4582e-18
+
+Static Analysis: [128  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 4.3907e-18
+
+Static Analysis: [129  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 5.5635e-18
+
+Static Analysis: [130  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 2.4414e-18
+
+Static Analysis: [131  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 5.3624e-18
+
+Static Analysis: [132  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.8501e-11
+	 	                   Norm deltaX: 3.03e-18
+
+Static Analysis: [133  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.0504e-18
+
+Static Analysis: [134  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 5.3822e-18
+
+Static Analysis: [135  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 5.2468e-11
+	 	                   Norm deltaX: 7.6446e-18
+
+Static Analysis: [136  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.9249e-18
+
+Static Analysis: [137  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 5.6359e-11
+	 	                   Norm deltaX: 7.8187e-18
+
+Static Analysis: [138  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 6.1228e-18
+
+Static Analysis: [139  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 2.5378e-19
+
+Static Analysis: [140  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 2.9979e-18
+
+Static Analysis: [141  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 4.6369e-19
+
+Static Analysis: [142  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 7.1407e-18
+
+Static Analysis: [143  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 4.8991e-18
+
+Static Analysis: [144  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.7489e-18
+
+Static Analysis: [145  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 5.0886e-18
+
+Static Analysis: [146  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.908e-18
+
+Static Analysis: [147  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.2091e-18
+
+Static Analysis: [148  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 2.3886e-18
+
+Static Analysis: [149  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 6.0442e-18
+
+Static Analysis: [150  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 5.4239e-18
+
+Static Analysis: [151  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.6151e-18
+
+Static Analysis: [152  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 4.1159e-11
+	 	                   Norm deltaX: 3.0854e-18
+
+Static Analysis: [153  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.9249e-18
+
+Static Analysis: [154  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 4.3656e-11
+	 	                   Norm deltaX: 6.9713e-18
+
+Static Analysis: [155  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 2.919e-18
+
+Static Analysis: [156  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 3.1057e-18
+
+Static Analysis: [157  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 2.9048e-18
+
+Static Analysis: [158  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 5.4012e-18
+
+Static Analysis: [159  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 2.4117e-18
+
+Static Analysis: [160  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 5.2246e-18
+
+Static Analysis: [161  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.2079e-18
+
+Static Analysis: [162  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.0439e-18
+
+Static Analysis: [163  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.8501e-11
+	 	                   Norm deltaX: 4.0579e-18
+
+Static Analysis: [164  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 2.0984e-18
+
+Static Analysis: [165  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 3.9855e-18
+
+Static Analysis: [166  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 5.5638e-18
+
+Static Analysis: [167  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 5.9184e-18
+
+Static Analysis: [168  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 3.3577e-18
+
+Static Analysis: [169  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 4.8263e-11
+	 	                   Norm deltaX: 9.0421e-18
+
+Static Analysis: [170  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.5727e-18
+
+Static Analysis: [171  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 6.2147e-18
+
+Static Analysis: [172  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 1.0879e-17
+
+Static Analysis: [173  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 1.1306e-17
+
+Static Analysis: [174  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 3.8373e-18
+
+Static Analysis: [175  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.8327e-18
+
+Static Analysis: [176  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 7.1595e-18
+
+Static Analysis: [177  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 7.1481e-18
+
+Static Analysis: [178  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 3.7174e-19
+
+Static Analysis: [179  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 6.0742e-18
+
+Static Analysis: [180  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 4.4791e-18
+
+Static Analysis: [181  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 5.52e-19
+
+Static Analysis: [182  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.7162e-18
+
+Static Analysis: [183  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 5.2468e-11
+	 	                   Norm deltaX: 5.7718e-18
+
+Static Analysis: [184  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 4.0807e-18
+
+Static Analysis: [185  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 5.9638e-18
+
+Static Analysis: [186  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 5.7151e-18
+
+Static Analysis: [187  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 4.9423e-19
+
+Static Analysis: [188  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.4479e-18
+
+Static Analysis: [189  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 5.8288e-18
+
+Static Analysis: [190  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.9095e-19
+
+Static Analysis: [191  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 9.1303e-18
+
+Static Analysis: [192  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 5.2714e-18
+
+Static Analysis: [193  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.9995e-18
+
+Static Analysis: [194  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.076e-19
+
+Static Analysis: [195  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 4.0541e-18
+
+Static Analysis: [196  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 7.0929e-18
+
+Static Analysis: [197  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 5.742e-18
+
+Static Analysis: [198  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 3.9142e-18
+
+Static Analysis: [199  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 6.1153e-18
+
+Static Analysis: [200  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 8.129e-18
+
+> Analysis End -------------------------------------------------------------------------------
+
+
+Starting new stage: 4reloading
+
+changing previous_stage_name from 3unloading to 4reloading
+Setting set_constitutive_integration_method = 2
+
+Starting sequential static multistep analysis
+====================================================================================================
+Creating analysis model........................................................................Pass!
+Checking constraint handler....................................................................Pass!
+Checking numberer..............................................................................Pass!
+Checking analysis algorithm....................................................................Pass!
+Checking system of equation handler............................................................Pass!
+Checking static integration handler............................................................Pass!
+
+ 
+ Writing Initial Conditions and   (0) - Outputting mesh.
+
+Static Analysis: [1    /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 7.0934e-18
+
+Static Analysis: [2    /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.8353e-19
+
+Static Analysis: [3    /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 1.3755e-17
+
+Static Analysis: [4    /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 5.3506e-19
+
+Static Analysis: [5    /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.9191e-18
+
+Static Analysis: [6    /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 5.8221e-19
+
+Static Analysis: [7    /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 4.5844e-18
+
+Static Analysis: [8    /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 2.9695e-18
+
+Static Analysis: [9    /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 5.9728e-18
+
+Static Analysis: [10   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 6.0122e-18
+
+Static Analysis: [11   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.063e-18
+
+Static Analysis: [12   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 4.6107e-18
+
+Static Analysis: [13   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 5.7239e-19
+
+Static Analysis: [14   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 4.5678e-18
+
+Static Analysis: [15   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 6.1818e-18
+
+Static Analysis: [16   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 4.9357e-19
+
+Static Analysis: [17   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 4.9691e-18
+
+Static Analysis: [18   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 7.1263e-18
+
+Static Analysis: [19   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.415e-18
+
+Static Analysis: [20   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 2.5311e-18
+
+Static Analysis: [21   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 6.4142e-18
+
+Static Analysis: [22   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.191e-18
+
+Static Analysis: [23   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 5.354e-18
+
+Static Analysis: [24   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.1839e-18
+
+Static Analysis: [25   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.0631e-18
+
+Static Analysis: [26   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 3.1778e-18
+
+Static Analysis: [27   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 2.5653e-18
+
+Static Analysis: [28   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 6.1531e-19
+
+Static Analysis: [29   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 4.4654e-18
+
+Static Analysis: [30   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 4.0411e-18
+
+Static Analysis: [31   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.8501e-11
+	 	                   Norm deltaX: 8.979e-18
+
+Static Analysis: [32   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.0168e-18
+
+Static Analysis: [33   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 6.6476e-19
+
+Static Analysis: [34   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.6002e-18
+
+Static Analysis: [35   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.8395e-18
+
+Static Analysis: [36   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 3.0675e-18
+
+Static Analysis: [37   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 7.2818e-18
+
+Static Analysis: [38   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 4.8682e-18
+
+Static Analysis: [39   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.026e-18
+
+Static Analysis: [40   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 6.1059e-18
+
+Static Analysis: [41   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 4.996e-18
+
+Static Analysis: [42   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.321e-18
+
+Static Analysis: [43   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 1.0499e-18
+
+Static Analysis: [44   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 1.0068e-17
+
+Static Analysis: [45   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 2.9039e-18
+
+Static Analysis: [46   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 4.4202e-18
+
+Static Analysis: [47   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 5.6752e-18
+
+Static Analysis: [48   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 8.1371e-19
+
+Static Analysis: [49   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 4.6322e-18
+
+Static Analysis: [50   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 4.9379e-18
+
+Static Analysis: [51   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 6.401e-18
+
+Static Analysis: [52   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 4.8615e-18
+
+Static Analysis: [53   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.7774e-18
+
+Static Analysis: [54   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 4.7136e-18
+
+Static Analysis: [55   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 4.6017e-11
+	 	                   Norm deltaX: 8.4495e-18
+
+Static Analysis: [56   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 3.2342e-18
+
+Static Analysis: [57   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 4.6017e-11
+	 	                   Norm deltaX: 6.4995e-18
+
+Static Analysis: [58   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.2684e-18
+
+Static Analysis: [59   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 4.9527e-18
+
+Static Analysis: [60   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 6.4188e-18
+
+Static Analysis: [61   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 1.1408e-18
+
+Static Analysis: [62   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 4.1159e-11
+	 	                   Norm deltaX: 6.34e-18
+
+Static Analysis: [63   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.9305e-18
+
+Static Analysis: [64   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 7.6553e-18
+
+Static Analysis: [65   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 4.9233e-18
+
+Static Analysis: [66   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 8.3939e-18
+
+Static Analysis: [67   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.0448e-18
+
+Static Analysis: [68   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 8.939e-19
+
+Static Analysis: [69   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 4.7878e-18
+
+Static Analysis: [70   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.0338e-18
+
+Static Analysis: [71   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 1.0086e-18
+
+Static Analysis: [72   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.0379e-18
+
+Static Analysis: [73   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 9.2298e-19
+
+Static Analysis: [74   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 1.233e-17
+
+Static Analysis: [75   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 6.5444e-18
+
+Static Analysis: [76   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 3.344e-18
+
+Static Analysis: [77   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 4.7394e-18
+
+Static Analysis: [78   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.0866e-18
+
+Static Analysis: [79   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 1.0084e-17
+
+Static Analysis: [80   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 1.1639e-18
+
+Static Analysis: [81   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.022e-18
+
+Static Analysis: [82   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.919e-18
+
+Static Analysis: [83   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 1.0006e-18
+
+Static Analysis: [84   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 1.1183e-18
+
+Static Analysis: [85   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 3.0622e-18
+
+Static Analysis: [86   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.7204e-18
+
+Static Analysis: [87   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 3.175e-18
+
+Static Analysis: [88   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 3.0937e-18
+
+Static Analysis: [89   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.1792e-18
+
+Static Analysis: [90   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 4.3656e-11
+	 	                   Norm deltaX: 1.0359e-17
+
+Static Analysis: [91   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 1.0907e-18
+
+Static Analysis: [92   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 2.6861e-18
+
+Static Analysis: [93   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 1.2483e-18
+
+Static Analysis: [94   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 1.1625e-18
+
+Static Analysis: [95   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 6.0018e-18
+
+Static Analysis: [96   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.7782e-18
+
+Static Analysis: [97   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 4.3656e-11
+	 	                   Norm deltaX: 1.192e-17
+
+Static Analysis: [98   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 7.9636e-18
+
+Static Analysis: [99   /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 1.3136e-18
+
+Static Analysis: [100  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 3.4977e-18
+
+Static Analysis: [101  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 1.0396e-17
+
+Static Analysis: [102  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 5.0409e-11
+	 	                   Norm deltaX: 8.1057e-18
+
+Static Analysis: [103  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 9.6221e-19
+
+Static Analysis: [104  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 8.4313e-18
+
+Static Analysis: [105  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 4.9908e-18
+
+Static Analysis: [106  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.9968e-18
+
+Static Analysis: [107  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.5794e-18
+
+Static Analysis: [108  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 9.0251e-19
+
+Static Analysis: [109  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 7.3425e-18
+
+Static Analysis: [110  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.6983e-18
+
+Static Analysis: [111  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 3.127e-18
+
+Static Analysis: [112  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 5.0528e-18
+
+Static Analysis: [113  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 3.6355e-18
+
+Static Analysis: [114  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 9.4607e-18
+
+Static Analysis: [115  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.0887e-18
+
+Static Analysis: [116  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 8.8998e-18
+
+Static Analysis: [117  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 7.8177e-18
+
+Static Analysis: [118  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 5.0893e-18
+
+Static Analysis: [119  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 2.8616e-18
+
+Static Analysis: [120  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 2.4072e-18
+
+Static Analysis: [121  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.9653e-18
+
+Static Analysis: [122  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 1.041e-18
+
+Static Analysis: [123  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.6028e-18
+
+Static Analysis: [124  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 4.6017e-11
+	 	                   Norm deltaX: 5.0968e-18
+
+Static Analysis: [125  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 6.1739e-11
+	 	                   Norm deltaX: 9.8255e-18
+
+Static Analysis: [126  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 3.1315e-18
+
+Static Analysis: [127  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 8.9604e-19
+
+Static Analysis: [128  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 6.1739e-11
+	 	                   Norm deltaX: 1.0338e-17
+
+Static Analysis: [129  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 5.0409e-11
+	 	                   Norm deltaX: 6.7996e-18
+
+Static Analysis: [130  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.0955e-18
+
+Static Analysis: [131  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 2.9462e-18
+
+Static Analysis: [132  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.9031e-18
+
+Static Analysis: [133  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 2.5916e-18
+
+Static Analysis: [134  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 1.2664e-18
+
+Static Analysis: [135  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 5.0593e-18
+
+Static Analysis: [136  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 3.1127e-18
+
+Static Analysis: [137  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 6.4273e-18
+
+Static Analysis: [138  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 4.1211e-18
+
+Static Analysis: [139  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 2.8166e-18
+
+Static Analysis: [140  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 7.3814e-18
+
+Static Analysis: [141  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 8.9094e-18
+
+Static Analysis: [142  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 6.7779e-18
+
+Static Analysis: [143  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 5.2468e-11
+	 	                   Norm deltaX: 6.8538e-18
+
+Static Analysis: [144  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 5.4448e-11
+	 	                   Norm deltaX: 9.6109e-18
+
+Static Analysis: [145  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.8501e-11
+	 	                   Norm deltaX: 1.1136e-17
+
+Static Analysis: [146  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 1.1419e-18
+
+Static Analysis: [147  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 8.3842e-18
+
+Static Analysis: [148  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 7.6922e-18
+
+Static Analysis: [149  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 8.9873e-18
+
+Static Analysis: [150  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.9297e-18
+
+Static Analysis: [151  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 8.225e-18
+
+Static Analysis: [152  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 1.182e-18
+
+Static Analysis: [153  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 3.1313e-18
+
+Static Analysis: [154  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 6.071e-18
+
+Static Analysis: [155  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 2.6502e-18
+
+Static Analysis: [156  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 3.3663e-18
+
+Static Analysis: [157  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.2284e-18
+
+Static Analysis: [158  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 5.1443e-18
+
+Static Analysis: [159  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 5.0409e-11
+	 	                   Norm deltaX: 9.9875e-18
+
+Static Analysis: [160  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 1.2536e-18
+
+Static Analysis: [161  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 6.909e-18
+
+Static Analysis: [162  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 2.944e-18
+
+Static Analysis: [163  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.8151e-18
+
+Static Analysis: [164  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 1.1425e-18
+
+Static Analysis: [165  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 3.4296e-18
+
+Static Analysis: [166  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 4.5829e-18
+
+Static Analysis: [167  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 4.6017e-11
+	 	                   Norm deltaX: 6.3374e-18
+
+Static Analysis: [168  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 4.6017e-11
+	 	                   Norm deltaX: 2.4462e-18
+
+Static Analysis: [169  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.0092e-18
+
+Static Analysis: [170  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 3.2049e-18
+
+Static Analysis: [171  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 4.6017e-11
+	 	                   Norm deltaX: 6.5637e-18
+
+Static Analysis: [172  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 3.3688e-18
+
+Static Analysis: [173  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 4.6017e-11
+	 	                   Norm deltaX: 5.3085e-18
+
+Static Analysis: [174  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 4.8628e-18
+
+Static Analysis: [175  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 7.7697e-18
+
+Static Analysis: [176  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 1.0449e-17
+
+Static Analysis: [177  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 4.7352e-18
+
+Static Analysis: [178  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 3.2078e-18
+
+Static Analysis: [179  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 6.6395e-18
+
+Static Analysis: [180  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 3.1042e-18
+
+Static Analysis: [181  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.9769e-18
+
+Static Analysis: [182  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.6139e-18
+
+Static Analysis: [183  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 3.1818e-18
+
+Static Analysis: [184  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.5205e-11
+	 	                   Norm deltaX: 4.9014e-18
+
+Static Analysis: [185  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.8501e-11
+	 	                   Norm deltaX: 4.7946e-18
+
+Static Analysis: [186  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.4897e-18
+
+Static Analysis: [187  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 0
+	 	                   Norm deltaX: 1.175e-18
+
+Static Analysis: [188  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 4.7566e-18
+
+Static Analysis: [189  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 4.3656e-11
+	 	                   Norm deltaX: 1.0156e-17
+
+Static Analysis: [190  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 5.2468e-11
+	 	                   Norm deltaX: 4.9092e-18
+
+Static Analysis: [191  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.5645e-11
+	 	                   Norm deltaX: 7.5444e-18
+
+Static Analysis: [192  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 2.4815e-18
+
+Static Analysis: [193  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 5.0061e-18
+
+Static Analysis: [194  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 2.5933e-18
+
+Static Analysis: [195  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 3.2539e-11
+	 	                   Norm deltaX: 5.715e-18
+
+Static Analysis: [196  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.058e-11
+	 	                   Norm deltaX: 7.3472e-18
+
+Static Analysis: [197  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 3.2811e-18
+
+Static Analysis: [198  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 4.6017e-11
+	 	                   Norm deltaX: 5.5957e-18
+
+Static Analysis: [199  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 1.4552e-11
+	 	                   Norm deltaX: 4.4337e-18
+
+Static Analysis: [200  /200  ] 
+	 [iteration 1    /50   ]  CTestNormUnbalance::(tol: 1)
+	 	                   Norm deltaF: 2.9104e-11
+	 	                   Norm deltaX: 3.0161e-18
+
+> Analysis End -------------------------------------------------------------------------------
+How polite! Bye, have a nice day!
+
+Script done on Thu 06 Apr 2017 11:17:50 AM PDT

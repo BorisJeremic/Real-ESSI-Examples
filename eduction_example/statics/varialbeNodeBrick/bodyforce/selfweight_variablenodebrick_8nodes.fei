@@ -1,0 +1,56 @@
+// ESSI Test Suite
+// ---------------------------------------------------------------------
+
+
+model name "variablenodebrick";
+new loading stage "load";
+
+
+add material # 1 type linear_elastic_isotropic_3d mass_density=10.0*kg/m^3 elastic_modulus = 100.0*N/m^2 poisson_ratio=0.3;
+
+
+// Nodal  Coordinates
+add node # 1 at (1*m, 1*m , 1*m) with 3 dofs;      
+add node # 2 at (0*m, 1*m , 1*m) with 3 dofs;      
+add node # 3 at (0*m, 0*m , 1*m) with 3 dofs;      
+add node # 4 at (1*m, 0*m , 1*m) with 3 dofs;      
+add node # 5 at (1*m, 1*m , 0*m) with 3 dofs;      
+add node # 6 at (0*m, 1*m , 0*m) with 3 dofs;      
+add node # 7 at (0*m, 0*m , 0*m) with 3 dofs;      
+add node # 8 at (1*m, 0*m , 0*m) with 3 dofs; 
+ 
+
+// Acceleration field
+add acceleration field # 1 ax=0.0*g ay=0.0*g az=-1.0*g;
+
+
+// Elements
+add element # 1 type variable_node_brick_8_to_27 using 2 Gauss points each direction with nodes (1,2,3,4,5,6,7,8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0) use material # 1;
+
+
+// Constrains
+fix node No 5 dofs all;
+fix node No 6 dofs all;
+fix node No 7 dofs all;
+fix node No 8 dofs all;
+
+
+// Load
+add load # 1 to element # 1 type self_weight use acceleration field # 1;
+
+
+
+define load factor increment 0.1;
+define algorithm with_no_convergence_check;
+define solver ProfileSPD;
+
+simulate 2 steps using static algorithm;
+
+
+print node # 1;
+print node # 2;
+print node # 4;
+print node # 5;
+
+
+bye;

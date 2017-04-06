@@ -74,10 +74,10 @@ define NDMaterial constitutive integration algorithm Backward_Euler
 define solver UMFPack;
 //define algorithm With_no_convergence_check ;
 define convergence test Norm_Displacement_Increment
-    tolerance = 1E-8
+    tolerance = 1E-4
     maximum_iterations =  50
     verbose_level = 4;
-define algorithm NewtonLineSearch ;
+define algorithm Newton ;
 Nstep = 10;
 define load factor increment 1/Nstep;
 simulate Nstep steps using static algorithm;
@@ -95,17 +95,17 @@ fix node # 4 dofs uy uz ;
 
 
 
-add load # 101 to node # 1 type linear Fx =  400 * N;
-add load # 102 to node # 2 type linear Fx =  400 * N;
-add load # 103 to node # 3 type linear Fx =  400 * N;
-add load # 104 to node # 4 type linear Fx =  400 * N;
+add load # 101 to node # 1 type linear Fx =  2E4 * N;
+add load # 102 to node # 2 type linear Fx =  2E4 * N;
+add load # 103 to node # 3 type linear Fx =  2E4 * N;
+add load # 104 to node # 4 type linear Fx =  2E4 * N;
 
 
     
-define solver ProfileSPD;
-//define algorithm With_no_convergence_check ;Norm_Displacement_Increment;Norm_Unbalance
+define solver UMFPack;
+//define algorithm With_no_convergence_check ;Norm_Displacement_Increment;Norm_Displacement_Increment
 define convergence test Norm_Displacement_Increment
-    tolerance = 1E-6
+    tolerance = 1E-4
     maximum_iterations =  50
     verbose_level = 4;
 define algorithm Newton;
@@ -120,14 +120,14 @@ define static integrator displacement_control using node # 1 dof ux increment 1E
 //define load factor increment 1/Nsteps;
 simulate Nsteps steps using static algorithm;
 new loading stage "3unloading";
-add load # 105 to node # 1 type linear Fx =  -400 * N;
-add load # 106 to node # 2 type linear Fx =  -400 * N;
-add load # 107 to node # 3 type linear Fx =  -400 * N;
-add load # 108 to node # 4 type linear Fx =  -400 * N;
-define solver ProfileSPD;
+add load # 105 to node # 1 type linear Fx =  -2E4 * N;
+add load # 106 to node # 2 type linear Fx =  -2E4 * N;
+add load # 107 to node # 3 type linear Fx =  -2E4 * N;
+add load # 108 to node # 4 type linear Fx =  -2E4 * N;
+define solver UMFPack;
 //define algorithm With_no_convergence_check ;
 define convergence test Norm_Displacement_Increment
-    tolerance = 1E-6
+    tolerance = 1E-4
     maximum_iterations =  50
     verbose_level = 4;
 define algorithm Newton ;
@@ -139,19 +139,19 @@ define NDMaterial constitutive integration algorithm Backward_Euler
 Nsteps = 100;
 // define static integrator displacement_control using node # <.> dof DOFTYPE increment <length>;
 define static integrator displacement_control using node # 1 dof ux increment -1E-3*m ;
-//define load factor increment 1/Nsteps;
+// define load factor increment 1/Nsteps;
 simulate 2*Nsteps steps using static algorithm;
 
 
 new loading stage "4reloading" ;
-add load # 115 to node # 1 type linear Fx =  400 * N;
-add load # 116 to node # 2 type linear Fx =  400 * N;
-add load # 117 to node # 3 type linear Fx =  400 * N;
-add load # 118 to node # 4 type linear Fx =  400 * N;
-define solver ProfileSPD;
+add load # 115 to node # 1 type linear Fx =  2E4 * N;
+add load # 116 to node # 2 type linear Fx =  2E4 * N;
+add load # 117 to node # 3 type linear Fx =  2E4 * N;
+add load # 118 to node # 4 type linear Fx =  2E4 * N;
+define solver UMFPack;
 //define algorithm With_no_convergence_check ;
 define convergence test Norm_Displacement_Increment
-    tolerance = 1E-6
+    tolerance = 1E-4
     maximum_iterations =  50
     verbose_level = 4;
 define algorithm Newton ;
@@ -169,25 +169,3 @@ simulate 2*Nsteps steps using static algorithm;
 
 bye;  
 
-
-
-
-//mot = 1;
-//dt = 1E2*s ; 
-//while (mot < 5 ) {
-    //add imposed motion # mot+100 to node # mot dof ux 
-        //time_step =  dt
-        //displacement_scale_unit =  0.3*m 
-        //displacement_file =  "path.txt" 
-        //velocity_scale_unit =  0*m/s 
-        //velocity_file =  "path.txt" 
-        //acceleration_scale_unit =  0.0*m/s^2 
-        //acceleration_file = "path.txt";
-    //mot = mot + 1;
-    //};
-
-    //
-//define dynamic integrator Newmark with 
-    //gamma = 0.5 
-    //beta = 0.25;
-//    
