@@ -39,7 +39,6 @@ while (mot < 5 ) {
     mot = mot + 1;
     };
 define solver UMFPack;
-   
 define convergence test Norm_Unbalance
     tolerance = 1E-2 
     maximum_iterations =  10

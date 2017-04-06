@@ -1,10 +1,8 @@
 model name "vonMises";
-
 // Parameters:
 rho = 0.0*kg/m^3;
 nu = 0.0;
 E = 2E7*N/m^2;
-
 // Define the material:
 add material # 1 type VonMises
     mass_density = rho
@@ -13,33 +11,26 @@ add material # 1 type VonMises
     von_mises_radius = 1E5*Pa
     kinematic_hardening_rate = 0*Pa
     isotropic_hardening_rate = 0*Pa;
-
 // define the node:
 add node # 1 at (0*m,0*m,1*m)  with 3 dofs;
 add node # 2 at (1*m,0*m,1*m)  with 3 dofs;
 add node # 3 at (1*m,1*m,1*m)  with 3 dofs;
 add node # 4 at (0*m,1*m,1*m)  with 3 dofs;
-
 add node # 5 at (0*m,0*m,0*m)  with 3 dofs;
 add node # 6 at (1*m,0*m,0*m)  with 3 dofs;
 add node # 7 at (1*m,1*m,0*m)  with 3 dofs;
 add node # 8 at (0*m,1*m,0*m)  with 3 dofs;
-
 // Define the element.
 add element # 1 type 8NodeBrick with nodes (1, 2, 3, 4, 5, 6, 7, 8) use material # 1;
-
 new loading stage "shearing";
-
 fix node # 1 dofs uy;
 fix node # 2 dofs uy;
 fix node # 3 dofs uy;
 fix node # 4 dofs uy;
-
 fix node # 5 dofs all;
 fix node # 6 dofs all;
 fix node # 7 dofs all;
 fix node # 8 dofs all;
-
 mot = 1;
 dt = 1E2*s ; 
 while (mot < 5 ) {
@@ -53,27 +44,20 @@ while (mot < 5 ) {
         acceleration_file = "path.txt";
     mot = mot + 1;
     };
-
-define solver ProfileSPD;
+define solver UMFPack;
 //define algorithm With_no_convergence_check ;
-
 define convergence test Norm_Displacement_Increment
     tolerance = 1E-12 
     maximum_iterations =  50
     verbose_level = 4;
 define algorithm Newton ;
-
-
 define dynamic integrator Newmark with 
     gamma = 0.5 
     beta = 0.25;
-    
 define NDMaterial constitutive integration algorithm Forward_Euler
     yield_function_relative_tolerance =  1E-15
     stress_relative_tolerance =  1E-15
     maximum_iterations = 1000;
-
 simulate 499 steps using transient algorithm 
     time_step = dt;
-
 bye;  

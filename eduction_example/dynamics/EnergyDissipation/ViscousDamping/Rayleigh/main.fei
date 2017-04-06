@@ -1,17 +1,7 @@
-model name "beam_5element" ;
-
-// add node
-add node #  1 at (   0.0*m ,    0.0*m,     0.0*m)  with 6 dofs;
-add node #  2 at (   0.2*m ,    0.0*m,     0.0*m)  with 6 dofs;
-add node #  3 at (   0.4*m ,    0.0*m,     0.0*m)  with 6 dofs;
-add node #  4 at (   0.6*m ,    0.0*m,     0.0*m)  with 6 dofs;
-add node #  5 at (   0.8*m ,    0.0*m,     0.0*m)  with 6 dofs;
-add node #  6 at (   1.0*m ,    0.0*m,     0.0*m)  with 6 dofs;
-	
+model name "brick_5element" ;
 // Geometry: width and height
 b=0.2*m;
 h=0.2*m;
-
 // Materials: properties
 natural_period    = 1*s;				
 natural_frequency  = 2*pi/natural_period;
@@ -21,84 +11,153 @@ A=b*h;
 L=1*m;
 rho 	= (1.8751)^4*elastic_constant*I/(natural_frequency^2*L^4*A);
 possion_ratio=0.3;
-
-// add elements
-ii=1;
-while (ii<6) {
-	add element # ii type beam_elastic with nodes (ii,ii+1) 
-		cross_section =   b*h 
-		elastic_modulus =  elastic_constant
-		shear_modulus =  elastic_constant/2/(1+possion_ratio)
-		torsion_Jx =  0.33*b*h^3
-		bending_Iy =  b*h^3/12
-		bending_Iz =  b*h^3/12
-		mass_density = rho
-		xz_plane_vector = ( 1, 0, 1) 
-		joint_1_offset = (0*m, 0*m, 0*m) 
-		joint_2_offset = (0*m, 0*m, 0*m);
-	ii+=1;
-}
-
-// add boundary condition
-fix node #      1 dofs all;
-ii=2;
-while (ii<7) {
-	fix node # ii dofs uy;
-	ii+=1;
-}
-
-
-beamMass=rho*A*L;
-add mass to node # 3 
-	mx =  beamMass
-	my =  beamMass
-	mz = beamMass
-	Imx = beamMass*L^2
-	Imy = beamMass*L^2
-	Imz = beamMass*L^2;
+add material # 1 type linear_elastic_isotropic_3d
+  mass_density = rho
+  elastic_modulus = elastic_constant
+  poisson_ratio = possion_ratio;
+add node # 1 at (0.0*m, 0.0*m , 0.0*m) with 3 dofs;
+add node # 2 at (0.1*m, 0.0*m , 0.0*m) with 3 dofs;
+add node # 3 at (0.2*m, 0.0*m , 0.0*m) with 3 dofs;
+add node # 4 at (0.0*m, 0.1*m , 0.0*m) with 3 dofs;
+add node # 5 at (0.1*m, 0.1*m , 0.0*m) with 3 dofs;
+add node # 6 at (0.2*m, 0.1*m , 0.0*m) with 3 dofs;
+add node # 7 at (0.0*m, 0.2*m , 0.0*m) with 3 dofs;
+add node # 8 at (0.1*m, 0.2*m , 0.0*m) with 3 dofs;
+add node # 9 at (0.2*m, 0.2*m , 0.0*m) with 3 dofs;
+fix node No 1 dofs ux uy uz;
+fix node No 2 dofs ux uy uz;
+fix node No 3 dofs ux uy uz;
+fix node No 4 dofs ux uy uz;
+fix node No 5 dofs ux uy uz;
+fix node No 6 dofs ux uy uz;
+fix node No 7 dofs ux uy uz;
+fix node No 8 dofs ux uy uz;
+fix node No 9 dofs ux uy uz;
+e = 0;
+hh = 0*m;
+NBricks=5;
+dz = 0.2*m;
+while ( e < NBricks)
+{
+	hh += dz;
+	add node # 10+18*e at (0.0*m, 0.0*m , hh - 0.5*dz) with 3 dofs;
+	add node # 11+18*e at (0.1*m, 0.0*m , hh - 0.5*dz) with 3 dofs;
+	add node # 12+18*e at (0.2*m, 0.0*m , hh - 0.5*dz) with 3 dofs;
+	add node # 13+18*e at (0.0*m, 0.1*m , hh - 0.5*dz) with 3 dofs;
+	add node # 14+18*e at (0.1*m, 0.1*m , hh - 0.5*dz) with 3 dofs;
+	add node # 15+18*e at (0.2*m, 0.1*m , hh - 0.5*dz) with 3 dofs;
+	add node # 16+18*e at (0.0*m, 0.2*m , hh - 0.5*dz) with 3 dofs;
+	add node # 17+18*e at (0.1*m, 0.2*m , hh - 0.5*dz) with 3 dofs;
+	add node # 18+18*e at (0.2*m, 0.2*m , hh - 0.5*dz) with 3 dofs;
+	add node # 19+18*e at (0.0*m, 0.0*m , hh) with 3 dofs;
+	add node # 20+18*e at (0.1*m, 0.0*m , hh) with 3 dofs;
+	add node # 21+18*e at (0.2*m, 0.0*m , hh) with 3 dofs;
+	add node # 22+18*e at (0.0*m, 0.1*m , hh) with 3 dofs;
+	add node # 23+18*e at (0.1*m, 0.1*m , hh) with 3 dofs;
+	add node # 24+18*e at (0.2*m, 0.1*m , hh) with 3 dofs;
+	add node # 25+18*e at (0.0*m, 0.2*m , hh) with 3 dofs;
+	add node # 26+18*e at (0.1*m, 0.2*m , hh) with 3 dofs;
+	add node # 27+18*e at (0.2*m, 0.2*m , hh) with 3 dofs;
+	add element # e+1 type 27NodeBrick with nodes 
+		(
+			21+18*e,
+			27+18*e,
+			25+18*e,
+			19+18*e,
+			 3+18*e,
+			 9+18*e,
+			 7+18*e,
+			 1+18*e,
+			24+18*e,
+			26+18*e,
+			22+18*e,
+			20+18*e,
+			 6+18*e,
+			 8+18*e,
+			 4+18*e,
+			 2+18*e,
+			12+18*e,
+			18+18*e,
+			16+18*e,
+			10+18*e,
+			14+18*e,
+			15+18*e,
+			17+18*e,
+			13+18*e,
+			11+18*e,
+			23+18*e,
+			 5+18*e
+		) 
+		use material # 1;
+	e += 1;
+};
+e = e -1;
 // // ----------------------------------------------------------------------------
-// // --no-damping-------------------------------------------------------------
+// // --slowLoading---------------------------------------------------------------
+// // add the 1 Newton load in 180 seconds. 
 // // ----------------------------------------------------------------------------
-// new loading stage "no-damping";
-// add load # 1 to node # 6 type path_time_series 
-// 	Fz =  1.*N
-// 	series_file = "freeVibration.txt" ;
+// new loading stage "slowLoading";
+// add load # 1 to node # (19+18*e) type path_time_series Fx=1/36.0*N series_file = "slowLoading.txt";
+// add load # 2 to node # (20+18*e) type path_time_series Fx=1/9.0*N series_file = "slowLoading.txt";
+// add load # 3 to node # (21+18*e) type path_time_series Fx=1/36.0*N series_file = "slowLoading.txt";
+// add load # 4 to node # (22+18*e) type path_time_series Fx=1/9.0*N series_file = "slowLoading.txt";
+// add load # 5 to node # (23+18*e) type path_time_series Fx=4/9.0*N series_file = "slowLoading.txt";
+// add load # 6 to node # (24+18*e) type path_time_series Fx=1/9.0*N series_file = "slowLoading.txt";
+// add load # 7 to node # (25+18*e) type path_time_series Fx=1/36.0*N series_file = "slowLoading.txt";
+// add load # 8 to node # (26+18*e) type path_time_series Fx=1/9.0*N series_file = "slowLoading.txt";
+// add load # 9 to node # (27+18*e) type path_time_series Fx=1/36.0*N series_file = "slowLoading.txt";
+// // add algorithm and solver
 // define dynamic integrator Newmark with gamma = 0.5 beta = 0.25;
 // define algorithm With_no_convergence_check ;
-// define solver ProfileSPD;
-// simulate 100 steps using transient algorithm 
+// define solver UMFPack;
+// simulate 2000 steps using transient algorithm 
 // 	time_step = 0.1*s;
-
 // // ----------------------------------------------------------------------------
-// // --numerical-damping-------------------------------------------------------------
+// // --fastLoading---------------------------------------------------------------
+// // add the 1 Newton load in 0.6 seconds.
 // // ----------------------------------------------------------------------------
-// remove load # 2;
-// new loading stage "numerical-damping";
-// add load # 3 to node # 6 type path_time_series 
-// 	Fz =  1.*N
-// 	series_file = "freeVibration.txt" ;
-// define dynamic integrator Newmark with gamma = 0.6 beta = 0.3025;
+// new loading stage "fastLoading";
+// add load # 101 to node # (19+18*e) type path_time_series Fx=1/36.0*N series_file = "fastLoading.txt" ; 
+// add load # 102 to node # (20+18*e) type path_time_series Fx=1/9.0*N series_file = "fastLoading.txt" ; 
+// add load # 103 to node # (21+18*e) type path_time_series Fx=1/36.0*N series_file = "fastLoading.txt" ; 
+// add load # 104 to node # (22+18*e) type path_time_series Fx=1/9.0*N series_file = "fastLoading.txt" ; 
+// add load # 105 to node # (23+18*e) type path_time_series Fx=4/9.0*N series_file = "fastLoading.txt" ; 
+// add load # 106 to node # (24+18*e) type path_time_series Fx=1/9.0*N series_file = "fastLoading.txt" ; 
+// add load # 107 to node # (25+18*e) type path_time_series Fx=1/36.0*N series_file = "fastLoading.txt" ; 
+// add load # 108 to node # (26+18*e) type path_time_series Fx=1/9.0*N series_file = "fastLoading.txt" ; 
+// add load # 109 to node # (27+18*e) type path_time_series Fx=1/36.0*N series_file = "fastLoading.txt" ; 
+// // add algorithm and solver
+// define dynamic integrator Newmark with gamma = 0.5 beta = 0.25;
 // define algorithm With_no_convergence_check ;
-// define solver ProfileSPD;
-// simulate 100 steps using transient algorithm 
-// 	time_step = 0.1*s;
-
-
+// define solver UMFPack;
+// simulate 1000 steps using transient algorithm 
+// 	time_step = 0.01*s;
 // // ----------------------------------------------------------------------------
-// // --Rayleigh-damping-------------------------------------------------------------
+// // --freeVibration---------------------------------------------------------------
+// // add a load and then release to free vibration
 // // ----------------------------------------------------------------------------
-// remove load # 3;
-
-// simulate using eigen algorithm	number_of_modes = 4;
-f1=0.407108/s;
-f2=0.552311/s;
+new loading stage "freeVibration";
+add load # 201 to node # (19+18*e) type path_time_series Fx=1/36.0*kN series_file = "freeVibration.txt" ; 
+add load # 202 to node # (20+18*e) type path_time_series Fx=1/9.0*kN series_file = "freeVibration.txt" ; 
+add load # 203 to node # (21+18*e) type path_time_series Fx=1/36.0*kN series_file = "freeVibration.txt" ; 
+add load # 204 to node # (22+18*e) type path_time_series Fx=1/9.0*kN series_file = "freeVibration.txt" ; 
+add load # 205 to node # (23+18*e) type path_time_series Fx=4/9.0*kN series_file = "freeVibration.txt" ; 
+add load # 206 to node # (24+18*e) type path_time_series Fx=1/9.0*kN series_file = "freeVibration.txt" ; 
+add load # 207 to node # (25+18*e) type path_time_series Fx=1/36.0*kN series_file = "freeVibration.txt" ; 
+add load # 208 to node # (26+18*e) type path_time_series Fx=1/9.0*kN series_file = "freeVibration.txt" ; 
+add load # 209 to node # (27+18*e) type path_time_series Fx=1/36.0*kN series_file = "freeVibration.txt" ; 
+// add algorithm and solver
+// simulate using eigen algorithm number_of_modes = <.>;
+simulate using eigen algorithm 
+	number_of_modes = 4;
+// add damping # <.> type Rayleigh with a0 = <1/T> a1 = <T> stiffness_to_use = <Initial_Stiffness | Current_Stiffness | Last_Committed_Stiffness>;
+f1=0.9900282/s;
+f2=0.9900282/s;
 w1 = 2*pi*f1;
 w2 = 2*pi*f2;
-xi=0.05;
+xi=0.02;
 rayl_a1 = 2*xi/(w1 + w2);
 rayl_a0 = rayl_a1*w1*w2;
-
-	
 add damping # 1 type Rayleigh with 
 	a0 =  rayl_a0
 	a1 =  rayl_a1
@@ -108,80 +167,16 @@ while (jj<6) {
 	add damping # 1 to element # jj;
 	jj+=1;
 }
-new loading stage "Rayleigh-damping";
-add load # 4 to node # 6 type path_time_series 
-	Fz =  1.*N
-	series_file = "freeVibration.txt" ;
 define dynamic integrator Newmark with gamma = 0.5 beta = 0.25;
-define algorithm With_no_convergence_check ;
-define solver ProfileSPD;
-simulate 1000 steps using transient algorithm 
-	time_step = 0.01*s;
-
-
-
-
-// // ----------------------------------------------------------------------------
-// // --HHT-damping-------------------------------------------------------------
-// // ----------------------------------------------------------------------------
-// remove load # 4;
-// new loading stage "HHT-damping";
-// add load # 5 to node # 6 type path_time_series 
-// 	Fz =  5.*kN
-// 	series_file = "freeVibration.txt" ;
-// define dynamic integrator Hilber_Hughes_Taylor with alpha = -0.20;
+define convergence test  Norm_Unbalance
+	tolerance =  5
+	maximum_iterations =  20
+	verbose_level = 4;
 // define algorithm With_no_convergence_check ;
-// define solver ProfileSPD;
-// simulate 300 steps using transient algorithm 
-// 	time_step = 0.2*s;
-
-// // ----------------------------------------------------------------------------
-// // --Caughey3rd-damping--------------------------------------------------------
-// // ----------------------------------------------------------------------------
-// add damping # 2 type Caughey3rd with 
-// 	a0 =  0.560523/s
-// 	a1 =  0.0730746*s
-// 	a2 =  0.000361559*s^3
-// 	stiffness_to_use = Last_Committed_Stiffness;
-// kk=1;
-// while (kk<6) {
-// 	add damping # 2 to element # kk;
-// 	kk+=1;
-// }
-// new loading stage "Caughey3rd-damping";
-// add load # 6 to node # 6 type path_time_series 
-// 	Fz =  10.*kN
-// 	series_file = "freeVibration.txt" ;
-// define dynamic integrator Newmark with gamma = 0.6 beta = 0.3025;
-// define algorithm With_no_convergence_check ;
-// define solver ProfileSPD;
-// simulate 100 steps using transient algorithm 
-// 	time_step = 0.2*s;
-
-
-// // ----------------------------------------------------------------------------
-// // --Caughey4th-damping--------------------------------------------------------
-// // ----------------------------------------------------------------------------
-// add damping # 2 type Caughey4th with 
-// 	a0 =  0.560523/s
-// 	a1 =  0.0756472*s
-// 	a2 =  0.000517195*s^3
-// 	a3 =  1.20005*10^(-6)*s^5
-// 	stiffness_to_use = Last_Committed_Stiffness;
-// kk=1;
-// while (kk<6) {
-// 	add damping # 2 to element # kk;
-// 	kk+=1;
-// }
-// new loading stage "Caughey4th-damping";
-// add load # 6 to node # 6 type path_time_series 
-// 	Fz =  10.*kN
-// 	series_file = "freeVibration.txt" ;
-// define dynamic integrator Newmark with gamma = 0.6 beta = 0.3025;
-// define algorithm With_no_convergence_check ;
-// define solver ProfileSPD;
-// simulate 100 steps using transient algorithm 
-// 	time_step = 0.2*s;
-
-
+define algorithm Newton ;
+define solver UMFPack;
+NN = 1000 ;
+simulate NN steps using transient algorithm 
+	time_step = 10/NN *s;
+// end
 bye;

@@ -12,4 +12,8 @@ strain = outputs_all[4  , :-1]
 
 
 plt.plot(strain, stress)
-plt.show()
+# plt.show()
+plt.grid()
+plt.xlabel("Strain ")
+plt.ylabel("Stress (Pa)  ")
+plt.savefig("results.pdf",  bbox_inches='tight')

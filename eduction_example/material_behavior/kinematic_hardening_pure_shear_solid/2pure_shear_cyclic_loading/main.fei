@@ -40,7 +40,7 @@ while (mot < 5 ) {
         acceleration_file = "path.txt";
     mot = mot + 1;
     };
-define solver ProfileSPD;
+define solver UMFPack;
 define convergence test Norm_Displacement_Increment
     tolerance = 1E-12 
     maximum_iterations =  50
