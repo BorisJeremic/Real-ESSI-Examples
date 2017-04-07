@@ -15,7 +15,7 @@ add node No 2  at (1*m, 0*m ,  0*m) with 3 dofs;
 
 
 // Elements
-add element # 1 type truss with nodes (1, 2) use material # 1 cross_section=1.0*m^2 mass_density=0.0*kg/m^3;
+add element # 1 type truss with nodes (1, 2) use material # 1 cross_section=1.0*m^2 mass_density=2E3*kg/m^3;
 
 
 // Constrains
