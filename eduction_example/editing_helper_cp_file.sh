@@ -15,7 +15,8 @@ do
 	# sed -i 's/8NodeBrickLT/8NodeBrick/' *.fei
 	# sed -i 's/20NodeBrickLT/20NodeBrick/' *.fei
 	# sed -i 's/27NodeBrickLT/27NodeBrick/' *.fei
-	sed -i 's/ProfileSPD/UMFPack/' *.fei
+	# sed -i 's/ProfileSPD/UMFPack/' *.fei
+	mv beam.fei main.fei
 	# sed -i 's/linear_elastic_isotropic_3d/linear_elastic_isotropic_3d_LT/' main.fei
 
 done

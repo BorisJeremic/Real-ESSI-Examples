@@ -10,7 +10,7 @@ for thefile in files:
 
 	# Read the time and displacement
 	times = finput["time"][:]
-	disp = finput["/Model/Nodes/Generalized_Displacements"][6,:]
+	disp = finput["/Model/Nodes/Generalized_Displacements"][282,:]
 
 	# Configure the figure filename, according to the input filename.
 	outfig=thefile.replace("_","-")
