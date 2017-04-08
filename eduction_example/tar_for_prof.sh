@@ -1,0 +1,1 @@
+tar -czvf eduction_example.tgz */
