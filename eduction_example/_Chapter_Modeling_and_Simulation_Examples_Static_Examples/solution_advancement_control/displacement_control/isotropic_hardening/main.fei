@@ -23,14 +23,20 @@ fix node # 6 dofs uy uz;
 fix node # 8 dofs ux uz;
 new loading stage "2shearing";
 //fix the bottom totally
+fix node # 5 dofs all;
+fix node # 6 dofs all;
 fix node # 7 dofs all;
-fix node # 6 dofs ux;
-fix node # 8 dofs uy;
-// Fix the other 2 directions.
+fix node # 8 dofs all;
+// Fix the other 2 directions on the top.
+free node # 1 dofs ux uy uz;
+free node # 2 dofs ux uy uz;
+free node # 3 dofs ux uy uz;
+free node # 4 dofs ux uy uz;
 fix node # 1 dofs uy uz ;
 fix node # 2 dofs uy uz ;
 fix node # 3 dofs uy uz ;
 fix node # 4 dofs uy uz ;
+
 add load # 101 to node # 1 type linear Fx =  400 * N;
 add load # 102 to node # 2 type linear Fx =  400 * N;
 add load # 103 to node # 3 type linear Fx =  400 * N;
