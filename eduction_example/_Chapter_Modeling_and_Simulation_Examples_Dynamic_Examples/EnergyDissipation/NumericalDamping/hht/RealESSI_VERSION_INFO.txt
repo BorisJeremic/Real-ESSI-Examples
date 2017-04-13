@@ -1,8 +1,0 @@
-Version Name   : Academic Version. Release date: Apr 9 2017 at 11:19:12. Tag: 0e09418010
-Version Branch : yuan
-Compile Date   : Apr 12 2017 at 18:42:18
-Compile User   : yuan
-Compile Sysinfo: cml01 4.4.0-72-generic x86_64 GNU/Linux
-Runtime User   : yuan
-Runtime Sysinfo: cml01 4.4.0-72-generic x86_64 GNU/Linux
-Time Now       : Apr 13 2017 at 10:17:48
