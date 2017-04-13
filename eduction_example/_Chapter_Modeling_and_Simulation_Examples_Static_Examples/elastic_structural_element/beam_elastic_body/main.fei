@@ -59,7 +59,7 @@ add load # 1 to element # 1 type self_weight use acceleration field # 1;
 
 
 define solver UMFPack;
-define convergence test Norm_Displacement_Increment
+define convergence test Absolute_Norm_Displacement_Increment
 	tolerance = 0.001 
 	maximum_iterations =  10
 	verbose_level = 2;

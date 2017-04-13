@@ -1,5 +1,5 @@
 model name "test";
-add material # 1 type Duncan_Chang_nonlinear_elastic_isotropic_3d_LT 
+add material # 1 type Duncan_Chang_nonlinear_elastic_isotropic_3d 
 	mass_density = 2E3 * kg/m^3 
 	initial_elastic_modulus = 3E5 * Pa 
 	poisson_ratio= 0.15

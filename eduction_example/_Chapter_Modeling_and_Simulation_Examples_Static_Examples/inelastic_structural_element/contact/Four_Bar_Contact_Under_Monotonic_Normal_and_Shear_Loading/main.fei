@@ -40,10 +40,10 @@ new loading stage "Normal_Loading";
 	add load #1  to node #2  type linear Fx = 0.1*N;
 
 	tol = 1e-10;
-	define convergence test Norm_Displacement_Increment 
+	define convergence test Absolute_Norm_Displacement_Increment 
 	  tolerance =  tol
 	  maximum_iterations = 10 
-	  verbose_level = 4;
+	  ;
 
 	define algorithm Newton;
 
@@ -57,10 +57,10 @@ new loading stage "Shear_Loading";
 	add load #2  to node #2  type linear Fy = 0.2*N;
 
 	tol = 1e-10;
-	define convergence test Norm_Displacement_Increment 
+	define convergence test Absolute_Norm_Displacement_Increment 
 	  tolerance =  tol
 	  maximum_iterations = 10
-	  verbose_level = 4;
+	  ;
 
 	define algorithm Newton;
 

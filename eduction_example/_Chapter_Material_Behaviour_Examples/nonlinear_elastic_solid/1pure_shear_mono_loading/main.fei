@@ -1,5 +1,5 @@
 model name "elastic";
-add material # 1 type Duncan_Chang_nonlinear_elastic_isotropic_3d_LT 
+add material # 1 type Duncan_Chang_nonlinear_elastic_isotropic_3d 
     mass_density = 2E3 * kg/m^3 
     initial_elastic_modulus = 3E5 * Pa 
     poisson_ratio= 0.15
@@ -15,7 +15,7 @@ add node # 6 at (1*m,0*m,0*m)  with 3 dofs;
 add node # 7 at (1*m,1*m,0*m)  with 3 dofs;
 add node # 8 at (0*m,1*m,0*m)  with 3 dofs;
 // Define the element.
-add element # 1 type 8NodeBrick with nodes (1, 2, 3, 4, 5, 6, 7, 8) use material # 1;
+add element # 1 type 8NodeBrick using 2 Gauss points each direction with nodes (1, 2, 3, 4, 5, 6, 7, 8) use material # 1;
 new loading stage "shearing";
 fix node # 1 dofs uy;
 fix node # 2 dofs uy;
@@ -39,10 +39,10 @@ while (mot < 5 ) {
     mot = mot + 1;
     };
 define solver UMFPack;
-define convergence test Norm_Unbalance
+define convergence test Absolute_Norm_Unbalanced_Forced_Force
     tolerance = 1E-2 
     maximum_iterations =  10
-    verbose_level = 4;
+    ;
 define algorithm Newton ;
 define dynamic integrator Newmark with 
     gamma = 0.5 

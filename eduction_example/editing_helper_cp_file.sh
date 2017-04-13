@@ -16,7 +16,13 @@ do
 	# sed -i 's/20NodeBrickLT/20NodeBrick/' *.fei
 	# sed -i 's/27NodeBrickLT/27NodeBrick/' *.fei
 	# sed -i 's/ProfileSPD/UMFPack/' *.fei
-	mv beam.fei main.fei
-	# sed -i 's/linear_elastic_isotropic_3d/linear_elastic_isotropic_3d_LT/' main.fei
+	# mv beam.fei main.fei
+	# sed -i 's/type\ 8NodeBrick\ with/type\ 8NodeBrick\ using\ 2\ Gauss\ points\ each\ direction\ with/' *.fei
+	# sed -i 's/type\ 27NodeBrick\ with/type\ 27NodeBrick\ using\ 3\ Gauss\ points\ each\ direction\ with/' *.fei
+	# sed -i 's/linear\_elastic\_isotropic\_3d\_LT/linear\_elastic\_isotropic\_3d/' *.fei
+	sed -i 's/verbose_level = 4;/;/' *.fei
+	sed -i 's/\ Norm_Displacement_Increment/\ Absolute_Norm_Displacement_Increment/' *.fei
+	sed -i 's/\ Norm_Unbalance/\ Absolute_Norm_Unbalance/' *.fei
+	sed -i 's/\ Absolute_Norm_Unbalance/\ Absolute_Norm_Unbalanced_Force/' *.fei
 
 done
