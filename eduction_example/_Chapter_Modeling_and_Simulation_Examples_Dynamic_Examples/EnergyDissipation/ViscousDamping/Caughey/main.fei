@@ -58,7 +58,7 @@ while ( e < NBricks)
 	add node # 25+18*e at (0.0*m, 0.2*m , hh) with 3 dofs;
 	add node # 26+18*e at (0.1*m, 0.2*m , hh) with 3 dofs;
 	add node # 27+18*e at (0.2*m, 0.2*m , hh) with 3 dofs;
-	add element # e+1 type 27NodeBrick with nodes 
+	add element # e+1 type 27NodeBrick using 3 Gauss points each direction with nodes 
 		(
 			21+18*e,
 			27+18*e,
@@ -173,10 +173,10 @@ while (jj<6) {
 	jj+=1;
 }
 define dynamic integrator Newmark with gamma = 0.5 beta = 0.25;
-define convergence test  Norm_Unbalance
+define convergence test  Absolute_Norm_Unbalanced_Forced_Force
 	tolerance =  5
 	maximum_iterations =  20
-	verbose_level = 4;
+	;
 // define algorithm With_no_convergence_check ;
 define algorithm Newton ;
 define solver UMFPack;

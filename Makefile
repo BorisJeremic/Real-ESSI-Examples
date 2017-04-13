@@ -7,6 +7,7 @@ clean:
 	find eduction_example/ -name "*.h5.feioutput" -delete
 	find eduction_example/ -name "essi_*.log" -delete
 	find eduction_example/ -name "log" -delete
+	find eduction_example/ -name "RealESSI_VERSION_INFO.txt" -delete
 	
 cleanall: clean
 	find eduction_example/ -name "*.tgz" -delete

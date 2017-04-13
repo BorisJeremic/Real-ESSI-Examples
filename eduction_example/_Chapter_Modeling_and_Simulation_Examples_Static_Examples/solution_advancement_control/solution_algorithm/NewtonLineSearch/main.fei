@@ -30,7 +30,7 @@ add node # 7 at (1*m,1*m,0*m)  with 3 dofs;
 add node # 8 at (0*m,1*m,0*m)  with 3 dofs;
 
 // Define the element.
-add element # 1 type 8NodeBrick with nodes (1, 2, 3, 4, 5, 6, 7, 8) use material # 1;
+add element # 1 type 8NodeBrick using 2 Gauss points each direction with nodes (1, 2, 3, 4, 5, 6, 7, 8) use material # 1;
 
 new loading stage "1Confine" ;
 fix node # 5 dofs all;
@@ -76,10 +76,10 @@ define NDMaterial constitutive integration algorithm Backward_Euler
 
 define solver UMFPack;
 //define algorithm With_no_convergence_check ;
-define convergence test Norm_Unbalance
+define convergence test Absolute_Norm_Unbalanced_Forced_Force
     tolerance = 1E-8
     maximum_iterations =  50
-    verbose_level = 4;
+    ;
 define algorithm Newton;
 Nstep = 10;
 define load factor increment 1/Nstep;
@@ -112,10 +112,10 @@ add load # 104 to node # 4 type linear Fx =  2E4 * N;
     
 define solver UMFPack;
 //define algorithm With_no_convergence_check ;Norm_Unbalance;Norm_Unbalance
-define convergence test Norm_Unbalance
+define convergence test Absolute_Norm_Unbalanced_Forced_Force
     tolerance = 1
     maximum_iterations =  50
-    verbose_level = 4;
+    ;
 define algorithm NewtonLineSearch;
 
 define NDMaterial constitutive integration algorithm Backward_Euler
@@ -134,10 +134,10 @@ add load # 107 to node # 3 type linear Fx =  -2E4 * N;
 add load # 108 to node # 4 type linear Fx =  -2E4 * N;
 define solver UMFPack;
 //define algorithm With_no_convergence_check ;
-define convergence test Norm_Unbalance
+define convergence test Absolute_Norm_Unbalanced_Forced_Force
     tolerance = 1
     maximum_iterations =  50
-    verbose_level = 4;
+    ;
 define algorithm NewtonLineSearch ;
 
 define NDMaterial constitutive integration algorithm Backward_Euler
@@ -158,10 +158,10 @@ add load # 117 to node # 3 type linear Fx =  2E4 * N;
 add load # 118 to node # 4 type linear Fx =  2E4 * N;
 define solver UMFPack;
 //define algorithm With_no_convergence_check ;
-define convergence test Norm_Unbalance
+define convergence test Absolute_Norm_Unbalanced_Forced_Force
     tolerance = 1
     maximum_iterations =  50
-    verbose_level = 4;
+    ;
 define algorithm NewtonLineSearch ;
 
 define NDMaterial constitutive integration algorithm Backward_Euler

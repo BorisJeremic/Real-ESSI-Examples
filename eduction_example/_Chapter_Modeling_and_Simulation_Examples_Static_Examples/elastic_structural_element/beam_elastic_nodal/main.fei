@@ -42,7 +42,7 @@ add load # 3 to node # 2 type linear
 	Fz = 3*N;
 
 define solver UMFPack;
-define convergence test Norm_Displacement_Increment
+define convergence test Absolute_Norm_Displacement_Increment
 	tolerance = 0.001
 	maximum_iterations =  10
 	verbose_level = 2;

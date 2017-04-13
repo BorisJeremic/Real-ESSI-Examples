@@ -61,10 +61,10 @@ add load # 1 to node # 2 type linear
 
 	
 define load factor increment 0.01;
-define convergence test Norm_Unbalance
+define convergence test Absolute_Norm_Unbalanced_Forced_Force
     tolerance = 0.1
     maximum_iterations =  50
-    verbose_level = 4;
+    ;
 define algorithm Newton;
 define solver  UMFPack;
 define NDMaterial constitutive integration algorithm Backward_Euler
@@ -93,10 +93,10 @@ define NDMaterial constitutive integration algorithm Backward_Euler
     maximum_iterations = 100;
 define load factor increment 0.0005;
 
-define convergence test Norm_Unbalance
+define convergence test Absolute_Norm_Unbalanced_Forced_Force
     tolerance = 0.1
     maximum_iterations =  50
-    verbose_level = 4;
+    ;
 define algorithm Newton;
 
 define solver  UMFPack;

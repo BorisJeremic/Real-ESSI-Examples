@@ -37,10 +37,10 @@ model name "3-D_Contact_Under_Normal_And_Tangential_Loading" ;
     Nsteps = 1;
 
     tol = 1e-10;
-    define convergence test Norm_Displacement_Increment 
+    define convergence test Absolute_Norm_Displacement_Increment 
       tolerance =  tol
       maximum_iterations = 1 
-      verbose_level = 4;
+      ;
 
     define algorithm Newton;
     define solver UMFPack;
@@ -54,10 +54,10 @@ model name "3-D_Contact_Under_Normal_And_Tangential_Loading" ;
     add load #3  to node #2  type linear Fy = 0.3;
 
     tol = 1e-12;
-    define convergence test Norm_Displacement_Increment 
+    define convergence test Absolute_Norm_Displacement_Increment 
       tolerance =  tol
       maximum_iterations = 10
-      verbose_level = 4;
+      ;
 
     define algorithm Newton;
 

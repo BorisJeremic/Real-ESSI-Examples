@@ -1,19 +1,19 @@
 model name "8NodeBrick_DRM" ;
 
 //Material for soil
-add material # 1 type linear_elastic_isotropic_3d_LT
+add material # 1 type linear_elastic_isotropic_3d
   mass_density = 2000*kg/m^3
   elastic_modulus = 1300*MPa
   poisson_ratio = 0.3;
 
 //Material for DRM layer
-add material # 2 type linear_elastic_isotropic_3d_LT
+add material # 2 type linear_elastic_isotropic_3d
   mass_density = 2000*kg/m^3
   elastic_modulus = 1300*MPa
   poisson_ratio = 0.3;
 
 //Material for exterior layer
-add material # 3 type linear_elastic_isotropic_3d_LT
+add material # 3 type linear_elastic_isotropic_3d
   mass_density = 2000*kg/m^3
   elastic_modulus = 1300*MPa
   poisson_ratio = 0.3;

@@ -79,7 +79,7 @@ while ( e < NBricks)
 	add node # 25+18*e at (0.0*m, 0.2*m , hh) with 3 dofs;
 	add node # 26+18*e at (0.1*m, 0.2*m , hh) with 3 dofs;
 	add node # 27+18*e at (0.2*m, 0.2*m , hh) with 3 dofs;
-	add element # e+1 type 27NodeBrick with nodes 
+	add element # e+1 type 27NodeBrick using 3 Gauss points each direction with nodes 
 		(
 			21+18*e,
 			27+18*e,
@@ -169,10 +169,10 @@ add load # 4 to element # 4 type self_weight use acceleration field # 1;
 add load # 5 to element # 5 type self_weight use acceleration field # 1;
 
 define solver UMFPack;
-define convergence test Norm_Unbalance
+define convergence test Absolute_Norm_Unbalanced_Forced_Force
     tolerance = 100
     maximum_iterations =  50
-    verbose_level = 4;
+    ;
 define algorithm NewtonLineSearch;
 Nstep = 10;
 define load factor increment 1/Nstep;
@@ -186,10 +186,10 @@ remove load # 5;
 	
 new loading stage "freeVibration";
 define dynamic integrator Newmark with gamma = 0.5 beta = 0.25;
-define convergence test  Norm_Unbalance
+define convergence test  Absolute_Norm_Unbalanced_Forced_Force
 	tolerance =  100
 	maximum_iterations =  40
-	verbose_level = 4;
+	;
 // define algorithm With_no_convergence_check ;
 define algorithm NewtonLineSearch ;
 define solver UMFPack;

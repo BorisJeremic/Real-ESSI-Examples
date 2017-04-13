@@ -35,10 +35,10 @@ new loading stage "Adding_Normal_Load";
 	Nsteps = 10;
 
 	tol = 5e-12;
-	define convergence test Norm_Displacement_Increment 
+	define convergence test Absolute_Norm_Displacement_Increment 
 	  tolerance =  tol
 	  maximum_iterations = 10 
-	  verbose_level = 4;
+	  ;
 
 	define algorithm Newton;
 	define solver UMFPack;
