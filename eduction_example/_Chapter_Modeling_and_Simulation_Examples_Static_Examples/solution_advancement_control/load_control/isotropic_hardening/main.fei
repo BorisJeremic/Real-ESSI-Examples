@@ -1,6 +1,6 @@
 model name "vm";
 // Define the material:
-add material # 1 type VonMises
+add material # 1 type vonMises
     mass_density = 0.0*kg/m^3
     elastic_modulus = 2E7*N/m^2
     poisson_ratio = 0.0
@@ -42,7 +42,7 @@ add load # 102 to node # 2 type linear Fx =  2E4 * N;
 add load # 103 to node # 3 type linear Fx =  2E4 * N;
 add load # 104 to node # 4 type linear Fx =  2E4 * N;
 define solver UMFPack;
-define convergence test Absolute_Norm_Unbalanced_Forced_Force
+define convergence test Absolute_Norm_Unbalanced_Force
     tolerance = 10
     maximum_iterations =  50
     ;
@@ -62,7 +62,7 @@ add load # 106 to node # 2 type linear Fx =  -3E4 * N;
 add load # 107 to node # 3 type linear Fx =  -3E4 * N;
 add load # 108 to node # 4 type linear Fx =  -3E4 * N;
 define solver UMFPack;
-define convergence test Absolute_Norm_Unbalanced_Forced_Force
+define convergence test Absolute_Norm_Unbalanced_Force
     tolerance = 10
     maximum_iterations =  50
     ;
@@ -81,7 +81,7 @@ add load # 116 to node # 2 type linear Fx =  4.8E4 * N;
 add load # 117 to node # 3 type linear Fx =  4.8E4 * N;
 add load # 118 to node # 4 type linear Fx =  4.8E4 * N;
 define solver UMFPack;
-define convergence test Absolute_Norm_Unbalanced_Forced_Force
+define convergence test Absolute_Norm_Unbalanced_Force
     tolerance = 10
     maximum_iterations =  50
     ;

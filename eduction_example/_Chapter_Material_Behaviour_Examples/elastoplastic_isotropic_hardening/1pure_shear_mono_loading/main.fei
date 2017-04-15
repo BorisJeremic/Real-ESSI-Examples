@@ -1,5 +1,5 @@
 model name "test";
-add material # 1 type VonMises 
+add material # 1 type vonMises 
 	mass_density = 2E3*kg/m^3 
 	elastic_modulus = 2E7 * Pa 
 	poisson_ratio=0.25 

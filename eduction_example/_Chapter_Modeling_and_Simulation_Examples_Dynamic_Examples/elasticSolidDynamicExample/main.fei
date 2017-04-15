@@ -168,7 +168,7 @@ while (jj<6) {
 	jj+=1;
 }
 define dynamic integrator Newmark with gamma = 0.5 beta = 0.25;
-define convergence test  Absolute_Norm_Unbalanced_Forced_Force
+define convergence test  Absolute_Norm_Unbalanced_Force
 	tolerance =  5
 	maximum_iterations =  20
 	;

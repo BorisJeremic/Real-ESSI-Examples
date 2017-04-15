@@ -13,7 +13,7 @@ fix node # 2 dofs uy ;
 
 
 
-add material # 1 type VonMisesLT 
+add material # 1 type vonMises
 	mass_density = 0*kg/m^3
 	elastic_modulus = 1000*kPa
 	poisson_ratio = 0.3 
@@ -22,7 +22,7 @@ add material # 1 type VonMisesLT
 	isotropic_hardening_rate = 0*kPa ;
 	
 
-add element # 1 type ShearBeamLT with nodes (1, 2) 
+add element # 1 type ShearBeam with nodes (1, 2) 
 	cross_section = 1*m^2 use material # 1;
 
 

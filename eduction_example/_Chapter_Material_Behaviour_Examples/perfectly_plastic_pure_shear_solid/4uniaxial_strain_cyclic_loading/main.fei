@@ -1,6 +1,6 @@
 model name "vonMises";
 // Define the material:
-add material # 1 type VonMises
+add material # 1 type vonMises
     mass_density = 0.0*kg/m^3
     elastic_modulus = 2E7*N/m^2
     poisson_ratio = 0.0

@@ -9,7 +9,7 @@ phi   = 5;
 phirad = pi*phi/180;
 eta = 6*sin(phirad)/(3-sin(phirad));
 // Define the material:
-add material # 1 type VonMisesArmstrongFrederick
+add material # 1 type vonMisesArmstrongFrederick
     mass_density = rho
     elastic_modulus = E
     poisson_ratio = nu

@@ -16,8 +16,8 @@ possion_ratio=0.3;
 //   elastic_modulus = elastic_constant
 //   poisson_ratio = possion_ratio;
 
-// add material # <.> type VonMises mass_density = <M/L^3> elastic_modulus = <F/L^2> poisson_ratio = <.> von_mises_radius = <F/L^2> kinematic_hardening_rate = <F/L^2> isotropic_hardening_rate = <F/L^2> ;
-add material # 1 type VonMises 
+// add material # <.> type vonMises mass_density = <M/L^3> elastic_modulus = <F/L^2> poisson_ratio = <.> von_mises_radius = <F/L^2> kinematic_hardening_rate = <F/L^2> isotropic_hardening_rate = <F/L^2> ;
+add material # 1 type vonMises 
 	mass_density = rho
 	elastic_modulus = elastic_constant
 	poisson_ratio = possion_ratio
@@ -189,7 +189,7 @@ while (jj<6) {
 	jj+=1;
 }
 define dynamic integrator Newmark with gamma = 0.5 beta = 0.25;
-define convergence test  Absolute_Norm_Unbalanced_Forced_Force
+define convergence test  Absolute_Norm_Unbalanced_Force
 	tolerance =  5
 	maximum_iterations =  20
 	;

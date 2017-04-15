@@ -20,9 +20,10 @@ do
 	# sed -i 's/type\ 8NodeBrick\ with/type\ 8NodeBrick\ using\ 2\ Gauss\ points\ each\ direction\ with/' *.fei
 	# sed -i 's/type\ 27NodeBrick\ with/type\ 27NodeBrick\ using\ 3\ Gauss\ points\ each\ direction\ with/' *.fei
 	# sed -i 's/linear\_elastic\_isotropic\_3d\_LT/linear\_elastic\_isotropic\_3d/' *.fei
-	sed -i 's/verbose_level = 4;/;/' *.fei
-	sed -i 's/\ Norm_Displacement_Increment/\ Absolute_Norm_Displacement_Increment/' *.fei
-	sed -i 's/\ Norm_Unbalance/\ Absolute_Norm_Unbalance/' *.fei
-	sed -i 's/\ Absolute_Norm_Unbalance/\ Absolute_Norm_Unbalanced_Force/' *.fei
+	# sed -i 's/verbose_level = 4;/;/' *.fei
+	sed -i 's/VonMises/vonMises/' *.fei
+	# sed -i 's/\ Norm_Displacement_Increment/\ Absolute_Norm_Displacement_Increment/' *.fei
+	sed -i 's/\ Norm_Unbalance/\ Absolute_Norm_Unbalanced_Force/' *.fei
+	# sed -i 's/\ Absolute_Norm_Unbalanced_Forced_Force/\ Absolute_Norm_Unbalanced_Force/' *.fei
 
 done

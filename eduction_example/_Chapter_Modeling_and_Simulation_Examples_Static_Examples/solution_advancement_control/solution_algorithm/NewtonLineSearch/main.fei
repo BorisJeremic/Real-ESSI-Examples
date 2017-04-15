@@ -9,7 +9,7 @@ phi   = 5;
 phirad = pi*phi/180;
 eta = 6*sin(phirad)/(3-sin(phirad));
 // Define the material:
-add material # 1 type VonMisesArmstrongFrederick
+add material # 1 type vonMisesArmstrongFrederick
     mass_density = rho
     elastic_modulus = E
     poisson_ratio = nu
@@ -76,7 +76,7 @@ define NDMaterial constitutive integration algorithm Backward_Euler
 
 define solver UMFPack;
 //define algorithm With_no_convergence_check ;
-define convergence test Absolute_Norm_Unbalanced_Forced_Force
+define convergence test Absolute_Norm_Unbalanced_Force
     tolerance = 1E-8
     maximum_iterations =  50
     ;
@@ -112,7 +112,7 @@ add load # 104 to node # 4 type linear Fx =  2E4 * N;
     
 define solver UMFPack;
 //define algorithm With_no_convergence_check ;Norm_Unbalance;Norm_Unbalance
-define convergence test Absolute_Norm_Unbalanced_Forced_Force
+define convergence test Absolute_Norm_Unbalanced_Force
     tolerance = 1
     maximum_iterations =  50
     ;
@@ -134,7 +134,7 @@ add load # 107 to node # 3 type linear Fx =  -2E4 * N;
 add load # 108 to node # 4 type linear Fx =  -2E4 * N;
 define solver UMFPack;
 //define algorithm With_no_convergence_check ;
-define convergence test Absolute_Norm_Unbalanced_Forced_Force
+define convergence test Absolute_Norm_Unbalanced_Force
     tolerance = 1
     maximum_iterations =  50
     ;
@@ -158,7 +158,7 @@ add load # 117 to node # 3 type linear Fx =  2E4 * N;
 add load # 118 to node # 4 type linear Fx =  2E4 * N;
 define solver UMFPack;
 //define algorithm With_no_convergence_check ;
-define convergence test Absolute_Norm_Unbalanced_Forced_Force
+define convergence test Absolute_Norm_Unbalanced_Force
     tolerance = 1
     maximum_iterations =  50
     ;

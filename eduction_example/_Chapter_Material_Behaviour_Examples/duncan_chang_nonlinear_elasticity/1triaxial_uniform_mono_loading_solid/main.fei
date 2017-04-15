@@ -76,7 +76,7 @@ define NDMaterial constitutive integration algorithm Backward_Euler
     maximum_iterations = 100;
 define solver UMFPack;
 //define algorithm With_no_convergence_check ;
-define convergence test Absolute_Norm_Unbalanced_Forced_Force
+define convergence test Absolute_Norm_Unbalanced_Force
     tolerance = 0.1
     maximum_iterations =  50
     ;

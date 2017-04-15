@@ -33,7 +33,7 @@ phi   = 5;
 phirad = pi*phi/180;
 eta = 6*sin(phirad)/(3-sin(phirad));
 // Define the material:
-add material # 1 type VonMisesArmstrongFrederick
+add material # 1 type vonMisesArmstrongFrederick
     mass_density = rho
     elastic_modulus = E
     poisson_ratio = nu
@@ -61,7 +61,7 @@ add load # 1 to node # 2 type linear
 
 	
 define load factor increment 0.01;
-define convergence test Absolute_Norm_Unbalanced_Forced_Force
+define convergence test Absolute_Norm_Unbalanced_Force
     tolerance = 0.1
     maximum_iterations =  50
     ;
@@ -93,7 +93,7 @@ define NDMaterial constitutive integration algorithm Backward_Euler
     maximum_iterations = 100;
 define load factor increment 0.0005;
 
-define convergence test Absolute_Norm_Unbalanced_Forced_Force
+define convergence test Absolute_Norm_Unbalanced_Force
     tolerance = 0.1
     maximum_iterations =  50
     ;

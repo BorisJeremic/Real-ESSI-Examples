@@ -39,7 +39,7 @@ while (mot < 5 ) {
     mot = mot + 1;
     };
 define solver UMFPack;
-define convergence test Absolute_Norm_Unbalanced_Forced_Force
+define convergence test Absolute_Norm_Unbalanced_Force
     tolerance = 1E-2 
     maximum_iterations =  10
     ;

@@ -4,7 +4,7 @@ rho = 0.0*kg/m^3;
 nu = 0.0;
 E = 2E7*N/m^2;
 // Define the material:
-add material # 1 type VonMises
+add material # 1 type vonMises
     mass_density = rho
     elastic_modulus = E
     poisson_ratio = nu
@@ -46,10 +46,10 @@ while (mot < 5 ) {
     };
 define solver UMFPack;
 //define algorithm With_no_convergence_check ;
-define convergence test Norm_Unbalance
+define convergence test Absolute_Norm_Unbalanced_Force
     tolerance = 1
     maximum_iterations =  50
-    verbose_level = 4;
+    ;
 define algorithm Newton ;
 define dynamic integrator Newmark with 
     gamma = 0.5 
