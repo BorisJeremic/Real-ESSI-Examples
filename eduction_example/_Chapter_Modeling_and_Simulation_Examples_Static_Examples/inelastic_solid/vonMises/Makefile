@@ -1,11 +1,11 @@
 run:
-	script -c "essi -f main.fei " log
-look_confine:
-	paraview_release DP_Confine.h5.feioutput
-look_shear:
-	paraview_release DP_shearing.h5.feioutput
-
+	essi -f main.fei
 plot:
-	python plot.py
-plot_unloading:
-	python plot_unloading.py
+	python plot.py *.h5.feioutput
+
+
+clean:
+	rm *.feioutput
+
+paraview_plot:
+	pvpython pvESSI_camera.py *h5.feioutput

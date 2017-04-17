@@ -20,7 +20,7 @@ add element #1  type truss with nodes (1,2) use material # 1 cross_section = 1*m
 add element #2  type truss with nodes (3,4) use material # 1 cross_section = 1*m^2 mass_density =  1*kg/m^3;
 
 // Adding Contact Element
-add element #3  type FrictionalPenaltyContact with nodes (2,3) 
+add element #3  type HardContact with nodes (2,3) 
 	normal_stiffness =1e10*N/m 
 	tangential_stiffness =  1e10*Pa*m
 	normal_damping =  0*kN/m*s

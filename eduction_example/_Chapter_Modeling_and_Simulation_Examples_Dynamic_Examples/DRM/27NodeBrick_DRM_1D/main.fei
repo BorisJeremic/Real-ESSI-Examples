@@ -18,7 +18,7 @@ add material # 3 type linear_elastic_isotropic_3d
   elastic_modulus = 1300*MPa
   poisson_ratio = 0.3;
 include "node.fei";
-include "elementLT.fei";
+include "element.fei";
 include "constraint.fei"';
 
 new loading stage "1D";

@@ -1,9 +1,10 @@
-run_essi:
+run:
 	essi -f main_loading.fei
 cyclic:
 	essi -f main_cyclic.fei
 stress_strain:
 	python plot_stress_strain.py
+plot: GGmax
 GGmax:
 	python plot_GGmax.py
 damping:

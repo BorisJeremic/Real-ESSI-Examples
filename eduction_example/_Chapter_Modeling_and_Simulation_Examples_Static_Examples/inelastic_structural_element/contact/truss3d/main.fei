@@ -22,7 +22,7 @@ model name "3-D_Contact_Under_Normal_And_Tangential_Loading" ;
     add element #3  type truss with nodes (2,5) use material # 1 cross_section = 1*m^2 mass_density =  1*kg/m^3;
 
     // Adding Contact Element
-    add element #4  type FrictionalPenaltyContact with nodes (1,2) 
+    add element #4  type HardContact with nodes (1,2) 
     normal_stiffness =1e10*N/m 
     tangential_stiffness =  1e10*Pa*m
     normal_damping =  0*kN/m*s
@@ -50,8 +50,8 @@ model name "3-D_Contact_Under_Normal_And_Tangential_Loading" ;
 
     new loading stage "Shear_Loading";
 
-    add load #2  to node #2  type linear Fx = 0.4;
-    add load #3  to node #2  type linear Fy = 0.3;
+    add load #2  to node #2  type linear Fx = 0.4*N;
+    add load #3  to node #2  type linear Fy = 0.3*N;
 
     tol = 1e-12;
     define convergence test Absolute_Norm_Displacement_Increment 

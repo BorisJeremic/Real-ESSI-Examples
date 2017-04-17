@@ -9,7 +9,7 @@ outputs_all=h5in['/Model/Elements/Gauss_Outputs'][()]
 stress = outputs_all[16 , :-1]
 strain = outputs_all[4  , :-1]
 
-plt.rcParams.update({'font.size': 28})
+plt.rcParams.update({'font.size': 20})
 plt.plot(strain, stress)
 plt.xlabel('strain')
 plt.ylabel('stress/(Pa)')

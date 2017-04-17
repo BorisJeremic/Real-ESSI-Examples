@@ -45,7 +45,7 @@ define solver UMFPack;
 define convergence test Absolute_Norm_Displacement_Increment
 	tolerance = 0.001
 	maximum_iterations =  10
-	verbose_level = 2;
+	;
 define algorithm Newton;
 define load factor increment 0.1;
 

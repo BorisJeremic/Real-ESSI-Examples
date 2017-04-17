@@ -1,7 +1,8 @@
-all:
+run:
 	essi -f main.fei
+plot:
 	python plot.py *.h5.feioutput
 
 
 clean:
-	rm *.feioutput
+	rm -f *.feioutput
