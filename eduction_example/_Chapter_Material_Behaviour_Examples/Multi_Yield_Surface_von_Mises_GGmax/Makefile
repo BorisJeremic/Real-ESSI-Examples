@@ -1,5 +1,5 @@
 run:
-	essi -f main_loading.fei
+	essi -f main.fei
 cyclic:
 	essi -f main_cyclic.fei
 stress_strain:
