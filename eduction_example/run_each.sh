@@ -7,7 +7,8 @@ deepest_dir_array=( $(find . -type d -links 2 ) )
 for element in $(seq 0 $((${#deepest_dir_array[@]} - 1)))
 do
 	cd ${current_dir}/"${deepest_dir_array[$element]}"
-	
+	echo "Testing Location:"
+	echo $PWD
 	if [ -f $PWD/require_parallel.hold ] # check if require essi_parallel
 		then
 			if hash essi_parallel 2>/dev/null; then # check if essi_parallel is available
