@@ -1,4 +1,4 @@
-model name "elastic";
+model name "DP";
 add material # 1 type Duncan_Chang_nonlinear_elastic_isotropic_3d 
     mass_density = 2E3 * kg/m^3 
     initial_elastic_modulus = 3E5 * Pa 
@@ -6,6 +6,8 @@ add material # 1 type Duncan_Chang_nonlinear_elastic_isotropic_3d
     DuncanChang_K = 1E3  
     DuncanChang_pa = 1E5 * Pa  
     DuncanChang_n = 0.5  ;
+
+// define the node:
 add node # 1 at (0*m,0*m,1*m)  with 3 dofs;
 add node # 2 at (1*m,0*m,1*m)  with 3 dofs;
 add node # 3 at (1*m,1*m,1*m)  with 3 dofs;
@@ -16,37 +18,128 @@ add node # 7 at (1*m,1*m,0*m)  with 3 dofs;
 add node # 8 at (0*m,1*m,0*m)  with 3 dofs;
 // Define the element.
 add element # 1 type 8NodeBrick using 2 Gauss points each direction with nodes (1, 2, 3, 4, 5, 6, 7, 8) use material # 1;
-new loading stage "shearing";
-fix node # 1 dofs uy;
-fix node # 2 dofs uy;
-fix node # 3 dofs uy;
-fix node # 4 dofs uy;
+
+new loading stage "1Confine" ;
 fix node # 5 dofs all;
-fix node # 6 dofs all;
-fix node # 7 dofs all;
-fix node # 8 dofs all;
-mot = 1;
-dt = 1E2*s ; 
-while (mot < 5 ) {
-    add imposed motion # mot to node # mot dof ux 
-        time_step =  dt
-        displacement_scale_unit =  0.1*m 
-        displacement_file =  "path.txt" 
-        velocity_scale_unit =  0*m/s 
-        velocity_file =  "path.txt" 
-        acceleration_scale_unit =  0.0*m/s^2 
-        acceleration_file = "path.txt";
-    mot = mot + 1;
-    };
+fix node # 1 dofs ux uy;
+fix node # 6 dofs uy uz;
+fix node # 8 dofs ux uz;
+fix node # 7 dofs uz; 
+fix node # 2 dofs uy;
+fix node # 4 dofs ux; 
+press = 1000 * Pa;
+add load # 1 to node # 1 type linear Fz = - press *m^2 ;
+add load # 2 to node # 2 type linear Fz = - press *m^2 ;
+add load # 3 to node # 3 type linear Fz = - press *m^2 ;
+add load # 4 to node # 4 type linear Fz = - press *m^2 ;
+add load # 5 to node # 5 type linear Fz = press *m^2 ;
+add load # 6 to node # 6 type linear Fz = press *m^2 ;
+add load # 7 to node # 7 type linear Fz = press *m^2 ;
+add load # 8 to node # 8 type linear Fz = press *m^2 ;
+add load #  9 to node # 1 type linear Fx = press *m^2 ;
+add load # 10 to node # 4 type linear Fx = press *m^2 ;
+add load # 11 to node # 8 type linear Fx = press *m^2 ;
+add load # 12 to node # 5 type linear Fx = press *m^2 ;
+add load # 13 to node # 2 type linear Fx = - press *m^2 ;
+add load # 14 to node # 3 type linear Fx = - press *m^2 ;
+add load # 15 to node # 6 type linear Fx = - press *m^2 ;
+add load # 16 to node # 7 type linear Fx = - press *m^2 ;
+add load # 17 to node # 1 type linear Fy = press *m^2 ;
+add load # 18 to node # 2 type linear Fy = press *m^2 ;
+add load # 19 to node # 6 type linear Fy = press *m^2 ;
+add load # 20 to node # 5 type linear Fy = press *m^2 ;
+add load # 21 to node # 3 type linear Fy = - press *m^2 ;
+add load # 22 to node # 7 type linear Fy = - press *m^2 ;
+add load # 23 to node # 8 type linear Fy = - press *m^2 ;
+add load # 24 to node # 4 type linear Fy = - press *m^2 ;
 define solver UMFPack;
+//define algorithm With_no_convergence_check ;
 define convergence test Absolute_Norm_Unbalanced_Force
-    tolerance = 1E-2 
+    tolerance = 1
     maximum_iterations =  10
     ;
-define algorithm Newton ;
-define dynamic integrator Newmark with 
-    gamma = 0.5 
-    beta = 0.25;
-simulate 180 steps using transient algorithm 
-    time_step = dt;
-bye;  
+define algorithm Newton;
+Nstep = 10;
+define load factor increment 1/Nstep;
+simulate Nstep steps using static algorithm;
+
+
+
+new loading stage "2Release" ;
+press = -800 * Pa;
+add load # 25 to node # 1 type linear Fz = - press *m^2 ;
+add load # 26 to node # 2 type linear Fz = - press *m^2 ;
+add load # 27 to node # 3 type linear Fz = - press *m^2 ;
+add load # 28 to node # 4 type linear Fz = - press *m^2 ;
+add load # 29 to node # 5 type linear Fz = press *m^2 ;
+add load # 30 to node # 6 type linear Fz = press *m^2 ;
+add load # 31 to node # 7 type linear Fz = press *m^2 ;
+add load # 32 to node # 8 type linear Fz = press *m^2 ;
+add load # 33 to node # 1 type linear Fx = press *m^2 ;
+add load # 34 to node # 4 type linear Fx = press *m^2 ;
+add load # 35 to node # 8 type linear Fx = press *m^2 ;
+add load # 36 to node # 5 type linear Fx = press *m^2 ;
+add load # 37 to node # 2 type linear Fx = - press *m^2 ;
+add load # 38 to node # 3 type linear Fx = - press *m^2 ;
+add load # 39 to node # 6 type linear Fx = - press *m^2 ;
+add load # 40 to node # 7 type linear Fx = - press *m^2 ;
+add load # 41 to node # 1 type linear Fy = press *m^2 ;
+add load # 42 to node # 2 type linear Fy = press *m^2 ;
+add load # 43 to node # 6 type linear Fy = press *m^2 ;
+add load # 44 to node # 5 type linear Fy = press *m^2 ;
+add load # 45 to node # 3 type linear Fy = - press *m^2 ;
+add load # 46 to node # 7 type linear Fy = - press *m^2 ;
+add load # 47 to node # 8 type linear Fy = - press *m^2 ;
+add load # 48 to node # 4 type linear Fy = - press *m^2 ;
+define solver UMFPack;
+//define algorithm With_no_convergence_check ;
+define convergence test Absolute_Norm_Unbalanced_Force
+    tolerance = 1
+    maximum_iterations =  10
+    ;
+define algorithm Newton;
+Nstep = 10;
+define load factor increment 1/Nstep;
+simulate Nstep steps using static algorithm;
+
+bye;
+
+
+// new loading stage "3ReConfine" ;
+// press = 1000 * Pa;
+// add load # 49 to node # 1 type linear Fz = - press *m^2 ;
+// add load # 50 to node # 2 type linear Fz = - press *m^2 ;
+// add load # 51 to node # 3 type linear Fz = - press *m^2 ;
+// add load # 52 to node # 4 type linear Fz = - press *m^2 ;
+// add load # 53 to node # 5 type linear Fz = press *m^2 ;
+// add load # 54 to node # 6 type linear Fz = press *m^2 ;
+// add load # 55 to node # 7 type linear Fz = press *m^2 ;
+// add load # 56 to node # 8 type linear Fz = press *m^2 ;
+// add load # 57 to node # 1 type linear Fx = press *m^2 ;
+// add load # 58 to node # 4 type linear Fx = press *m^2 ;
+// add load # 59 to node # 8 type linear Fx = press *m^2 ;
+// add load # 60 to node # 5 type linear Fx = press *m^2 ;
+// add load # 61 to node # 2 type linear Fx = - press *m^2 ;
+// add load # 62 to node # 3 type linear Fx = - press *m^2 ;
+// add load # 63 to node # 6 type linear Fx = - press *m^2 ;
+// add load # 64 to node # 7 type linear Fx = - press *m^2 ;
+// add load # 65 to node # 1 type linear Fy = press *m^2 ;
+// add load # 66 to node # 2 type linear Fy = press *m^2 ;
+// add load # 67 to node # 6 type linear Fy = press *m^2 ;
+// add load # 68 to node # 5 type linear Fy = press *m^2 ;
+// add load # 69 to node # 3 type linear Fy = - press *m^2 ;
+// add load # 70 to node # 7 type linear Fy = - press *m^2 ;
+// add load # 71 to node # 8 type linear Fy = - press *m^2 ;
+// add load # 72 to node # 4 type linear Fy = - press *m^2 ;
+// define solver UMFPack;
+// //define algorithm With_no_convergence_check ;
+// define convergence test Absolute_Norm_Unbalanced_Force
+//     tolerance = 1
+//     maximum_iterations =  10
+//     ;
+// define algorithm Newton;
+// Nstep = 10;
+// define load factor increment 1/Nstep;
+// simulate Nstep steps using static algorithm;
+
+
