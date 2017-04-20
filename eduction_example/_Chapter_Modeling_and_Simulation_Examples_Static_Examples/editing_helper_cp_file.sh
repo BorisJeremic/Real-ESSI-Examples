@@ -8,9 +8,10 @@ for element in $(seq 0 $((${#deepest_dir_array[@]} - 1)))
 do
 	cd ${current_dir}/"${deepest_dir_array[$element]}"
 
-	cp ${current_dir}/run_and_plot.sh .
+	# cp ${current_dir}/run_and_plot.sh .
 	# cp ${current_dir}/pvESSI_camera.py .
 	# cp ${current_dir}/Makefile .
+	rm Makefile
 	# rm run.sh
 	# python plot.py
 	# sed -i '/^\s*$/d' main.fei
