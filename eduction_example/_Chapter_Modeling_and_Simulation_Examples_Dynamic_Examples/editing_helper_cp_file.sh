@@ -9,7 +9,8 @@ do
 	cd ${current_dir}/"${deepest_dir_array[$element]}"
 
 	# cp ${current_dir}/run_and_plot.sh .
-	cp ${current_dir}/pvESSI_camera.py .
+	# cp ${current_dir}/pvESSI_camera.py .
+	rm Makefile
 	# cp ${current_dir}/Makefile .
 	# rm run.sh
 	# python plot.py

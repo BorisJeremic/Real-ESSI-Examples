@@ -9,8 +9,10 @@ do
 	cd ${current_dir}/"${deepest_dir_array[$element]}"
 
 	# cp ${current_dir}/run_and_plot.sh .
-	cp ${current_dir}/Makefile .
-	rm run.sh
+	# cp ${current_dir}/Makefile .
+	# rm Makefile
+	echo ${PWD}
+	bash run_and_plot.sh
 	# python plot.py
 	# sed -i '/^\s*$/d' main.fei
 	# sed -i 's/8NodeBrickLT/8NodeBrick/' *.fei

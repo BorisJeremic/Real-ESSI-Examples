@@ -91,7 +91,7 @@ def start_simulation(Nstep_):
 # Start Simulation:
 # ******************************************
 [InputStrain, InputDamping] = start_simulation(11)
-[ESSIStrain, ESSIDamping] = start_simulation(101)
+[ESSIStrain, ESSIDamping] = start_simulation(51)
 plt.semilogx(InputStrain, InputDamping, 'b-^', label='Input' )
 plt.semilogx(ESSIStrain, ESSIDamping, 'r-*', label=' ESSI')
 plt.legend(loc=2)
