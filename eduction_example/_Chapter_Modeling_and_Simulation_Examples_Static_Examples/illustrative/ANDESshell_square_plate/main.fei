@@ -1,20 +1,12 @@
 model name "square_plate" ;
-
 h     = 1*m;       
 Eshell  = 1e8*N/m^2; 
-nu    = 0.3;        // Poisson's ratio
-rho   = 1e2*kg/m^3;     // Mass density
-
+nu    = 0.3;        
+rho   = 1e2*kg/m^3;     
 add material # 1 type linear_elastic_isotropic_3d
   mass_density = rho
   elastic_modulus = Eshell
   poisson_ratio = nu;
-
-
-
-//==========================================
-//==== add node ==start ====================
-//==========================================
 add node #      1 at (          0.000000*m,          0.000000*m,          0.000000*m) with 6 dofs;
 add node #      2 at (         20.000000*m,          0.000000*m,          0.000000*m) with 6 dofs;
 add node #      3 at (          1.000000*m,          0.000000*m,          0.000000*m) with 6 dofs;
@@ -456,14 +448,6 @@ add node #    438 at (         19.000000*m,         16.000000*m,          0.0000
 add node #    439 at (         19.000000*m,         17.000000*m,          0.000000*m) with 6 dofs;
 add node #    440 at (         19.000000*m,         18.000000*m,          0.000000*m) with 6 dofs;
 add node #    441 at (         19.000000*m,         19.000000*m,          0.000000*m) with 6 dofs;
-//==========================================
-//==== add node ==end   ====================
-//==========================================
-
-
-//==========================================
-//==== add element ==start =================
-//==========================================
 add element #       1 type 4NodeShell_ANDES with nodes(      1,      3,     81,     80) use material #   1 thickness=h;
 add element #       2 type 4NodeShell_ANDES with nodes(      3,      4,    100,     81) use material #   1 thickness=h;
 add element #       3 type 4NodeShell_ANDES with nodes(      4,      5,    119,    100) use material #   1 thickness=h;
@@ -864,16 +848,6 @@ add element #     397 type 4NodeShell_ANDES with nodes(    384,    403,     45, 
 add element #     398 type 4NodeShell_ANDES with nodes(    403,    422,     44,     45) use material #   1 thickness=h;
 add element #     399 type 4NodeShell_ANDES with nodes(    422,    441,     43,     44) use material #   1 thickness=h;
 add element #     400 type 4NodeShell_ANDES with nodes(    441,     41,     22,     43) use material #   1 thickness=h;
-//==========================================
-//==== add element ==end   =================
-//==========================================
-
-
-
-
-//==========================================
-//==== add boudanry condition ==start ======
-//==========================================
 fix node #      1 dofs all    ;
 fix node #      2 dofs all    ;
 fix node #      3 dofs all    ;
@@ -954,18 +928,7 @@ fix node #     77 dofs all    ;
 fix node #     78 dofs all    ;
 fix node #     79 dofs all    ;
 fix node #     80 dofs all    ;
-//==========================================
-//==== add boudanry condition ==end   ======
-//==========================================
-
-
-
-
-
 new loading stage "self_weight";
-//==========================================
-//==== add load  ==start ===================
-//==========================================
 add acceleration field # 1
 	 ax =  0*g
 	 ay =  0*g
@@ -1370,15 +1333,8 @@ add load # 397 to element # 397 type self_weight use acceleration field # 1;
 add load # 398 to element # 398 type self_weight use acceleration field # 1;
 add load # 399 to element # 399 type self_weight use acceleration field # 1;
 add load # 400 to element # 400 type self_weight use acceleration field # 1;
-//==========================================
-//==== add load  ==end   ===================
-//==========================================
-
-
-
 define algorithm With_no_convergence_check ;
 define solver ProfileSPD;
-
 define load factor increment 1;
 simulate 1 steps using static algorithm;
 bye;

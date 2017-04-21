@@ -1,5 +1,4 @@
 model name "vm";
-// Define the material:
 add material # 1 type vonMises
     mass_density = 0.0*kg/m^3
     elastic_modulus = 2E7*N/m^2
@@ -7,7 +6,6 @@ add material # 1 type vonMises
     von_mises_radius = 8E4*Pa
     kinematic_hardening_rate = 0*Pa
     isotropic_hardening_rate = 2E6*Pa;
-// define the node:
 add node # 1 at (0*m,0*m,1*m)  with 3 dofs;
 add node # 2 at (1*m,0*m,1*m)  with 3 dofs;
 add node # 3 at (1*m,1*m,1*m)  with 3 dofs;
@@ -16,18 +14,15 @@ add node # 5 at (0*m,0*m,0*m)  with 3 dofs;
 add node # 6 at (1*m,0*m,0*m)  with 3 dofs;
 add node # 7 at (1*m,1*m,0*m)  with 3 dofs;
 add node # 8 at (0*m,1*m,0*m)  with 3 dofs;
-// Define the element.
 add element # 1 type 8NodeBrick using 2 Gauss points each direction with nodes (1, 2, 3, 4, 5, 6, 7, 8) use material # 1;
 fix node # 5 dofs all;
 fix node # 6 dofs uy uz;
 fix node # 8 dofs ux uz;
 new loading stage "2shearing";
-//fix the bottom totally
 fix node # 5 dofs all;
 fix node # 6 dofs all;
 fix node # 7 dofs all;
 fix node # 8 dofs all;
-// Fix the other 2 directions on the top.
 free node # 1 dofs ux uy uz;
 free node # 2 dofs ux uy uz;
 free node # 3 dofs ux uy uz;
@@ -36,7 +31,6 @@ fix node # 1 dofs uy uz ;
 fix node # 2 dofs uy uz ;
 fix node # 3 dofs uy uz ;
 fix node # 4 dofs uy uz ;
-
 add load # 101 to node # 1 type linear Fx =  2E4 * N;
 add load # 102 to node # 2 type linear Fx =  2E4 * N;
 add load # 103 to node # 3 type linear Fx =  2E4 * N;
@@ -53,7 +47,6 @@ define NDMaterial constitutive integration algorithm Backward_Euler
     maximum_iterations = 100;
 Nsteps = 1000;
 target_disp = 4E-4;
-// define static integrator displacement_control using node # 1 dof ux increment target_disp*m ;
 define load factor increment 1/Nsteps;
 simulate Nsteps steps using static algorithm;
 new loading stage "3unloading";
@@ -72,7 +65,6 @@ define NDMaterial constitutive integration algorithm Backward_Euler
     stress_relative_tolerance =  1E-7
     maximum_iterations = 100;
 Nsteps = 1000;
-// define static integrator displacement_control using node # 1 dof ux increment -target_disp*m ;
 define load factor increment 1/Nsteps;
 simulate 2*Nsteps steps using static algorithm;
 new loading stage "4reloading" ;
@@ -91,7 +83,6 @@ define NDMaterial constitutive integration algorithm Backward_Euler
     stress_relative_tolerance =  1E-7
     maximum_iterations = 100;
 Nsteps = 1000;
-// define static integrator displacement_control using node # 1 dof ux increment target_disp*m ;
 define load factor increment 1/Nsteps;
 simulate 2*Nsteps steps using static algorithm;
 bye;  

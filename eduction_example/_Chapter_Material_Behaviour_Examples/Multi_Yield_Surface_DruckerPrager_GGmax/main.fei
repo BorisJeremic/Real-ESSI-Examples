@@ -1,5 +1,4 @@
 model name "test";
-
 add material # 1 type DruckerPragerMultipleYieldSurfaceGoverGmax
 	mass_density = 0.0*kg/m^3 
 	initial_shear_modulus = 3E8 * Pa 

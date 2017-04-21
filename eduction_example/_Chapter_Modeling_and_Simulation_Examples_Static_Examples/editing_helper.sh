@@ -10,7 +10,8 @@ do
 
 	# cp ${current_dir}/run_and_plot.sh .
 	# cp ${current_dir}/pvESSI_camera.py .
-	rm Makefile
+	# rm Makefile
+	cp ${current_dir}/pvESSI_camera.py .
 	# cp ${current_dir}/Makefile .
 	# rm run.sh
 	# python plot.py

@@ -1,18 +1,8 @@
 model name "RC_Column_Pushover" ;
-// units: m, Pa
-// code by Floriana PETRONE, May 2016
-
-// Nodes//
 add node # 1 at (0*m, 0*m, 0*m)  with 6 dofs;
 add node # 2 at (0*m, 4*m, 0*m)  with 6 dofs;
-
-// Boundary conditions//
-
 fix node # 1 dofs ux uy uz rx ry rz;
 fix node # 2 dofs uz rx ry;
-
-//Materials//
-//CONFINED CONCRETE//
 add material # 1 type uniaxial_concrete02
 	compressive_strength = -30.2e+6*Pa 
 	strain_at_compressive_strength = -0.00219 
@@ -21,7 +11,6 @@ add material # 1 type uniaxial_concrete02
 	lambda = 0.5
 	tensile_strength = 30.2e+5*Pa 
 	tension_softening_stiffness = 0*1.38e+9*Pa;
-//UNCONFINED CONCRETE//
 add material # 2 type uniaxial_concrete02
 	compressive_strength = -30.2e+6*0.8*Pa 
 	strain_at_compressive_strength = -0.00219*0.8 
@@ -30,12 +19,6 @@ add material # 2 type uniaxial_concrete02
 	lambda = 0.5
 	tensile_strength = 0*Pa 
 	tension_softening_stiffness = 0*Pa;
-//STEEL//
-//add material # 3 type uniaxial_steel01
-//  yield_strength = 413.8e+6*Pa
-//	elastic_modulus = 200000e+6*Pa
-//	strain_hardening_ratio = 0.01
-//	a1 = 0. a2 = 55. a3 = 0. a4 =55. ;
  
 add material # 3 type uniaxial_steel02
     yield_strength = 413.8e+6*Pa
@@ -46,10 +29,8 @@ add material # 3 type uniaxial_steel02
     cR2 = 0.15
 	a1 = 0. a2 = 55. a3 = 0. a4 =55. ;
   
-// Sections//
 include "ColumnSection.fei";
     
-// Elements//
 add element # 1 type BeamColumnDispFiber3d with nodes (1,2)
 						number_of_integration_points = 4
 						section_number  =  1
@@ -58,45 +39,14 @@ add element # 1 type BeamColumnDispFiber3d with nodes (1,2)
 						joint_1_offset = (  0*m,0*m,0*m)
 						joint_2_offset = (  0*m,0*m,0*m);
 						
-
-// PUSHOVER ANALYSIS
-
 new loading stage "Normal_loading";
-
-// FORCE CONTROLLED
-
 add load # 111 to node # 2 type linear Fy= - 8.0e+4*N;
-//
-//
-//define convergence test Absolute_Norm_Displacement_Increment
-//    tolerance = 1e-12
-//    maximum_iterations = 1000
-//    ;	
-//
-//define algorithm Newton;
-//define solver UMFPack;
-//define load factor increment 0.01;
-//simulate 100 steps using static algorithm;
-
-// DISPLACEMENT CONTROLLED
-
-// add imposed motion # 1 to node # 2 dof ux
-// time_step = 1.0*s
-// displacement_scale_unit = 1e3*m displacement_file = "Push_m.txt"
-// velocity_scale_unit = 1e3*m/s velocity_file = "Push_m.txt"
-// acceleration_scale_unit = 1e3*m/s^2 acceleration_file = "Push_m.txt";
-
 define load factor increment 0.001;
-
 define convergence test 
        Absolute_Norm_Displacement_Increment tolerance = 1.0e-12 
        maximum_iterations = 1000
        ;
-
 define algorithm Newton;
 define solver UMFPack;
-
 simulate 1000 steps using static algorithm;
-
-
 bye;

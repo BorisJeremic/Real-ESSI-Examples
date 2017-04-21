@@ -1,9 +1,7 @@
 model name "vonMises";
-// Parameters:
 rho = 0.0*kg/m^3;
 nu = 0.0;
 E = 2E7*N/m^2;
-// Define the material:
 add material # 1 type vonMises
     mass_density = rho
     elastic_modulus = E
@@ -11,7 +9,6 @@ add material # 1 type vonMises
     von_mises_radius = 5E4*Pa
     kinematic_hardening_rate = 0*Pa
     isotropic_hardening_rate = E/2.0;
-// define the node:
 add node # 1 at (0*m,0*m,1*m)  with 3 dofs;
 add node # 2 at (1*m,0*m,1*m)  with 3 dofs;
 add node # 3 at (1*m,1*m,1*m)  with 3 dofs;
@@ -20,7 +17,6 @@ add node # 5 at (0*m,0*m,0*m)  with 3 dofs;
 add node # 6 at (1*m,0*m,0*m)  with 3 dofs;
 add node # 7 at (1*m,1*m,0*m)  with 3 dofs;
 add node # 8 at (0*m,1*m,0*m)  with 3 dofs;
-// Define the element.
 add element # 1 type 8NodeBrick using 2 Gauss points each direction with nodes (1, 2, 3, 4, 5, 6, 7, 8) use material # 1;
 new loading stage "shearing";
 fix node # 1 dofs uy;
@@ -45,7 +41,6 @@ while (mot < 5 ) {
     mot = mot + 1;
     };
 define solver UMFPack;
-//define algorithm With_no_convergence_check ;
 define convergence test Absolute_Norm_Unbalanced_Force
     tolerance = 1
     maximum_iterations =  50

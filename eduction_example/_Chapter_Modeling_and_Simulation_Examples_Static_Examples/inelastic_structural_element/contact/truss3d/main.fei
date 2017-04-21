@@ -1,27 +1,22 @@
 model name "3-D_Contact_Under_Normal_And_Tangential_Loading" ;
-
-    // Adding material
+    
     add material #1 type uniaxial_elastic elastic_modulus =  1*Pa viscoelastic_modulus =  0*Pa*s;
-
-    // Adding Nodes 
+    
     add node #1 at (0*m,0*m,0*m)   with  3 dofs;
     add node #2 at (0*m,0*m,0*m)   with  3 dofs;
     add node #3 at (-1*m,0*m,0*m)  with  3 dofs;
     add node #4 at (0*m,1*m,0*m)   with  3 dofs;
     add node #5 at (0*m,0*m,1*m)   with  3 dofs;
-
-    // Adding Fixities
+    
     fix node #1 dofs ux uy uz;
     fix node #3 dofs ux uy uz;
     fix node #4 dofs ux uy uz;
     fix node #5 dofs ux uy uz;
-
-    // Adding Truss Elements
+    
     add element #1  type truss with nodes (2,3) use material # 1 cross_section = 1*m^2 mass_density =  1*kg/m^3;
     add element #2  type truss with nodes (2,4) use material # 1 cross_section = 1*m^2 mass_density =  1*kg/m^3;
     add element #3  type truss with nodes (2,5) use material # 1 cross_section = 1*m^2 mass_density =  1*kg/m^3;
-
-    // Adding Contact Element
+    
     add element #4  type HardContact with nodes (1,2) 
     normal_stiffness =1e10*N/m 
     tangential_stiffness =  1e10*Pa*m
@@ -29,41 +24,29 @@ model name "3-D_Contact_Under_Normal_And_Tangential_Loading" ;
     tangential_damping =   0*kN/m*s
     friction_ratio =  0.2   
     contact_plane_vector = (0,0,1);
-
     new loading stage "Adding_Normal_Load";
-
     add load #1  to node #2  type linear Fz = -0.5*N;
-
     Nsteps = 1;
-
     tol = 1e-10;
     define convergence test Absolute_Norm_Displacement_Increment 
       tolerance =  tol
       maximum_iterations = 1 
       ;
-
     define algorithm Newton;
     define solver UMFPack;
-
     define load factor increment 1/Nsteps;
     simulate Nsteps steps using static algorithm;
-
     new loading stage "Shear_Loading";
-
     add load #2  to node #2  type linear Fx = 0.4*N;
     add load #3  to node #2  type linear Fy = 0.3*N;
-
     tol = 1e-12;
     define convergence test Absolute_Norm_Displacement_Increment 
       tolerance =  tol
       maximum_iterations = 10
       ;
-
     define algorithm Newton;
-
     Nsteps= 20;
     define solver UMFPack;
     define load factor increment 1/Nsteps;
     simulate Nsteps steps using static algorithm;
-
     bye;  

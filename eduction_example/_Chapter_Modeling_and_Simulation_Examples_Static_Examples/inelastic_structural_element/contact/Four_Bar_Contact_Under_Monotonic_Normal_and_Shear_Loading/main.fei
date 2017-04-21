@@ -1,24 +1,16 @@
  
 model name "Four_Bar_Contact_Under_Monotonic_Normal_and_Shear_Loading";
-
-// Adding material
 add material #1 type uniaxial_elastic elastic_modulus =  1*Pa viscoelastic_modulus =  0*Pa*s;
-
-// Adding Nodes 
 add node #1 at (0*m,0*m,0*m)  with 3 dofs;
 add node #2 at (1*m,0*m,0*m)  with 3 dofs;
 add node #3 at (1*m,0*m,0*m)  with 3 dofs;
 add node #4 at (2*m,0*m,0*m)  with 3 dofs;
 add node #5 at (1*m,-1*m,0*m) with 3 dofs;
 add node #6 at (1*m,1*m,0*m)  with 3 dofs;
-
-// Adding Truss Elements
 add element #1  type truss with nodes (1,2) use material # 1 cross_section = 1*m^2 mass_density =  1*kg/m^3;
 add element #2  type truss with nodes (3,4) use material # 1 cross_section = 1*m^2 mass_density =  1*kg/m^3;
 add element #3  type truss with nodes (3,5) use material # 1 cross_section = 1*m^2 mass_density =  1*kg/m^3;
 add element #4  type truss with nodes (2,6) use material # 1 cross_section = 1*m^2 mass_density =  1*kg/m^3;
-
-// Adding Contact Element
 add element #5 type HardContact with nodes (2,3) 
 	normal_stiffness =  1e12*N/m
 	tangential_stiffness =   1e12*N/m
@@ -26,47 +18,34 @@ add element #5 type HardContact with nodes (2,3)
 	tangential_damping =  0*N/m*s  
 	friction_ratio =  0.4 
 	contact_plane_vector = (1,0,0);
-
-// Adding Fixities
 fix node #1 dofs ux uy uz ;
 fix node #4 dofs ux uy uz ;
 fix node #5 dofs ux uy uz ;
 fix node #6 dofs ux uy uz ;
 fix node #2 dofs uz ;
 fix node #3 dofs uz ;
-
 new loading stage "Normal_Loading";
-
 	add load #1  to node #2  type linear Fx = 0.1*N;
-
 	tol = 1e-10;
 	define convergence test Absolute_Norm_Displacement_Increment 
 	  tolerance =  tol
 	  maximum_iterations = 10 
 	  ;
-
 	define algorithm Newton;
-
 	Nsteps= 10;
 	define solver UMFPack;
 	define load factor increment 1/Nsteps;
 	simulate Nsteps steps using static algorithm;
-
 new loading stage "Shear_Loading";
-
 	add load #2  to node #2  type linear Fy = 0.2*N;
-
 	tol = 1e-10;
 	define convergence test Absolute_Norm_Displacement_Increment 
 	  tolerance =  tol
 	  maximum_iterations = 10
 	  ;
-
 	define algorithm Newton;
-
 	Nsteps= 100;
 	define solver UMFPack;
 	define load factor increment 1/Nsteps;
 	simulate Nsteps steps using static algorithm;
-
 bye; 	

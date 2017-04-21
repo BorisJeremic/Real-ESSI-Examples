@@ -1,24 +1,10 @@
 model name "DP";
-// Parameters:
 rho = 0.0*kg/m^3;
 nu = 0.0;
 E = 1E7*N/m^2;
-//
 phi   = 1;
 phirad = pi*phi/180;
 eta = 6*sin(phirad)/(3-sin(phirad));
-// Define the material:
-// add material # 1 type DruckerPragerNonAssociateArmstrongFrederick
-//     mass_density = rho
-//     elastic_modulus = E
-//     poisson_ratio = nu
-//     druckerprager_k = eta
-//     armstrong_frederick_ha = E
-//     armstrong_frederick_cr = 100 
-//     isotropic_hardening_rate = 0*Pa
-//     initial_confining_stress = 1*Pa
-//     plastic_flow_xi = 0.0
-//     plastic_flow_kd = 0.0 ;
 add material # 1 type Duncan_Chang_nonlinear_elastic_isotropic_3d 
     mass_density = 0. * kg/m^3 
     initial_elastic_modulus = 1E6 * Pa 
@@ -26,7 +12,6 @@ add material # 1 type Duncan_Chang_nonlinear_elastic_isotropic_3d
     DuncanChang_K = 1E2  
     DuncanChang_pa = 1E5 * Pa  
     DuncanChang_n = 0.5  ;
-// define the node:
 add node # 1 at (0*m,0*m,1*m)  with 3 dofs;
 add node # 2 at (1*m,0*m,1*m)  with 3 dofs;
 add node # 3 at (1*m,1*m,1*m)  with 3 dofs;
@@ -35,7 +20,6 @@ add node # 5 at (0*m,0*m,0*m)  with 3 dofs;
 add node # 6 at (1*m,0*m,0*m)  with 3 dofs;
 add node # 7 at (1*m,1*m,0*m)  with 3 dofs;
 add node # 8 at (0*m,1*m,0*m)  with 3 dofs;
-// Define the element.
 add element # 1 type 8NodeBrick using 2 Gauss points each direction with nodes (1, 2, 3, 4, 5, 6, 7, 8) use material # 1;
 new loading stage "1Confine" ;
 fix node # 5 dofs all;
@@ -75,13 +59,11 @@ define NDMaterial constitutive integration algorithm Backward_Euler
     stress_relative_tolerance =  1E-7
     maximum_iterations = 100;
 define solver UMFPack;
-//define algorithm With_no_convergence_check ;
 define convergence test Absolute_Norm_Unbalanced_Force
     tolerance = 0.1
     maximum_iterations =  50
     ;
 define algorithm Newton;
-// define algorithm NewtonLineSearch ;
 Nstep = 30;
 define load factor increment 1/Nstep;
 simulate Nstep steps using static algorithm;

@@ -1,5 +1,4 @@
 model name "DP";
-// Define the material:
 add material # 1 type Duncan_Chang_nonlinear_elastic_isotropic_3d 
     mass_density = 2E3 * kg/m^3 
     initial_elastic_modulus = 3E5 * Pa 
@@ -7,8 +6,6 @@ add material # 1 type Duncan_Chang_nonlinear_elastic_isotropic_3d
     DuncanChang_K = 1E3  
     DuncanChang_pa = 1E5 * Pa  
     DuncanChang_n = 0.5  ;
-
-// define the node:
 add node # 1 at (0*m,0*m,1*m)  with 3 dofs;
 add node # 2 at (1*m,0*m,1*m)  with 3 dofs;
 add node # 3 at (1*m,1*m,1*m)  with 3 dofs;
@@ -17,7 +14,6 @@ add node # 5 at (0*m,0*m,0*m)  with 3 dofs;
 add node # 6 at (1*m,0*m,0*m)  with 3 dofs;
 add node # 7 at (1*m,1*m,0*m)  with 3 dofs;
 add node # 8 at (0*m,1*m,0*m)  with 3 dofs;
-// Define the element.
 add element # 1 type 8NodeBrick using 2 Gauss points each direction with nodes (1, 2, 3, 4, 5, 6, 7, 8) use material # 1;
 new loading stage "1Confine" ;
 fix node # 5 dofs all;
@@ -52,9 +48,7 @@ add load # 21 to node # 3 type linear Fy = - press *m^2 ;
 add load # 22 to node # 7 type linear Fy = - press *m^2 ;
 add load # 23 to node # 8 type linear Fy = - press *m^2 ;
 add load # 24 to node # 4 type linear Fy = - press *m^2 ;
-
 define solver UMFPack;
-//define algorithm With_no_convergence_check ;
 define convergence test Absolute_Norm_Unbalanced_Force
     tolerance = 1
     maximum_iterations =  10
@@ -63,5 +57,4 @@ define algorithm Newton;
 Nstep = 10;
 define load factor increment 1/Nstep;
 simulate Nstep steps using static algorithm;
-
 bye;  
