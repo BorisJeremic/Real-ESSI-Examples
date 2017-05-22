@@ -1,0 +1,86 @@
+model name "Frictional_SDOF" ;
+
+add acceleration field #1 
+	ax = 0*m/s^2 
+	ay = 0*m/s^2 
+	az = 10*m/s^2 ;
+
+add material #1 type uniaxial_elastic elastic_modulus =  1*Pa viscoelastic_modulus =  0*Pa*s;
+
+add node #1 at (0*m,0*m,0*m)   with  3 dofs;
+add node #2 at (1*m,0*m,0*m)   with  3 dofs;
+add node #3 at (1*m,0*m,0*m)   with  3 dofs;
+
+fix node #1 dofs ux uy uz;
+fix node #3 dofs ux uy uz;
+fix node #2 dofs uy  ;
+
+add element #1  type truss with nodes (1,2) use material # 1 cross_section = 1*m^2 mass_density =  0*kg/m^3;
+
+add mass to node #2 
+	mx = 1*kg
+	my = 1*kg
+	mz = 1*kg;
+
+add element #2  type HardContact with nodes (3,2) 
+	normal_stiffness =1e10*N/m
+	tangential_stiffness =  1e4*Pa*m
+	normal_damping =  0*kN/m*s
+	tangential_damping =   0*N/m*s
+	friction_ratio =  1   
+	contact_plane_vector = (0,0,1);
+
+new loading stage "Adding_Normal_Load";
+
+	add load #1 to node #2  type self_weight use acceleration field #1 ;
+	
+	Nsteps = 1;
+	tol = 1e-3;
+	define convergence test Norm_Unbalance 
+	  tolerance =  tol
+	  maximum_iterations = 100 
+	  verbose_level = 4;
+
+	define algorithm Newton;
+	define solver UMFPack;
+
+	define load factor increment 1/Nsteps;
+	simulate Nsteps steps using static algorithm;
+
+new loading stage "Adding_Tangential_Load";
+
+	tan_load = 80*N;
+	add load #2 to node #2 type linear Fx =  tan_load;
+
+	Nsteps = 1;
+	tol = 1e-3;
+	define convergence test Norm_Unbalance 
+	  tolerance =  tol
+	  maximum_iterations = 10
+	  verbose_level = 4;
+
+	define algorithm Newton;
+	define solver UMFPack;
+
+	define load factor increment 1/Nsteps;
+	simulate Nsteps steps using static algorithm;
+
+new loading stage "freeVibration";
+
+	remove load # 2;	
+
+	tol = 1e-3;
+	define convergence test Norm_Unbalance  
+	  tolerance =  tol
+	  maximum_iterations = 100 
+	  verbose_level = 4;
+
+	define algorithm Newton;	
+	define solver UMFPack;
+
+	define dynamic integrator Newmark with gamma = 1/2 beta = 1/4;
+
+	simulate 1000 steps using transient algorithm 
+		time_step = 0.01*s;
+
+bye;
