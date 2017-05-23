@@ -64,9 +64,10 @@ simulate NumSteps steps using static algorithm;
 new loading stage "DRM_analysis"; 
 
 
-// include "test_model_load.fei"; 
+add domain reduction method loading #  2
+	hdf5_file = "DRM_Input.hdf5";
 
-// if (.) { };
+
 if(IS_PARALLEL==0)
 {define solver UMFPack;}
 else
@@ -76,10 +77,7 @@ define dynamic integrator Newmark with gamma = 0.5 beta = 0.25;
 
 define algorithm With_no_convergence_check; 
 
-add domain reduction method loading #  1
-	hdf5_file = "test_model.h5.drminput";
-
-simulate 20 steps using transient algorithm time_step = 0.005*s; 
+simulate 20 steps using transient algorithm time_step = 0.01*s; 
 
 
 
