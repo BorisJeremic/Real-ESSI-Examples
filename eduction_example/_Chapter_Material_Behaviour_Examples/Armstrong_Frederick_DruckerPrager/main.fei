@@ -1,0 +1,28 @@
+model name "test";
+rho = 0.0*kg/m^3;
+nu = 0.0;
+E = 2E7*N/m^2;
+phi   = 5;
+phirad = pi*phi/180;
+eta = 6*sin(phirad)/(3-sin(phirad));
+add material # 1 type DruckerPragerNonAssociateArmstrongFrederick
+    mass_density = rho
+    elastic_modulus = E
+    poisson_ratio = nu
+    druckerprager_k = eta
+    armstrong_frederick_ha = E
+    armstrong_frederick_cr = 100 
+    isotropic_hardening_rate = 0*Pa
+    initial_confining_stress = 1*Pa
+    plastic_flow_xi = 0.0
+    plastic_flow_kd = 0.0 ;
+define NDMaterial constitutive integration algorithm Backward_Euler 
+	yield_function_relative_tolerance = 1E-6   
+	stress_relative_tolerance = 1E-6    
+	maximum_iterations = 30;
+simulate constitutive testing strain control pure shear cyclic loading use material # 1
+	confinement_strain = 0.001 
+	strain_increment_size = 0.0001 
+	maximum_strain = 0.01
+	number_of_cycles = 1;
+bye;
