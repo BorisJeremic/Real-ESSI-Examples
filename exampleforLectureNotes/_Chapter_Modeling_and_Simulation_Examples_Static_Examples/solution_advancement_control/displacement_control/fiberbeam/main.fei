@@ -1,0 +1,52 @@
+model name "RC_Column_Pushover" ;
+add node # 1 at (0*m, 0*m, 0*m)  with 6 dofs;
+add node # 2 at (0*m, 4*m, 0*m)  with 6 dofs;
+fix node # 1 dofs ux uy uz rx ry rz;
+fix node # 2 dofs uz rx ry;
+add material # 1 type uniaxial_concrete02
+	compressive_strength = -30.2e+6*Pa 
+	strain_at_compressive_strength = -0.00219 
+	crushing_strength = -6.0e+6*Pa 
+	strain_at_crushing_strength = -0.00396 
+	lambda = 0.5
+	tensile_strength = 30.2e+5*Pa 
+	tension_softening_stiffness = 0*1.38e+9*Pa;
+add material # 2 type uniaxial_concrete02
+	compressive_strength = -30.2e+6*0.8*Pa 
+	strain_at_compressive_strength = -0.00219*0.8 
+	crushing_strength = 0.0*Pa 
+	strain_at_crushing_strength = -0.00396*0.8
+	lambda = 0.5
+	tensile_strength = 0*Pa 
+	tension_softening_stiffness = 0*Pa;
+ 
+add material # 3 type uniaxial_steel02
+    yield_strength = 413.8e+6*Pa
+	elastic_modulus = 200000e+6*Pa
+	strain_hardening_ratio = 0.01
+    R0 = 18.0
+    cR1 = 0.925
+    cR2 = 0.15
+	a1 = 0. a2 = 55. a3 = 0. a4 =55. ;
+  
+include "ColumnSection.fei";
+    
+add element # 1 type BeamColumnDispFiber3d with nodes (1,2)
+						number_of_integration_points = 4
+						section_number  =  1
+						mass_density = 2400*kg/m^3
+						xz_plane_vector = ( 0 ,  0 , -1  )
+						joint_1_offset = (  0*m,0*m,0*m)
+						joint_2_offset = (  0*m,0*m,0*m);
+						
+new loading stage "Pushover";
+add load # 111 to node # 2 type linear Fy=-8.0e+4*N;
+define load factor increment 0.001;
+define convergence test Absolute_Norm_Displacement_Increment
+       tolerance = 1.0e-12 
+       maximum_iterations = 1000
+       ;
+define algorithm Newton;
+define solver UMFPack;
+simulate 1000 steps using static algorithm;
+bye;
