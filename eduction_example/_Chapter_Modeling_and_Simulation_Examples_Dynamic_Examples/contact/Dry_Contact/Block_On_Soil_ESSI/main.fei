@@ -2,10 +2,10 @@ model name "Block_On_Soil";
 
 add acceleration field # 1 ax = 0*g ay = 0*g az = -1*g ; 
 
-kn = 1e11*N/m; 
-kt = 1e8*N/m; 
-cn = 1e3*kN/m*s; 
-ct = 1e3*kN/m*s; 
+kn = 1e9*N/m; 
+kt = 1e6*N/m; 
+cn = 100*N/m*s; 
+ct = 100*N/m*s; 
 Vs = 100*m/s; 
 rho = 2000*kg/m^3; 
 nu = 0.3; 
@@ -50,7 +50,7 @@ add uniform acceleration #127 to all nodes dof ux
 	acceleration_file = "acc.txt";
 
 tol = 1; 
-define convergence test Norm_Unbalance tolerance = tol maximum_iterations = 20 verbose_level = 1; 
+define convergence test Norm_Unbalance tolerance = tol maximum_iterations = 100 verbose_level = 1; 
 define algorithm NewtonLineSearch; 
 define solver UMFPack; 
 NumSteps = 600; 

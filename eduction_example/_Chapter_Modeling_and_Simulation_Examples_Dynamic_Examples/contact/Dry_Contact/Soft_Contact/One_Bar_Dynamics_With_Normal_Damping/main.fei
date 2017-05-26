@@ -18,7 +18,7 @@ add mass to node #2
 
 add element #3  type SoftContact with nodes (1,2) 
 	initial_normal_stiffness =1e4*N/m
-	stiffning_rate = 1000/m 
+	stiffening_rate = 1000/m 
 	max_normal_stiffness =1e7*N/m
 	tangential_stiffness =  0*Pa*m
 	normal_damping =  10*N/m*s
