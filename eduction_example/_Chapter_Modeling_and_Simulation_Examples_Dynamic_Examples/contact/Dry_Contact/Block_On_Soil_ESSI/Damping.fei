@@ -1,6 +1,14 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+
 
 //*************************************************************************************************************************
-//							Add_Damping_To_Element{Physical_Group#Soil, DampingNo:= 1}Starts
+//       Add_Damping_To_Element{Physical_Group#Soil, DampingNo:= 1}Starts
 //*************************************************************************************************************************
 
 add damping # 1 to element # 96; 
@@ -157,6 +165,6 @@ add damping # 1 to element # 246;
 add damping # 1 to element # 247; 
 
 //*************************************************************************************************************************
-//							Add_Damping_To_Element{Physical_Group#Soil, DampingNo:= 1}Ends
+//       Add_Damping_To_Element{Physical_Group#Soil, DampingNo:= 1}Ends
 //*************************************************************************************************************************
 

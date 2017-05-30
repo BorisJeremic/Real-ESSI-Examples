@@ -1,14 +1,22 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+
 model name "test";
 add material # 1 type vonMisesMultipleYieldSurfaceGoverGmax
-	mass_density = 0.0*kg/m^3 
-	initial_shear_modulus = 3E8 * Pa 
-	poisson_ratio = 0.0 
-	total_number_of_shear_modulus = 9
-	GoverGmax = 
-	"1,0.99563892,0.96674888,0.87318337,0.78735192,0.46719464,0.32043423,0.10940113,0.06347752"  
-	ShearStrainGamma = 
-	"0,1E-6,1E-5,5E-5,1E-4, 0.0005, 0.001, 0.005, 0.01"
-	;
+ mass_density = 0.0*kg/m^3 
+ initial_shear_modulus = 3E8 * Pa 
+ poisson_ratio = 0.0 
+ total_number_of_shear_modulus = 9
+ GoverGmax = 
+ "1,0.99563892,0.96674888,0.87318337,0.78735192,0.46719464,0.32043423,0.10940113,0.06347752"  
+ ShearStrainGamma = 
+ "0,1E-6,1E-5,5E-5,1E-4, 0.0005, 0.001, 0.005, 0.01"
+ ;
 define NDMaterial constitutive integration algorithm Backward_Euler
     yield_function_relative_tolerance =  1E-6
     stress_relative_tolerance =  1E-6
@@ -18,8 +26,8 @@ incr_size = 0.000001  ;
 max_strain= strainIN ;// 0.005      ; 
 num_of_increm =  5*max_strain/incr_size -1 ;
 simulate constitutive testing strain control pure shear use material # 1
-	confinement_strain = 0.0
-	strain_increment_size = incr_size 
-	maximum_strain = max_strain
-	number_of_increment = num_of_increm;
+ confinement_strain = 0.0
+ strain_increment_size = incr_size 
+ maximum_strain = max_strain
+ number_of_increment = num_of_increm;
 bye;

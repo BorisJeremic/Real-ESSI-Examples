@@ -1,29 +1,36 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
 model name "RC_Column_Pushover" ;
 add node # 1 at (0*m, 0*m, 0*m)  with 6 dofs;
 add node # 2 at (0*m, 4*m, 0*m)  with 6 dofs;
 fix node # 1 dofs ux uy uz rx ry rz;
 fix node # 2 dofs uz rx ry;
 add material # 1 type uniaxial_elastic 
-	elastic_modulus =  200000e+6*Pa
-	viscoelastic_modulus = 0*kg/m/s ;
+ elastic_modulus =  200000e+6*Pa
+ viscoelastic_modulus = 0*kg/m/s ;
 add material # 2 type uniaxial_elastic 
-	elastic_modulus =  200000e+6*Pa
-	viscoelastic_modulus = 0*kg/m/s ;
+ elastic_modulus =  200000e+6*Pa
+ viscoelastic_modulus = 0*kg/m/s ;
 add material # 3 type uniaxial_elastic 
-	elastic_modulus =  200000e+6*Pa
-	viscoelastic_modulus = 0*kg/m/s ;
+ elastic_modulus =  200000e+6*Pa
+ viscoelastic_modulus = 0*kg/m/s ;
  
   
 include "ColumnSection.fei";
-	
+ 
 add element # 1 type BeamColumnDispFiber3d with nodes (1,2)
-						number_of_integration_points = 4
-						section_number  =  1
-						mass_density = 2400*kg/m^3
-						xz_plane_vector = ( 0 ,  0 , -1  )
-						joint_1_offset = (  0*m,0*m,0*m)
-						joint_2_offset = (  0*m,0*m,0*m);
-						
+      number_of_integration_points = 4
+      section_number  =  1
+      mass_density = 2400*kg/m^3
+      xz_plane_vector = ( 0 ,  0 , -1  )
+      joint_1_offset = (  0*m,0*m,0*m)
+      joint_2_offset = (  0*m,0*m,0*m);
+      
 new loading stage "Pushover";
 add imposed motion # 1 to node # 2 dof ux
 time_step = 1.0*s

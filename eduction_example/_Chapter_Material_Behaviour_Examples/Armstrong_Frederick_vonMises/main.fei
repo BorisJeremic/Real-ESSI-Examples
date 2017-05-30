@@ -1,3 +1,11 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+
 model name "test";
 rho = 0.0*kg/m^3;
 nu = 0.0;
@@ -16,12 +24,12 @@ add material # 1 type vonMisesArmstrongFrederick
     ;
 
 define NDMaterial constitutive integration algorithm Backward_Euler 
-	yield_function_relative_tolerance = 1E-6   
-	stress_relative_tolerance = 1E-6    
-	maximum_iterations = 30;
+ yield_function_relative_tolerance = 1E-6   
+ stress_relative_tolerance = 1E-6    
+ maximum_iterations = 30;
 simulate constitutive testing strain control pure shear cyclic loading use material # 1
-	confinement_strain = 0.001 
-	strain_increment_size = 0.0001 
-	maximum_strain = 0.01
-	number_of_cycles = 1;
+ confinement_strain = 0.001 
+ strain_increment_size = 0.0001 
+ maximum_strain = 0.01
+ number_of_cycles = 1;
 bye;

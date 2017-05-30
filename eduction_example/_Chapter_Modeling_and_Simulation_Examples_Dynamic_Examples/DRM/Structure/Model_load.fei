@@ -1,6 +1,14 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+
 
 //*************************************************************************************************************************
-//							Fix_Dofs{ Physical_Group#Model_Lateral_X ,dofs:= ux}Starts
+//       Fix_Dofs{ Physical_Group#Model_Lateral_X ,dofs:= ux}Starts
 //*************************************************************************************************************************
 
 fix node # 1615 dofs ux; 
@@ -93,12 +101,12 @@ fix node # 1847 dofs ux;
 fix node # 1848 dofs ux; 
 
 //*************************************************************************************************************************
-//							Fix_Dofs{ Physical_Group#Model_Lateral_X ,dofs:= ux}Ends
+//       Fix_Dofs{ Physical_Group#Model_Lateral_X ,dofs:= ux}Ends
 //*************************************************************************************************************************
 
 
 //*************************************************************************************************************************
-//							Fix_Dofs{ Physical_Group#Model_Lateral_Y ,dofs:= uy}Starts
+//       Fix_Dofs{ Physical_Group#Model_Lateral_Y ,dofs:= uy}Starts
 //*************************************************************************************************************************
 
 fix node # 1 dofs uy; 
@@ -2227,12 +2235,12 @@ fix node # 2123 dofs uy;
 fix node # 2124 dofs uy; 
 
 //*************************************************************************************************************************
-//							Fix_Dofs{ Physical_Group#Model_Lateral_Y ,dofs:= uy}Ends
+//       Fix_Dofs{ Physical_Group#Model_Lateral_Y ,dofs:= uy}Ends
 //*************************************************************************************************************************
 
 
 //*************************************************************************************************************************
-//							Fix_Dofs{ Physical_Group#Model_Base ,dofs:= all}Starts
+//       Fix_Dofs{ Physical_Group#Model_Base ,dofs:= all}Starts
 //*************************************************************************************************************************
 
 fix node # 1631 dofs all; 
@@ -2331,12 +2339,12 @@ fix node # 1843 dofs all;
 fix node # 1844 dofs all; 
 
 //*************************************************************************************************************************
-//							Fix_Dofs{ Physical_Group#Model_Base ,dofs:= all}Ends
+//       Fix_Dofs{ Physical_Group#Model_Base ,dofs:= all}Ends
 //*************************************************************************************************************************
 
 
 //*************************************************************************************************************************
-//							Add_Damping_To_Element{Physical_Group#Solid, DampingNo:= 3}Starts
+//       Add_Damping_To_Element{Physical_Group#Solid, DampingNo:= 3}Starts
 //*************************************************************************************************************************
 
 add damping # 3 to element # 1; 
@@ -2365,12 +2373,12 @@ add damping # 3 to element # 23;
 add damping # 3 to element # 24; 
 
 //*************************************************************************************************************************
-//							Add_Damping_To_Element{Physical_Group#Solid, DampingNo:= 3}Ends
+//       Add_Damping_To_Element{Physical_Group#Solid, DampingNo:= 3}Ends
 //*************************************************************************************************************************
 
 
 //*************************************************************************************************************************
-//							Add_Damping_To_Element{Physical_Group#Foundation, DampingNo:= 3}Starts
+//       Add_Damping_To_Element{Physical_Group#Foundation, DampingNo:= 3}Starts
 //*************************************************************************************************************************
 
 add damping # 3 to element # 25; 
@@ -2381,12 +2389,12 @@ add damping # 3 to element # 29;
 add damping # 3 to element # 30; 
 
 //*************************************************************************************************************************
-//							Add_Damping_To_Element{Physical_Group#Foundation, DampingNo:= 3}Ends
+//       Add_Damping_To_Element{Physical_Group#Foundation, DampingNo:= 3}Ends
 //*************************************************************************************************************************
 
 
 //*************************************************************************************************************************
-//							Add_Damping_To_Element{Physical_Group#DRM_Volume, DampingNo:= 1}Starts
+//       Add_Damping_To_Element{Physical_Group#DRM_Volume, DampingNo:= 1}Starts
 //*************************************************************************************************************************
 
 add damping # 1 to element # 31; 
@@ -2465,12 +2473,12 @@ add damping # 1 to element # 103;
 add damping # 1 to element # 104; 
 
 //*************************************************************************************************************************
-//							Add_Damping_To_Element{Physical_Group#DRM_Volume, DampingNo:= 1}Ends
+//       Add_Damping_To_Element{Physical_Group#DRM_Volume, DampingNo:= 1}Ends
 //*************************************************************************************************************************
 
 
 //*************************************************************************************************************************
-//							Add_Damping_To_Element{Physical_Group#Damping_Volume, DampingNo:= 1}Starts
+//       Add_Damping_To_Element{Physical_Group#Damping_Volume, DampingNo:= 1}Starts
 //*************************************************************************************************************************
 
 add damping # 1 to element # 105; 
@@ -2721,12 +2729,12 @@ add damping # 1 to element # 349;
 add damping # 1 to element # 350; 
 
 //*************************************************************************************************************************
-//							Add_Damping_To_Element{Physical_Group#Damping_Volume, DampingNo:= 1}Ends
+//       Add_Damping_To_Element{Physical_Group#Damping_Volume, DampingNo:= 1}Ends
 //*************************************************************************************************************************
 
 
 //*************************************************************************************************************************
-//							Add_Damping_To_Element{Physical_Group#Soil, DampingNo:= 1}Starts
+//       Add_Damping_To_Element{Physical_Group#Soil, DampingNo:= 1}Starts
 //*************************************************************************************************************************
 
 add damping # 1 to element # 351; 
@@ -3371,6 +3379,6 @@ add damping # 1 to element # 989;
 add damping # 1 to element # 990; 
 
 //*************************************************************************************************************************
-//							Add_Damping_To_Element{Physical_Group#Soil, DampingNo:= 1}Ends
+//       Add_Damping_To_Element{Physical_Group#Soil, DampingNo:= 1}Ends
 //*************************************************************************************************************************
 

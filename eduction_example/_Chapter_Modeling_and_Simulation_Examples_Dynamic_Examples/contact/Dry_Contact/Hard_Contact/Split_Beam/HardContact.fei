@@ -1,5 +1,13 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+
 //*************************************************************************************************************************
-//							[Add_HardContact{ Physical_Group#Contact_Group, normal_stiffness:= kn, tangential_stiffness:=kt , normal_damping:= 0*kN/m*s, tangential_damping:= 0*kN/m*s, friction_ratio:= fr, contact_plane_vector_x:= -0, contact_plane_vector_y:= 1, contact_plane_vector_z:= 0}]Starts
+//       [Add_HardContact{ Physical_Group#Contact_Group, normal_stiffness:= kn, tangential_stiffness:=kt , normal_damping:= 0*kN/m*s, tangential_damping:= 0*kN/m*s, friction_ratio:= fr, contact_plane_vector_x:= -0, contact_plane_vector_y:= 1, contact_plane_vector_z:= 0}]Starts
 //*************************************************************************************************************************
 
 add element # 1281 type HardContact with nodes (2, 3) normal_stiffness = kn tangential_stiffness = kt normal_damping = Cn tangential_damping = 0*kN/m*s friction_ratio = fr contact_plane_vector = (-0, 1, 0 );  
@@ -193,7 +201,7 @@ add element # 1468 type HardContact with nodes (422, 880) normal_stiffness = kn 
 add element # 1469 type HardContact with nodes (423, 881) normal_stiffness = kn tangential_stiffness = kt normal_damping = Cn tangential_damping = 0*kN/m*s friction_ratio = fr contact_plane_vector = (-0, 1, 0 );  
 
 //*************************************************************************************************************************
-//							[Add_HardContact{ Physical_Group#Contact_Group, normal_stiffness:= kn, tangential_stiffness:=kt , normal_damping:= 0*kN/m*s, tangential_damping:= 0*kN/m*s, friction_ratio:= fr, contact_plane_vector_x:= -0, contact_plane_vector_y:= 1, contact_plane_vector_z:= 0}]Ends
+//       [Add_HardContact{ Physical_Group#Contact_Group, normal_stiffness:= kn, tangential_stiffness:=kt , normal_damping:= 0*kN/m*s, tangential_damping:= 0*kN/m*s, friction_ratio:= fr, contact_plane_vector_x:= -0, contact_plane_vector_y:= 1, contact_plane_vector_z:= 0}]Ends
 //*************************************************************************************************************************
 
 

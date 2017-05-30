@@ -1,3 +1,11 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+
 model name "VMAF";
 
 gamma_max = 3e-3;
@@ -29,19 +37,19 @@ add material # 1 type vonMisesArmstrongFrederick
 
 
 add element # 1 type ShearBeam with nodes (1, 2) 
-	cross_section = 1*m^2 use material # 1;
+ cross_section = 1*m^2 use material # 1;
 
 
-	
+ 
 
 
 new loading stage "confinement";
 
 add load # 1 to node # 2 type linear 
-	Fz = -200*kN;
+ Fz = -200*kN;
 
 
-	
+ 
 define load factor increment 0.01;
 define convergence test Absolute_Norm_Unbalanced_Force
     tolerance = 0.1
@@ -61,12 +69,12 @@ new loading stage "test01";
 
 
 add imposed motion # 2 to node # 2 dof ux
-	displacement_scale_unit =  gamma_max*m
-	displacement_file =  "input_sine.txt"
-	velocity_scale_unit =  gamma_max*m/s
-	velocity_file =  "input_sine.txt"
-	acceleration_scale_unit =  gamma_max*m/s^2
-	acceleration_file = "input_sine.txt";
+ displacement_scale_unit =  gamma_max*m
+ displacement_file =  "input_sine.txt"
+ velocity_scale_unit =  gamma_max*m/s
+ velocity_file =  "input_sine.txt"
+ acceleration_scale_unit =  gamma_max*m/s^2
+ acceleration_file = "input_sine.txt";
 
 define NDMaterial constitutive integration algorithm Backward_Euler
     yield_function_relative_tolerance =  1E-7
@@ -87,11 +95,11 @@ simulate 1250 steps using static algorithm;
 bye;
 
 
-	
+ 
 
-	
-
-
+ 
 
 
-	
+
+
+ 

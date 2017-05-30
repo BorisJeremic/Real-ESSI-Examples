@@ -1,3 +1,11 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+
 model name "Beam_4NodeANDES" ;
 
 h     = 1*m;       
@@ -12,8 +20,8 @@ add material # 1 type linear_elastic_isotropic_3d
 
 include "add_node.fei";
 include "element.fei";
-include "constraint.fei"';
-	
+include "constraint.fei";
+ 
 
 ////////////////////////////////
 add node # 15 at (3.0*m, 0.5*m, 0.0*m) with 6 dofs;

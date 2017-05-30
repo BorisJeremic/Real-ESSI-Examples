@@ -1,3 +1,11 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+
 fix node # 1 dofs all;
 fix node # 2 dofs all;
 fix node # 15 dofs all;

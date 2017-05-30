@@ -1,5 +1,13 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+
 //*************************************************************************************************************************
-//							[Add_SoftContact{ Physical_Group#Contact_Group, initial_normal_stiffness:= kn_init,stiffening_rate = Sr max_normal_stiffness = max_kn  tangential_stiffness:= kt, normal_damping:= 0*kN/m*s, tangential_damping:= 0*kN/m*s, friction_ratio:= fr, contact_plane_vector_x:= -0, contact_plane_vector_y:= 1, contact_plane_vector_z:= 0}]Starts
+//       [Add_SoftContact{ Physical_Group#Contact_Group, initial_normal_stiffness:= kn_init,stiffening_rate = Sr max_normal_stiffness = max_kn  tangential_stiffness:= kt, normal_damping:= 0*kN/m*s, tangential_damping:= 0*kN/m*s, friction_ratio:= fr, contact_plane_vector_x:= -0, contact_plane_vector_y:= 1, contact_plane_vector_z:= 0}]Starts
 //*************************************************************************************************************************
 
 add element # 1281 type SoftContact with nodes (2, 3) initial_normal_stiffness = kn_init stiffening_rate = Sr max_normal_stiffness = max_kn tangential_stiffness = kt normal_damping = Cn tangential_damping = 0*kN/m*s friction_ratio = fr contact_plane_vector = (-0, 1, 0 );  
@@ -193,7 +201,7 @@ add element # 1468 type SoftContact with nodes (422, 880) initial_normal_stiffne
 add element # 1469 type SoftContact with nodes (423, 881) initial_normal_stiffness = kn_init stiffening_rate = Sr max_normal_stiffness = max_kn tangential_stiffness = kt normal_damping = Cn tangential_damping = 0*kN/m*s friction_ratio = fr contact_plane_vector = (-0, 1, 0 );  
 
 //*************************************************************************************************************************
-//							[Add_SoftContact{ Physical_Group#Contact_Group, initial_normal_stiffness:= kn_init,stiffening_rate = Sr max_normal_stiffness = max_kn  tangential_stiffness:= kt, normal_damping:= 0*kN/m*s, tangential_damping:= 0*kN/m*s, friction_ratio:= fr, contact_plane_vector_x:= -0, contact_plane_vector_y:= 1, contact_plane_vector_z:= 0}]Ends
+//       [Add_SoftContact{ Physical_Group#Contact_Group, initial_normal_stiffness:= kn_init,stiffening_rate = Sr max_normal_stiffness = max_kn  tangential_stiffness:= kt, normal_damping:= 0*kN/m*s, tangential_damping:= 0*kN/m*s, friction_ratio:= fr, contact_plane_vector_x:= -0, contact_plane_vector_y:= 1, contact_plane_vector_z:= 0}]Ends
 //*************************************************************************************************************************
 
 

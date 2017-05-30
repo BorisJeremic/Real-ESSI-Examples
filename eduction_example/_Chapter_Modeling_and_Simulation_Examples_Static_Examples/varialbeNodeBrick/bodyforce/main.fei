@@ -1,3 +1,11 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+
 model name "variablenodebrick";
 new loading stage "load";
 add material # 1 type linear_elastic_isotropic_3d mass_density=10.0*kg/m^3 elastic_modulus = 100.0*N/m^2 poisson_ratio=0.3;

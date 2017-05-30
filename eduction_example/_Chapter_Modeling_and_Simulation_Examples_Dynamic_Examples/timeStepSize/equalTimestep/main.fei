@@ -1,3 +1,11 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+
 model name "imposed" ;
 add material # 1 type linear_elastic_isotropic_3d
   mass_density = 2000*kg/m^3
@@ -13,7 +21,7 @@ add material # 3 type linear_elastic_isotropic_3d
   poisson_ratio = 0.3;
 include "add_node.include";
 include "add_elementLT.include";
-include "add_constraint.include"';
+include "add_constraint.include";
 new loading stage "motion";
 add imposed motion # 100 to node # 45 dof ux 
   displacement_scale_unit = 1*m 
@@ -46,8 +54,8 @@ add imposed motion # 103 to node # 51 dof ux
 define algorithm With_no_convergence_check ;
 define solver UMFPack;
 define dynamic integrator Newmark with 
-	gamma = 0.5050 
-	beta = 0.2525;
+ gamma = 0.5050 
+ beta = 0.2525;
 simulate 2000 steps using transient algorithm 
-	time_step = 0.01*s;
+ time_step = 0.01*s;
 bye;

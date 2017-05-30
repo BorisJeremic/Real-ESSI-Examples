@@ -1,3 +1,11 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+
 model name "Block_On_Soil"; 
 
 add acceleration field # 1 ax = 0*g ay = 0*g az = -1*g ; 
@@ -44,10 +52,10 @@ add damping # 1 type Rayleigh with a0 = a_0*Damping a1 = a_1*Damping stiffness_t
 include "Damping.fei"; 
 
 add uniform acceleration #127 to all nodes dof ux 
-	time_step =  0.01*s
-	scale_factor =  10
-	initial_velocity =  0*m/s
-	acceleration_file = "acc.txt";
+ time_step =  0.01*s
+ scale_factor =  10
+ initial_velocity =  0*m/s
+ acceleration_file = "acc.txt";
 
 tol = 1; 
 define convergence test Norm_Unbalance tolerance = tol maximum_iterations = 100 verbose_level = 1; 

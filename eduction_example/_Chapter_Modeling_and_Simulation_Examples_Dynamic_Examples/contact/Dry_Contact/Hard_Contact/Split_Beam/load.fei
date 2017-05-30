@@ -1,6 +1,14 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+
 
 //*************************************************************************************************************************
-//							[Fix_Dofs{ Physical_Group#Fixed_End, dofs:= ux uy uz}]Starts
+//       [Fix_Dofs{ Physical_Group#Fixed_End, dofs:= ux uy uz}]Starts
 //*************************************************************************************************************************
 
 fix node # 1 dofs ux uy uz;  
@@ -95,12 +103,12 @@ fix node # 289 dofs ux uy uz;
 fix node # 290 dofs ux uy uz;  
 
 //*************************************************************************************************************************
-//							[Fix_Dofs{ Physical_Group#Fixed_End, dofs:= ux uy uz}]Ends
+//       [Fix_Dofs{ Physical_Group#Fixed_End, dofs:= ux uy uz}]Ends
 //*************************************************************************************************************************
 
 
 //*************************************************************************************************************************
-//							[Fix_Dofs{ Physical_Group#Side_Surface, dofs:= ux}]Starts
+//       [Fix_Dofs{ Physical_Group#Side_Surface, dofs:= ux}]Starts
 //*************************************************************************************************************************
 
 fix node # 1 dofs ux;  
@@ -525,12 +533,12 @@ fix node # 937 dofs ux;
 fix node # 938 dofs ux;  
 
 //*************************************************************************************************************************
-//							[Fix_Dofs{ Physical_Group#Side_Surface, dofs:= ux}]Ends
+//       [Fix_Dofs{ Physical_Group#Side_Surface, dofs:= ux}]Ends
 //*************************************************************************************************************************
 
 
 //*************************************************************************************************************************
-//							[Add_8NodeBrick_SurfaceLoad{Physical_Group#Beam,Physical_Group#Top_Surface, magnitude:= Normal_Load}]Starts
+//       [Add_8NodeBrick_SurfaceLoad{Physical_Group#Beam,Physical_Group#Top_Surface, magnitude:= Normal_Load}]Starts
 //*************************************************************************************************************************
 
 add load # 1 to element # 641 type surface at nodes (173 , 1053 , 4 , 53) with magnitude Normal_Load;  
@@ -695,6 +703,6 @@ add load # 159 to element # 799 type surface at nodes (957 , 248 , 956 , 247) wi
 add load # 160 to element # 800 type surface at nodes (166 , 16 , 957 , 248) with magnitude Normal_Load;  
 
 //*************************************************************************************************************************
-//							[Add_8NodeBrick_SurfaceLoad{Physical_Group#Beam,Physical_Group#Top_Surface, magnitude:= Normal_Load}]Ends
+//       [Add_8NodeBrick_SurfaceLoad{Physical_Group#Beam,Physical_Group#Top_Surface, magnitude:= Normal_Load}]Ends
 //*************************************************************************************************************************
 

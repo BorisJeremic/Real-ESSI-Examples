@@ -1,3 +1,11 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+
 add section # 1 type FiberSection
     TorsionConstant_GJ = 1e10*N*m*m;
 

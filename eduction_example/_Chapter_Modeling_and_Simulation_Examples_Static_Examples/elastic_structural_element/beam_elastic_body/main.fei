@@ -1,39 +1,46 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
 model name "add_equaldof_to_two_nodes";
 new loading stage "test";
-	
+ 
 add node # 1 at (0*m,0*m,0*m)  with 6 dofs;
 add node # 2 at (1*m,0*m,0*m)  with 6 dofs;
 add node # 3 at (1*m,0*m,0*m)  with 3 dofs;
 fix node # 1 dofs all;
 add element # 1 type beam_elastic with nodes (1, 2) 
-	cross_section = 1*m^2
-	elastic_modulus =  1*Pa
-	shear_modulus =  1*Pa
-	torsion_Jx =  1*m^4
-	bending_Iy =  1*m^4
-	bending_Iz =  1*m^4
-	mass_density =   2E3 * kg/m^3
-	xz_plane_vector = (0, 1, 0 ) 
-	joint_1_offset = (0*m, 0*m , 0*m ) 
-	joint_2_offset = (0*m, 0*m , 0*m );
+ cross_section = 1*m^2
+ elastic_modulus =  1*Pa
+ shear_modulus =  1*Pa
+ torsion_Jx =  1*m^4
+ bending_Iy =  1*m^4
+ bending_Iz =  1*m^4
+ mass_density =   2E3 * kg/m^3
+ xz_plane_vector = (0, 1, 0 ) 
+ joint_1_offset = (0*m, 0*m , 0*m ) 
+ joint_2_offset = (0*m, 0*m , 0*m );
 add constraint equal_dof with master node # 2 and slave node # 3 dof to constrain ux;
 add constraint equal_dof with master node # 2 and slave node # 3 dof to constrain uy;
 add constraint equal_dof with master node # 2 and slave node # 3 dof to constrain uz;
-	
+ 
 add acceleration field # 1 ax=0.0*g ay=0.0*g az=-1.0*g;
 add load # 1 to element # 1 type self_weight use acceleration field # 1;
 define solver UMFPack;
 define convergence test Absolute_Norm_Displacement_Increment
-	tolerance = 0.001 
-	maximum_iterations =  10
-	;
+ tolerance = 0.001 
+ maximum_iterations =  10
+ ;
 define algorithm Newton;
 define load factor increment 0.1;
 simulate 10 steps using static algorithm;
 bye;
-	
-	
-	
-	
-	
-	
+ 
+ 
+ 
+ 
+ 
+ 

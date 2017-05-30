@@ -1,3 +1,11 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+
 model name "Split_Beam_Analysis";  
 
 add acceleration field # 1 ax = 0*g ay = 0*g az = 1*g ;  
@@ -49,11 +57,11 @@ define solver UMFPack;
 gam = 0.65;
 bet = 0.15*(1+gam)^2;
 define dynamic integrator Newmark with 
-	gamma = gam
-	beta = bet;
+ gamma = gam
+ beta = bet;
 
 simulate NumSteps steps using transient algorithm 
-	time_step = total_Time/NumSteps;
+ time_step = total_Time/NumSteps;
 
 bye;  
 

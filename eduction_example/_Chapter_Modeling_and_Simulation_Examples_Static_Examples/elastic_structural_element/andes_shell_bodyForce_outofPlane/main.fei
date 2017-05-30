@@ -1,3 +1,10 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
 model name "cantilever_4NodeANDES" ;
 h     = 1*m;       
 Eshell  = 1e8*N/m^2; 
@@ -9,7 +16,7 @@ add material # 1 type linear_elastic_isotropic_3d
   poisson_ratio = nu;
 include "add_node.fei";
 include "element.fei";
-include "constraint.fei"';
+include "constraint.fei";
 new loading stage "y";
 add acceleration field # 1 ax=0.0*g ay=0.0*g az=-1.0*g;
 add load # 1 to element # 1 type self_weight use acceleration field # 1;

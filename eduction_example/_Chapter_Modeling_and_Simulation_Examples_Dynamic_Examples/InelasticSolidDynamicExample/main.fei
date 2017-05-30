@@ -1,28 +1,36 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+
 model name "brick_5element" ;
 b=0.2*m;
 h=0.2*m;
-natural_period    = 1*s;				
+natural_period    = 1*s;    
 natural_frequency  = 2*pi/natural_period;
 elastic_constant  = 1e9*N/m^2; 
 I=b*h^3/12.0;
 A=b*h;
 L=1*m;
-rho 	= (1.8751)^4*elastic_constant*I/(natural_frequency^2*L^4*A);
+rho  = (1.8751)^4*elastic_constant*I/(natural_frequency^2*L^4*A);
 possion_ratio=0.3;
 add material # 1 type vonMises 
-	mass_density = rho
-	elastic_modulus = elastic_constant
-	poisson_ratio = possion_ratio
-	von_mises_radius =  1000 * Pa
-	kinematic_hardening_rate = elastic_constant/2
-	isotropic_hardening_rate = 0 * Pa ;
+ mass_density = rho
+ elastic_modulus = elastic_constant
+ poisson_ratio = possion_ratio
+ von_mises_radius =  1000 * Pa
+ kinematic_hardening_rate = elastic_constant/2
+ isotropic_hardening_rate = 0 * Pa ;
 define NDMaterial constitutive integration algorithm  Backward_Euler
-	yield_function_relative_tolerance = 1E-4 
-	stress_relative_tolerance =  1E-4
-	maximum_iterations = 10;
-	
-	
-	
+ yield_function_relative_tolerance = 1E-4 
+ stress_relative_tolerance =  1E-4
+ maximum_iterations = 10;
+ 
+ 
+ 
 add node # 1 at (0.0*m, 0.0*m , 0.0*m) with 3 dofs;
 add node # 2 at (0.1*m, 0.0*m , 0.0*m) with 3 dofs;
 add node # 3 at (0.2*m, 0.0*m , 0.0*m) with 3 dofs;
@@ -47,57 +55,57 @@ NBricks=5;
 dz = 0.2*m;
 while ( e < NBricks)
 {
-	hh += dz;
-	add node # 10+18*e at (0.0*m, 0.0*m , hh - 0.5*dz) with 3 dofs;
-	add node # 11+18*e at (0.1*m, 0.0*m , hh - 0.5*dz) with 3 dofs;
-	add node # 12+18*e at (0.2*m, 0.0*m , hh - 0.5*dz) with 3 dofs;
-	add node # 13+18*e at (0.0*m, 0.1*m , hh - 0.5*dz) with 3 dofs;
-	add node # 14+18*e at (0.1*m, 0.1*m , hh - 0.5*dz) with 3 dofs;
-	add node # 15+18*e at (0.2*m, 0.1*m , hh - 0.5*dz) with 3 dofs;
-	add node # 16+18*e at (0.0*m, 0.2*m , hh - 0.5*dz) with 3 dofs;
-	add node # 17+18*e at (0.1*m, 0.2*m , hh - 0.5*dz) with 3 dofs;
-	add node # 18+18*e at (0.2*m, 0.2*m , hh - 0.5*dz) with 3 dofs;
-	add node # 19+18*e at (0.0*m, 0.0*m , hh) with 3 dofs;
-	add node # 20+18*e at (0.1*m, 0.0*m , hh) with 3 dofs;
-	add node # 21+18*e at (0.2*m, 0.0*m , hh) with 3 dofs;
-	add node # 22+18*e at (0.0*m, 0.1*m , hh) with 3 dofs;
-	add node # 23+18*e at (0.1*m, 0.1*m , hh) with 3 dofs;
-	add node # 24+18*e at (0.2*m, 0.1*m , hh) with 3 dofs;
-	add node # 25+18*e at (0.0*m, 0.2*m , hh) with 3 dofs;
-	add node # 26+18*e at (0.1*m, 0.2*m , hh) with 3 dofs;
-	add node # 27+18*e at (0.2*m, 0.2*m , hh) with 3 dofs;
-	add element # e+1 type 27NodeBrick using 3 Gauss points each direction with nodes 
-		(
-			21+18*e,
-			27+18*e,
-			25+18*e,
-			19+18*e,
-			 3+18*e,
-			 9+18*e,
-			 7+18*e,
-			 1+18*e,
-			24+18*e,
-			26+18*e,
-			22+18*e,
-			20+18*e,
-			 6+18*e,
-			 8+18*e,
-			 4+18*e,
-			 2+18*e,
-			12+18*e,
-			18+18*e,
-			16+18*e,
-			10+18*e,
-			14+18*e,
-			15+18*e,
-			17+18*e,
-			13+18*e,
-			11+18*e,
-			23+18*e,
-			 5+18*e
-		) 
-		use material # 1;
-	e += 1;
+ hh += dz;
+ add node # 10+18*e at (0.0*m, 0.0*m , hh - 0.5*dz) with 3 dofs;
+ add node # 11+18*e at (0.1*m, 0.0*m , hh - 0.5*dz) with 3 dofs;
+ add node # 12+18*e at (0.2*m, 0.0*m , hh - 0.5*dz) with 3 dofs;
+ add node # 13+18*e at (0.0*m, 0.1*m , hh - 0.5*dz) with 3 dofs;
+ add node # 14+18*e at (0.1*m, 0.1*m , hh - 0.5*dz) with 3 dofs;
+ add node # 15+18*e at (0.2*m, 0.1*m , hh - 0.5*dz) with 3 dofs;
+ add node # 16+18*e at (0.0*m, 0.2*m , hh - 0.5*dz) with 3 dofs;
+ add node # 17+18*e at (0.1*m, 0.2*m , hh - 0.5*dz) with 3 dofs;
+ add node # 18+18*e at (0.2*m, 0.2*m , hh - 0.5*dz) with 3 dofs;
+ add node # 19+18*e at (0.0*m, 0.0*m , hh) with 3 dofs;
+ add node # 20+18*e at (0.1*m, 0.0*m , hh) with 3 dofs;
+ add node # 21+18*e at (0.2*m, 0.0*m , hh) with 3 dofs;
+ add node # 22+18*e at (0.0*m, 0.1*m , hh) with 3 dofs;
+ add node # 23+18*e at (0.1*m, 0.1*m , hh) with 3 dofs;
+ add node # 24+18*e at (0.2*m, 0.1*m , hh) with 3 dofs;
+ add node # 25+18*e at (0.0*m, 0.2*m , hh) with 3 dofs;
+ add node # 26+18*e at (0.1*m, 0.2*m , hh) with 3 dofs;
+ add node # 27+18*e at (0.2*m, 0.2*m , hh) with 3 dofs;
+ add element # e+1 type 27NodeBrick using 3 Gauss points each direction with nodes 
+  (
+   21+18*e,
+   27+18*e,
+   25+18*e,
+   19+18*e,
+    3+18*e,
+    9+18*e,
+    7+18*e,
+    1+18*e,
+   24+18*e,
+   26+18*e,
+   22+18*e,
+   20+18*e,
+    6+18*e,
+    8+18*e,
+    4+18*e,
+    2+18*e,
+   12+18*e,
+   18+18*e,
+   16+18*e,
+   10+18*e,
+   14+18*e,
+   15+18*e,
+   17+18*e,
+   13+18*e,
+   11+18*e,
+   23+18*e,
+    5+18*e
+  ) 
+  use material # 1;
+ e += 1;
 };
 e = e -1;
 new loading stage "freeVibration";
@@ -111,7 +119,7 @@ add load # 207 to node # (25+18*e) type path_time_series Fx=1/36.0*kN series_fil
 add load # 208 to node # (26+18*e) type path_time_series Fx=1/9.0*kN series_file = "freeVibration.txt" ; 
 add load # 209 to node # (27+18*e) type path_time_series Fx=1/36.0*kN series_file = "freeVibration.txt" ; 
 simulate using eigen algorithm 
-	number_of_modes = 4;
+ number_of_modes = 4;
 f1=0.9900282/s;
 f2=0.9900282/s;
 w1 = 2*pi*f1;
@@ -120,22 +128,22 @@ xi=0.02;
 rayl_a1 = 2*xi/(w1 + w2);
 rayl_a0 = rayl_a1*w1*w2;
 add damping # 1 type Rayleigh with 
-	a0 =  rayl_a0
-	a1 =  rayl_a1
-	stiffness_to_use = Initial_Stiffness;
+ a0 =  rayl_a0
+ a1 =  rayl_a1
+ stiffness_to_use = Initial_Stiffness;
 jj=1;
 while (jj<6) {
-	add damping # 1 to element # jj;
-	jj+=1;
+ add damping # 1 to element # jj;
+ jj+=1;
 }
 define dynamic integrator Newmark with gamma = 0.5 beta = 0.25;
 define convergence test  Absolute_Norm_Unbalanced_Force
-	tolerance =  5
-	maximum_iterations =  20
-	;
+ tolerance =  5
+ maximum_iterations =  20
+ ;
 define algorithm Newton ;
 define solver UMFPack;
 NN = 1000 ;
 simulate NN steps using transient algorithm 
-	time_step = 10/NN *s;
+ time_step = 10/NN *s;
 bye;

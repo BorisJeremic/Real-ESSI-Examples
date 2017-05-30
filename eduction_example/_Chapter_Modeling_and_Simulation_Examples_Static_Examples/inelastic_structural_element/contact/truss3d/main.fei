@@ -1,3 +1,11 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+
 model name "3-D_Contact_Under_Normal_And_Tangential_Loading" ;
     
     add material #1 type uniaxial_elastic elastic_modulus =  1*Pa viscoelastic_modulus =  0*Pa*s;

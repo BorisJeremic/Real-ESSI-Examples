@@ -1,3 +1,11 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+
 model name "DRM" ;
 add material # 1 type linear_elastic_isotropic_3d
   mass_density = 2000*kg/m^3
@@ -15,7 +23,7 @@ include "node.fei";
 include "element.fei";
 new loading stage "1D";
 add domain reduction method loading #  1
-	hdf5_file = "input.hdf5";
+ hdf5_file = "input.hdf5";
 define algorithm With_no_convergence_check ;
 if(IS_PARALLEL==1){
 define solver parallel;
@@ -24,8 +32,8 @@ define solver UMFPack;
 }
 define solver parallel;
 define dynamic integrator Newmark with 
-	gamma = 0.5050 
-	beta = 0.2525;
+ gamma = 0.5050 
+ beta = 0.2525;
 simulate 50 steps using transient algorithm 
-	time_step = 0.01*s;
+ time_step = 0.01*s;
 bye;

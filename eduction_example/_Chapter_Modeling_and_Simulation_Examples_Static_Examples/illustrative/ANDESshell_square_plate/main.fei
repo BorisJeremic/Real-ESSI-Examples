@@ -1,3 +1,11 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+
 model name "square_plate" ;
 h     = 1*m;       
 Eshell  = 1e8*N/m^2; 
@@ -930,9 +938,9 @@ fix node #     79 dofs all    ;
 fix node #     80 dofs all    ;
 new loading stage "self_weight";
 add acceleration field # 1
-	 ax =  0*g
-	 ay =  0*g
-	 az =  1*m/s^2;
+  ax =  0*g
+  ay =  0*g
+  az =  1*m/s^2;
 add load # 1 to element # 1 type self_weight use acceleration field # 1;
 add load # 2 to element # 2 type self_weight use acceleration field # 1;
 add load # 3 to element # 3 type self_weight use acceleration field # 1;
