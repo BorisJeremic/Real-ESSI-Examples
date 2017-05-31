@@ -46,22 +46,59 @@ essiGamma = [2*item for item in strain]
 # # Plot the G/Gmax
 # # ============================================
 # avoid the divide by zero
+fontSIZE = 21
+import matplotlib as mpl
+label_size = fontSIZE
+mpl.rcParams['xtick.labelsize'] = label_size 
+mpl.rcParams['ytick.labelsize'] = label_size 
+
+
 stress[0]=stress[1]
 strain[0]=strain[1]
 essiG = [a/b/2. for a,b in zip(stress, strain)]
 essiGGmax = [item/Gmax for item in essiG]
 
-plt.semilogx(essiGamma, essiGGmax, label='ESSI')
-plt.semilogx(gamma , GGmax , label='Input')
+# strain_plot = [100* x for x in strain]
+# stress_plot = [1./1000* x for x in stress]
+plt.semilogx(essiGamma, essiGGmax, 'b-', label='ESSI', linewidth = 5.0 )
+plt.semilogx(gamma , GGmax , 'r--', label='Input', linewidth = 5.0 )
 
-plt.legend(loc=3)
-plt.title('Multi-Yield-Surface vonMises G/Gmax')
-plt.xlabel('Strain / (unitless)')
-plt.ylabel('G/Gmax / (unitless)')
+# plt.legend(loc=3)
+plt.legend(loc=3, prop={'size':fontSIZE})
+plt.title('Multi-Yield-Surface vonMises G/Gmax',fontsize=fontSIZE)
+plt.xlabel('Strain / (unitless)',fontsize=fontSIZE)
+plt.ylabel('G/Gmax / (unitless)',fontsize=fontSIZE)
 plt.grid()
 plt.box()
 plt.savefig('GGmax.pdf', transparent=True, bbox_inches='tight')
 plt.show()
 
 
+
+
+
+
+# strain_stress = np.loadtxt('strain_stress.txt')
+# strain = strain_stress[:,0]
+# stress = strain_stress[:,1]
+# # vol_s = strain_stress[:,3]
+# strain_plot = [100* x for x in strain]
+# stress_plot = [1./1000* x for x in stress]
+
+# plt.plot(strain_plot,stress_plot,linewidth=3.0)
+# # plt.plot(vol_s, stress)
+# minY = min(stress_plot)*1.05
+# maxY = max(stress_plot)*1.05
+# minX = min(strain_plot)*1.05
+# maxX = max(strain_plot)*1.05
+# plt.ylim([minY, maxY])
+# plt.xlim([minX, maxX])
+
+# plt.xlabel('Shear Strain (%) ',fontsize=fontSIZE)
+# plt.ylabel('Shear Stress (kPa)',fontsize=fontSIZE)
+
+# plt.grid()
+# # plt.show()
+# plt.savefig('multiSurface.pdf', dpi=1200, transparent=True, bbox_inches='tight')
+# # plt.savefig('multiSurface', format='svg', dpi=1200, transparent=True, bbox_inches='tight')
 

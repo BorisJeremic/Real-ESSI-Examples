@@ -8,15 +8,15 @@
 
 model name "test";
 add material # 1 type vonMisesMultipleYieldSurfaceGoverGmax
- mass_density = 0.0*kg/m^3 
- initial_shear_modulus = 3E8 * Pa 
- poisson_ratio = 0.0 
- total_number_of_shear_modulus = 9
- GoverGmax = 
- "1,0.99563892,0.96674888,0.87318337,0.78735192,0.46719464,0.32043423,0.10940113,0.06347752"  
- ShearStrainGamma = 
- "0,1E-6,1E-5,5E-5,1E-4, 0.0005, 0.001, 0.005, 0.01"
- ;
+mass_density = 0.0*kg/m^3 
+initial_shear_modulus = 3E8 * Pa 
+poisson_ratio = 0.0 
+total_number_of_shear_modulus = 17
+GoverGmax = 
+"1,0.997819460000000,0.995638920000000,0.981193900000000,0.966748880000000,0.919966125000000,0.873183370000000,0.830267645000000,0.787351920000000,0.627273280000000,0.467194640000000,0.393814435000000,0.320434230000000,0.214917680000000,0.109401130000000,0.0864393250000000,0.0634775200000000" 
+ShearStrainGamma = 
+"0,3.16200000000000e-07,1.00000000000000e-06,3.16227766016838e-06,1.00000000000000e-05,2.23606797749979e-05,5.00000000000000e-05,7.07106781186548e-05,0.000100000000000000,0.000223606797749979,0.000500000000000000,0.000707106781186548,0.00100000000000000,0.00223606797749979,0.00500000000000000,0.00707106781186548,0.0100000000000000"
+;
 define NDMaterial constitutive integration algorithm Backward_Euler
     yield_function_relative_tolerance =  1E-6
     stress_relative_tolerance =  1E-6
@@ -26,8 +26,8 @@ incr_size = 0.000001  ;
 max_strain=  0.005      ; 
 num_of_increm =  5*max_strain/incr_size -1 ;
 simulate constitutive testing strain control pure shear use material # 1
- confinement_strain = 0.0
- strain_increment_size = incr_size 
- maximum_strain = max_strain
- number_of_increment = num_of_increm;
+confinement_strain = 0.0
+strain_increment_size = incr_size 
+maximum_strain = max_strain
+number_of_increment = num_of_increm;
 bye;

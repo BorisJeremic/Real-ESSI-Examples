@@ -45,7 +45,7 @@ plt.ylabel('Stress / (kPa)',fontsize=fontSIZE)
 plt.title('Material Behavior: Stress-Strain',fontsize=fontSIZE)
 plt.grid()
 plt.box()
-plt.savefig('backbone.pdf', transparent=True, bbox_inches='tight')
+plt.savefig('full-loop.pdf', transparent=True, bbox_inches='tight')
 plt.show()
 
 

@@ -92,17 +92,36 @@ def start_simulation(Nstep_):
 # ******************************************
 [InputStrain, InputDamping] = start_simulation(11)
 [ESSIStrain, ESSIDamping] = start_simulation(51)
-plt.semilogx(InputStrain, InputDamping, 'b-^', label='Input' )
-plt.semilogx(ESSIStrain, ESSIDamping, 'r-*', label=' ESSI')
-plt.legend(loc=2)
-plt.xlabel('Strain / (unitless)')
-plt.ylabel('Damping Ratio')
-plt.title('Damping Plot')
+
+
+# plot:
+fontSIZE = 21
+import matplotlib as mpl
+label_size = fontSIZE
+mpl.rcParams['xtick.labelsize'] = label_size 
+mpl.rcParams['ytick.labelsize'] = label_size 
+
+plt.semilogx(ESSIStrain, ESSIDamping,  'b-', label=' ESSI',  linewidth = 5.0 )
+plt.semilogx(InputStrain, InputDamping,'r--', label='Input',  linewidth = 5.0 )
+plt.legend(loc=2, prop={'size':fontSIZE})
+plt.xlabel('Strain / (unitless)',fontsize=fontSIZE)
+plt.ylabel('Damping Ratio/ (unitless)',fontsize=fontSIZE)
+plt.title('Damping Plot',fontsize=fontSIZE)
 plt.grid()
 plt.box()
 plt.savefig('damping.pdf', transparent=True, bbox_inches='tight')
 plt.show()
 
+
+
+
+
+
+# plt.title('Material Behavior: Stress-Strain',fontsize=fontSIZE)
+# plt.grid()
+# plt.box()
+# plt.savefig('backbone.pdf', transparent=True, bbox_inches='tight')
+# plt.show()
 
 
 
