@@ -22,7 +22,7 @@ add material # 3 type linear_elastic_isotropic_3d
 include "node.fei";
 include "element.fei";
 new loading stage "1D";
-add domain reduction method loading #  1
+ add load type #  1 domain reduction method
  hdf5_file = "input.hdf5";
 define algorithm With_no_convergence_check ;
 if(IS_PARALLEL==1){

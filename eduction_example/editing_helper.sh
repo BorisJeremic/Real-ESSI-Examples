@@ -12,7 +12,7 @@ do
 	# sed -i 's/\/\/.*//' main.fei
 	# sed -i '/^$/d' main.fei
 	# tar -czvf ${PWD##*/}.tgz *
-	cp ${current_dir}/pvESSI_camera.py .
+	# cp ${current_dir}/pvESSI_camera.py .
 	# python plot.py
 	# sed -i '/^\s*$/d' main.fei
 	# sed -i 's/8NodeBrickLT/8NodeBrick/' *.fei
@@ -28,6 +28,8 @@ do
 	# sed -i 's/\ Norm_Displacement_Increment/\ Absolute_Norm_Displacement_Increment/' *.fei
 	# sed -i 's/\ Norm_Unbalance/\ Absolute_Norm_Unbalanced_Force/' *.fei
 	# sed -i 's/\ Absolute_Norm_Unbalanced_Forced_Force/\ Absolute_Norm_Unbalanced_Force/' *.fei
+	sed -i 's/add\ domain\ reduction\ method\ loading\ \#\ \ 1/\ add\ load\ type\ \#\ \ 1 domain\ reduction\ method/' *.fei
+	sed -i 's/add\ domain\ reduction\ method\ loading\ \#\ \ 2/\ add\ load\ type\ \#\ \ 2 domain\ reduction\ method/' *.fei
 
 done
 

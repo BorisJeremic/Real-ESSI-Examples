@@ -1,194 +1,217 @@
-// 
-// Real ESSI Simulator
-// Modeling and Simulation Examples
-// for more information, see: http://real-essi.info
-// 
-
-
 
 model name "Six_Solid_Blocks_Example_With_Contact";
- add material #1 type linear_elastic_isotropic_3d mass_density=2000*kg/m^3 elastic_modulus=200*MPa poisson_ratio=0.3; 
- add node # 1 at (-1.500000*m,-0.500000*m,0.000000*m) with 3 dofs;
- add node # 2 at (-1.500000*m,0.500000*m,0.000000*m) with 3 dofs;
- add node # 3 at (1.500000*m,-0.500000*m,0.000000*m) with 3 dofs;
- add node # 4 at (1.500000*m,0.500000*m,0.000000*m) with 3 dofs;
- add node # 5 at (-1.500000*m,-0.500000*m,-2.000000*m) with 3 dofs;
- add node # 6 at (-1.500000*m,0.500000*m,-2.000000*m) with 3 dofs;
- add node # 7 at (1.500000*m,0.500000*m,-2.000000*m) with 3 dofs;
- add node # 8 at (1.500000*m,-0.500000*m,-2.000000*m) with 3 dofs;
- add node # 9 at (-0.500000*m,-0.500000*m,0.000000*m) with 3 dofs;
- add node # 10 at (0.500000*m,-0.500000*m,0.000000*m) with 3 dofs;
- add node # 11 at (-0.500000*m,0.500000*m,0.000000*m) with 3 dofs;
- add node # 12 at (0.500000*m,0.500000*m,0.000000*m) with 3 dofs;
- add node # 13 at (-0.500000*m,0.500000*m,-2.000000*m) with 3 dofs;
- add node # 14 at (0.500000*m,0.500000*m,-2.000000*m) with 3 dofs;
- add node # 15 at (0.500000*m,-0.500000*m,-2.000000*m) with 3 dofs;
- add node # 16 at (-0.500000*m,-0.500000*m,-2.000000*m) with 3 dofs;
- add node # 17 at (-1.500000*m,-0.500000*m,-1.000000*m) with 3 dofs;
- add node # 18 at (-1.500000*m,0.500000*m,-1.000000*m) with 3 dofs;
- add node # 19 at (1.500000*m,0.500000*m,-1.000000*m) with 3 dofs;
- add node # 20 at (1.500000*m,-0.500000*m,-1.000000*m) with 3 dofs;
- add node # 21 at (-0.500000*m,0.500000*m,-1.000000*m) with 3 dofs;
- add node # 22 at (0.500000*m,0.500000*m,-1.000000*m) with 3 dofs;
- add node # 23 at (-0.500000*m,-0.500000*m,-1.000000*m) with 3 dofs;
- add node # 24 at (0.500000*m,-0.500000*m,-1.000000*m) with 3 dofs;
- add node # 25 at (-0.500000*m,-0.500000*m,0.000000*m) with 3 dofs;
- add node # 26 at (0.500000*m,-0.500000*m,0.000000*m) with 3 dofs;
- add node # 27 at (-0.500000*m,0.500000*m,0.000000*m) with 3 dofs;
- add node # 28 at (0.500000*m,0.500000*m,0.000000*m) with 3 dofs;
- add node # 29 at (-0.500000*m,0.500000*m,-1.000000*m) with 3 dofs;
- add node # 30 at (0.500000*m,0.500000*m,-1.000000*m) with 3 dofs;
- add node # 31 at (-0.500000*m,-0.500000*m,-1.000000*m) with 3 dofs;
- add node # 32 at (0.500000*m,-0.500000*m,-1.000000*m) with 3 dofs;
- add element #1 type 8NodeBrick using 2 Gauss points each direction with nodes (21,23,17,18,11,9,1,2) use material #1;
- add element #2 type 8NodeBrick using 2 Gauss points each direction with nodes (13,16,5,6,21,23,17,18) use material #1;
- add element #3 type 8NodeBrick using 2 Gauss points each direction with nodes (30,32,31,29,28,26,25,27) use material #1;
- add element #4 type 8NodeBrick using 2 Gauss points each direction with nodes (14,15,16,13,22,24,23,21) use material #1;
- add element #5 type 8NodeBrick using 2 Gauss points each direction with nodes (19,20,24,22,4,3,10,12) use material #1;
- add element #6 type 8NodeBrick using 2 Gauss points each direction with nodes (7,8,15,14,19,20,24,22) use material #1;
- Kn = 1e12*N/m; 
- Kt = 1e12*N/m; 
- Cn = 0*N/m*s; 
- Ct = 0*N/m*s; 
- nu = 0.4;  
- add element #7 type HardContact with nodes (9,25) 
-  normal_stiffness =  Kn
-  tangential_stiffness =   Kt
-  normal_damping =   Cn
-  tangential_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (1,0,0);
- add element #8 type HardContact with nodes (10,26) 
-  normal_stiffness =  Kn
-  tangential_stiffness =   Kt
-  normal_damping =   Cn
-  tangential_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (-1,0,0);
- add element #9 type HardContact with nodes (11,27) 
-  normal_stiffness =  Kn
-  tangential_stiffness =   Kt
-  normal_damping =   Cn
-  tangential_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (1,0,0);
- add element #10 type HardContact with nodes (12,28) 
-  normal_stiffness =  Kn
-  tangential_stiffness =   Kt
-  normal_damping =   Cn
-  tangential_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (-1,0,0);
- add element #11 type HardContact with nodes (21,29) 
-  normal_stiffness =  Kn
-  tangential_stiffness =   Kt
-  normal_damping =   Cn
-  tangential_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (1,0,0);
- add element #12 type HardContact with nodes (22,30) 
-  normal_stiffness =  Kn
-  tangential_stiffness =   Kt
-  normal_damping =   Cn
-  tangential_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (-1,0,0);
- add element #13 type HardContact with nodes (23,31) 
-  normal_stiffness =  Kn
-  tangential_stiffness =   Kt
-  normal_damping =   Cn
-  tangential_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (1,0,0);
- add element #14 type HardContact with nodes (24,32) 
-  normal_stiffness =  Kn
-  tangential_stiffness =   Kt
-  normal_damping =   Cn
-  tangential_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (-1,0,0);
- add element #15 type HardContact with nodes (21,29) 
-  normal_stiffness =  Kn
-  tangential_stiffness =   Kt
-  normal_damping =   Cn
-  tangential_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (0,0,1);
- add element #16 type HardContact with nodes (22,30) 
-  normal_stiffness =  Kn
-  tangential_stiffness =   Kt
-  normal_damping =   Cn
-  tangential_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (0,0,1);
- add element #17 type HardContact with nodes (23,31) 
-  normal_stiffness =  Kn
-  tangential_stiffness =   Kt
-  normal_damping =   Cn
-  tangential_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (0,0,1);
- add element #18 type HardContact with nodes (24,32) 
-  normal_stiffness =  Kn
-  tangential_stiffness =   Kt
-  normal_damping =   Cn
-  tangential_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (0,0,1);
- fix node #5  dofs ux uy uz;
- fix node #6  dofs ux uy uz;
- fix node #13 dofs ux uy uz;
- fix node #16 dofs ux uy uz;
- fix node #15 dofs ux uy uz;
- fix node #14 dofs ux uy uz; 
- fix node #7  dofs ux uy uz;
- fix node #8  dofs ux uy uz;
- fix node #17 dofs ux uy;
- fix node #18 dofs ux uy;
- fix node #1  dofs ux uy;
- fix node #2  dofs ux uy;
- fix node #20 dofs ux uy;
- fix node #19 dofs ux uy;
- fix node #3  dofs ux uy;
- fix node #4  dofs ux uy;
- fix node #9  dofs uy;
- fix node #10 dofs uy;
- fix node #23 dofs uy;
- fix node #24 dofs uy;
- fix node #11 dofs uy;
- fix node #21 dofs uy;
- fix node #12 dofs uy;
- fix node #22 dofs uy;
- fix node #25 dofs uy;
- fix node #26 dofs uy;
- fix node #27 dofs uy;
- fix node #28 dofs uy;
- fix node #29 dofs uy;
- fix node #30 dofs uy;
- fix node #31 dofs uy;
- fix node #32 dofs uy;
+
+// Adding material
+	add material #1 type linear_elastic_isotropic_3d mass_density=2000*kg/m^3 elastic_modulus=200*MPa poisson_ratio=0.3;	
+
+// Adding Nodes 
+	add node # 1 at (-1.500000*m,-0.500000*m,0.000000*m) with 3 dofs;
+	add node # 2 at (-1.500000*m,0.500000*m,0.000000*m) with 3 dofs;
+	add node # 3 at (1.500000*m,-0.500000*m,0.000000*m) with 3 dofs;
+	add node # 4 at (1.500000*m,0.500000*m,0.000000*m) with 3 dofs;
+	add node # 5 at (-1.500000*m,-0.500000*m,-2.000000*m) with 3 dofs;
+	add node # 6 at (-1.500000*m,0.500000*m,-2.000000*m) with 3 dofs;
+	add node # 7 at (1.500000*m,0.500000*m,-2.000000*m) with 3 dofs;
+	add node # 8 at (1.500000*m,-0.500000*m,-2.000000*m) with 3 dofs;
+	add node # 9 at (-0.500000*m,-0.500000*m,0.000000*m) with 3 dofs;
+	add node # 10 at (0.500000*m,-0.500000*m,0.000000*m) with 3 dofs;
+	add node # 11 at (-0.500000*m,0.500000*m,0.000000*m) with 3 dofs;
+	add node # 12 at (0.500000*m,0.500000*m,0.000000*m) with 3 dofs;
+	add node # 13 at (-0.500000*m,0.500000*m,-2.000000*m) with 3 dofs;
+	add node # 14 at (0.500000*m,0.500000*m,-2.000000*m) with 3 dofs;
+	add node # 15 at (0.500000*m,-0.500000*m,-2.000000*m) with 3 dofs;
+	add node # 16 at (-0.500000*m,-0.500000*m,-2.000000*m) with 3 dofs;
+	add node # 17 at (-1.500000*m,-0.500000*m,-1.000000*m) with 3 dofs;
+	add node # 18 at (-1.500000*m,0.500000*m,-1.000000*m) with 3 dofs;
+	add node # 19 at (1.500000*m,0.500000*m,-1.000000*m) with 3 dofs;
+	add node # 20 at (1.500000*m,-0.500000*m,-1.000000*m) with 3 dofs;
+	add node # 21 at (-0.500000*m,0.500000*m,-1.000000*m) with 3 dofs;
+	add node # 22 at (0.500000*m,0.500000*m,-1.000000*m) with 3 dofs;
+	add node # 23 at (-0.500000*m,-0.500000*m,-1.000000*m) with 3 dofs;
+	add node # 24 at (0.500000*m,-0.500000*m,-1.000000*m) with 3 dofs;
+
+	add node # 25 at (-0.500000*m,-0.500000*m,0.000000*m) with 3 dofs;
+	add node # 26 at (0.500000*m,-0.500000*m,0.000000*m) with 3 dofs;
+	add node # 27 at (-0.500000*m,0.500000*m,0.000000*m) with 3 dofs;
+	add node # 28 at (0.500000*m,0.500000*m,0.000000*m) with 3 dofs;
+
+	add node # 29 at (-0.500000*m,0.500000*m,-1.000000*m) with 3 dofs;
+	add node # 30 at (0.500000*m,0.500000*m,-1.000000*m) with 3 dofs;
+	add node # 31 at (-0.500000*m,-0.500000*m,-1.000000*m) with 3 dofs;
+	add node # 32 at (0.500000*m,-0.500000*m,-1.000000*m) with 3 dofs;
+
+// Adding Solid 8 Node Brick Elements
+	add element #1 type 8NodeBrick with nodes (21,23,17,18,11,9,1,2) use material #1;
+	add element #2 type 8NodeBrick with nodes (13,16,5,6,21,23,17,18) use material #1;
+	add element #3 type 8NodeBrick with nodes (30,32,31,29,28,26,25,27) use material #1;
+	add element #4 type 8NodeBrick with nodes (14,15,16,13,22,24,23,21) use material #1;
+	add element #5 type 8NodeBrick with nodes (19,20,24,22,4,3,10,12) use material #1;
+	add element #6 type 8NodeBrick with nodes (7,8,15,14,19,20,24,22) use material #1;
+
+//Adding some variables
+	Kn = 1e12*N/m;	// normal penalty stiffness
+	Kt = 1e8*N/m;	// tangential penalty stiffness
+	Cn = 0*N/m*s;	// normal penalty damping   
+	Ct = 0*N/m*s;	// tangential penalty damping
+	nu = 0.4;		// friction ratio
+
+// Adding Contact Element
+	add element #7 type HardContact with nodes (9,25) 
+		normal_stiffness =  Kn
+		tangential_stiffness =   Kt
+		normal_damping =   Cn
+		tangential_damping =  Ct  
+		friction_ratio =  nu 
+		contact_plane_vector = (1,0,0);
+
+	add element #8 type HardContact with nodes (10,26) 
+		normal_stiffness =  Kn
+		tangential_stiffness =   Kt
+		normal_damping =   Cn
+		tangential_damping =  Ct  
+		friction_ratio =  nu 
+		contact_plane_vector = (-1,0,0);
+
+	add element #9 type HardContact with nodes (11,27) 
+		normal_stiffness =  Kn
+		tangential_stiffness =   Kt
+		normal_damping =   Cn
+		tangential_damping =  Ct  
+		friction_ratio =  nu 
+		contact_plane_vector = (1,0,0);
+
+	add element #10 type HardContact with nodes (12,28) 
+		normal_stiffness =  Kn
+		tangential_stiffness =   Kt
+		normal_damping =   Cn
+		tangential_damping =  Ct  
+		friction_ratio =  nu 
+		contact_plane_vector = (-1,0,0);
+
+	add element #11 type HardContact with nodes (21,29) 
+		normal_stiffness =  Kn
+		tangential_stiffness =   Kt
+		normal_damping =   Cn
+		tangential_damping =  Ct  
+		friction_ratio =  nu 
+		contact_plane_vector = (1,0,0);
+
+	add element #12 type HardContact with nodes (22,30) 
+		normal_stiffness =  Kn
+		tangential_stiffness =   Kt
+		normal_damping =   Cn
+		tangential_damping =  Ct  
+		friction_ratio =  nu 
+		contact_plane_vector = (-1,0,0);
+
+	add element #13 type HardContact with nodes (23,31) 
+		normal_stiffness =  Kn
+		tangential_stiffness =   Kt
+		normal_damping =   Cn
+		tangential_damping =  Ct  
+		friction_ratio =  nu 
+		contact_plane_vector = (1,0,0);
+
+	add element #14 type HardContact with nodes (24,32) 
+		normal_stiffness =  Kn
+		tangential_stiffness =   Kt
+		normal_damping =   Cn
+		tangential_damping =  Ct  
+		friction_ratio =  nu 
+		contact_plane_vector = (-1,0,0);
+
+	add element #15 type HardContact with nodes (21,29) 
+		normal_stiffness =  Kn
+		tangential_stiffness =   Kt
+		normal_damping =   Cn
+		tangential_damping =  Ct  
+		friction_ratio =  nu 
+		contact_plane_vector = (0,0,1);
+
+	add element #16 type HardContact with nodes (22,30) 
+		normal_stiffness =  Kn
+		tangential_stiffness =   Kt
+		normal_damping =   Cn
+		tangential_damping =  Ct  
+		friction_ratio =  nu 
+		contact_plane_vector = (0,0,1);
+
+	add element #17 type HardContact with nodes (23,31) 
+		normal_stiffness =  Kn
+		tangential_stiffness =   Kt
+		normal_damping =   Cn
+		tangential_damping =  Ct  
+		friction_ratio =  nu 
+		contact_plane_vector = (0,0,1);
+
+	add element #18 type HardContact with nodes (24,32) 
+		normal_stiffness =  Kn
+		tangential_stiffness =   Kt
+		normal_damping =   Cn
+		tangential_damping =  Ct  
+		friction_ratio =  nu 
+		contact_plane_vector = (0,0,1);
+
+// Adding Fixities
+	fix node #5  dofs ux uy uz;
+	fix node #6  dofs ux uy uz;
+	fix node #13 dofs ux uy uz;
+	fix node #16 dofs ux uy uz;
+	fix node #15 dofs ux uy uz;
+	fix node #14 dofs ux uy uz;	
+	fix node #7  dofs ux uy uz;
+	fix node #8  dofs ux uy uz;
+	fix node #17 dofs ux uy;
+	fix node #18 dofs ux uy;
+	fix node #1  dofs ux uy;
+	fix node #2  dofs ux uy;
+	fix node #20 dofs ux uy;
+	fix node #19 dofs ux uy;
+	fix node #3  dofs ux uy;
+	fix node #4  dofs ux uy;
+	fix node #9  dofs uy;
+	fix node #10 dofs uy;
+	fix node #23 dofs uy;
+	fix node #24 dofs uy;
+	fix node #11 dofs uy;
+	fix node #21 dofs uy;
+	fix node #12 dofs uy;
+	fix node #22 dofs uy;
+	fix node #25 dofs uy;
+	fix node #26 dofs uy;
+	fix node #27 dofs uy;
+	fix node #28 dofs uy;
+	fix node #29 dofs uy;
+	fix node #30 dofs uy;
+	fix node #31 dofs uy;
+	fix node #32 dofs uy;
+
 new loading stage "Normal_Loading";
- add load #1 to element #3 type surface at nodes (25,26,27,28) with magnitude (-1*Pa);
- tol = 1e-12;
- define convergence test Absolute_Norm_Displacement_Increment 
-   tolerance =  tol
-   maximum_iterations = 100 
-   ;
- define algorithm Newton;
- Nsteps= 10;
- define solver UMFPack;
- define load factor increment 1/Nsteps;
- simulate Nsteps steps using static algorithm;
+
+	add load #1 to element #3 type surface at nodes (25,26,27,28) with magnitude (-1*Pa);
+
+	tol = 1e-3;
+	define convergence test Relative_Norm_Unbalanced_Force tolerance = tol minimum_absolute_tolerance = 1 maximum_iterations = 20 ;
+
+
+	define algorithm Newton;
+
+	Nsteps= 10;
+	define solver UMFPack;
+	define load factor increment 1/Nsteps;
+	simulate Nsteps steps using static algorithm;
+
 new loading stage "Shear_Loading";
- add load #2 to element #3 type surface at nodes (26,28,30,32) with magnitude (-1*Pa);
- tol = 1e-12;
- define convergence test Absolute_Norm_Displacement_Increment 
-   tolerance =  tol
-   maximum_iterations = 100
-   ;
- define algorithm Newton;
- Nsteps= 10;
- define solver UMFPack;
- define load factor increment 1/Nsteps;
- simulate Nsteps steps using static algorithm;
-bye;  
+
+	add load #2 to element #3 type surface at nodes (26,28,30,32) with magnitude (-1*Pa);
+
+	tol = 1e-3;
+	define convergence test Relative_Norm_Unbalanced_Force tolerance = tol minimum_absolute_tolerance = 1 maximum_iterations = 20 ;
+	define algorithm Newton;
+
+	Nsteps= 10;
+	define solver UMFPack;
+	define load factor increment 1/Nsteps;
+	simulate Nsteps steps using static algorithm;
+
+bye; 	

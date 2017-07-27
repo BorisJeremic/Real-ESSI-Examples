@@ -44,7 +44,7 @@ fix node #   1334 dofs all    ;
 fix node #   2924 dofs all    ;
 
 new loading stage "3D";
-add domain reduction method loading #  1
+add load type #  1 domain reduction method
   hdf5_file = "input.hdf5";
 
 define algorithm With_no_convergence_check ;
