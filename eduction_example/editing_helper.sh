@@ -28,8 +28,8 @@ do
 	# sed -i 's/\ Norm_Displacement_Increment/\ Absolute_Norm_Displacement_Increment/' *.fei
 	# sed -i 's/\ Norm_Unbalance/\ Absolute_Norm_Unbalanced_Force/' *.fei
 	# sed -i 's/\ Absolute_Norm_Unbalanced_Forced_Force/\ Absolute_Norm_Unbalanced_Force/' *.fei
-	sed -i 's/add\ domain\ reduction\ method\ loading\ \#\ \ 1/\ add\ load\ type\ \#\ \ 1 domain\ reduction\ method/' *.fei
-	sed -i 's/add\ domain\ reduction\ method\ loading\ \#\ \ 2/\ add\ load\ type\ \#\ \ 2 domain\ reduction\ method/' *.fei
+	sed -i 's/\ add\ load\ type\ \#\ \ 1 domain\ reduction\ method/\ add\ load\ \#\ 1\ type\ domain\ reduction\ method/' *.fei
+	sed -i 's/\ add\ load\ type\ \#\ \ 2 domain\ reduction\ method/\ add\ load\ \#\ 2\ type\ domain\ reduction\ method/' *.fei
 
 done
 

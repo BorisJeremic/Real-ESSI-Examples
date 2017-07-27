@@ -75,7 +75,7 @@ simulate NumSteps steps using static algorithm;
 new loading stage "DRM_analysis"; 
 
 
- add load type #  2 domain reduction method
+ add load # 2 type domain reduction method
 	hdf5_file = "DRM_Input.hdf5";
 
 

@@ -28,7 +28,7 @@ define solver ProfileSPD;
 define dynamic integrator Newmark with 
   gamma = 0.5050 
   beta = 0.2525;
- add load type #  1 domain reduction method
+ add load # 1 type domain reduction method
  hdf5_file = "input.hdf5";
 simulate 999 steps using transient algorithm 
  time_step = 0.01*s;

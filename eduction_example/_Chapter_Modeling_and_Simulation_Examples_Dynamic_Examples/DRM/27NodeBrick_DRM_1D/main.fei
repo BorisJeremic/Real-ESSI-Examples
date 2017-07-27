@@ -23,7 +23,7 @@ include "node.fei";
 include "element.fei";
 include "constraint.fei";
 new loading stage "1D";
- add load type #  1 domain reduction method
+ add load # 1 type domain reduction method
  hdf5_file = "input.hdf5";
 define algorithm With_no_convergence_check ;
 define solver ProfileSPD;
