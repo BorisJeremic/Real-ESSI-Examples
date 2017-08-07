@@ -1,0 +1,67 @@
+
+//*************************************************************************************************************************
+//							Fix_Dofs{Physical_Group#Base_Surface, DofTypes:= ux uy uz p Ux Uy}Starts
+//*************************************************************************************************************************
+
+fix node # 1 dofs ux uy uz p Ux Uy; 
+fix node # 2 dofs ux uy uz p Ux Uy; 
+fix node # 3 dofs ux uy uz p Ux Uy; 
+fix node # 4 dofs ux uy uz p Ux Uy; 
+fix node # 5 dofs ux uy uz p Ux Uy; 
+fix node # 6 dofs ux uy uz p Ux Uy; 
+fix node # 7 dofs ux uy uz p Ux Uy; 
+fix node # 8 dofs ux uy uz p Ux Uy; 
+fix node # 17 dofs ux uy uz p Ux Uy; 
+fix node # 18 dofs ux uy uz p Ux Uy; 
+fix node # 19 dofs ux uy uz p Ux Uy; 
+fix node # 20 dofs ux uy uz p Ux Uy; 
+fix node # 21 dofs ux uy uz p Ux Uy; 
+fix node # 22 dofs ux uy uz p Ux Uy; 
+fix node # 23 dofs ux uy uz p Ux Uy; 
+fix node # 24 dofs ux uy uz p Ux Uy; 
+fix node # 25 dofs ux uy uz p Ux Uy; 
+fix node # 26 dofs ux uy uz p Ux Uy; 
+fix node # 27 dofs ux uy uz p Ux Uy; 
+fix node # 28 dofs ux uy uz p Ux Uy; 
+fix node # 29 dofs ux uy uz p Ux Uy; 
+fix node # 30 dofs ux uy uz p Ux Uy; 
+fix node # 31 dofs ux uy uz p Ux Uy; 
+fix node # 32 dofs ux uy uz p Ux Uy; 
+fix node # 33 dofs ux uy uz p Ux Uy; 
+fix node # 34 dofs ux uy uz p Ux Uy; 
+fix node # 35 dofs ux uy uz p Ux Uy; 
+fix node # 36 dofs ux uy uz p Ux Uy; 
+fix node # 37 dofs ux uy uz p Ux Uy; 
+fix node # 38 dofs ux uy uz p Ux Uy; 
+fix node # 39 dofs ux uy uz p Ux Uy; 
+fix node # 40 dofs ux uy uz p Ux Uy; 
+fix node # 41 dofs ux uy uz p Ux Uy; 
+fix node # 42 dofs ux uy uz p Ux Uy; 
+fix node # 43 dofs ux uy uz p Ux Uy; 
+fix node # 44 dofs ux uy uz p Ux Uy; 
+fix node # 97 dofs ux uy uz p Ux Uy; 
+fix node # 98 dofs ux uy uz p Ux Uy; 
+fix node # 99 dofs ux uy uz p Ux Uy; 
+fix node # 100 dofs ux uy uz p Ux Uy; 
+fix node # 101 dofs ux uy uz p Ux Uy; 
+fix node # 102 dofs ux uy uz p Ux Uy; 
+fix node # 103 dofs ux uy uz p Ux Uy; 
+fix node # 104 dofs ux uy uz p Ux Uy; 
+fix node # 105 dofs ux uy uz p Ux Uy; 
+fix node # 106 dofs ux uy uz p Ux Uy; 
+fix node # 107 dofs ux uy uz p Ux Uy; 
+fix node # 108 dofs ux uy uz p Ux Uy; 
+fix node # 109 dofs ux uy uz p Ux Uy; 
+fix node # 110 dofs ux uy uz p Ux Uy; 
+fix node # 111 dofs ux uy uz p Ux Uy; 
+fix node # 112 dofs ux uy uz p Ux Uy; 
+fix node # 113 dofs ux uy uz p Ux Uy; 
+fix node # 114 dofs ux uy uz p Ux Uy; 
+fix node # 115 dofs ux uy uz p Ux Uy; 
+fix node # 116 dofs ux uy uz p Ux Uy; 
+fix node # 117 dofs ux uy uz p Ux Uy; 
+
+//*************************************************************************************************************************
+//							Fix_Dofs{Physical_Group#Base_Surface, DofTypes:= ux uy uz p Ux Uy}Ends
+//*************************************************************************************************************************
+

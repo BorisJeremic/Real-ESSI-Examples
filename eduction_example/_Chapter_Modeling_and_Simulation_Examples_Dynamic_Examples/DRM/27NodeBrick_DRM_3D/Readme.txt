@@ -1,1 +1,1 @@
-This example requires parallel ESSI for execution.
+This example requires PARALLEL essi for execution.

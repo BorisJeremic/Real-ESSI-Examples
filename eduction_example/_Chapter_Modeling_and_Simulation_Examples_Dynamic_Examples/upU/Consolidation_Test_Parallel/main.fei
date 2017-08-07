@@ -1,0 +1,87 @@
+// ###########################################################################################################################
+// #                                                                                                                         #
+// #                               One -D Single Drainage Consolidation Test 	                                             #
+// #  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -                                      #
+// #                                                                                                                         #
+// #  GITHUB:: https://github.com/SumeetSinha                                                                                #
+// #                                                                                                                         #
+// #  Sumeet Kumar Sinha (September,2016)                                                                                    #
+// #  Computational Geomechanics Group                                                                                       #
+// #  University of California, Davis                                                                                        #
+// #  s u m e e t k s i n h a . c o m                                                                                        #
+// ###########################################################################################################################
+// My new model
+model name "Double_Drainage_Consolidation_Test"; 
+
+add acceleration field # 1 ax = 0*g ay = 0*g az = -100000000*g ; 
+
+
+// Defining material variables
+ Pois_Ratio = 0.25; 
+ Porosty = 0.25; 
+ Gravity_Constant = 9.81*m/s^2; 
+ Isotropic_Permeability_k_xyz = 1e-4*m/s; 
+ Solid_Density = 2650*kg/m^3; 
+ Fluid_Density = 1000*kg/m^3; 
+ Mixture_Density = (Porosty*Fluid_Density+(1-Porosty)*Solid_Density); 
+ Elstc_Modulus = 12e4*kN/m^2; 
+ K_solid = 50e6*kN/m^2; 
+ K_fluid = 2.15e6*kN/m^2; 
+ Biots_Constant_alpha = 1; 
+ k_all = Isotropic_Permeability_k_xyz/Fluid_Density/Gravity_Constant; 
+
+add material # 1 type linear_elastic_isotropic_3d mass_density = Mixture_Density elastic_modulus = Elstc_Modulus poisson_ratio = Pois_Ratio; 
+
+include "Consolidation_Test_geometry.fei"; 
+
+
+
+new loading stage "One_D_Compression_Load_Application"; 
+
+
+add load # 1 to all elements type self_weight use acceleration field # 1; 
+
+include "Consolidation_Test_load.fei"; 
+
+i = 1;
+
+// while(i<=51)
+// {
+// // fix node # <.> dofs <DofTypes>; 
+// fix node #i dofs p;
+
+// i=i+1; 
+
+
+	
+// };
+
+// Starting the simulation;
+ tol = 1e-9; 
+ maxIter = 1000; 
+
+// Simulation Parameters
+ Time1 = 0.01; 
+ Time2 = 5; 
+ NumSteps1 = 10; 
+ NumSteps2 = 100; 
+
+
+ DeltaT1 = Time1/NumSteps1*s; 
+ DeltaT2 = Time2/NumSteps2*s; 
+
+define algorithm With_no_convergence_check; 
+if(IS_PARALLEL==1)
+{
+define solver Parallel petsc "-pc_type lu -pc_factor_mat_solver_package mumps" ;
+}
+else{
+define solver UMFPack  ;
+}; 
+
+define dynamic integrator Newmark with gamma = 0.5 beta = 0.25; 
+simulate NumSteps1 steps using transient algorithm time_step = DeltaT1; 
+
+ bye; 
+
+

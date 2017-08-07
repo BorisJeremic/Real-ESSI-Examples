@@ -1,0 +1,102 @@
+model name "CoupledContactEffect";  
+
+
+// Defining material variables
+ Pois_Ratio = 0.25;  
+ Porosty = 0.25;  
+ Gravity_Constant = 9.81*m/s^2;  
+ Isotropic_Permeability_k_xyz = 1e-4*m/s;  
+ Solid_Density = 2650*kg/m^3;  
+ Fluid_Density = 1000*kg/m^3;  
+ Mixture_Density = (Porosty*Fluid_Density+(1-Porosty)*Solid_Density);  
+ Elstc_Modulus = 12e4*kN/m^2;  
+ K_solid = 50e6*kN/m^2;  
+ K_fluid = 2.15e6*kN/m^2;  
+ Biots_Constant_alpha = 1;  
+ k_all = Isotropic_Permeability_k_xyz/Fluid_Density/Gravity_Constant;  
+
+
+ ConcreteDensity = 2400*kg/m^3;  
+ ConcreteE = 20*GPa;  
+ ConcreteNu = 0.2;  
+
+ One_D_Compressive_Load = -0.1*kN;  
+
+
+// Contact Parameters
+ NormStiff = 1e10*N/m;  
+ NormPenStiff = 1e10*N/m;
+ TanStiff = 1e7*N/m;  
+ NormDamp = 0*kN/m*s;  
+ TanDamp = 0*kN/m*s;  
+ FricRatio = 0.3;  
+
+
+add material # 1 type linear_elastic_isotropic_3d mass_density = Mixture_Density elastic_modulus = Elstc_Modulus poisson_ratio = Pois_Ratio;  
+add material # 2 type linear_elastic_isotropic_3d mass_density = ConcreteDensity elastic_modulus = ConcreteE poisson_ratio = ConcreteNu;  
+
+
+
+
+
+include "Prototype_Model_01_geometry.fei";  
+
+// Starting the simulation;
+ tol = 1e-3;  
+ maxIter = 100;  
+
+// Simulation Parameters
+ Time1 = 1;  
+ Time2 = 500;  
+ NumSteps1 = 100;  
+ NumSteps2 = 100;  
+
+ DeltaT1 = Time1/NumSteps1*s;  
+ DeltaT2 = Time2/NumSteps2*s;  
+
+add acceleration field # 1 ax = 0*g ay = 0*g az = -g/Time1 ;  
+
+new loading stage "Self_Weight";  
+
+
+
+include "Prototype_Model_01_load.fei";  
+
+
+define convergence test Relative_Norm_Unbalanced_Force tolerance = tol minimum_absolute_tolerance = 100 maximum_iterations = maxIter;  
+
+define algorithm Newton; 
+// define algorithm <With_no_convergence_check|Newton|Modified_Newton>;
+ // define algorithm With_no_convergence_check;
+ 
+ 
+
+ if(IS_PARALLEL==1){
+ define solver Parallel petsc "-pc_type lu -pc_factor_mat_solver_package mumps" ;
+ }else{
+ define solver UMFPack  ;
+ }; 
+
+define dynamic integrator Newmark with gamma = 0.5 beta = 0.25;  
+simulate NumSteps1 steps using transient algorithm time_step = DeltaT1;  
+
+
+
+new loading stage "Consolidation";  
+
+// include "Prototype_Model_01_load.fei"; 
+
+define convergence test Relative_Norm_Unbalanced_Force tolerance = tol minimum_absolute_tolerance = 100 maximum_iterations = maxIter;  
+
+define algorithm Newton;  
+if(IS_PARALLEL==1){
+define solver Parallel petsc "-pc_type lu -pc_factor_mat_solver_package mumps" ;
+}else{
+define solver UMFPack  ;
+}; 
+define dynamic integrator Newmark with gamma = 0.5 beta = 0.25;  
+simulate NumSteps2 steps using transient algorithm time_step = DeltaT2;  
+
+ bye;  
+
+
