@@ -1,0 +1,58 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+model name "t" ;
+h     = 1*m;       
+Eshell  = 1e8*N/m^2; 
+nu    = 0.0;        
+rho   = 10*kg/m^3;     
+add material # 1 type linear_elastic_isotropic_3d
+  mass_density = rho
+  elastic_modulus = Eshell
+  poisson_ratio = nu;
+include "add_node.fei";
+include "element.fei";
+include "constraint.fei";
+new loading stage "1";
+add acceleration field # 1 
+ ax =  0*g
+ ay =  0*g
+ az =  - g;
+add load # 1 to element # 1 type self_weight use acceleration field # 1;
+add load # 2 to element # 2 type self_weight use acceleration field # 1;
+add load # 3 to element # 3 type self_weight use acceleration field # 1;
+add load # 4 to element # 4 type self_weight use acceleration field # 1;
+add load # 5 to element # 5 type self_weight use acceleration field # 1;
+add load # 6 to element # 6 type self_weight use acceleration field # 1;
+define algorithm With_no_convergence_check ;
+define solver UMFPack;
+// define load factor increment 1;
+// simulate 1 steps using static algorithm;
+
+define dynamic integrator Newmark with gamma = 0.5 beta = 0.25;
+simulate 3 steps using transient algorithm 
+ time_step = 0.1 *s;
+
+save model;
+// new loading stage "2" ; 
+// add acceleration field # 2 
+//  ax =  0*g
+//  ay =  0*g
+//  az =  - g;
+// add load # 7 to element # 1 type self_weight use acceleration field # 2;
+// add load # 8 to element # 2 type self_weight use acceleration field # 2;
+// add load # 9 to element # 3 type self_weight use acceleration field # 2;
+// add load # 10 to element # 4 type self_weight use acceleration field # 2;
+// add load # 11 to element # 5 type self_weight use acceleration field # 2;
+// add load # 12 to element # 6 type self_weight use acceleration field # 2;
+// define algorithm With_no_convergence_check ;
+// define solver UMFPack;
+// define dynamic integrator Newmark with gamma = 0.5 beta = 0.25;
+// simulate 3 steps using transient algorithm 
+//  time_step = 0.1 *s;
+
+bye;
