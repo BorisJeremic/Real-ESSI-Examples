@@ -5,22 +5,62 @@
 // 
 
 
-model name "t" ;
-h     = 1*m;       
-Eshell  = 1e8*N/m^2; 
-nu    = 0.0;        
-rho   = 0*kg/m^3;     
-add material # 1 type linear_elastic_isotropic_3d
-  mass_density = rho
-  elastic_modulus = Eshell
-  poisson_ratio = nu;
-include "node.fei";
-include "element.fei";
-include "constraint.fei";
-new loading stage "Fz";
-include "add_load.fei"
-define algorithm With_no_convergence_check ;
+
+model name "27nodebrick";
+new loading stage "nodal_load";
+add material # 1 type linear_elastic_isotropic_3d mass_density=0.0*kg/m^3 elastic_modulus = 100.0*N/m^2 poisson_ratio=0.0;
+add node # 1  at (2.0*m, 2.0*m, 2.0*m) with 3 dofs;
+add node # 2  at (0.0*m, 2.0*m, 2.0*m) with 3 dofs;
+add node # 3  at (0.0*m, 0.0*m, 2.0*m) with 3 dofs;
+add node # 4  at (2.0*m, 0.0*m, 2.0*m) with 3 dofs;
+add node # 5  at (2.0*m, 2.0*m, 0.0*m) with 3 dofs;
+add node # 6  at (0.0*m, 2.0*m, 0.0*m) with 3 dofs;
+add node # 7  at (0.0*m, 0.0*m, 0.0*m) with 3 dofs;
+add node # 8  at (2.0*m, 0.0*m, 0.0*m) with 3 dofs;
+add node # 9  at (1.0*m, 2.0*m, 2.0*m) with 3 dofs;
+add node # 10 at (0.0*m, 1.0*m, 2.0*m) with 3 dofs;
+add node # 11 at (1.0*m, 0.0*m, 2.0*m) with 3 dofs;
+add node # 12 at (2.0*m, 1.0*m, 2.0*m) with 3 dofs;
+add node # 13 at (1.0*m, 2.0*m, 0.0*m) with 3 dofs;
+add node # 14 at (0.0*m, 1.0*m, 0.0*m) with 3 dofs;
+add node # 15 at (1.0*m, 0.0*m, 0.0*m) with 3 dofs;
+add node # 16 at (2.0*m, 1.0*m, 0.0*m) with 3 dofs;
+add node # 17 at (2.0*m, 2.0*m, 1.0*m) with 3 dofs;
+add node # 18 at (0.0*m, 2.0*m, 1.0*m) with 3 dofs;
+add node # 19 at (0.0*m, 0.0*m, 1.0*m) with 3 dofs;
+add node # 20 at (2.0*m, 0.0*m, 1.0*m) with 3 dofs;
+add node # 21 at (1.0*m, 1.0*m, 1.0*m) with 3 dofs;
+add node # 22 at (1.0*m, 2.0*m, 1.0*m) with 3 dofs;
+add node # 23 at (0.0*m, 1.0*m, 1.0*m) with 3 dofs;
+add node # 24 at (1.0*m, 0.0*m, 1.0*m) with 3 dofs;
+add node # 25 at (2.0*m, 1.0*m, 1.0*m) with 3 dofs;
+add node # 26 at (1.0*m, 1.0*m, 2.0*m) with 3 dofs;
+add node # 27 at (1.0*m, 1.0*m, 0.0*m) with 3 dofs;
+ 
+add element # 1 type 27NodeBrick using 3 Gauss points each direction with nodes (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27) use material # 1;
+fix node No 5 dofs all;
+fix node No 6 dofs all;
+fix node No 7 dofs all;
+fix node No 8 dofs all;
+fix node No 13 dofs all;
+fix node No 14 dofs all;
+fix node No 15 dofs all;
+fix node No 16 dofs all;
+fix node No 27 dofs all;
+
+// nodal load
+add load # 1 to node # 1  type linear Fz = 100 /36.0*N ;
+add load # 2 to node # 2  type linear Fz = 100 /36.0*N ;
+add load # 3 to node # 3  type linear Fz = 100 /36.0*N ;
+add load # 4 to node # 4  type linear Fz = 100 /36.0*N ;
+add load # 5 to node # 9  type linear Fz = 100 / 9.0 * N ;
+add load # 6 to node # 10 type linear Fz = 100 / 9.0 * N ;
+add load # 7 to node # 11 type linear Fz = 100 / 9.0 * N ;
+add load # 8 to node # 12 type linear Fz = 100 / 9.0 * N ;
+add load # 9 to node # 26 type linear Fz = 100 *4/9. * N ;
+
+define load factor increment 1.0;
+define algorithm With_no_convergence_check;
 define solver UMFPack;
-define load factor increment 1;
 simulate 1 steps using static algorithm;
 bye;

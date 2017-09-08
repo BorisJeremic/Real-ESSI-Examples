@@ -42,7 +42,8 @@ define dynamic integrator Newmark with
  beta = 0.2525;
 add load # 2 type domain reduction method
   hdf5_file = "input.hdf5";
-  simulate 120 steps using transient algorithm 
-  time_step = 0.01*s;
+simulate 120 steps using transient algorithm 
+  time_step = 0.01*s
+  restart_time = 1.2*s ;
 
 bye;

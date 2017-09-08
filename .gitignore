@@ -1,1 +1,5 @@
-*.h5.feioutput
+*.feioutput
+**/*.feioutput
+**/*.log
+**/*.out
+**/*.RESTART.essi

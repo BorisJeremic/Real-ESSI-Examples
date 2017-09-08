@@ -6,35 +6,36 @@
 
 
 
+// model name "t" ;
+// add material # 1 type linear_elastic_isotropic_3d
+//   mass_density = 2000*kg/m^3
+//   elastic_modulus = 1300*MPa
+//   poisson_ratio = 0.3;
+// add material # 2 type linear_elastic_isotropic_3d
+//   mass_density = 2000*kg/m^3
+//   elastic_modulus = 1300*MPa
+//   poisson_ratio = 0.3;
+// add material # 3 type linear_elastic_isotropic_3d
+//   mass_density = 2000*kg/m^3
+//   elastic_modulus = 1300*MPa
+//   poisson_ratio = 0.3;
+// include "node.fei";
+// include "element.fei";
+// include "constraint.fei";
+// new loading stage "1";
+// define algorithm With_no_convergence_check ;
+// define solver UMFPack;
+// define dynamic integrator Newmark with 
+//   gamma = 0.5050 
+//   beta = 0.2525;
+//  add load # 1 type domain reduction method
+//  hdf5_file = "input.hdf5";
+// simulate 120 steps using transient algorithm 
+//  time_step = 0.01*s;
+
+restart model using file  "t_1_at_time_1.2second_RESTART.essi" ;
 model name "t" ;
-add material # 1 type linear_elastic_isotropic_3d
-  mass_density = 2000*kg/m^3
-  elastic_modulus = 1300*MPa
-  poisson_ratio = 0.3;
-add material # 2 type linear_elastic_isotropic_3d
-  mass_density = 2000*kg/m^3
-  elastic_modulus = 1300*MPa
-  poisson_ratio = 0.3;
-add material # 3 type linear_elastic_isotropic_3d
-  mass_density = 2000*kg/m^3
-  elastic_modulus = 1300*MPa
-  poisson_ratio = 0.3;
-include "node.fei";
-include "element.fei";
-include "constraint.fei";
-new loading stage "1";
-define algorithm With_no_convergence_check ;
-define solver UMFPack;
-define dynamic integrator Newmark with 
-  gamma = 0.5050 
-  beta = 0.2525;
- add load # 1 type domain reduction method
- hdf5_file = "input.hdf5";
-simulate 120 steps using transient algorithm 
- time_step = 0.01*s;
-
-
-new loading stage "2";
+new loading stage "2_restart";
 
 add load # 2 type domain reduction method
   hdf5_file = "input.hdf5";
@@ -46,6 +47,7 @@ define dynamic integrator Newmark with
  beta = 0.2525;
 
 simulate 120 steps using transient algorithm 
-  time_step = 0.01*s;
+  time_step = 0.01*s
+  restart_time = 1.2*s ;
 
 bye;

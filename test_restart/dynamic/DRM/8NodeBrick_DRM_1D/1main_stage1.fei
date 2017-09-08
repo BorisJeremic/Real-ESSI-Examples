@@ -32,17 +32,17 @@ define dynamic integrator Newmark with
  hdf5_file = "input.hdf5";
 simulate 120 steps using transient algorithm 
  time_step = 0.01*s;
+save model;
 
-
-new loading stage "2";
-define algorithm With_no_convergence_check ;
-define solver UMFPack;
-define dynamic integrator Newmark with 
- gamma = 0.5050 
- beta = 0.2525;
-add load # 2 type domain reduction method
-  hdf5_file = "input.hdf5";
-  simulate 120 steps using transient algorithm 
-  time_step = 0.01*s;
+// new loading stage "2";
+// define algorithm With_no_convergence_check ;
+// define solver UMFPack;
+// define dynamic integrator Newmark with 
+//  gamma = 0.5050 
+//  beta = 0.2525;
+// add load # 2 type domain reduction method
+//   hdf5_file = "input.hdf5";
+//   simulate 120 steps using transient algorithm 
+//   time_step = 0.01*s;
 
 bye;
