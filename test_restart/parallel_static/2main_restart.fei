@@ -1,0 +1,54 @@
+// model name "t" ;
+
+// Eshell  = 1e8*N/m^2; 
+// nu    = 0.3;        // Poisson's ratio
+// rho   = 1e2*kg/m^3;     // Mass density
+
+// add material # 1 type linear_elastic_isotropic_3d
+//   mass_density = rho
+//   elastic_modulus = Eshell
+//   poisson_ratio = nu;
+
+// include "node.fei";
+// include "element.fei";
+// include "constraint.fei"';
+
+// new loading stage "1";
+// // disable all output;
+// include "load.fei";
+
+// define algorithm With_no_convergence_check;
+// // define algorithm modified_newton;
+// if(IS_PARALLEL==0)
+// {define solver UMFPack;}
+// else
+// {define solver parallel;}
+
+// define load factor increment 1;
+// simulate 1 steps using static algorithm;
+// save model;
+
+
+
+
+
+
+
+
+restart parallel model 
+	number_of_files = 4
+	restart_files = "t_1_at_load_factor_0.3_Master_RESTART.essi t_1_at_load_factor_0.3_subdomain_1_RESTART.essi t_1_at_load_factor_0.3_subdomain_2_RESTART.essi  t_1_at_load_factor_0.3_subdomain_3_RESTART.essi" ;
+model name "t" ;
+new loading stage "2_restart";
+
+include "load2.fei";
+
+define algorithm With_no_convergence_check;
+if(IS_PARALLEL==0)
+{define solver UMFPack;}
+else
+{define solver parallel;}
+define load factor increment 0.1 ;
+simulate 3 steps using static algorithm;
+
+bye;

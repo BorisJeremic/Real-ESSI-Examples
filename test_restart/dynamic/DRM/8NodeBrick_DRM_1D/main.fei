@@ -46,5 +46,5 @@ define dynamic integrator Newmark with
 //   time_step = 0.01*s;
 simulate 120 steps using transient algorithm 
  time_step = 0.01*s
- start_time = 1.2*s ;
+ restart_time = 1.2*s ;
 bye;

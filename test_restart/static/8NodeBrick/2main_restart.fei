@@ -37,13 +37,13 @@
 // simulate 3 steps using transient algorithm 
 //  time_step = 0.1 *s;
 
-restart model using file "t_1_1._RESTART.essi" ; 
+restart model using file "t_1_at_load_factor_1._RESTART.essi"; 
 model name "t" ;
 new loading stage "2_restart" ; 
 add acceleration field # 2 
  ax =  0*g
  ay =  0*g
- az =  - g;
+ az =  -1.* g;
 add load # 7 to element # 1 type self_weight use acceleration field # 2;
 add load # 8 to element # 2 type self_weight use acceleration field # 2;
 add load # 9 to element # 3 type self_weight use acceleration field # 2;

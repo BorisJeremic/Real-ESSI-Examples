@@ -2,4 +2,6 @@
 **/*.feioutput
 **/*.log
 **/*.out
-**/*.RESTART.essi
+**/*RESTART.essi
+**/petsc_log.txt
+**/vtk_errors.txt

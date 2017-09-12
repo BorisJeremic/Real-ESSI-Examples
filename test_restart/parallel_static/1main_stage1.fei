@@ -24,8 +24,8 @@ if(IS_PARALLEL==0)
 else
 {define solver parallel;}
 
-define load factor increment 1;
-simulate 1 steps using static algorithm;
+define load factor increment 0.1 ;
+simulate 3 steps using static algorithm;
 save model;
 
 // new loading stage "2";
