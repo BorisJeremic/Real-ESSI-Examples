@@ -1,7 +1,8 @@
-*.feioutput
 **/*.feioutput
 **/*.log
 **/*.out
 **/*RESTART.essi
 **/petsc_log.txt
 **/vtk_errors.txt
+**/RealESSI_VERSION_INFO.txt
+
