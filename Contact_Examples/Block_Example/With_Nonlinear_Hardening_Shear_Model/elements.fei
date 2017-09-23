@@ -1,0 +1,392 @@
+add element # 1 type 8NodeBrick with nodes (322, 326, 327, 323, 321, 325, 328, 324) 
+	    use material # 2; // slab Element in contact! 
+add element # 2 type 8NodeBrick with nodes (9, 4, 8, 12, 10, 1, 5, 11) 
+    use material # 1; // Soil Element 
+add element # 3 type 8NodeBrick with nodes (13, 9, 12, 16, 14, 10, 11, 15) 
+    use material # 1 ; // DRM element 
+add element # 4 type 8NodeBrick with nodes (17, 13, 16, 20, 18, 14, 15, 19) 
+    use material # 1 ;// AbsLayer element 
+add element # 5 type 8NodeBrick with nodes (23, 3, 2, 24, 22, 7, 6, 21) 
+    use material # 1; // Soil Element 
+add element # 6 type 8NodeBrick with nodes (27, 23, 24, 28, 26, 22, 21, 25) 
+    use material # 1 ; // DRM element 
+add element # 7 type 8NodeBrick with nodes (31, 27, 28, 32, 30, 26, 25, 29) 
+    use material # 1 ;// AbsLayer element 
+add element # 8 type 8NodeBrick with nodes (33, 14, 18, 36, 34, 15, 19, 35) 
+    use material # 1 ;// AbsLayer element 
+add element # 9 type 8NodeBrick with nodes (37, 10, 14, 33, 38, 11, 15, 34) 
+    use material # 1 ; // DRM element 
+add element # 10 type 8NodeBrick with nodes (39, 1, 10, 37, 40, 5, 11, 38) 
+    use material # 1; // Soil Element 
+add element # 11 type 8NodeBrick with nodes (42, 2, 1, 39, 41, 6, 5, 40) 
+    use material # 1; // Soil Element 
+add element # 12 type 8NodeBrick with nodes (43, 21, 24, 44, 41, 6, 2, 42) 
+    use material # 1; // Soil Element 
+add element # 13 type 8NodeBrick with nodes (45, 25, 28, 46, 43, 21, 24, 44) 
+    use material # 1 ; // DRM element 
+add element # 14 type 8NodeBrick with nodes (47, 29, 32, 48, 45, 25, 28, 46) 
+    use material # 1 ;// AbsLayer element 
+add element # 15 type 8NodeBrick with nodes (49, 33, 36, 52, 50, 34, 35, 51) 
+    use material # 1 ;// AbsLayer element 
+add element # 16 type 8NodeBrick with nodes (53, 37, 33, 49, 54, 38, 34, 50) 
+    use material # 1 ; // DRM element 
+add element # 17 type 8NodeBrick with nodes (55, 39, 37, 53, 56, 40, 38, 54) 
+    use material # 1 ; // DRM element 
+add element # 18 type 8NodeBrick with nodes (58, 42, 39, 55, 57, 41, 40, 56) 
+    use material # 1 ; // DRM element 
+add element # 19 type 8NodeBrick with nodes (59, 43, 44, 60, 57, 41, 42, 58) 
+    use material # 1 ; // DRM element 
+add element # 20 type 8NodeBrick with nodes (61, 45, 46, 62, 59, 43, 44, 60) 
+    use material # 1 ; // DRM element 
+add element # 21 type 8NodeBrick with nodes (63, 47, 48, 64, 61, 45, 46, 62) 
+    use material # 1 ;// AbsLayer element 
+add element # 22 type 8NodeBrick with nodes (65, 49, 52, 68, 66, 50, 51, 67) 
+    use material # 1 ;// AbsLayer element 
+add element # 23 type 8NodeBrick with nodes (69, 53, 49, 65, 70, 54, 50, 66) 
+    use material # 1 ;// AbsLayer element 
+add element # 24 type 8NodeBrick with nodes (71, 55, 53, 69, 72, 56, 54, 70) 
+    use material # 1 ;// AbsLayer element 
+add element # 25 type 8NodeBrick with nodes (74, 58, 55, 71, 73, 57, 56, 72) 
+    use material # 1 ;// AbsLayer element 
+add element # 26 type 8NodeBrick with nodes (75, 59, 60, 76, 73, 57, 58, 74) 
+    use material # 1 ;// AbsLayer element 
+add element # 27 type 8NodeBrick with nodes (77, 61, 62, 78, 75, 59, 60, 76) 
+    use material # 1 ;// AbsLayer element 
+add element # 28 type 8NodeBrick with nodes (79, 63, 64, 80, 77, 61, 62, 78) 
+    use material # 1 ;// AbsLayer element 
+add element # 29 type 8NodeBrick with nodes (83, 31, 30, 84, 82, 27, 26, 81) 
+    use material # 1 ;// AbsLayer element 
+add element # 30 type 8NodeBrick with nodes (82, 27, 26, 81, 86, 23, 22, 85) 
+    use material # 1 ; // DRM element 
+add element # 31 type 8NodeBrick with nodes (88, 3, 23, 86, 87, 7, 22, 85) 
+    use material # 1; // Soil Element 
+add element # 32 type 8NodeBrick with nodes (90, 4, 3, 88, 89, 8, 7, 87) 
+    use material # 1; // Soil Element 
+add element # 33 type 8NodeBrick with nodes (92, 12, 9, 91, 89, 8, 4, 90) 
+    use material # 1; // Soil Element 
+add element # 34 type 8NodeBrick with nodes (92, 12, 16, 94, 91, 9, 13, 93) 
+    use material # 1 ; // DRM element 
+add element # 35 type 8NodeBrick with nodes (94, 16, 20, 96, 93, 13, 17, 95) 
+    use material # 1 ;// AbsLayer element 
+add element # 36 type 8NodeBrick with nodes (99, 83, 84, 100, 98, 82, 81, 97) 
+    use material # 1 ;// AbsLayer element 
+add element # 37 type 8NodeBrick with nodes (98, 82, 81, 97, 102, 86, 85, 101) 
+    use material # 1 ; // DRM element 
+add element # 38 type 8NodeBrick with nodes (104, 88, 86, 102, 103, 87, 85, 101) 
+    use material # 1 ; // DRM element 
+add element # 39 type 8NodeBrick with nodes (106, 90, 88, 104, 105, 89, 87, 103) 
+    use material # 1 ; // DRM element 
+add element # 40 type 8NodeBrick with nodes (108, 92, 91, 107, 105, 89, 90, 106) 
+    use material # 1 ; // DRM element 
+add element # 41 type 8NodeBrick with nodes (108, 92, 94, 110, 107, 91, 93, 109) 
+    use material # 1 ; // DRM element 
+add element # 42 type 8NodeBrick with nodes (110, 94, 96, 112, 109, 93, 95, 111) 
+    use material # 1 ;// AbsLayer element 
+add element # 43 type 8NodeBrick with nodes (115, 99, 100, 116, 114, 98, 97, 113) 
+    use material # 1 ;// AbsLayer element 
+add element # 44 type 8NodeBrick with nodes (114, 98, 97, 113, 118, 102, 101, 117) 
+    use material # 1 ;// AbsLayer element 
+add element # 45 type 8NodeBrick with nodes (120, 104, 102, 118, 119, 103, 101, 117) 
+    use material # 1 ;// AbsLayer element 
+add element # 46 type 8NodeBrick with nodes (122, 106, 104, 120, 121, 105, 103, 119) 
+    use material # 1 ;// AbsLayer element 
+add element # 47 type 8NodeBrick with nodes (124, 108, 107, 123, 121, 105, 106, 122) 
+    use material # 1 ;// AbsLayer element 
+add element # 48 type 8NodeBrick with nodes (124, 108, 110, 126, 123, 107, 109, 125) 
+    use material # 1 ;// AbsLayer element 
+add element # 49 type 8NodeBrick with nodes (126, 110, 112, 128, 125, 109, 111, 127) 
+    use material # 1 ;// AbsLayer element 
+add element # 50 type 8NodeBrick with nodes (129, 15, 19, 132, 130, 16, 20, 131) 
+    use material # 1 ;// AbsLayer element 
+add element # 51 type 8NodeBrick with nodes (129, 15, 34, 134, 132, 19, 35, 133) 
+    use material # 1 ;// AbsLayer element 
+add element # 52 type 8NodeBrick with nodes (134, 34, 50, 136, 133, 35, 51, 135) 
+    use material # 1 ;// AbsLayer element 
+add element # 53 type 8NodeBrick with nodes (136, 50, 66, 138, 135, 51, 67, 137) 
+    use material # 1 ;// AbsLayer element 
+add element # 54 type 8NodeBrick with nodes (140, 96, 94, 139, 131, 20, 16, 130) 
+    use material # 1 ;// AbsLayer element 
+add element # 55 type 8NodeBrick with nodes (140, 96, 112, 142, 139, 94, 110, 141) 
+    use material # 1 ;// AbsLayer element 
+add element # 56 type 8NodeBrick with nodes (142, 112, 128, 144, 141, 110, 126, 143) 
+    use material # 1 ;// AbsLayer element 
+add element # 57 type 8NodeBrick with nodes (148, 11, 12, 147, 145, 5, 8, 146) 
+    use material # 1; // Soil Element 
+add element # 58 type 8NodeBrick with nodes (145, 5, 40, 150, 148, 11, 38, 149) 
+    use material # 1; // Soil Element 
+add element # 59 type 8NodeBrick with nodes (150, 40, 56, 152, 149, 38, 54, 151) 
+    use material # 1 ; // DRM element 
+add element # 60 type 8NodeBrick with nodes (152, 56, 72, 154, 151, 54, 70, 153) 
+    use material # 1 ;// AbsLayer element 
+add element # 61 type 8NodeBrick with nodes (156, 92, 89, 155, 147, 12, 8, 146) 
+    use material # 1; // Soil Element 
+add element # 62 type 8NodeBrick with nodes (156, 92, 108, 158, 155, 89, 105, 157) 
+    use material # 1 ; // DRM element 
+add element # 63 type 8NodeBrick with nodes (158, 108, 124, 160, 157, 105, 121, 159) 
+    use material # 1 ;// AbsLayer element 
+add element # 64 type 8NodeBrick with nodes (146, 8, 7, 162, 145, 5, 6, 161) 
+    use material # 1; // Soil Element 
+add element # 65 type 8NodeBrick with nodes (163, 41, 40, 150, 161, 6, 5, 145) 
+    use material # 1; // Soil Element 
+add element # 66 type 8NodeBrick with nodes (164, 57, 56, 152, 163, 41, 40, 150) 
+    use material # 1 ; // DRM element 
+add element # 67 type 8NodeBrick with nodes (165, 73, 72, 154, 164, 57, 56, 152) 
+    use material # 1 ;// AbsLayer element 
+add element # 68 type 8NodeBrick with nodes (155, 89, 87, 166, 146, 8, 7, 162) 
+    use material # 1; // Soil Element 
+add element # 69 type 8NodeBrick with nodes (157, 105, 103, 167, 155, 89, 87, 166) 
+    use material # 1 ; // DRM element 
+add element # 70 type 8NodeBrick with nodes (159, 121, 119, 168, 157, 105, 103, 167) 
+    use material # 1 ;// AbsLayer element 
+add element # 71 type 8NodeBrick with nodes (169, 22, 21, 170, 162, 7, 6, 161) 
+    use material # 1; // Soil Element 
+add element # 72 type 8NodeBrick with nodes (171, 43, 41, 163, 170, 21, 6, 161) 
+    use material # 1; // Soil Element 
+add element # 73 type 8NodeBrick with nodes (172, 59, 57, 164, 171, 43, 41, 163) 
+    use material # 1 ; // DRM element 
+add element # 74 type 8NodeBrick with nodes (173, 75, 73, 165, 172, 59, 57, 164) 
+    use material # 1 ;// AbsLayer element 
+add element # 75 type 8NodeBrick with nodes (162, 7, 87, 166, 169, 22, 85, 174) 
+    use material # 1; // Soil Element 
+add element # 76 type 8NodeBrick with nodes (167, 103, 101, 175, 166, 87, 85, 174) 
+    use material # 1 ; // DRM element 
+add element # 77 type 8NodeBrick with nodes (168, 119, 117, 176, 167, 103, 101, 175) 
+    use material # 1 ;// AbsLayer element 
+add element # 78 type 8NodeBrick with nodes (179, 63, 61, 180, 178, 47, 45, 177) 
+    use material # 1 ;// AbsLayer element 
+add element # 79 type 8NodeBrick with nodes (178, 47, 45, 177, 182, 29, 25, 181) 
+    use material # 1 ;// AbsLayer element 
+add element # 80 type 8NodeBrick with nodes (184, 30, 29, 182, 183, 26, 25, 181) 
+    use material # 1 ;// AbsLayer element 
+add element # 81 type 8NodeBrick with nodes (183, 26, 81, 185, 184, 30, 84, 186) 
+    use material # 1 ;// AbsLayer element 
+add element # 82 type 8NodeBrick with nodes (187, 97, 100, 188, 185, 81, 84, 186) 
+    use material # 1 ;// AbsLayer element 
+add element # 83 type 8NodeBrick with nodes (189, 113, 116, 190, 187, 97, 100, 188) 
+    use material # 1 ;// AbsLayer element 
+add element # 84 type 8NodeBrick with nodes (151, 54, 70, 153, 136, 50, 66, 138) 
+    use material # 1 ;// AbsLayer element 
+add element # 85 type 8NodeBrick with nodes (149, 38, 54, 151, 134, 34, 50, 136) 
+    use material # 1 ; // DRM element 
+add element # 86 type 8NodeBrick with nodes (148, 11, 38, 149, 129, 15, 34, 134) 
+    use material # 1 ; // DRM element 
+add element # 87 type 8NodeBrick with nodes (148, 11, 15, 129, 147, 12, 16, 130) 
+    use material # 1 ; // DRM element 
+add element # 88 type 8NodeBrick with nodes (139, 94, 92, 156, 130, 16, 12, 147) 
+    use material # 1 ; // DRM element 
+add element # 89 type 8NodeBrick with nodes (139, 94, 110, 141, 156, 92, 108, 158) 
+    use material # 1 ; // DRM element 
+add element # 90 type 8NodeBrick with nodes (141, 110, 126, 143, 158, 108, 124, 160) 
+    use material # 1 ;// AbsLayer element 
+add element # 91 type 8NodeBrick with nodes (176, 117, 113, 189, 175, 101, 97, 187) 
+    use material # 1 ;// AbsLayer element 
+add element # 92 type 8NodeBrick with nodes (175, 101, 97, 187, 174, 85, 81, 185) 
+    use material # 1 ; // DRM element 
+add element # 93 type 8NodeBrick with nodes (169, 22, 85, 174, 183, 26, 81, 185) 
+    use material # 1 ; // DRM element 
+add element # 94 type 8NodeBrick with nodes (183, 26, 25, 181, 169, 22, 21, 170) 
+    use material # 1 ; // DRM element 
+add element # 95 type 8NodeBrick with nodes (177, 45, 43, 171, 181, 25, 21, 170) 
+    use material # 1 ; // DRM element 
+add element # 96 type 8NodeBrick with nodes (180, 61, 59, 172, 177, 45, 43, 171) 
+    use material # 1 ; // DRM element 
+add element # 97 type 8NodeBrick with nodes (191, 77, 75, 173, 180, 61, 59, 172) 
+    use material # 1 ;// AbsLayer element 
+add element # 98 type 8NodeBrick with nodes (192, 79, 77, 191, 179, 63, 61, 180) 
+    use material # 1 ;// AbsLayer element 
+add element # 99 type 8NodeBrick with nodes (193, 129, 132, 196, 194, 130, 131, 195) 
+    use material # 1 ;// AbsLayer element 
+add element # 100 type 8NodeBrick with nodes (193, 129, 134, 198, 196, 132, 133, 197) 
+    use material # 1 ;// AbsLayer element 
+add element # 101 type 8NodeBrick with nodes (198, 134, 136, 200, 197, 133, 135, 199) 
+    use material # 1 ;// AbsLayer element 
+add element # 102 type 8NodeBrick with nodes (200, 136, 138, 202, 199, 135, 137, 201) 
+    use material # 1 ;// AbsLayer element 
+add element # 103 type 8NodeBrick with nodes (204, 140, 139, 203, 195, 131, 130, 194) 
+    use material # 1 ;// AbsLayer element 
+add element # 104 type 8NodeBrick with nodes (204, 140, 142, 206, 203, 139, 141, 205) 
+    use material # 1 ;// AbsLayer element 
+add element # 105 type 8NodeBrick with nodes (206, 142, 144, 208, 205, 141, 143, 207) 
+    use material # 1 ;// AbsLayer element 
+add element # 106 type 8NodeBrick with nodes (212, 148, 147, 211, 209, 145, 146, 210) 
+    use material # 1 ; // DRM element 
+add element # 107 type 8NodeBrick with nodes (209, 145, 150, 214, 212, 148, 149, 213) 
+    use material # 1 ; // DRM element 
+add element # 108 type 8NodeBrick with nodes (214, 150, 152, 216, 213, 149, 151, 215) 
+    use material # 1 ; // DRM element 
+add element # 109 type 8NodeBrick with nodes (216, 152, 154, 218, 215, 151, 153, 217) 
+    use material # 1 ;// AbsLayer element 
+add element # 110 type 8NodeBrick with nodes (220, 156, 155, 219, 211, 147, 146, 210) 
+    use material # 1 ; // DRM element 
+add element # 111 type 8NodeBrick with nodes (220, 156, 158, 222, 219, 155, 157, 221) 
+    use material # 1 ; // DRM element 
+add element # 112 type 8NodeBrick with nodes (222, 158, 160, 224, 221, 157, 159, 223) 
+    use material # 1 ;// AbsLayer element 
+add element # 113 type 8NodeBrick with nodes (210, 146, 162, 226, 209, 145, 161, 225) 
+    use material # 1 ; // DRM element 
+add element # 114 type 8NodeBrick with nodes (227, 163, 150, 214, 225, 161, 145, 209) 
+    use material # 1 ; // DRM element 
+add element # 115 type 8NodeBrick with nodes (228, 164, 152, 216, 227, 163, 150, 214) 
+    use material # 1 ; // DRM element 
+add element # 116 type 8NodeBrick with nodes (229, 165, 154, 218, 228, 164, 152, 216) 
+    use material # 1 ;// AbsLayer element 
+add element # 117 type 8NodeBrick with nodes (219, 155, 166, 230, 210, 146, 162, 226) 
+    use material # 1 ; // DRM element 
+add element # 118 type 8NodeBrick with nodes (221, 157, 167, 231, 219, 155, 166, 230) 
+    use material # 1 ; // DRM element 
+add element # 119 type 8NodeBrick with nodes (223, 159, 168, 232, 221, 157, 167, 231) 
+    use material # 1 ;// AbsLayer element 
+add element # 120 type 8NodeBrick with nodes (233, 169, 170, 234, 226, 162, 161, 225) 
+    use material # 1 ; // DRM element 
+add element # 121 type 8NodeBrick with nodes (235, 171, 163, 227, 234, 170, 161, 225) 
+    use material # 1 ; // DRM element 
+add element # 122 type 8NodeBrick with nodes (236, 172, 164, 228, 235, 171, 163, 227) 
+    use material # 1 ; // DRM element 
+add element # 123 type 8NodeBrick with nodes (237, 173, 165, 229, 236, 172, 164, 228) 
+    use material # 1 ;// AbsLayer element 
+add element # 124 type 8NodeBrick with nodes (226, 162, 166, 230, 233, 169, 174, 238) 
+    use material # 1 ; // DRM element 
+add element # 125 type 8NodeBrick with nodes (231, 167, 175, 239, 230, 166, 174, 238) 
+    use material # 1 ; // DRM element 
+add element # 126 type 8NodeBrick with nodes (232, 168, 176, 240, 231, 167, 175, 239) 
+    use material # 1 ;// AbsLayer element 
+add element # 127 type 8NodeBrick with nodes (243, 179, 180, 244, 242, 178, 177, 241) 
+    use material # 1 ;// AbsLayer element 
+add element # 128 type 8NodeBrick with nodes (242, 178, 177, 241, 246, 182, 181, 245) 
+    use material # 1 ;// AbsLayer element 
+add element # 129 type 8NodeBrick with nodes (248, 184, 182, 246, 247, 183, 181, 245) 
+    use material # 1 ;// AbsLayer element 
+add element # 130 type 8NodeBrick with nodes (247, 183, 185, 249, 248, 184, 186, 250) 
+    use material # 1 ;// AbsLayer element 
+add element # 131 type 8NodeBrick with nodes (251, 187, 188, 252, 249, 185, 186, 250) 
+    use material # 1 ;// AbsLayer element 
+add element # 132 type 8NodeBrick with nodes (253, 189, 190, 254, 251, 187, 188, 252) 
+    use material # 1 ;// AbsLayer element 
+add element # 133 type 8NodeBrick with nodes (255, 192, 191, 256, 243, 179, 180, 244) 
+    use material # 1 ;// AbsLayer element 
+add element # 134 type 8NodeBrick with nodes (240, 176, 189, 253, 239, 175, 187, 251) 
+    use material # 1 ;// AbsLayer element 
+add element # 135 type 8NodeBrick with nodes (239, 175, 187, 251, 238, 174, 185, 249) 
+    use material # 1 ; // DRM element 
+add element # 136 type 8NodeBrick with nodes (233, 169, 174, 238, 247, 183, 185, 249) 
+    use material # 1 ; // DRM element 
+add element # 137 type 8NodeBrick with nodes (247, 183, 181, 245, 233, 169, 170, 234) 
+    use material # 1 ; // DRM element 
+add element # 138 type 8NodeBrick with nodes (241, 177, 171, 235, 245, 181, 170, 234) 
+    use material # 1 ; // DRM element 
+add element # 139 type 8NodeBrick with nodes (244, 180, 172, 236, 241, 177, 171, 235) 
+    use material # 1 ; // DRM element 
+add element # 140 type 8NodeBrick with nodes (256, 191, 173, 237, 244, 180, 172, 236) 
+    use material # 1 ;// AbsLayer element 
+add element # 141 type 8NodeBrick with nodes (215, 151, 153, 217, 200, 136, 138, 202) 
+    use material # 1 ;// AbsLayer element 
+add element # 142 type 8NodeBrick with nodes (213, 149, 151, 215, 198, 134, 136, 200) 
+    use material # 1 ; // DRM element 
+add element # 143 type 8NodeBrick with nodes (212, 148, 149, 213, 193, 129, 134, 198) 
+    use material # 1 ; // DRM element 
+add element # 144 type 8NodeBrick with nodes (212, 148, 129, 193, 211, 147, 130, 194) 
+    use material # 1 ; // DRM element 
+add element # 145 type 8NodeBrick with nodes (203, 139, 156, 220, 194, 130, 147, 211) 
+    use material # 1 ; // DRM element 
+add element # 146 type 8NodeBrick with nodes (203, 139, 141, 205, 220, 156, 158, 222) 
+    use material # 1 ; // DRM element 
+add element # 147 type 8NodeBrick with nodes (205, 141, 143, 207, 222, 158, 160, 224) 
+    use material # 1 ;// AbsLayer element 
+add element # 148 type 8NodeBrick with nodes (257, 198, 200, 260, 258, 197, 199, 259) 
+    use material # 1 ;// AbsLayer element 
+add element # 149 type 8NodeBrick with nodes (260, 200, 202, 262, 259, 199, 201, 261) 
+    use material # 1 ;// AbsLayer element 
+add element # 150 type 8NodeBrick with nodes (263, 193, 198, 257, 264, 196, 197, 258) 
+    use material # 1 ;// AbsLayer element 
+add element # 151 type 8NodeBrick with nodes (263, 193, 196, 264, 265, 194, 195, 266) 
+    use material # 1 ;// AbsLayer element 
+add element # 152 type 8NodeBrick with nodes (268, 204, 203, 267, 266, 195, 194, 265) 
+    use material # 1 ;// AbsLayer element 
+add element # 153 type 8NodeBrick with nodes (268, 204, 206, 270, 267, 203, 205, 269) 
+    use material # 1 ;// AbsLayer element 
+add element # 154 type 8NodeBrick with nodes (270, 206, 208, 272, 269, 205, 207, 271) 
+    use material # 1 ;// AbsLayer element 
+add element # 155 type 8NodeBrick with nodes (276, 212, 211, 275, 273, 209, 210, 274) 
+    use material # 1 ;// AbsLayer element 
+add element # 156 type 8NodeBrick with nodes (278, 220, 219, 277, 275, 211, 210, 274) 
+    use material # 1 ;// AbsLayer element 
+add element # 157 type 8NodeBrick with nodes (278, 220, 222, 280, 277, 219, 221, 279) 
+    use material # 1 ;// AbsLayer element 
+add element # 158 type 8NodeBrick with nodes (280, 222, 224, 282, 279, 221, 223, 281) 
+    use material # 1 ;// AbsLayer element 
+add element # 159 type 8NodeBrick with nodes (273, 209, 214, 284, 276, 212, 213, 283) 
+    use material # 1 ;// AbsLayer element 
+add element # 160 type 8NodeBrick with nodes (284, 214, 216, 286, 283, 213, 215, 285) 
+    use material # 1 ;// AbsLayer element 
+add element # 161 type 8NodeBrick with nodes (286, 216, 218, 288, 285, 215, 217, 287) 
+    use material # 1 ;// AbsLayer element 
+add element # 162 type 8NodeBrick with nodes (274, 210, 226, 290, 273, 209, 225, 289) 
+    use material # 1 ;// AbsLayer element 
+add element # 163 type 8NodeBrick with nodes (291, 227, 214, 284, 289, 225, 209, 273) 
+    use material # 1 ;// AbsLayer element 
+add element # 164 type 8NodeBrick with nodes (292, 228, 216, 286, 291, 227, 214, 284) 
+    use material # 1 ;// AbsLayer element 
+add element # 165 type 8NodeBrick with nodes (293, 229, 218, 288, 292, 228, 216, 286) 
+    use material # 1 ;// AbsLayer element 
+add element # 166 type 8NodeBrick with nodes (277, 219, 230, 294, 274, 210, 226, 290) 
+    use material # 1 ;// AbsLayer element 
+add element # 167 type 8NodeBrick with nodes (279, 221, 231, 295, 277, 219, 230, 294) 
+    use material # 1 ;// AbsLayer element 
+add element # 168 type 8NodeBrick with nodes (281, 223, 232, 296, 279, 221, 231, 295) 
+    use material # 1 ;// AbsLayer element 
+add element # 169 type 8NodeBrick with nodes (297, 233, 234, 298, 290, 226, 225, 289) 
+    use material # 1 ;// AbsLayer element 
+add element # 170 type 8NodeBrick with nodes (299, 235, 227, 291, 298, 234, 225, 289) 
+    use material # 1 ;// AbsLayer element 
+add element # 171 type 8NodeBrick with nodes (300, 236, 228, 292, 299, 235, 227, 291) 
+    use material # 1 ;// AbsLayer element 
+add element # 172 type 8NodeBrick with nodes (301, 237, 229, 293, 300, 236, 228, 292) 
+    use material # 1 ;// AbsLayer element 
+add element # 173 type 8NodeBrick with nodes (290, 226, 230, 294, 297, 233, 238, 302) 
+    use material # 1 ;// AbsLayer element 
+add element # 174 type 8NodeBrick with nodes (295, 231, 239, 303, 294, 230, 238, 302) 
+    use material # 1 ;// AbsLayer element 
+add element # 175 type 8NodeBrick with nodes (296, 232, 240, 304, 295, 231, 239, 303) 
+    use material # 1 ;// AbsLayer element 
+add element # 176 type 8NodeBrick with nodes (307, 243, 244, 308, 306, 242, 241, 305) 
+    use material # 1 ;// AbsLayer element 
+add element # 177 type 8NodeBrick with nodes (306, 242, 241, 305, 310, 246, 245, 309) 
+    use material # 1 ;// AbsLayer element 
+add element # 178 type 8NodeBrick with nodes (312, 248, 246, 310, 311, 247, 245, 309) 
+    use material # 1 ;// AbsLayer element 
+add element # 179 type 8NodeBrick with nodes (311, 247, 249, 313, 312, 248, 250, 314) 
+    use material # 1 ;// AbsLayer element 
+add element # 180 type 8NodeBrick with nodes (315, 251, 252, 316, 313, 249, 250, 314) 
+    use material # 1 ;// AbsLayer element 
+add element # 181 type 8NodeBrick with nodes (317, 253, 254, 318, 315, 251, 252, 316) 
+    use material # 1 ;// AbsLayer element 
+add element # 182 type 8NodeBrick with nodes (319, 255, 256, 320, 307, 243, 244, 308) 
+    use material # 1 ;// AbsLayer element 
+add element # 183 type 8NodeBrick with nodes (320, 256, 237, 301, 308, 244, 236, 300) 
+    use material # 1 ;// AbsLayer element 
+add element # 184 type 8NodeBrick with nodes (308, 244, 236, 300, 305, 241, 235, 299) 
+    use material # 1 ;// AbsLayer element 
+add element # 185 type 8NodeBrick with nodes (305, 241, 235, 299, 309, 245, 234, 298) 
+    use material # 1 ;// AbsLayer element 
+add element # 186 type 8NodeBrick with nodes (311, 247, 245, 309, 297, 233, 234, 298) 
+    use material # 1 ;// AbsLayer element 
+add element # 187 type 8NodeBrick with nodes (297, 233, 238, 302, 311, 247, 249, 313) 
+    use material # 1 ;// AbsLayer element 
+add element # 188 type 8NodeBrick with nodes (303, 239, 251, 315, 302, 238, 249, 313) 
+    use material # 1 ;// AbsLayer element 
+add element # 189 type 8NodeBrick with nodes (304, 240, 253, 317, 303, 239, 251, 315) 
+    use material # 1 ;// AbsLayer element 
+add element # 190 type 8NodeBrick with nodes (269, 205, 207, 271, 280, 222, 224, 282) 
+    use material # 1 ;// AbsLayer element 
+add element # 191 type 8NodeBrick with nodes (267, 203, 205, 269, 278, 220, 222, 280) 
+    use material # 1 ;// AbsLayer element 
+add element # 192 type 8NodeBrick with nodes (267, 203, 220, 278, 265, 194, 211, 275) 
+    use material # 1 ;// AbsLayer element 
+add element # 193 type 8NodeBrick with nodes (276, 212, 193, 263, 275, 211, 194, 265) 
+    use material # 1 ;// AbsLayer element 
+add element # 194 type 8NodeBrick with nodes (276, 212, 213, 283, 263, 193, 198, 257) 
+    use material # 1 ;// AbsLayer element 
+add element # 195 type 8NodeBrick with nodes (283, 213, 215, 285, 257, 198, 200, 260) 
+    use material # 1 ;// AbsLayer element 
+add element # 196 type 8NodeBrick with nodes (285, 215, 217, 287, 260, 200, 202, 262) 
+    use material # 1 ;// AbsLayer element 
