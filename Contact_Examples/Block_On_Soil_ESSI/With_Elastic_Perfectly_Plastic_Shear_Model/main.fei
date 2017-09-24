@@ -25,7 +25,7 @@ include "geometry.fei";
 
 //Contact Element Parameters variables
 	Kn = 500*MPa;	// normal stiffness
-	Kt = 1000*kPa;	// tangential stiffness
+	Kt = 400*kPa;	// tangential stiffness
 	Cn = 100*Pa*s;	// normal damping 
 	Ct = 100*Pa*s;	// tangential damping
 	Fr = 0.68;		// residual friction coefficient
