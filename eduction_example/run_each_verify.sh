@@ -1,4 +1,14 @@
 #!/bin/bash
+# ********************************************************************
+# Author: Yuan Feng
+# Date: Sun Sep 24 12:00:55 PDT 2017
+# Comments: 
+# 	1. This file is used to cooperate with the automatic verification
+#      script in Real-ESSI root folder. 
+#   2. When run_all_verification is used in Real-ESSI root folder,
+#      Real-ESSI-Examples will be downloaded. And this script will
+#      be called to run each example.
+# ********************************************************************
 
 current_dir=${PWD}
 deepest_dir_array=( $(find . -type d -links 2 ) )

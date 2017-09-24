@@ -1,3 +1,10 @@
+#!/bin/bash
+# ********************************************************************
+# Author: Yuan Feng
+# Date: Sun Sep 24 12:00:55 PDT 2017
+# Comments: When DSLs are updated, this editing helper will be 
+#           used to help update all DSLs in examples.
+# ********************************************************************
 
 
 current_dir=${PWD}
