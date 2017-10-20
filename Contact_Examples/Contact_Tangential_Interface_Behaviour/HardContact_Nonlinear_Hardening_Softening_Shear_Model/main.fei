@@ -55,33 +55,33 @@ add element  #3 type truss with nodes (9,11) use material # 2 cross_section = 1*
 // =============================================================================
 
 // Hard Contact With elastic_perfectly_plastic_shear_model
-// add element #4  type HardContact with elastic_perfectly_plastic_shear_model with nodes (7,9) 
-// 	normal_stiffness =20*GPa
-// 	initial_tangential_stiffness =  800*kPa 
-// 	normal_viscous_damping =  0*Pa*s
-// 	tangential_viscous_damping =   0*Pa*s
+// add element #4  type StressBasedHardContact_ElPPlShear with nodes (7,9) 
+// 	axial_stiffness =20*GPa
+// 	initial_shear_stiffness =  800*kPa 
+// 	axial_viscous_damping =  0*Pa*s
+// 	shear_viscous_damping =   0*Pa*s
 // 	residual_friction_coefficient =  0.68  
 // 	shear_zone_thickness = 5e-3*m
 // 	contact_plane_vector = (0,0,1);
 
 // Hard Contact With nonlinear_hardening_shear_model
-// add element #4  type HardContact with nonlinear_hardening_shear_model with nodes (7,9)
-// 	normal_stiffness =20*GPa
-// 	initial_tangential_stiffness =  800*kPa 
-// 	normal_viscous_damping =  0*Pa*s
-// 	tangential_viscous_damping =   0*Pa*s
+// add element #4  type StressBasedHardContact_NonLinHardShear with nodes (7,9)
+// 	axial_stiffness =20*GPa
+// 	initial_shear_stiffness =  800*kPa 
+// 	axial_viscous_damping =  0*Pa*s
+// 	shear_viscous_damping =   0*Pa*s
 // 	residual_friction_coefficient =  0.68 
 // 	shear_zone_thickness = 5e-3*m
 // 	contact_plane_vector = (0,0,1);
 
 // Hard Contact With nonlinear_hardening_softening_shear_model
-add element #4  type HardContact with nonlinear_hardening_softening_shear_model with nodes (7,9)
-	normal_stiffness =20*GPa
-	initial_tangential_stiffness = 1000*kPa 
+add element #4  type StressBasedHardContact_NonLinHardSoftShear with nodes (7,9)
+	axial_stiffness =20*GPa
+	initial_shear_stiffness = 1000*kPa 
 	rate_of_softening = 40
 	size_of_peak_plateau = 8
-	normal_viscous_damping =  0*Pa*s
-	tangential_viscous_damping =   0*Pa*s
+	axial_viscous_damping =  0*Pa*s
+	shear_viscous_damping =   0*Pa*s
 	peak_friction_coefficient_limit = 0.9
 	peak_friction_coefficient_rate_of_decrease    = 0.1
 	residual_friction_coefficient =  0.68 
@@ -89,39 +89,39 @@ add element #4  type HardContact with nonlinear_hardening_softening_shear_model 
 	contact_plane_vector = (0,0,1);
 
 // // Soft Contact With elastic_perfectly_plastic_shear_model
-// add element #4  type SoftContact with elastic_perfectly_plastic_shear_model with nodes (7,9)
-// 	initial_normal_stiffness =200*MPa
+// add element #4  type StressBasedSoftContact_ElPPlShear with nodes (7,9)
+// 	initial_axial_stiffness =200*MPa
 // 	stiffening_rate          = 100
-// 	max_normal_stiffness = 20*GPa
-// 	initial_tangential_stiffness =  800*kPa 
-// 	normal_viscous_damping =  0*Pa*s
-// 	tangential_viscous_damping =   0*Pa*s
+// 	max_axial_stiffness = 20*GPa
+// 	initial_shear_stiffness =  800*kPa 
+// 	axial_viscous_damping =  0*Pa*s
+// 	shear_viscous_damping =   0*Pa*s
 // 	residual_friction_coefficient =  0.68  
 // 	shear_zone_thickness = 5e-3*m
 // 	contact_plane_vector = (0,0,1);
 
 // // Soft Contact With nonlinear_hardening_shear_model
-// add element #4  type SoftContact with nonlinear_hardening_shear_model with nodes (7,9)
-// 	initial_normal_stiffness =400*MPa
+// add element #4  type StressBasedSoftContact_NonLinHardShear with nodes (7,9)
+// 	initial_axial_stiffness =400*MPa
 // 	stiffening_rate          = 100
-// 	max_normal_stiffness = 20*GPa
-// 	initial_tangential_stiffness =  800*kPa 
-// 	normal_viscous_damping =  0*Pa*s
-// 	tangential_viscous_damping =   0*Pa*s
+// 	max_axial_stiffness = 20*GPa
+// 	initial_shear_stiffness =  800*kPa 
+// 	axial_viscous_damping =  0*Pa*s
+// 	shear_viscous_damping =   0*Pa*s
 // 	residual_friction_coefficient =  0.68  
 // 	shear_zone_thickness = 5e-3*m
 // 	contact_plane_vector = (0,0,1);
 
 // // Soft Contact With nonlinear_hardening_softening_shear_model
-// add element #4  type SoftContact with nonlinear_hardening_softening_shear_model with nodes (7,9)
-// 	initial_normal_stiffness =400*MPa
+// add element #4  type StressBasedSoftContact_NonLinHardSoftShear with nodes (7,9)
+// 	initial_axial_stiffness =400*MPa
 // 	stiffening_rate          = 100
-// 	max_normal_stiffness = 20*GPa
-// 	initial_tangential_stiffness = 1000*kPa 
+// 	max_axial_stiffness = 20*GPa
+// 	initial_shear_stiffness = 1000*kPa 
 // 	rate_of_softening = 40
 // 	size_of_peak_plateau = 8
-// 	normal_viscous_damping =  0*Pa*s
-// 	tangential_viscous_damping =   0*Pa*s
+// 	axial_viscous_damping =  0*Pa*s
+// 	shear_viscous_damping =   0*Pa*s
 // 	peak_friction_coefficient_limit = 0.9
 // 	peak_friction_coefficient_rate_of_decrease    = 0.1
 // 	residual_friction_coefficient =  0.68 

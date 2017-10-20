@@ -1,161 +1,161 @@
 
-add element # 197 type HardContact with elastic_perfectly_plastic_shear_model with nodes (1, 321) 
-   normal_stiffness =  Kn
-   initial_tangential_stiffness =  Kt
-   normal_viscous_damping =  Cn
-   tangential_viscous_damping =  Ct
+add element # 197 type StressBasedHardContact_ElPPlShear with nodes (1, 321) 
+   axial_stiffness =  Kn
+   initial_shear_stiffness =  Kt
+   axial_viscous_damping =  Cn
+   shear_viscous_damping =  Ct
    residual_friction_coefficient =  Fr
    shear_zone_thickness = ShearZoneThickness
    contact_plane_vector = ( 1, 0, 0 );
-  add element # 198 type HardContact with elastic_perfectly_plastic_shear_model with nodes (1, 321) 
-   normal_stiffness =  Kn
-   initial_tangential_stiffness =  Kt
-   normal_viscous_damping =  Cn
-   tangential_viscous_damping =  Ct
+  add element # 198 type StressBasedHardContact_ElPPlShear with nodes (1, 321) 
+   axial_stiffness =  Kn
+   initial_shear_stiffness =  Kt
+   axial_viscous_damping =  Cn
+   shear_viscous_damping =  Ct
    residual_friction_coefficient =  Fr
    shear_zone_thickness = ShearZoneThickness
    contact_plane_vector = ( 0, 1, 0 );
-  add element # 199 type HardContact with elastic_perfectly_plastic_shear_model with nodes (2, 322) 
-   normal_stiffness =  Kn
-   initial_tangential_stiffness =  Kt
-   normal_viscous_damping =  Cn
-   tangential_viscous_damping =  Ct
+  add element # 199 type StressBasedHardContact_ElPPlShear with nodes (2, 322) 
+   axial_stiffness =  Kn
+   initial_shear_stiffness =  Kt
+   axial_viscous_damping =  Cn
+   shear_viscous_damping =  Ct
    residual_friction_coefficient =  Fr
    shear_zone_thickness = ShearZoneThickness
    contact_plane_vector = ( -1, 0, 0 );
-  add element # 200 type HardContact with elastic_perfectly_plastic_shear_model with nodes (2, 322) 
-   normal_stiffness =  Kn
-   initial_tangential_stiffness =  Kt
-   normal_viscous_damping =  Cn
-   tangential_viscous_damping =  Ct
+  add element # 200 type StressBasedHardContact_ElPPlShear with nodes (2, 322) 
+   axial_stiffness =  Kn
+   initial_shear_stiffness =  Kt
+   axial_viscous_damping =  Cn
+   shear_viscous_damping =  Ct
    residual_friction_coefficient =  Fr
    shear_zone_thickness = ShearZoneThickness
    contact_plane_vector = ( 0, 1, 0 );
-  add element # 201 type HardContact with elastic_perfectly_plastic_shear_model with nodes (3, 323) 
-   normal_stiffness =  Kn
-   initial_tangential_stiffness =  Kt
-   normal_viscous_damping =  Cn
-   tangential_viscous_damping =  Ct
+  add element # 201 type StressBasedHardContact_ElPPlShear with nodes (3, 323) 
+   axial_stiffness =  Kn
+   initial_shear_stiffness =  Kt
+   axial_viscous_damping =  Cn
+   shear_viscous_damping =  Ct
    residual_friction_coefficient =  Fr
    shear_zone_thickness = ShearZoneThickness
    contact_plane_vector = ( -1, 0, 0 );
-  add element # 202 type HardContact with elastic_perfectly_plastic_shear_model with nodes (3, 323) 
-   normal_stiffness =  Kn
-   initial_tangential_stiffness =  Kt
-   normal_viscous_damping =  Cn
-   tangential_viscous_damping =  Ct
+  add element # 202 type StressBasedHardContact_ElPPlShear with nodes (3, 323) 
+   axial_stiffness =  Kn
+   initial_shear_stiffness =  Kt
+   axial_viscous_damping =  Cn
+   shear_viscous_damping =  Ct
    residual_friction_coefficient =  Fr
    shear_zone_thickness = ShearZoneThickness
    contact_plane_vector = ( 0, -1, 0 );
-  add element # 203 type HardContact with elastic_perfectly_plastic_shear_model with nodes (4, 324) 
-   normal_stiffness =  Kn
-   initial_tangential_stiffness =  Kt
-   normal_viscous_damping =  Cn
-   tangential_viscous_damping =  Ct
+  add element # 203 type StressBasedHardContact_ElPPlShear with nodes (4, 324) 
+   axial_stiffness =  Kn
+   initial_shear_stiffness =  Kt
+   axial_viscous_damping =  Cn
+   shear_viscous_damping =  Ct
    residual_friction_coefficient =  Fr
    shear_zone_thickness = ShearZoneThickness
    contact_plane_vector = ( 1, 0, 0 );
-  add element # 204 type HardContact with elastic_perfectly_plastic_shear_model with nodes (4, 324) 
-   normal_stiffness =  Kn
-   initial_tangential_stiffness =  Kt
-   normal_viscous_damping =  Cn
-   tangential_viscous_damping =  Ct
+  add element # 204 type StressBasedHardContact_ElPPlShear with nodes (4, 324) 
+   axial_stiffness =  Kn
+   initial_shear_stiffness =  Kt
+   axial_viscous_damping =  Cn
+   shear_viscous_damping =  Ct
    residual_friction_coefficient =  Fr
    shear_zone_thickness = ShearZoneThickness
    contact_plane_vector = ( 0, -1, 0 );
-  add element # 205 type HardContact with elastic_perfectly_plastic_shear_model with nodes (5, 325) 
-   normal_stiffness =  Kn
-   initial_tangential_stiffness =  Kt
-   normal_viscous_damping =  Cn
-   tangential_viscous_damping =  Ct
+  add element # 205 type StressBasedHardContact_ElPPlShear with nodes (5, 325) 
+   axial_stiffness =  Kn
+   initial_shear_stiffness =  Kt
+   axial_viscous_damping =  Cn
+   shear_viscous_damping =  Ct
    residual_friction_coefficient =  Fr
    shear_zone_thickness = ShearZoneThickness
    contact_plane_vector = ( 0, 0, 1 );
-  add element # 206 type HardContact with elastic_perfectly_plastic_shear_model with nodes (5, 325) 
-   normal_stiffness =  Kn
-   initial_tangential_stiffness =  Kt
-   normal_viscous_damping =  Cn
-   tangential_viscous_damping =  Ct
+  add element # 206 type StressBasedHardContact_ElPPlShear with nodes (5, 325) 
+   axial_stiffness =  Kn
+   initial_shear_stiffness =  Kt
+   axial_viscous_damping =  Cn
+   shear_viscous_damping =  Ct
    residual_friction_coefficient =  Fr
    shear_zone_thickness = ShearZoneThickness
    contact_plane_vector = ( 1, 0, 0 );
-  add element # 207 type HardContact with elastic_perfectly_plastic_shear_model with nodes (5, 325) 
-   normal_stiffness =  Kn
-   initial_tangential_stiffness =  Kt
-   normal_viscous_damping =  Cn
-   tangential_viscous_damping =  Ct
+  add element # 207 type StressBasedHardContact_ElPPlShear with nodes (5, 325) 
+   axial_stiffness =  Kn
+   initial_shear_stiffness =  Kt
+   axial_viscous_damping =  Cn
+   shear_viscous_damping =  Ct
    residual_friction_coefficient =  Fr
    shear_zone_thickness = ShearZoneThickness
    contact_plane_vector = ( 0, 1, 0 );
-  add element # 208 type HardContact with elastic_perfectly_plastic_shear_model with nodes (6, 326) 
-   normal_stiffness =  Kn
-   initial_tangential_stiffness =  Kt
-   normal_viscous_damping =  Cn
-   tangential_viscous_damping =  Ct
+  add element # 208 type StressBasedHardContact_ElPPlShear with nodes (6, 326) 
+   axial_stiffness =  Kn
+   initial_shear_stiffness =  Kt
+   axial_viscous_damping =  Cn
+   shear_viscous_damping =  Ct
    residual_friction_coefficient =  Fr
    shear_zone_thickness = ShearZoneThickness
    contact_plane_vector = ( 0, 0, 1 );
-  add element # 209 type HardContact with elastic_perfectly_plastic_shear_model with nodes (6, 326) 
-   normal_stiffness =  Kn
-   initial_tangential_stiffness =  Kt
-   normal_viscous_damping =  Cn
-   tangential_viscous_damping =  Ct
+  add element # 209 type StressBasedHardContact_ElPPlShear with nodes (6, 326) 
+   axial_stiffness =  Kn
+   initial_shear_stiffness =  Kt
+   axial_viscous_damping =  Cn
+   shear_viscous_damping =  Ct
    residual_friction_coefficient =  Fr
    shear_zone_thickness = ShearZoneThickness
    contact_plane_vector = ( -1, 0, 0 );
-  add element # 210 type HardContact with elastic_perfectly_plastic_shear_model with nodes (6, 326) 
-   normal_stiffness =  Kn
-   initial_tangential_stiffness =  Kt
-   normal_viscous_damping =  Cn
-   tangential_viscous_damping =  Ct
+  add element # 210 type StressBasedHardContact_ElPPlShear with nodes (6, 326) 
+   axial_stiffness =  Kn
+   initial_shear_stiffness =  Kt
+   axial_viscous_damping =  Cn
+   shear_viscous_damping =  Ct
    residual_friction_coefficient =  Fr
    shear_zone_thickness = ShearZoneThickness
    contact_plane_vector = ( 0, 1, 0 );
-  add element # 211 type HardContact with elastic_perfectly_plastic_shear_model with nodes (7, 327) 
-   normal_stiffness =  Kn
-   initial_tangential_stiffness =  Kt
-   normal_viscous_damping =  Cn
-   tangential_viscous_damping =  Ct
+  add element # 211 type StressBasedHardContact_ElPPlShear with nodes (7, 327) 
+   axial_stiffness =  Kn
+   initial_shear_stiffness =  Kt
+   axial_viscous_damping =  Cn
+   shear_viscous_damping =  Ct
    residual_friction_coefficient =  Fr
    shear_zone_thickness = ShearZoneThickness
    contact_plane_vector = ( 0, 0, 1 );
-  add element # 212 type HardContact with elastic_perfectly_plastic_shear_model with nodes (7, 327) 
-   normal_stiffness =  Kn
-   initial_tangential_stiffness =  Kt
-   normal_viscous_damping =  Cn
-   tangential_viscous_damping =  Ct
+  add element # 212 type StressBasedHardContact_ElPPlShear with nodes (7, 327) 
+   axial_stiffness =  Kn
+   initial_shear_stiffness =  Kt
+   axial_viscous_damping =  Cn
+   shear_viscous_damping =  Ct
    residual_friction_coefficient =  Fr
    shear_zone_thickness = ShearZoneThickness
    contact_plane_vector = ( -1, 0, 0 );
-  add element # 213 type HardContact with elastic_perfectly_plastic_shear_model with nodes (7, 327) 
-   normal_stiffness =  Kn
-   initial_tangential_stiffness =  Kt
-   normal_viscous_damping =  Cn
-   tangential_viscous_damping =  Ct
+  add element # 213 type StressBasedHardContact_ElPPlShear with nodes (7, 327) 
+   axial_stiffness =  Kn
+   initial_shear_stiffness =  Kt
+   axial_viscous_damping =  Cn
+   shear_viscous_damping =  Ct
    residual_friction_coefficient =  Fr
    shear_zone_thickness = ShearZoneThickness
    contact_plane_vector = ( 0, -1, 0 );
-  add element # 214 type HardContact with elastic_perfectly_plastic_shear_model with nodes (8, 328) 
-   normal_stiffness =  Kn
-   initial_tangential_stiffness =  Kt
-   normal_viscous_damping =  Cn
-   tangential_viscous_damping =  Ct
+  add element # 214 type StressBasedHardContact_ElPPlShear with nodes (8, 328) 
+   axial_stiffness =  Kn
+   initial_shear_stiffness =  Kt
+   axial_viscous_damping =  Cn
+   shear_viscous_damping =  Ct
    residual_friction_coefficient =  Fr
    shear_zone_thickness = ShearZoneThickness
    contact_plane_vector = ( 0, 0, 1 );
-  add element # 215 type HardContact with elastic_perfectly_plastic_shear_model with nodes (8, 328) 
-   normal_stiffness =  Kn
-   initial_tangential_stiffness =  Kt
-   normal_viscous_damping =  Cn
-   tangential_viscous_damping =  Ct
+  add element # 215 type StressBasedHardContact_ElPPlShear with nodes (8, 328) 
+   axial_stiffness =  Kn
+   initial_shear_stiffness =  Kt
+   axial_viscous_damping =  Cn
+   shear_viscous_damping =  Ct
    residual_friction_coefficient =  Fr
    shear_zone_thickness = ShearZoneThickness
    contact_plane_vector = ( 1, 0, 0 );
-  add element # 216 type HardContact with elastic_perfectly_plastic_shear_model with nodes (8, 328) 
-   normal_stiffness =  Kn
-   initial_tangential_stiffness =  Kt
-   normal_viscous_damping =  Cn
-   tangential_viscous_damping =  Ct
+  add element # 216 type StressBasedHardContact_ElPPlShear with nodes (8, 328) 
+   axial_stiffness =  Kn
+   initial_shear_stiffness =  Kt
+   axial_viscous_damping =  Cn
+   shear_viscous_damping =  Ct
    residual_friction_coefficient =  Fr
    shear_zone_thickness = ShearZoneThickness
    contact_plane_vector = ( 0, -1, 0 );
