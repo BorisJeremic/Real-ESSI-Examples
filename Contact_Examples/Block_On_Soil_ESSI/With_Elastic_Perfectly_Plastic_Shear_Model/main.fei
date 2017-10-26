@@ -70,7 +70,7 @@ include "Damping.fei";
 
 add uniform acceleration #127 to all nodes dof ux 
  time_step =  0.01*s
- scale_factor =  10
+ scale_factor =  10* m/s^2
  initial_velocity =  0*m/s
  acceleration_file = "acc.txt";
 

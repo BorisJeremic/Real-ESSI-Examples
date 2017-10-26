@@ -49,7 +49,7 @@ add element  #3 type truss with nodes (9,11) use material # 2 cross_section = 1*
 
 
 // Stick Contact Element 
-add element #4  type ContactStick with nodes (7,9) penalty_stiffness =1e12*N/m;
+add element #4  type BondedContact with nodes (7,9) penalty_stiffness =1e12*N/m;
 
 
 new loading stage "Adding_Normal_Load";
