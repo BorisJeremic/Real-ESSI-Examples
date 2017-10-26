@@ -19,11 +19,11 @@ add element #1  type truss with nodes (1,2) use material # 1 cross_section = 1*m
 add element #2  type truss with nodes (3,4) use material # 1 cross_section = 1*m^2 mass_density =  1*kg/m^3;
 add element #3  type truss with nodes (3,5) use material # 1 cross_section = 1*m^2 mass_density =  1*kg/m^3;
 add element #4  type truss with nodes (2,6) use material # 1 cross_section = 1*m^2 mass_density =  1*kg/m^3;
-add element #5 type HardContact with nodes (2,3) 
- normal_stiffness =  1e12*N/m
- tangential_stiffness =   1e12*N/m
- normal_damping =   0*N/m*s
- tangential_damping =  0*N/m*s  
+add element #5 type ForceBasedHardContact with nodes (2,3) 
+ axial_stiffness =  1e12*N/m
+ shear_stiffness =   1e12*N/m
+ axial_viscous_damping =   0*N/m*s
+ shear_viscous_damping =  0*N/m*s  
  friction_ratio =  0.4 
  contact_plane_vector = (1,0,0);
 fix node #1 dofs ux uy uz ;

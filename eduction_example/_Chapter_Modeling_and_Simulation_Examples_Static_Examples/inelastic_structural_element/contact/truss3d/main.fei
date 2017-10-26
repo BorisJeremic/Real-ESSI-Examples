@@ -25,11 +25,11 @@ model name "3-D_Contact_Under_Normal_And_Tangential_Loading" ;
     add element #2  type truss with nodes (2,4) use material # 1 cross_section = 1*m^2 mass_density =  1*kg/m^3;
     add element #3  type truss with nodes (2,5) use material # 1 cross_section = 1*m^2 mass_density =  1*kg/m^3;
     
-    add element #4  type HardContact with nodes (1,2) 
-    normal_stiffness =1e10*N/m 
-    tangential_stiffness =  1e10*Pa*m
-    normal_damping =  0*kN/m*s
-    tangential_damping =   0*kN/m*s
+    add element #4  type ForceBasedHardContact with nodes (1,2) 
+    axial_stiffness =1e10*N/m 
+    shear_stiffness =  1e10*Pa*m
+    axial_viscous_damping =  0*kN/m*s
+    shear_viscous_damping =   0*kN/m*s
     friction_ratio =  0.2   
     contact_plane_vector = (0,0,1);
     new loading stage "Adding_Normal_Load";
