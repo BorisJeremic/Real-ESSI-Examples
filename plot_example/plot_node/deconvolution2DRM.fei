@@ -1,0 +1,53 @@
+
+model name "8NodeBrick_DRM" ;
+add material # 1 type linear_elastic_isotropic_3d
+  mass_density = 2000*kg/m^3
+  elastic_modulus = 1300*MPa
+  poisson_ratio = 0.3;
+add material # 2 type linear_elastic_isotropic_3d
+  mass_density = 2000*kg/m^3
+  elastic_modulus = 1300*MPa
+  poisson_ratio = 0.3;
+add material # 3 type linear_elastic_isotropic_3d
+  mass_density = 2000*kg/m^3
+  elastic_modulus = 1300*MPa
+  poisson_ratio = 0.3;
+include "node.fei";
+include "element.fei";
+include "constraint.fei";
+new loading stage "1D";
+// define algorithm With_no_convergence_check ;
+// define solver UMFPack;
+// define dynamic integrator Newmark with 
+//   gamma = 0.5050 
+//   beta = 0.2525;
+
+// within_soil_layer
+add wave field # 1 with
+	acceleration_filename = "scaled_northridge_acc.dat"
+	unit_of_acceleration = 1 * m/s^2
+  displacement_filename = "scaled_northridge_dis.dat"
+  unit_of_displacement = 1 * m
+	add_compensation_time = 0.5 * s
+  acceleration_depth = 0 * m
+	monitoring_location = within_soil_layer
+	soil_profile_filename = "soil_profile.txt"
+	unit_of_Vs = 1 * m/s
+	unit_of_rho = 1 * kg/m^3
+	unit_of_damping = absolute
+	unit_of_thickness = 1*m 
+	;
+
+// generate wave propagation results of wave field # 1 at depth -45*m to file "decon" ; 
+// generate wave propagation results of wave field # 1 at depth -50*m to file "decon" ; 
+
+generate domain reduction method motion file 
+  from wave field 
+  # 1 in direction ux 
+  soil_surface at z = 50*m
+  hdf5_file = "input.hdf5" ;
+
+
+
+bye;
+

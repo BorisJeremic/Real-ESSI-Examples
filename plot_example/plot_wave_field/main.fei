@@ -1,0 +1,25 @@
+
+
+// equivalent_rock_outcropping within_soil_layer
+add wave field # 1 with
+	acceleration_filename = "scaled_northridge_acc.dat"
+	unit_of_acceleration = 1 * m/s^2
+	displacement_filename = "scaled_northridge_dis.dat"
+	unit_of_displacement = 1 * m 
+	add_compensation_time = 2 * s 
+	acceleration_depth = 0 * m
+	monitoring_location = within_soil_layer
+	soil_profile_filename = "soil_profile.txt"
+	unit_of_Vs = 1 * m/s
+	unit_of_rho = 1 * kg/m^3
+	unit_of_damping = absolute
+	unit_of_thickness = 1*m 
+	;
+
+
+generate wave propagation results of wave field # 1 at depth -50*m to file "northridge" ;
+// generate wave propagation results of wave field # 1 at depth -50*m ;
+
+plot wave field # 1 at depth -50 * m to file "northridge" ;
+
+bye;

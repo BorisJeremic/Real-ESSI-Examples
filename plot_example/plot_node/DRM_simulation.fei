@@ -1,0 +1,52 @@
+
+model name "8NodeBrick_DRM" ;
+add material # 1 type linear_elastic_isotropic_3d
+  mass_density = 2000*kg/m^3
+  elastic_modulus = 1300*MPa
+  poisson_ratio = 0.3;
+add material # 2 type linear_elastic_isotropic_3d
+  mass_density = 2000*kg/m^3
+  elastic_modulus = 1300*MPa
+  poisson_ratio = 0.3;
+add material # 3 type linear_elastic_isotropic_3d
+  mass_density = 2000*kg/m^3
+  elastic_modulus = 1300*MPa
+  poisson_ratio = 0.3;
+include "node.fei";
+include "element.fei";
+include "constraint.fei";
+new loading stage "1D";
+enable acceleration output;
+
+define convergence test Relative_Norm_Unbalanced_Force
+  tolerance =  0.01
+  maximum_iterations =  20
+  ;
+// define algorithm With_no_convergence_check / Newton / Modified_Newton;
+define algorithm Newton ;
+
+
+define solver UMFPack;
+// define dynamic integrator Newmark with 
+//   gamma = 0.50
+//   beta = 0.25 ;
+define dynamic integrator Newmark with 
+  gamma = 0.5050 
+  beta = 0.2525 ;
+// define dynamic integrator Newmark with 
+//   gamma = 0.60 
+//   beta = 0.3025 ;
+
+
+
+add load # 1 type domain reduction method
+  hdf5_file = "input.hdf5"  ; 
+
+plot node #15 in direction ux to file "my_plot_northridge" ;
+
+simulate 1000 steps using transient algorithm 
+ time_step = 0.01*s;
+
+
+bye;
+
