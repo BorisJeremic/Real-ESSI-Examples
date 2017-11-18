@@ -53,7 +53,7 @@ add damping # 3 type Rayleigh with a0 = a_0*Concrete_Damping a1 = a_1*Concrete_D
 include "Model_geometry.fei"; 
 
 
-new loading stage "Self_Weight3"; 
+new loading stage "Self_WeightB"; 
 
 add load # 1 to all elements type self_weight use acceleration field # 1; 
 
@@ -72,7 +72,7 @@ else
 simulate NumSteps steps using static algorithm; 
 
 
-new loading stage "DRM_BA"; 
+new loading stage "BA"; 
 
 
  add load # 2 type domain reduction method
@@ -88,13 +88,17 @@ define dynamic integrator Newmark with gamma = 0.5 beta = 0.25;
 
 define algorithm With_no_convergence_check; 
 
-simulate 10 steps using transient algorithm time_step = 0.01*s; 
+simulate 10 steps using transient algorithm 
+	time_step = 0.01*s; 
 
 
-new loading stage "DRM_BB"; 
 
+new loading stage "BB"; 
 
- add load # 3 type domain reduction method
+// remove load # <.>;
+// remove load #2;
+
+add load # 3 type domain reduction method
 	hdf5_file = "DRM_Input.hdf5";
 
 
@@ -110,6 +114,5 @@ define algorithm With_no_convergence_check;
 simulate 10 steps using transient algorithm 
 	time_step = 0.01*s
 	restart_time = 0.1*s ; 
-
  bye; 
 

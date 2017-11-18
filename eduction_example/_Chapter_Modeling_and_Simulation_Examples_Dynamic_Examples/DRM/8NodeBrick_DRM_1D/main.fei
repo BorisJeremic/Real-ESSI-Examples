@@ -24,12 +24,30 @@ include "element.fei";
 include "constraint.fei";
 new loading stage "1D";
 define algorithm With_no_convergence_check ;
-define solver ProfileSPD;
+define solver UMFPack;
 define dynamic integrator Newmark with 
   gamma = 0.5050 
   beta = 0.2525;
- add load # 1 type domain reduction method
- hdf5_file = "input.hdf5";
+
+ // add load # 1 type domain reduction method
+ // hdf5_file = "input.hdf5";
+
+add wave field # 1 with
+  acceleration_filename = "acc.txt"
+  unit_of_acceleration = 1 * m/s^2
+  acceleration_depth = 0 * m
+  monitoring_location = within_soil_layer
+  soil_profile_filename = "soil_profile.txt"
+  unit_of_Vs = 1 * Pa
+  unit_of_rho = 1 * kg/m^3
+  unit_of_damping = absolute
+  unit_of_thickness = 1*m 
+  ;
+ add load # 1 type domain reduction method with wave field 
+  # 1 at direction ux
+  soil_surface at z = 0.0*m
+  hdf5_file = "input.hdf5" ; 
+
 simulate 999 steps using transient algorithm 
  time_step = 0.01*s;
 bye;

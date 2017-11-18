@@ -1,6 +1,6 @@
 rm -f *.feioutput
 rm -f essi*.log
-essi_debug -f main.fei
+essi -f main.fei
 
 python plot.py
 

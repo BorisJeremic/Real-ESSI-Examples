@@ -57,7 +57,7 @@ define solver UMFPack;
 define dynamic integrator Newmark with 
  gamma = 0.5050 
  beta = 0.2525;
-simulate 1000 steps using transient algorithm 
+simulate 500 steps using transient algorithm 
  time_step = 0.01*s;
 
 
@@ -67,8 +67,8 @@ new loading stage "AB";
  define dynamic integrator Newmark with 
   gamma = 0.5050 
   beta = 0.2525;
-simulate 1000 steps using transient algorithm 
+simulate 500 steps using transient algorithm 
  time_step = 0.01*s
- restart_time = 10*s ;
+ restart_time = 5*s ;
 
 bye;

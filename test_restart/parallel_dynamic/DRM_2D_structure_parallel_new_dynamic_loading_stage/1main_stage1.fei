@@ -72,7 +72,7 @@ else
 simulate NumSteps steps using static algorithm; 
 
 
-new loading stage "DRM_AA"; 
+new loading stage "AA"; 
 
 
  add load # 2 type domain reduction method
@@ -91,7 +91,7 @@ define algorithm With_no_convergence_check;
 simulate 10 steps using transient algorithm time_step = 0.01*s; 
 
 
-new loading stage "DRM_AB"; 
+new loading stage "AB"; 
 
 
  // add load # 2 type domain reduction method

@@ -12,7 +12,7 @@ add material # 1 type vonMises
     elastic_modulus = 2E7*N/m^2
     poisson_ratio = 0.0
     von_mises_radius = 8E4*Pa
-    kinematic_hardening_rate = 2E6*Pa
+    kinematic_hardening_rate = 2E7*Pa
     isotropic_hardening_rate = 0.0*Pa;
 add node # 1 at (0*m,0*m,1*m)  with 3 dofs;
 add node # 2 at (1*m,0*m,1*m)  with 3 dofs;

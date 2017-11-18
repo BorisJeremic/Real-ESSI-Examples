@@ -48,6 +48,7 @@ do
 	# sed -i 's/SoftContact\ with\ nonlinear_hardening_shear_model/StressBasedSoftContact_NonLinHardShear/' *.fei
 	# sed -i 's/SoftContact\ with\ nonlinear_hardening_softening_shear_model/StressBasedSoftContact_NonLinHardSoftShear/' *.fei
 	sed -i 's/ContactStick/BondedContact/' *.fei
+	sed -i 's/normal_stiffness*/penalty_stiffness=Kn;/' *.fei
 done
 
 
