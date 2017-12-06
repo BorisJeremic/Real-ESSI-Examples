@@ -1,0 +1,36 @@
+
+
+//*************************************************************************************************************************
+//							Add_Node_Load_Imposed_Motion_Time_Series{Physical_Group#ImposedMotionSurface, DofType:= uy, TimeStep:= 0.01*s, DispScale:= 1*cm, DispFile:= "dis.txt" , VelScale:= 1*cm/s , VelFile:= "vel.txt", AccScl:= 1*g, AccFile:= "acc.txt"}Starts
+//*************************************************************************************************************************
+
+add imposed motion # 1 to node # 1 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 2 to node # 3 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 3 to node # 5 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 4 to node # 8 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 5 to node # 87 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 6 to node # 88 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 7 to node # 89 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 8 to node # 174 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 9 to node # 175 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 10 to node # 176 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 11 to node # 177 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 12 to node # 178 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 13 to node # 179 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 14 to node # 186 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 15 to node # 187 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 16 to node # 188 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 17 to node # 549 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 18 to node # 550 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 19 to node # 551 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 20 to node # 552 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 21 to node # 553 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 22 to node # 554 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 23 to node # 555 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 24 to node # 556 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+add imposed motion # 25 to node # 557 dof uy time_step = 0.01*s displacement_scale_unit = 1*cm displacement_file = "dis.txt" velocity_scale_unit = 1*cm/s velocity_file = "vel.txt" acceleration_scale_unit = 1*g acceleration_file = "acc.txt"; 
+
+//*************************************************************************************************************************
+//							Add_Node_Load_Imposed_Motion_Time_Series{Physical_Group#ImposedMotionSurface, DofType:= uy, TimeStep:= 0.01*s, DispScale:= 1*cm, DispFile:= "dis.txt" , VelScale:= 1*cm/s , VelFile:= "vel.txt", AccScl:= 1*g, AccFile:= "acc.txt"}Ends
+//*************************************************************************************************************************
+

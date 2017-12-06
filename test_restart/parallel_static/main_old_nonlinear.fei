@@ -1,0 +1,160 @@
+model name "t" ;
+
+Eshell  = 1e8*N/m^2; 
+nu    = 0.3;        // Poisson's ratio
+rho   = 1e2*kg/m^3;     // Mass density
+
+// add material # 1 type linear_elastic_isotropic_3d
+//   mass_density = rho
+//   elastic_modulus = Eshell
+//   poisson_ratio = nu;
+
+
+// add material # 1 type vonMisesMultipleYieldSurface
+// 	mass_density = 10.0*kg/m^3 
+// 	elastic_modulus = 2E7 * Pa 
+// 	poisson_ratio = 0.0 
+// 	total_number_of_yield_surface = 8 
+// 	radiuses_of_yield_surface = 
+// 	"2.7 2.74 2.8 2.82 2.85 2.9 3.0 3.1 " 
+// 	radiuses_scale_unit = 10000* Pa
+// 	hardening_parameters_of_yield_surfaces = 
+// 	"5500 4000 2700 2400 1890 1300 915 600 "  
+// 	hardening_parameters_scale_unit = 1000* Pa ;
+
+add material # 1 type VonMisesArmstrongFrederick 
+    mass_density =  140.0*kg/m^3
+    elastic_modulus =  3E7 *Pa
+    poisson_ratio =  0.0
+    von_mises_radius =  1E4*Pa
+    armstrong_frederick_ha =  3E7*Pa
+    armstrong_frederick_cr =  5E2
+    isotropic_hardening_rate = 0.0*Pa ;
+
+// add material # 1 type DruckerPragerMultipleYieldSurface
+// 	mass_density = 10.0*kg/m^3 
+// 	elastic_modulus = 2E7 * Pa 
+// 	poisson_ratio = 0.0 
+// 	initial_confining_stress = 1E5 * Pa
+// 	reference_pressure =  1E5 * Pa
+// 	pressure_exponential_n = 0.5
+// 	cohesion = 1E8 * Pa
+// 	dilation_angle_eta = 1.2
+// 	dilation_scale = 1.0
+// 	total_number_of_yield_surface = 8 
+// 	sizes_of_yield_surfaces = 
+// 	"2.7 2.74 2.8 2.82 2.85 2.9 3.0 3.1 " 
+// 	yield_surface_scale_unit = 10000* Pa
+// 	hardening_parameters_of_yield_surfaces = 
+// 	"5500 4000 2700 2400 1890 1300 915 600 "  
+// 	hardening_parameters_scale_unit = 1000* Pa ;
+
+// add material # 1 type RoundedMohrCoulombMultipleYieldSurface
+// 	mass_density = 0.0*kg/m^3 
+// 	initial_shear_modulus = 3E10 * Pa 
+// 	poisson_ratio = 0.0 
+// 	initial_confining_stress = 1E5 * Pa
+// 	reference_pressure = 1E5 * Pa
+// 	pressure_exponential_n = 0.5
+// 	cohesion = 0. * Pa
+// 	RMC_shape_k = 1.0
+// 	dilation_angle_eta =1.0 
+// 	dilation_scale = 0.0
+// 	total_number_of_shear_modulus = 9
+// 	GoverGmax = 
+// 	"1,0.995,0.966,0.873,0.787,0.467,0.320,0.109,0.063"  
+// 	ShearStrainGamma = 
+// 	"0,1E-6,1E-5,5E-5,1E-4, 0.0005, 0.001, 0.005, 0.01"
+// 	;
+
+// add material # 1 type RoundedMohrCoulombMultipleYieldSurface
+// 	mass_density = 10.0*kg/m^3 
+// 	elastic_modulus = 2E7 * Pa 
+// 	poisson_ratio = 0.0 
+// 	initial_confining_stress = 1E5 * Pa
+// 	reference_pressure =  1E5 * Pa
+// 	pressure_exponential_n = 0.5
+// 	cohesion = 1E8 * Pa
+// 	RMC_shape_k = 1.
+// 	dilation_angle_eta = 1.2
+// 	dilation_scale = 1.0
+// 	total_number_of_yield_surface = 8 
+// 	sizes_of_yield_surfaces = 
+// 	"2.7 2.74 2.8 2.82 2.85 2.9 3.0 3.1 " 
+// 	yield_surface_scale_unit = 10000* Pa
+// 	hardening_parameters_of_yield_surfaces = 
+// 	"5500 4000 2700 2400 1890 1300 915 600 "  
+// 	hardening_parameters_scale_unit = 1000* Pa ;
+
+
+include "node.fei";
+include "element.fei";
+include "constraint.fei"';
+
+
+// define NDMaterial constitutive integration algorithm Backward_Euler_LineSearch
+//     yield_function_relative_tolerance =  1E-6
+//     stress_relative_tolerance =  1E-6
+//     maximum_iterations = 100
+//     line_search_max_iter = 10
+//     line_search_beta = 1E-4
+//     line_search_eta = 0.1
+//     ;
+
+ // define NDMaterial constitutive integration algorithm Forward_Euler ;
+
+ // define NDMaterial constitutive integration algorithm Forward_Euler_Subincrement
+ //     number_of_subincrements = 10 ;
+
+ define NDMaterial constitutive integration algorithm Backward_Euler
+     yield_function_relative_tolerance =  1E-6
+     stress_relative_tolerance =  1E-6
+     maximum_iterations = 100
+     ;
+
+ // define NDMaterial constitutive integration algorithm Backward_Euler_Subincrement
+ //     yield_function_relative_tolerance =  1E-6
+ //     stress_relative_tolerance =  1E-6
+ //     maximum_iterations = 100
+ //     allowed_subincrement_strain = 0.01;
+
+
+new loading stage "1";
+include "load.fei";
+	
+// define convergence test <Norm_Displacement_Increment|Energy_Increment|Norm_Unbalance|Relative_Norm_Displacement_Increment|Relative_Energy_Increment|Relative_Norm_Unbalance> tolerance = <.> maximum_iterations = <.> verbose_level = <0|1|2>;
+define convergence test Relative_Norm_Unbalanced_Force
+    tolerance =  0.01
+    maximum_iterations =  10 ; 
+
+// define algorithm <With_no_convergence_check|Newton|Modified_Newton>;
+define algorithm Newton;
+
+// define algorithm With_no_convergence_check ;
+
+if(IS_PARALLEL==0)
+{define solver UMFPack;}
+else
+{define solver parallel;}
+
+define load factor increment 1;
+simulate 1 steps using static algorithm;
+
+
+
+new loading stage "2";
+// define algorithm With_no_convergence_check ;
+define convergence test Relative_Norm_Unbalanced_Force
+    tolerance =  0.01
+    maximum_iterations =  10 ; 
+// define algorithm modified_newton;
+define algorithm Newton;
+
+if(IS_PARALLEL==0)
+{define solver UMFPack;}
+else
+{define solver parallel;}
+define load factor increment 1;
+simulate 1 steps using static algorithm;
+
+bye;

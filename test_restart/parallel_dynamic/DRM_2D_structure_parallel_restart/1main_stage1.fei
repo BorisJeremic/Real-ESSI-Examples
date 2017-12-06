@@ -1,0 +1,118 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+
+model name "NPP"; 
+
+add acceleration field # 1 ax = 0*g ay = 0*g az = -1*g ; 
+
+
+
+// Soil Material Parameters
+ ShearVelocity = 250*m/s; 
+ PoisonRatio = 0.3; 
+ Density = 2000*kg/m^3; 
+ ShearModulus = Density*ShearVelocity^2; 
+ ElasticModulus = ShearModulus*2*(1+PoisonRatio); 
+
+// Adding Material
+add material # 1 type linear_elastic_isotropic_3d mass_density = 1200*kg/m^3 elastic_modulus = 20e9*Pa poisson_ratio = 0.21; // Soli; 
+add material # 2 type linear_elastic_isotropic_3d mass_density = 2400*kg/m^3 elastic_modulus = 20e9*Pa poisson_ratio = 0.21; // Foundatio; 
+add material # 3 type linear_elastic_isotropic_3d mass_density = Density elastic_modulus = ElasticModulus poisson_ratio = PoisonRatio; // DR; 
+add material # 4 type linear_elastic_isotropic_3d mass_density = Density elastic_modulus = ElasticModulus poisson_ratio = PoisonRatio; // Dampin; 
+add material # 5 type linear_elastic_isotropic_3d mass_density = Density elastic_modulus = ElasticModulus poisson_ratio = PoisonRatio; // Soi; 
+
+
+
+
+// Adding Damping Variables
+ DRM_Layer_Damping = 0.2; 
+ Soil_Layer_Damping = 0.05; 
+ Concrete_Damping = 0.05; 
+
+// Rayleigh Damping Parameters
+ f_1 = 0.5*Hz; 
+ f_2 = 5.0*Hz; 
+ xi_1 = 1; 
+ xi_2 = 1; 
+ a_0 = 4*pi*f_1*f_2*(f_1*xi_2 - f_2*xi_1)/(f_1^2 - f_2^2); 
+ a_1 = (f_1*xi_1 - f_2*xi_2)/(pi*(f_1^2 - f_2^2)); 
+
+
+// Defining Damping
+add damping # 1 type Rayleigh with a0 = a_0*Soil_Layer_Damping a1 = a_1*Soil_Layer_Damping stiffness_to_use = Initial_Stiffness;  // Soil Dampin; 
+add damping # 2 type Rayleigh with a0 = a_0*DRM_Layer_Damping a1 = a_1*DRM_Layer_Damping stiffness_to_use = Initial_Stiffness;  // DRM Dampin; 
+add damping # 3 type Rayleigh with a0 = a_0*Concrete_Damping a1 = a_1*Concrete_Damping stiffness_to_use = Initial_Stiffness;  // Concrete Dampin; 
+
+
+// Including the files
+include "Model_geometry.fei"; 
+
+
+new loading stage "Self_WeightB"; 
+
+add load # 1 to all elements type self_weight use acceleration field # 1; 
+
+include "Model_load.fei"; 
+
+ NumSteps = 10; 
+
+// Carrying out the simulation
+define convergence test Norm_Unbalance tolerance = 1000 maximum_iterations = 20 verbose_level = 1; 
+define load factor increment 1/NumSteps; 
+define algorithm Newton; 
+if(IS_PARALLEL==0)
+{define solver UMFPack;}
+else
+{define solver parallel;}
+simulate NumSteps steps using static algorithm; 
+
+
+new loading stage "BA"; 
+
+
+ add load # 2 type domain reduction method
+	hdf5_file = "DRM_Input.hdf5";
+
+
+if(IS_PARALLEL==0)
+{define solver UMFPack;}
+else
+{define solver parallel;}
+
+define dynamic integrator Newmark with gamma = 0.5 beta = 0.25; 
+
+define algorithm With_no_convergence_check; 
+
+simulate 10 steps using transient algorithm 
+	time_step = 0.01*s; 
+
+save model;
+
+// new loading stage "BB"; 
+
+// // remove load # <.>;
+// remove load #2;
+
+// add load # 3 type domain reduction method
+// 	hdf5_file = "DRM_Input.hdf5";
+
+
+// if(IS_PARALLEL==0)
+// {define solver UMFPack;}
+// else
+// {define solver parallel;}
+
+// define dynamic integrator Newmark with gamma = 0.5 beta = 0.25; 
+
+// define algorithm With_no_convergence_check; 
+
+// simulate 10 steps using transient algorithm 
+// 	time_step = 0.01*s
+// 	restart_time = 0.1*s ; 
+ bye; 
+

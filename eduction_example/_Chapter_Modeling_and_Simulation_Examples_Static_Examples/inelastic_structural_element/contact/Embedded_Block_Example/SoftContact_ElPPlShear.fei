@@ -1,0 +1,201 @@
+
+add element # 197 type StressBasedSoftContact_ElPPlShear with nodes (1, 321) 
+ initial_axial_stiffness = Ki
+ stiffening_rate         = Sr
+ max_axial_stiffness     = Kn
+ initial_shear_stiffness =  Kt
+ axial_viscous_damping =  Cn
+ shear_viscous_damping =  Ct
+ residual_friction_coefficient =  Fr
+ shear_zone_thickness = ShearZoneThickness
+ contact_plane_vector = ( 1, 0, 0 );
+add element # 198 type StressBasedSoftContact_ElPPlShear with nodes (1, 321) 
+ initial_axial_stiffness = Ki
+ stiffening_rate         = Sr
+ max_axial_stiffness     = Kn
+ initial_shear_stiffness =  Kt
+ axial_viscous_damping =  Cn
+ shear_viscous_damping =  Ct
+ residual_friction_coefficient =  Fr
+ shear_zone_thickness = ShearZoneThickness
+ contact_plane_vector = ( 0, 1, 0 );
+add element # 199 type StressBasedSoftContact_ElPPlShear with nodes (2, 322) 
+ initial_axial_stiffness = Ki
+ stiffening_rate         = Sr
+ max_axial_stiffness     = Kn
+ initial_shear_stiffness =  Kt
+ axial_viscous_damping =  Cn
+ shear_viscous_damping =  Ct
+ residual_friction_coefficient =  Fr
+ shear_zone_thickness = ShearZoneThickness
+ contact_plane_vector = ( -1, 0, 0 );
+add element # 200 type StressBasedSoftContact_ElPPlShear with nodes (2, 322) 
+ initial_axial_stiffness = Ki
+ stiffening_rate         = Sr
+ max_axial_stiffness     = Kn
+ initial_shear_stiffness =  Kt
+ axial_viscous_damping =  Cn
+ shear_viscous_damping =  Ct
+ residual_friction_coefficient =  Fr
+ shear_zone_thickness = ShearZoneThickness
+ contact_plane_vector = ( 0, 1, 0 );
+add element # 201 type StressBasedSoftContact_ElPPlShear with nodes (3, 323) 
+ initial_axial_stiffness = Ki
+ stiffening_rate         = Sr
+ max_axial_stiffness     = Kn
+ initial_shear_stiffness =  Kt
+ axial_viscous_damping =  Cn
+ shear_viscous_damping =  Ct
+ residual_friction_coefficient =  Fr
+ shear_zone_thickness = ShearZoneThickness
+ contact_plane_vector = ( -1, 0, 0 );
+add element # 202 type StressBasedSoftContact_ElPPlShear with nodes (3, 323) 
+ initial_axial_stiffness = Ki
+ stiffening_rate         = Sr
+ max_axial_stiffness     = Kn
+ initial_shear_stiffness =  Kt
+ axial_viscous_damping =  Cn
+ shear_viscous_damping =  Ct
+ residual_friction_coefficient =  Fr
+ shear_zone_thickness = ShearZoneThickness
+ contact_plane_vector = ( 0, -1, 0 );
+add element # 203 type StressBasedSoftContact_ElPPlShear with nodes (4, 324) 
+ initial_axial_stiffness = Ki
+ stiffening_rate         = Sr
+ max_axial_stiffness     = Kn
+ initial_shear_stiffness =  Kt
+ axial_viscous_damping =  Cn
+ shear_viscous_damping =  Ct
+ residual_friction_coefficient =  Fr
+ shear_zone_thickness = ShearZoneThickness
+ contact_plane_vector = ( 1, 0, 0 );
+add element # 204 type StressBasedSoftContact_ElPPlShear with nodes (4, 324) 
+ initial_axial_stiffness = Ki
+ stiffening_rate         = Sr
+ max_axial_stiffness     = Kn
+ initial_shear_stiffness =  Kt
+ axial_viscous_damping =  Cn
+ shear_viscous_damping =  Ct
+ residual_friction_coefficient =  Fr
+ shear_zone_thickness = ShearZoneThickness
+ contact_plane_vector = ( 0, -1, 0 );
+add element # 205 type StressBasedSoftContact_ElPPlShear with nodes (5, 325) 
+ initial_axial_stiffness = Ki
+ stiffening_rate         = Sr
+ max_axial_stiffness     = Kn
+ initial_shear_stiffness =  Kt
+ axial_viscous_damping =  Cn
+ shear_viscous_damping =  Ct
+ residual_friction_coefficient =  Fr
+ shear_zone_thickness = ShearZoneThickness
+ contact_plane_vector = ( 0, 0, 1 );
+add element # 206 type StressBasedSoftContact_ElPPlShear with nodes (5, 325) 
+ initial_axial_stiffness = Ki
+ stiffening_rate         = Sr
+ max_axial_stiffness     = Kn
+ initial_shear_stiffness =  Kt
+ axial_viscous_damping =  Cn
+ shear_viscous_damping =  Ct
+ residual_friction_coefficient =  Fr
+ shear_zone_thickness = ShearZoneThickness
+ contact_plane_vector = ( 1, 0, 0 );
+add element # 207 type StressBasedSoftContact_ElPPlShear with nodes (5, 325) 
+ initial_axial_stiffness = Ki
+ stiffening_rate         = Sr
+ max_axial_stiffness     = Kn
+ initial_shear_stiffness =  Kt
+ axial_viscous_damping =  Cn
+ shear_viscous_damping =  Ct
+ residual_friction_coefficient =  Fr
+ shear_zone_thickness = ShearZoneThickness
+ contact_plane_vector = ( 0, 1, 0 );
+add element # 208 type StressBasedSoftContact_ElPPlShear with nodes (6, 326) 
+ initial_axial_stiffness = Ki
+ stiffening_rate         = Sr
+ max_axial_stiffness     = Kn
+ initial_shear_stiffness =  Kt
+ axial_viscous_damping =  Cn
+ shear_viscous_damping =  Ct
+ residual_friction_coefficient =  Fr
+ shear_zone_thickness = ShearZoneThickness
+ contact_plane_vector = ( 0, 0, 1 );
+add element # 209 type StressBasedSoftContact_ElPPlShear with nodes (6, 326) 
+ initial_axial_stiffness = Ki
+ stiffening_rate         = Sr
+ max_axial_stiffness     = Kn
+ initial_shear_stiffness =  Kt
+ axial_viscous_damping =  Cn
+ shear_viscous_damping =  Ct
+ residual_friction_coefficient =  Fr
+ shear_zone_thickness = ShearZoneThickness
+ contact_plane_vector = ( -1, 0, 0 );
+add element # 210 type StressBasedSoftContact_ElPPlShear with nodes (6, 326) 
+ initial_axial_stiffness = Ki
+ stiffening_rate         = Sr
+ max_axial_stiffness     = Kn
+ initial_shear_stiffness =  Kt
+ axial_viscous_damping =  Cn
+ shear_viscous_damping =  Ct
+ residual_friction_coefficient =  Fr
+ shear_zone_thickness = ShearZoneThickness
+ contact_plane_vector = ( 0, 1, 0 );
+add element # 211 type StressBasedSoftContact_ElPPlShear with nodes (7, 327) 
+ initial_axial_stiffness = Ki
+ stiffening_rate         = Sr
+ max_axial_stiffness     = Kn
+ initial_shear_stiffness =  Kt
+ axial_viscous_damping =  Cn
+ shear_viscous_damping =  Ct
+ residual_friction_coefficient =  Fr
+ shear_zone_thickness = ShearZoneThickness
+ contact_plane_vector = ( 0, 0, 1 );
+add element # 212 type StressBasedSoftContact_ElPPlShear with nodes (7, 327) 
+ initial_axial_stiffness = Ki
+ stiffening_rate         = Sr
+ max_axial_stiffness     = Kn
+ initial_shear_stiffness =  Kt
+ axial_viscous_damping =  Cn
+ shear_viscous_damping =  Ct
+ residual_friction_coefficient =  Fr
+ shear_zone_thickness = ShearZoneThickness
+ contact_plane_vector = ( -1, 0, 0 );
+add element # 213 type StressBasedSoftContact_ElPPlShear with nodes (7, 327) 
+ initial_axial_stiffness = Ki
+ stiffening_rate         = Sr
+ max_axial_stiffness     = Kn
+ initial_shear_stiffness =  Kt
+ axial_viscous_damping =  Cn
+ shear_viscous_damping =  Ct
+ residual_friction_coefficient =  Fr
+ shear_zone_thickness = ShearZoneThickness
+ contact_plane_vector = ( 0, -1, 0 );
+add element # 214 type StressBasedSoftContact_ElPPlShear with nodes (8, 328) 
+ initial_axial_stiffness = Ki
+ stiffening_rate         = Sr
+ max_axial_stiffness     = Kn
+ initial_shear_stiffness =  Kt
+ axial_viscous_damping =  Cn
+ shear_viscous_damping =  Ct
+ residual_friction_coefficient =  Fr
+ shear_zone_thickness = ShearZoneThickness
+ contact_plane_vector = ( 0, 0, 1 );
+add element # 215 type StressBasedSoftContact_ElPPlShear with nodes (8, 328) 
+ initial_axial_stiffness = Ki
+ stiffening_rate         = Sr
+ max_axial_stiffness     = Kn
+ initial_shear_stiffness =  Kt
+ axial_viscous_damping =  Cn
+ shear_viscous_damping =  Ct
+ residual_friction_coefficient =  Fr
+ shear_zone_thickness = ShearZoneThickness
+ contact_plane_vector = ( 1, 0, 0 );
+add element # 216 type StressBasedSoftContact_ElPPlShear with nodes (8, 328) 
+ initial_axial_stiffness = Ki
+ stiffening_rate         = Sr
+ max_axial_stiffness     = Kn
+ initial_shear_stiffness =  Kt
+ axial_viscous_damping =  Cn
+ shear_viscous_damping =  Ct
+ residual_friction_coefficient =  Fr
+ shear_zone_thickness = ShearZoneThickness
+ contact_plane_vector = ( 0, -1, 0 );

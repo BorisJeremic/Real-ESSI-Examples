@@ -1,0 +1,45 @@
+// adding coupled contact element 
+add element #3  type ForceBasedCoupledSoftContact with nodes ( 1, 13)
+	initial_axial_stiffness = 1e10*N/m	    
+	stiffening_rate         = 1e4/m
+	max_axial_stiffness     = 1e12*N/m      
+	axial_penalty_stiffness = 2e12*N/m	
+	shear_stiffness         = 1e6*N/m   	
+	axial_viscous_damping   = 0*N/m*s       
+	shear_viscous_damping   = 0*N/m*s   	
+	friction_ratio          = 0.68      
+	contact_plane_vector    = (0, 0, 1);
+
+add element #4  type ForceBasedCoupledSoftContact with nodes ( 2, 14) 
+	initial_axial_stiffness = 1e10*N/m	    
+	stiffening_rate         = 1e4/m
+	max_axial_stiffness     = 1e12*N/m      
+	axial_penalty_stiffness = 2e12*N/m	
+	shear_stiffness         = 1e6*N/m   	
+	axial_viscous_damping   = 0*N/m*s       
+	shear_viscous_damping   = 0*N/m*s   	
+	friction_ratio          = 0.68      
+	contact_plane_vector    = (0, 0, 1);
+
+add element #5  type ForceBasedCoupledSoftContact with nodes ( 3, 15) 
+	initial_axial_stiffness = 1e10*N/m	    
+	stiffening_rate         = 1e4/m
+	max_axial_stiffness     = 1e12*N/m      
+	axial_penalty_stiffness = 2e12*N/m	
+	shear_stiffness         = 1e6*N/m   	
+	axial_viscous_damping   = 0*N/m*s       
+	shear_viscous_damping   = 0*N/m*s   	
+	friction_ratio          = 0.68      
+	contact_plane_vector    = (0, 0, 1);
+
+add element #6  type ForceBasedCoupledSoftContact with nodes ( 4, 16) 
+	initial_axial_stiffness = 1e10*N/m	    
+	stiffening_rate         = 1e4/m
+	max_axial_stiffness     = 1e12*N/m      
+	axial_penalty_stiffness = 2e12*N/m	
+	shear_stiffness         = 1e6*N/m   	
+	axial_viscous_damping   = 0*N/m*s       
+	shear_viscous_damping   = 0*N/m*s   	
+	friction_ratio          = 0.68      
+	contact_plane_vector    = (0, 0, 1);
+

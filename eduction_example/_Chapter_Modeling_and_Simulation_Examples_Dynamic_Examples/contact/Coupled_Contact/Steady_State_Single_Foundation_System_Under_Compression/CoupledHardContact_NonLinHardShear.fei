@@ -1,0 +1,40 @@
+// adding coupled contact element 
+add element #3  type StressBasedCoupledHardContact_NonLinHardShear with nodes ( 1, 13)
+	axial_stiffness               =  1*GPa      
+	axial_penalty_stiffness       =  1*GPa	
+	initial_shear_stiffness       =  400*kPa 
+	axial_viscous_damping         =  0*Pa*s
+	shear_viscous_damping         =  0*Pa*s
+	residual_friction_coefficient =  0.68  
+	shear_zone_thickness          =  0.005*m
+	contact_plane_vector          =  (0,0,1);
+
+add element #4  type StressBasedCoupledHardContact_NonLinHardShear with nodes ( 2, 14) 
+	axial_stiffness               =  1*GPa      
+	axial_penalty_stiffness       =  1*GPa	
+	initial_shear_stiffness       =  400*kPa 
+	axial_viscous_damping         =  0*Pa*s
+	shear_viscous_damping         =  0*Pa*s
+	residual_friction_coefficient =  0.68  
+	shear_zone_thickness          =  0.005*m
+	contact_plane_vector          =  (0,0,1);
+	
+add element #5  type StressBasedCoupledHardContact_NonLinHardShear with nodes ( 3, 15) 
+	axial_stiffness               =  1*GPa      
+	axial_penalty_stiffness       =  1*GPa	
+	initial_shear_stiffness       =  400*kPa 
+	axial_viscous_damping         =  0*Pa*s
+	shear_viscous_damping         =  0*Pa*s
+	residual_friction_coefficient =  0.68  
+	shear_zone_thickness          =  0.005*m
+	contact_plane_vector          =  (0,0,1);
+
+add element #6  type StressBasedCoupledHardContact_NonLinHardShear with nodes ( 4, 16) 
+	axial_stiffness               =  1*GPa      
+	axial_penalty_stiffness       =  1*GPa	
+	initial_shear_stiffness       =  400*kPa 
+	axial_viscous_damping         =  0*Pa*s
+	shear_viscous_damping         =  0*Pa*s
+	residual_friction_coefficient =  0.68  
+	shear_zone_thickness          =  0.005*m
+	contact_plane_vector          =  (0,0,1);

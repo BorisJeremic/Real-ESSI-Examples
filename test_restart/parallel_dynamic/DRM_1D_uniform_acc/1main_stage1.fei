@@ -1,0 +1,89 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+
+model name "8NodeBrick_DRM" ;
+add material # 1 type linear_elastic_isotropic_3d
+  mass_density = 2000*kg/m^3
+  elastic_modulus = 1300*MPa
+  poisson_ratio = 0.3;
+add material # 2 type linear_elastic_isotropic_3d
+  mass_density = 2000*kg/m^3
+  elastic_modulus = 1300*MPa
+  poisson_ratio = 0.3;
+add material # 3 type linear_elastic_isotropic_3d
+  mass_density = 2000*kg/m^3
+  elastic_modulus = 1300*MPa
+  poisson_ratio = 0.3;
+include "node.fei";
+include "element.fei";
+include "constraint.fei";
+
+// new loading stage "name_string";
+// new loading stage "self_weight" ;
+
+// // add acceleration field # <.> ax = <accel> ay = <accel> az = <aaccel> ;
+// add acceleration field # 1 
+//   ax = 0*g 
+//   ay = 0*g 
+//   az = -1*g ;
+
+// add load # 1 to all elements type self_weight use acceleration field # 1;
+// if(IS_PARALLEL==0)
+// {define solver UMFPack;}
+// else
+// {define solver parallel;}
+
+// define algorithm With_no_convergence_check ;
+// define load factor increment 0.1;
+// simulate 10 steps using static algorithm;
+
+
+  
+new loading stage "AA";
+define algorithm With_no_convergence_check ;
+if(IS_PARALLEL==0)
+{define solver UMFPack;}
+else
+{define solver parallel;}
+define dynamic integrator Newmark with 
+  gamma = 0.5050 
+  beta = 0.2525;
+// add uniform acceleration # 2 to all nodes dof ux
+//   time_step =  0.01 * s
+//   scale_factor =  1
+//   initial_velocity =  0. * m/ s
+//   acceleration_file = "input.txt" ;
+ 
+simulate 20 steps using transient algorithm 
+ time_step = 0.01*s;
+
+
+new loading stage "AB";
+// remove load # <.>;
+// remove load #2;
+
+
+
+define algorithm With_no_convergence_check ;
+if(IS_PARALLEL==0)
+{define solver UMFPack;}
+else
+{define solver parallel;}
+define dynamic integrator Newmark with 
+ gamma = 0.5050 
+ beta = 0.2525;
+// add uniform acceleration # 3 to all nodes dof ux
+//  time_step =  0.01 * s
+//  scale_factor =  1
+//  initial_velocity =  0. * m/ s
+//  acceleration_file = "input.txt" ;
+
+simulate 20 steps using transient algorithm 
+  time_step = 0.01*s
+  restart_time = 0.2*s;
+bye;

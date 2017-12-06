@@ -1,0 +1,77 @@
+
+
+add imposed motion # 11 to node # 1 dof uy 
+	time_step =  0.01 * s
+	displacement_scale_unit =  1*cm
+	displacement_file =  "dis.txt"
+	velocity_scale_unit =  1*cm/s
+	velocity_file =  "vel.txt"
+	acceleration_scale_unit =  1*g
+	acceleration_file = "acc.txt" ;
+add imposed motion # 12 to node # 3 dof uy 
+	time_step =  0.01 * s
+	displacement_scale_unit =  1*cm
+	displacement_file =  "dis.txt"
+	velocity_scale_unit =  1*cm/s
+	velocity_file =  "vel.txt"
+	acceleration_scale_unit =  1*g
+	acceleration_file = "acc.txt" ;
+add imposed motion # 13 to node # 5 dof uy 
+	time_step =  0.01 * s
+	displacement_scale_unit =  1*cm
+	displacement_file =  "dis.txt"
+	velocity_scale_unit =  1*cm/s
+	velocity_file =  "vel.txt"
+	acceleration_scale_unit =  1*g
+	acceleration_file = "acc.txt" ;
+add imposed motion # 14 to node # 8 dof uy 
+	time_step =  0.01 * s
+	displacement_scale_unit =  1*cm
+	displacement_file =  "dis.txt"
+	velocity_scale_unit =  1*cm/s
+	velocity_file =  "vel.txt"
+	acceleration_scale_unit =  1*g
+	acceleration_file = "acc.txt" ;
+add imposed motion # 15 to node # 17 dof uy 
+	time_step =  0.01 * s
+	displacement_scale_unit =  1*cm
+	displacement_file =  "dis.txt"
+	velocity_scale_unit =  1*cm/s
+	velocity_file =  "vel.txt"
+	acceleration_scale_unit =  1*g
+	acceleration_file = "acc.txt" ;
+add imposed motion # 16 to node # 28 dof uy 
+	time_step =  0.01 * s
+	displacement_scale_unit =  1*cm
+	displacement_file =  "dis.txt"
+	velocity_scale_unit =  1*cm/s
+	velocity_file =  "vel.txt"
+	acceleration_scale_unit =  1*g
+	acceleration_file = "acc.txt" ;
+add imposed motion # 17 to node # 29 dof uy 
+	time_step =  0.01 * s
+	displacement_scale_unit =  1*cm
+	displacement_file =  "dis.txt"
+	velocity_scale_unit =  1*cm/s
+	velocity_file =  "vel.txt"
+	acceleration_scale_unit =  1*g
+	acceleration_file = "acc.txt" ;
+add imposed motion # 18 to node # 32 dof uy 
+	time_step =  0.01 * s
+	displacement_scale_unit =  1*cm
+	displacement_file =  "dis.txt"
+	velocity_scale_unit =  1*cm/s
+	velocity_file =  "vel.txt"
+	acceleration_scale_unit =  1*g
+	acceleration_file = "acc.txt" ;
+add imposed motion # 19 to node # 46 dof uy 
+	time_step =  0.01 * s
+	displacement_scale_unit =  1*cm
+	displacement_file =  "dis.txt"
+	velocity_scale_unit =  1*cm/s
+	velocity_file =  "vel.txt"
+	acceleration_scale_unit =  1*g
+	acceleration_file = "acc.txt" ;
+
+
+

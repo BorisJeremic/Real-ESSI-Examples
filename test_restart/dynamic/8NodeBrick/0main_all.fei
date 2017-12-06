@@ -21,7 +21,7 @@ new loading stage "1";
 add acceleration field # 1 
  ax =  0*g
  ay =  0*g
- az =  - g;
+ az =  - g/10000;
 add load # 1 to element # 1 type self_weight use acceleration field # 1;
 add load # 2 to element # 2 type self_weight use acceleration field # 1;
 add load # 3 to element # 3 type self_weight use acceleration field # 1;
@@ -32,27 +32,28 @@ define algorithm With_no_convergence_check ;
 define solver UMFPack;
 // define load factor increment 1;
 // simulate 1 steps using static algorithm;
-
-define dynamic integrator Newmark with gamma = 0.5 beta = 0.25;
-simulate 3 steps using transient algorithm 
- time_step = 0.1 *s;
+ga = 0.6 ; 
+be = 0.25 * (ga + 0.5)* (ga + 0.5);
+define dynamic integrator Newmark with gamma = ga beta = be ; 
+simulate 10 steps using transient algorithm 
+ time_step = 1000 *s;
 
 
 new loading stage "2" ; 
-add acceleration field # 2 
- ax =  0*g
- ay =  0*g
- az =  - g;
-add load # 7 to element # 1 type self_weight use acceleration field # 2;
-add load # 8 to element # 2 type self_weight use acceleration field # 2;
-add load # 9 to element # 3 type self_weight use acceleration field # 2;
-add load # 10 to element # 4 type self_weight use acceleration field # 2;
-add load # 11 to element # 5 type self_weight use acceleration field # 2;
-add load # 12 to element # 6 type self_weight use acceleration field # 2;
+// add acceleration field # 2 
+//  ax =  0*g
+//  ay =  0*g
+//  az =  - g;
+// add load # 7 to element # 1 type self_weight use acceleration field # 2;
+// add load # 8 to element # 2 type self_weight use acceleration field # 2;
+// add load # 9 to element # 3 type self_weight use acceleration field # 2;
+// add load # 10 to element # 4 type self_weight use acceleration field # 2;
+// add load # 11 to element # 5 type self_weight use acceleration field # 2;
+// add load # 12 to element # 6 type self_weight use acceleration field # 2;
 define algorithm With_no_convergence_check ;
 define solver UMFPack;
 define dynamic integrator Newmark with gamma = 0.5 beta = 0.25;
-simulate 3 steps using transient algorithm 
- time_step = 0.1 *s;
+simulate 1000 steps using transient algorithm 
+ time_step = 0.01 *s;
 
 bye;

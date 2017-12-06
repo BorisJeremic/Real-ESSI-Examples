@@ -1,0 +1,17 @@
+//*************************************************************************************************************************
+//							Add_8NodeBrick_SurfaceLoad{Physical_Group#Upper_Volume, Physical_Group#Surface_Load, Press1:= Surface_Load}Starts
+//*************************************************************************************************************************
+
+add load # 2 to element # 121 type surface at nodes (9 , 58 , 220 , 119) with magnitude Surface_Load; 
+add load # 3 to element # 122 type surface at nodes (119 , 220 , 113 , 23) with magnitude Surface_Load; 
+add load # 4 to element # 123 type surface at nodes (58 , 59 , 221 , 220) with magnitude Surface_Load; 
+add load # 5 to element # 124 type surface at nodes (220 , 221 , 114 , 113) with magnitude Surface_Load; 
+add load # 6 to element # 125 type surface at nodes (59 , 60 , 222 , 221) with magnitude Surface_Load; 
+add load # 7 to element # 126 type surface at nodes (221 , 222 , 115 , 114) with magnitude Surface_Load; 
+add load # 8 to element # 127 type surface at nodes (60 , 12 , 120 , 222) with magnitude Surface_Load; 
+add load # 9 to element # 128 type surface at nodes (222 , 120 , 24 , 115) with magnitude Surface_Load; 
+
+//*************************************************************************************************************************
+//							Add_8NodeBrick_SurfaceLoad{Physical_Group#Upper_Volume, Physical_Group#Surface_Load, Press1:= Surface_Load}Ends
+//*************************************************************************************************************************
+

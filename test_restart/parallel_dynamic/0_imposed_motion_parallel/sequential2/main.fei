@@ -1,0 +1,8 @@
+ model name "Cantilever_Analysis";
+ add material #1 type linear_elastic_isotropic_3d mass_density = 2000*kg/m^3 elastic_modulus = 200*MPa poisson_ratio = 0.2;
+
+
+
+ include "node.fei";
+ include "element.fei";
+ include "load.fei";

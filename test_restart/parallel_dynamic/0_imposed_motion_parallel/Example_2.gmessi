@@ -1,0 +1,49 @@
+
+###########################################################################################################################
+#                                                                                                                         #
+#  GMESSI :: Translator for The Real ESSI (Real Earthquake-Soil-Structure Interaction) Simulator                          #
+#  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -                                      #
+#                                                                                                                         #
+#  Example_1 : Modelling of Cantilever Beam With Uniformly Distributed Load                                               #
+#                                                                                                                         #
+#  GITHUB:: https://github.com/SumeetSinha/gmESSI.git                                                                     #
+#                                                                                                                         #
+#  *** gmsh geometry file  for this example ***                                                                           #
+#                                                                                                                         #
+#  Sumeet Kumar Sinha (Decmbere,2016)                                                                                     #
+#  Computational Geomechanics Group                                                                                       #
+#  University of California, Davis                                                                                        #
+#  s u m e e t k s i n h a . c o m                                                                                        #
+########################################################################################################################### 
+
+gmESSI.loadGmshFile("Example_2.msh")
+
+gmESSI.setSimulationDir("./Example_2_ESSI_Simulation",1) 
+gmESSI.setMainFile(gmESSI.SimulationDir+ "main.fei")
+gmESSI.setNodeFile(gmESSI.SimulationDir+ "node.fei")
+gmESSI.setElementFile(gmESSI.SimulationDir+ "element.fei")
+gmESSI.setLoadFile(gmESSI.SimulationDir+ "load.fei")
+#0 1 "All_Points"
+#1 3 "All_Lines"
+#2 2 "All_Surfaces"
+#2 5 "ImposedMotionSurface"
+##3 4 "All_Volumes"
+! model name "Cantilever_Analysis"; 
+[Add_All_Node{Unit:= m, NumDofs:= 3}]
+! add material #1 type linear_elastic_isotropic_3d mass_density = 2000*kg/m^3 elastic_modulus = 200*MPa poisson_ratio = 0.2;
+#// Adding Material
+#[Add_Linear_Elastic_Isotropic_3D{MaterialNo:= 1, Density:= 2000*kg/m^3, ElasticModulus:= 200*MPa, PoissonRatio:= 0.2}]
+[Add_8NodeBrick{Physical_Group#All_Volumes, material_no:= 1}]
+
+#// Applying Fixities
+[Fix_Dofs{Physical_Group#All_Volumes, ux uz}]
+
+
+! include "node.fei"; 
+! include "element.fei"; 
+## Adding Surface Load
+##[Add_8NodeBrick_SurfaceLoad{Physical_Group#All_Volumes,Physical_Group#ApplySurfaceLoad,-10*Pa}]
+[Add_Node_Load_Imposed_Motion_Time_Series{Physical_Group#ImposedMotionSurface, DofType:= uy, TimeStep:= 0.01*s, DispScale:= 1*cm, DispFile:= "dis.txt" , VelScale:= 1*cm/s , VelFile:= "vel.txt", AccScl:= 1*g, AccFile:= "acc.txt"}]
+##[Add_Node_Load_Linear{Physical_Group#ApplySurfaceLoad, ForceType:= Fz, Mag:= -10*kN}]
+
+! include "load.fei";

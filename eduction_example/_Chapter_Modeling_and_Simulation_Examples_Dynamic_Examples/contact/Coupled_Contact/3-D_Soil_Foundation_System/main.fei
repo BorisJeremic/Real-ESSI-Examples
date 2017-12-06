@@ -1,0 +1,92 @@
+model name "CoupledContactEffect";  
+
+// Defining material variables
+Pois_Ratio = 0.25;  
+Porosty = 0.25;  
+Gravity_Constant = 9.81*m/s^2;  
+Isotropic_Permeability_k_xyz = 1e-4*m/s;  
+Solid_Density = 2650*kg/m^3;  
+Fluid_Density = 1000*kg/m^3;  
+Mixture_Density = (Porosty*Fluid_Density+(1-Porosty)*Solid_Density);  
+Elstc_Modulus = 12e4*kN/m^2;  
+K_solid = 50e6*kN/m^2;  
+K_fluid = 2.15e6*kN/m^2;  
+Biots_Constant_alpha = 1;  
+k_all = Isotropic_Permeability_k_xyz/Fluid_Density/Gravity_Constant;  
+
+
+ConcreteDensity = 2400*kg/m^3;  
+ConcreteE = 20*GPa;  
+ConcreteNu = 0.2;  
+
+One_D_Compressive_Load = -0.1*kN;  
+
+
+// Contact Parameters 
+
+Kinit = 800*MPa;     // initial axial stiffness [Pa]
+Sr = 1000;           // stiffening rate []
+Kn = 10*GPa;        // axial stiffness [Pa]
+Kp = 10*GPa;        // axial penalty stiffness [Pa]
+Kt = 400*kPa;        // initial shear stiffness [Pa]
+Ct = 0*Pa*s;		 // shear viscous damping [Pa*s]
+Cn = 0*Pa*s;         // axial viscous damping [Pa*s]
+Fr = 0.68;			 // residual coefficient of friction or normalized shear stress 
+Shear_Zone  = 1e-3*m;// shear zone thickness
+mu_p0 = 0.9;		 // peak normalized shear stress limit	
+mu_k  = 0.1;		 // peak normalized shear stress rate of decrease 
+Soft_rate = 4;		 // softening rate
+Pleateau_Size = 8;   // plateau size
+Tolerance = 0.01;    // relative tolerance to find out the surface normal vector for auto-contact
+
+
+add material # 1 type linear_elastic_isotropic_3d mass_density = Mixture_Density elastic_modulus = Elstc_Modulus poisson_ratio = Pois_Ratio;  
+add material # 2 type linear_elastic_isotropic_3d mass_density = ConcreteDensity elastic_modulus = ConcreteE poisson_ratio = ConcreteNu;  
+
+
+include "geometry.fei"; 
+include "fixities.fei";   
+
+//*****Single Normal Contact********/
+// include "CoupledHardContact_ElPPlShear.fei";
+// include "CoupledHardContact_NonLinHardShear.fei";
+include "CoupledHardContact_NonLinHardSoftShear.fei";
+
+//***Auto Contact****/
+// include "Auto_CoupledHardContact_ElPPlShear.fei";
+// include "Auto_CoupledHardContact_NonLinHardShear.fei";
+// include "Auto_CoupledHardContact_NonLinHardSoftShear.fei";
+
+
+// Simulation Parameters
+ Time1 = 1;   // in seconds
+ Time2 = 500;  // in seconds 
+ NumSteps1 = 100;  
+ NumSteps2 = 100;  
+
+ DeltaT1 = Time1/NumSteps1*s;  
+ DeltaT2 = Time2/NumSteps2*s;  
+
+add acceleration field # 1 ax = 0*g ay = 0*g az = -g/Time1 ; 
+
+new loading stage "Self_Weight";  
+
+include "self_weight.fei";
+
+tol = 1e-3; define convergence test Relative_Norm_Unbalanced_Force tolerance = tol minimum_absolute_tolerance = 1 maximum_iterations = 20 ;
+define algorithm Newton;  
+define solver umfpack;
+Gamma = 0.5; define dynamic integrator Newmark with gamma = Gamma beta = 0.25*(Gamma+0.5)^2;    
+simulate NumSteps1 steps using transient algorithm time_step = DeltaT1;  
+
+new loading stage "Consolidation";  
+
+tol = 1e-2; define convergence test Relative_Norm_Unbalanced_Force tolerance = tol minimum_absolute_tolerance = 100 maximum_iterations = 20 ;
+define algorithm Newton; 
+define solver umfpack;
+Gamma = 0.5; define dynamic integrator Newmark with gamma = Gamma beta = 0.25*(Gamma+0.5)^2;  
+simulate NumSteps2 steps using transient algorithm time_step = DeltaT2;  
+
+bye;  
+
+

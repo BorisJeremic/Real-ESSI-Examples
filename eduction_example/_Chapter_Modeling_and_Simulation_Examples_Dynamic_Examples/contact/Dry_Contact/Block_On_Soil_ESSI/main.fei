@@ -10,10 +10,6 @@ model name "Block_On_Soil";
 
 add acceleration field # 1 ax = 0*g ay = 0*g az = -1*g ; 
 
-kn = 1e9*N/m; 
-kt = 1e6*N/m; 
-cn = 100*N/m*s; 
-ct = 100*N/m*s; 
 Vs = 100*m/s; 
 rho = 2000*kg/m^3; 
 nu = 0.3; 
@@ -23,15 +19,38 @@ E0 = 2*G0*(1+nu);
 add material # 1 type linear_elastic_isotropic_3d mass_density = rho elastic_modulus = E0 poisson_ratio = nu; 
 add material # 2 type linear_elastic_isotropic_3d mass_density = 2400*kg/m^3 elastic_modulus = 10e9*Pa poisson_ratio = 0.2; 
 
-include "geometry.fei"; 
+include "geometry.fei";
+
+// Contact Element Parameters
+Ki = 5*MPa;                 // initial normal stiffness
+Sr = 100;                    // Stiffening rate
+Kn = 800*MPa;                // normal stiffness
+Kt = 800*kPa;                // tangential stiffness
+Cn = 50*Pa*s;                // normal damping 
+Ct = 50*Pa*s;                // tangential damping
+Fr = 0.68;                   // residual friction coefficient
+ShearZoneThickness = 5e-3*m; // Shear Zone Thickness
+Softening_rate = 40;
+Pleateau_Size = 8;
+mu_p0 = 0.9;
+mu_k  = 0.1;
+
+// include "HardContact.fei";
+// include "HardContact_ElPPlShear.fei";
+// include "HardContact_NonLinHardShear.fei";
+// include "HardContact_NonLinHardSoftShear.fei";
+include "SoftContact.fei";
+// include "SoftContact_ElPPlShear.fei";
+// include "SoftContact_NonLinHardShear.fei";
+// include "SoftContact_NonLinHardSoftShear.fei";
 
 new loading stage "Self_Weight"; 
 
 add load # 1 to all elements type self_weight use acceleration field # 1; 
 include "load.fei"; 
 
-tol = 1; 
-define convergence test Norm_Unbalance tolerance = tol maximum_iterations = 20 verbose_level = 1; 
+tol = 1e-3;
+define convergence test Relative_Norm_Unbalanced_Force tolerance = tol minimum_absolute_tolerance = 10 maximum_iterations = 10 ;
 define algorithm NewtonLineSearch; 
 define solver UMFPack; 
 NumSteps = 10; 
@@ -57,12 +76,13 @@ add uniform acceleration #2 to all nodes dof ux
  initial_velocity =  0*m/s
  acceleration_file = "acc.txt";
 
-tol = 1; 
-define convergence test Norm_Unbalance tolerance = tol maximum_iterations = 100 verbose_level = 1; 
-define algorithm NewtonLineSearch; 
-define solver UMFPack; 
-NumSteps = 600; 
+NumSteps = 6000; 
 TotalTime = 6*s; 
+
+tol = 1e-3;
+define convergence test Relative_Norm_Unbalanced_Force tolerance = tol minimum_absolute_tolerance = 100 maximum_iterations = 50 ;
+define algorithm Newton_With_Subincrement using minimum_time_step =  TotalTime/NumSteps/10/s;
+define solver UMFPack; 
 
 gam = 0.6; 
 bet = 0.25*(0.5+gam)^2; 

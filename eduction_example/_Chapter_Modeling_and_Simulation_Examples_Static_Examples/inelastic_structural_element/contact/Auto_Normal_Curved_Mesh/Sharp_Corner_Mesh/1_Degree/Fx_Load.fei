@@ -1,0 +1,15 @@
+//*************************************************************************************************************************
+//							Add_Node_Load_Linear{Physical_Group#Surface_Load, ForceType:= Fx, Mag:= LoadFx}Starts
+//*************************************************************************************************************************
+
+add load # 2 to node # 3 type linear Fx = LoadFx; 
+add load # 3 to node # 6 type linear Fx = LoadFx; 
+add load # 4 to node # 17 type linear Fx = LoadFx; 
+add load # 5 to node # 18 type linear Fx = LoadFx; 
+add load # 6 to node # 29 type linear Fx = LoadFx; 
+add load # 7 to node # 30 type linear Fx = LoadFx; 
+
+//*************************************************************************************************************************
+//							Add_Node_Load_Linear{Physical_Group#Surface_Load, ForceType:= Fx, Mag:= LoadFx}Ends
+//*************************************************************************************************************************
+

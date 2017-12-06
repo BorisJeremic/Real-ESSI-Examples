@@ -1,0 +1,73 @@
+
+//*************************************************************************************************************************
+//							Fix_Dofs{ Physical_Group#Fix_End ,dofs:= ux uy uz}Starts
+//*************************************************************************************************************************
+
+fix node # 2 dofs ux uy uz; 
+fix node # 5 dofs ux uy uz; 
+fix node # 8 dofs ux uy uz; 
+fix node # 11 dofs ux uy uz; 
+fix node # 13 dofs ux uy uz; 
+fix node # 16 dofs ux uy uz; 
+fix node # 19 dofs ux uy uz; 
+fix node # 22 dofs ux uy uz; 
+fix node # 25 dofs ux uy uz; 
+fix node # 28 dofs ux uy uz; 
+fix node # 31 dofs ux uy uz; 
+fix node # 34 dofs ux uy uz; 
+
+//*************************************************************************************************************************
+//							Fix_Dofs{ Physical_Group#Fix_End ,dofs:= ux uy uz}Ends
+//*************************************************************************************************************************
+
+//*************************************************************************************************************************
+//							Fix_Dofs{ Physical_Group#Fix_End_Bottom ,dofs:= ux uy uz}Starts
+//*************************************************************************************************************************
+
+fix node # 10 dofs ux uy uz; 
+fix node # 11 dofs ux uy uz; 
+fix node # 12 dofs ux uy uz; 
+fix node # 19 dofs ux uy uz; 
+fix node # 20 dofs ux uy uz; 
+fix node # 23 dofs ux uy uz; 
+fix node # 31 dofs ux uy uz; 
+fix node # 32 dofs ux uy uz; 
+fix node # 35 dofs ux uy uz; 
+
+//*************************************************************************************************************************
+//							Fix_Dofs{ Physical_Group#Fix_End_Bottom ,dofs:= ux uy uz}Ends
+//*************************************************************************************************************************
+
+
+//*************************************************************************************************************************
+//							Fix_Dofs{ Physical_Group#Fix_y_side_Surface ,dofs:=  uy}Starts
+//*************************************************************************************************************************
+
+fix node # 1 dofs uy; 
+fix node # 2 dofs uy; 
+fix node # 3 dofs uy; 
+fix node # 4 dofs uy; 
+fix node # 5 dofs uy; 
+fix node # 6 dofs uy; 
+fix node # 7 dofs uy; 
+fix node # 8 dofs uy; 
+fix node # 9 dofs uy; 
+fix node # 10 dofs uy; 
+fix node # 11 dofs uy; 
+fix node # 12 dofs uy; 
+fix node # 13 dofs uy; 
+fix node # 14 dofs uy; 
+fix node # 15 dofs uy; 
+fix node # 16 dofs uy; 
+fix node # 17 dofs uy; 
+fix node # 18 dofs uy; 
+fix node # 19 dofs uy; 
+fix node # 20 dofs uy; 
+fix node # 21 dofs uy; 
+fix node # 22 dofs uy; 
+fix node # 23 dofs uy; 
+fix node # 24 dofs uy; 
+
+//*************************************************************************************************************************
+//							Fix_Dofs{ Physical_Group#Fix_y_side_Surface ,dofs:=  uy}Ends
+//*************************************************************************************************************************

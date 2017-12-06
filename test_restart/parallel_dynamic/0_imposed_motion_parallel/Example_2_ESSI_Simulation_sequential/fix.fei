@@ -1,0 +1,103 @@
+
+//*************************************************************************************************************************
+//							Fix_Dofs{Physical_Group#SurfaceToBeFixed, all}Starts
+//*************************************************************************************************************************
+
+// fix node # 1 dofs all; 
+// fix node # 3 dofs all; 
+// fix node # 5 dofs all; 
+// fix node # 8 dofs all; 
+// fix node # 17 dofs all; 
+// fix node # 28 dofs all; 
+// fix node # 29 dofs all; 
+// fix node # 32 dofs all; 
+// fix node # 46 dofs all; 
+fix node # 1 dofs ux uz;
+fix node # 2 dofs ux uz;
+fix node # 3 dofs ux uz;
+fix node # 4 dofs ux uz;
+fix node # 5 dofs ux uz;
+fix node # 6 dofs ux uz;
+fix node # 7 dofs ux uz;
+fix node # 8 dofs ux uz;
+fix node # 9 dofs ux uz;
+fix node # 10 dofs ux uz;
+fix node # 11 dofs ux uz;
+fix node # 12 dofs ux uz;
+fix node # 13 dofs ux uz;
+fix node # 14 dofs ux uz;
+fix node # 15 dofs ux uz;
+fix node # 16 dofs ux uz;
+fix node # 17 dofs ux uz;
+fix node # 18 dofs ux uz;
+fix node # 19 dofs ux uz;
+fix node # 20 dofs ux uz;
+fix node # 21 dofs ux uz;
+fix node # 22 dofs ux uz;
+fix node # 23 dofs ux uz;
+fix node # 24 dofs ux uz;
+fix node # 25 dofs ux uz;
+fix node # 26 dofs ux uz;
+fix node # 27 dofs ux uz;
+fix node # 28 dofs ux uz;
+fix node # 29 dofs ux uz;
+fix node # 30 dofs ux uz;
+fix node # 31 dofs ux uz;
+fix node # 32 dofs ux uz;
+fix node # 33 dofs ux uz;
+fix node # 34 dofs ux uz;
+fix node # 35 dofs ux uz;
+fix node # 36 dofs ux uz;
+fix node # 37 dofs ux uz;
+fix node # 38 dofs ux uz;
+fix node # 39 dofs ux uz;
+fix node # 40 dofs ux uz;
+fix node # 41 dofs ux uz;
+fix node # 42 dofs ux uz;
+fix node # 43 dofs ux uz;
+fix node # 44 dofs ux uz;
+fix node # 45 dofs ux uz;
+fix node # 46 dofs ux uz;
+fix node # 47 dofs ux uz;
+fix node # 48 dofs ux uz;
+fix node # 49 dofs ux uz;
+fix node # 50 dofs ux uz;
+fix node # 51 dofs ux uz;
+fix node # 52 dofs ux uz;
+fix node # 53 dofs ux uz;
+fix node # 54 dofs ux uz;
+
+
+
+	
+// add load #  to element #  type surface at nodes ( ,  ,  , , , , , , ) with magnitudes ( ,  ,  , , , , , , );
+
+
+	
+
+
+
+//*************************************************************************************************************************
+//							Fix_Dofs{Physical_Group#SurfaceToBeFixed, all}Ends
+//*************************************************************************************************************************
+
+
+//*************************************************************************************************************************
+//							Add_8NodeBrick_SurfaceLoad{Physical_Group#All_Volumes,Physical_Group#ApplySurfaceLoad,-10*Pa}Starts
+//*************************************************************************************************************************
+
+// add load # 1 to element # 2 type surface at nodes (5 , 19 , 47 , 28) with magnitude -10*Pa; 
+// add load # 2 to element # 4 type surface at nodes (28 , 47 , 27 , 8) with magnitude -10*Pa; 
+// add load # 3 to element # 6 type surface at nodes (19 , 20 , 48 , 47) with magnitude -10*Pa; 
+// add load # 4 to element # 8 type surface at nodes (47 , 48 , 26 , 27) with magnitude -10*Pa; 
+// add load # 5 to element # 10 type surface at nodes (20 , 21 , 49 , 48) with magnitude -10*Pa; 
+// add load # 6 to element # 12 type surface at nodes (48 , 49 , 25 , 26) with magnitude -10*Pa; 
+// add load # 7 to element # 14 type surface at nodes (21 , 22 , 50 , 49) with magnitude -10*Pa; 
+// add load # 8 to element # 16 type surface at nodes (49 , 50 , 24 , 25) with magnitude -10*Pa; 
+// add load # 9 to element # 18 type surface at nodes (22 , 6 , 23 , 50) with magnitude -10*Pa; 
+// add load # 10 to element # 20 type surface at nodes (50 , 23 , 7 , 24) with magnitude -10*Pa; 
+
+//*************************************************************************************************************************
+//							Add_8NodeBrick_SurfaceLoad{Physical_Group#All_Volumes,Physical_Group#ApplySurfaceLoad,-10*Pa}Ends
+//*************************************************************************************************************************
+

@@ -24,13 +24,13 @@ add mass to node #2
  my = 1*kg 
  mz = 1*kg;
 
-add element #3  type SoftContact with nodes (1,2) 
- initial_normal_stiffness =1e4*N/m
+add element #3  type ForceBasedSoftContact with nodes (1,2) 
+ initial_axial_stiffness =1e4*N/m
  stiffening_rate = 1000/m 
- max_normal_stiffness =1e7*N/m
- tangential_stiffness =  0*Pa*m
- normal_damping =  0*N/m*s
- tangential_damping =   0*N/m*s
+ max_axial_stiffness =1e7*N/m
+ shear_stiffness =  0*Pa*m
+ axial_viscous_damping =  0*N/m*s
+ shear_viscous_damping =   0*N/m*s
  friction_ratio =  0.3   
  contact_plane_vector = (0,0,1);
 

@@ -1,0 +1,36 @@
+// adding coupled contact element 
+add element #3  type ForceBasedCoupledHardContact with nodes ( 1, 13)
+	axial_stiffness     = 1e12*N/m      
+	axial_penalty_stiffness = 2e12*N/m	
+	shear_stiffness         = 1e6 *N/m    	
+	axial_viscous_damping   = 0*kN/m*s       
+	shear_viscous_damping   = 0*kN/m*s   	
+	friction_ratio          = 0.3      
+	contact_plane_vector    = (0, 0, 1);
+
+add element #4  type ForceBasedCoupledHardContact with nodes ( 2, 14) 
+	axial_stiffness     = 1e12*N/m      
+	axial_penalty_stiffness = 2e12*N/m	
+	shear_stiffness         = 1e6 *N/m    	
+	axial_viscous_damping   = 0*kN/m*s       
+	shear_viscous_damping   = 0*kN/m*s   	
+	friction_ratio          = 0.3      
+	contact_plane_vector    = (0, 0, 1);
+
+add element #5  type ForceBasedCoupledHardContact with nodes ( 3, 15) 
+	axial_stiffness     = 1e12*N/m      
+	axial_penalty_stiffness = 2e12*N/m	
+	shear_stiffness         = 1e6 *N/m    	
+	axial_viscous_damping   = 0*kN/m*s       
+	shear_viscous_damping   = 0*kN/m*s   	
+	friction_ratio          = 0.3      
+	contact_plane_vector    = (0, 0, 1);
+
+add element #6  type ForceBasedCoupledHardContact with nodes ( 4, 16) 
+	axial_stiffness     = 1e12*N/m      
+	axial_penalty_stiffness = 2e12*N/m	
+	shear_stiffness         = 1e6 *N/m    	
+	axial_viscous_damping   = 0*kN/m*s       
+	shear_viscous_damping   = 0*kN/m*s   	
+	friction_ratio          = 0.3      
+	contact_plane_vector    = (0, 0, 1);

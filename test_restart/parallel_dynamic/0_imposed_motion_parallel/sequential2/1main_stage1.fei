@@ -1,0 +1,53 @@
+// My new model
+model name "t"; 
+// Adding Material
+add material # 1 type linear_elastic_isotropic_3d 
+	mass_density = 2000*kg/m^3 
+	elastic_modulus = 50*kPa 
+	poisson_ratio = 0.2; 
+
+
+// Applying Fixities
+include "node.fei"; 
+include "element.fei"; 
+include "fix.fei";
+
+// ************************************
+// ************************************
+// ************************************
+new loading stage "AA"; 
+include "imposed_motion1.fei"; 
+define algorithm With_no_convergence_check; 
+define solver UMFPack; 
+// define load factor increment 1; 
+// simulate 100 steps using static algorithm; 
+// define dynamic integrator Newmark with gamma = <.> beta = <.>;
+define dynamic integrator Newmark with 
+	gamma = 0.5050 
+	beta = 0.2525;
+// simulate <.> steps using transient algorithm time_step = <time>;
+simulate 50 steps using transient algorithm 
+	time_step = 0.01*s ;
+
+
+// ************************************
+// ************************************
+// ************************************
+new loading stage "AB"; 
+// include "imposed_motion2.fei"; 
+define algorithm With_no_convergence_check; 
+define solver UMFPack; 
+// define load factor increment 1; 
+// simulate 100 steps using static algorithm; 
+// define dynamic integrator Newmark with gamma = <.> beta = <.>;
+define dynamic integrator Newmark with 
+	gamma = 0.5050 
+	beta = 0.2525;
+// simulate <.> steps using transient algorithm time_step = <time>;
+simulate 50 steps using transient algorithm 
+	time_step = 0.01*s 
+	restart_time = 0.5 * s;
+
+bye; 
+
+

@@ -56,109 +56,29 @@ model name "Six_Solid_Blocks_Example_With_Contact";
  add element #5 type 8NodeBrick with nodes (19,20,24,22,4,3,10,12) use material #1;
  add element #6 type 8NodeBrick with nodes (7,8,15,14,19,20,24,22) use material #1;
 
-//Adding some variables
- Kn = 1e12*N/m; // normal penalty stiffness
- Kt = 1e6*N/m; // tangential penalty stiffness
- Cn = 0*N/m*s; // normal penalty damping   
- Ct = 0*N/m*s; // tangential penalty damping
- nu = 0.3;  // friction ratio
 
-// Adding Contact Element
- add element #7 type ForceBasedHardContact with nodes (9,25) 
-  axial_stiffness =  Kn
-  shear_stiffness =   Kt
-  axial_viscous_damping =   Cn
-  shear_viscous_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (1,0,0);
+// Contact Element Parameters
+  Ki = 50*kPa;                 // initial normal stiffness
+  Sr = 1000;                   // Stiffening rate
+  Kn = 800*MPa;                // normal stiffness
+  Kt = 400*kPa;                // tangential stiffness
+  Cn = 0*Pa*s;                 // normal damping 
+  Ct = 0*Pa*s;                 // tangential damping
+  Fr = 0.68;                   // residual friction coefficient
+  ShearZoneThickness = 5e-3*m; // Shear Zone Thickness
+  Softening_rate = 40;
+  Pleateau_Size = 8;
+  mu_p0 = 0.9;
+  mu_k  = 0.1;
 
- add element #8 type ForceBasedHardContact with nodes (10,26) 
-  axial_stiffness =  Kn
-  shear_stiffness =   Kt
-  axial_viscous_damping =   Cn
-  shear_viscous_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (-1,0,0);
-
- add element #9 type ForceBasedHardContact with nodes (11,27) 
-  axial_stiffness =  Kn
-  shear_stiffness =   Kt
-  axial_viscous_damping =   Cn
-  shear_viscous_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (1,0,0);
-
- add element #10 type ForceBasedHardContact with nodes (12,28) 
-  axial_stiffness =  Kn
-  shear_stiffness =   Kt
-  axial_viscous_damping =   Cn
-  shear_viscous_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (-1,0,0);
-
- add element #11 type ForceBasedHardContact with nodes (21,29) 
-  axial_stiffness =  Kn
-  shear_stiffness =   Kt
-  axial_viscous_damping =   Cn
-  shear_viscous_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (1,0,0);
-
- add element #12 type ForceBasedHardContact with nodes (22,30) 
-  axial_stiffness =  Kn
-  shear_stiffness =   Kt
-  axial_viscous_damping =   Cn
-  shear_viscous_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (-1,0,0);
-
- add element #13 type ForceBasedHardContact with nodes (23,31) 
-  axial_stiffness =  Kn
-  shear_stiffness =   Kt
-  axial_viscous_damping =   Cn
-  shear_viscous_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (1,0,0);
-
- add element #14 type ForceBasedHardContact with nodes (24,32) 
-  axial_stiffness =  Kn
-  shear_stiffness =   Kt
-  axial_viscous_damping =   Cn
-  shear_viscous_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (-1,0,0);
-
- add element #15 type ForceBasedHardContact with nodes (21,29) 
-  axial_stiffness =  Kn
-  shear_stiffness =   Kt
-  axial_viscous_damping =   Cn
-  shear_viscous_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (0,0,1);
-
- add element #16 type ForceBasedHardContact with nodes (22,30) 
-  axial_stiffness =  Kn
-  shear_stiffness =   Kt
-  axial_viscous_damping =   Cn
-  shear_viscous_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (0,0,1);
-
- add element #17 type ForceBasedHardContact with nodes (23,31) 
-  axial_stiffness =  Kn
-  shear_stiffness =   Kt
-  axial_viscous_damping =   Cn
-  shear_viscous_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (0,0,1);
-
- add element #18 type ForceBasedHardContact with nodes (24,32) 
-  axial_stiffness =  Kn
-  shear_stiffness =   Kt
-  axial_viscous_damping =   Cn
-  shear_viscous_damping =  Ct  
-  friction_ratio =  nu 
-  contact_plane_vector = (0,0,1);
+// include "HardContact_ElPPlShear.fei";
+// include "HardContact_NonLinHardShear.fei";
+// include "HardContact_NonLinHardSoftShear.fei";
+// include "SoftContact_ElPPlShear.fei";
+include "SoftContact_NonLinHardShear.fei";
+// include "SoftContact_NonLinHardSoftShear.fei";
+// include "HardContact.fei";
+// include "SoftContact.fei";
 
 // Adding Fixities
  fix node #5  dofs ux uy uz;

@@ -9,21 +9,32 @@
 model name "Split_Beam_Analysis";  
 
 add acceleration field # 1 ax = 0*g ay = 0*g az = 1*g ;  
-
- O = 0*m; 
- kn_init = 1e9*N/m ;
- kn = 1e11*N/m;  
- Sr = 100/m;
- max_kn = 1e11*N/m;
- kt = 1e7*N/m;  
- Normal_Load = 50*Pa; 
- Cn = 0*N/m*s; 
- fr = 0.3;  
-
 add material # 1 type linear_elastic_isotropic_3d mass_density = 2000*kg/m^3 elastic_modulus = 200*MPa poisson_ratio = 0.3;  
 
-include "geometry.fei"; 
-include "SoftContact.fei"
+
+include "geometry.fei";
+
+// Contact Element Parameters
+Ki = 50*kPa;                 // initial normal stiffness
+Sr = 1000;                   // Stiffening rate
+Kn = 800*MPa;                // normal stiffness
+Kt = 400*kPa;                // tangential stiffness
+Cn = 0*Pa*s;                 // normal damping 
+Ct = 0*Pa*s;                 // tangential damping
+Fr = 0.68;                   // residual friction coefficient
+ShearZoneThickness = 5e-3*m; // Shear Zone Thickness
+Softening_rate = 40;
+Pleateau_Size = 8;
+mu_p0 = 0.9;
+mu_k  = 0.1;
+
+
+// include "SoftContact.fei";
+// include "SoftContact_ElPPlShear.fei";
+// include "SoftContact_NonLinHardShear.fei";
+include "SoftContact_NonLinHardSoftShear.fei";
+
+Normal_Load = 50*Pa;
  
 new loading stage "Normal_Loading";
 
@@ -55,7 +66,7 @@ define algorithm Newton;
 define solver UMFPack;  
 
 gam = 0.65;
-bet = 0.15*(1+gam)^2;
+bet = 0.25*(1+gam)^2;
 define dynamic integrator Newmark with 
  gamma = gam
  beta = bet;

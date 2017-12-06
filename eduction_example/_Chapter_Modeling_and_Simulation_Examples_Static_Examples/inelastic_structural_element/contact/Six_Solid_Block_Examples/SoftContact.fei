@@ -1,0 +1,120 @@
+// Adding Contact Element
+ add element #7 type ForceBasedSoftContact with nodes (9,25) 
+  initial_axial_stiffness = Ki/ShearZoneThickness*m^2
+  stiffening_rate          = Sr/ShearZoneThickness
+  max_axial_stiffness     = Kn/ShearZoneThickness*m^2
+  shear_stiffness          = Kt/ShearZoneThickness*m^2
+  axial_viscous_damping    = Cn/ShearZoneThickness*m^2
+  shear_viscous_damping    = Ct/ShearZoneThickness*m^2  
+  friction_ratio           = Fr 
+  contact_plane_vector     = (1,0,0);
+
+ add element #8 type ForceBasedSoftContact with nodes (10,26) 
+  initial_axial_stiffness = Ki/ShearZoneThickness*m^2
+  stiffening_rate          = Sr/ShearZoneThickness
+  max_axial_stiffness     = Kn/ShearZoneThickness*m^2
+  shear_stiffness          = Kt/ShearZoneThickness*m^2
+  axial_viscous_damping    = Cn/ShearZoneThickness*m^2
+  shear_viscous_damping    = Ct/ShearZoneThickness*m^2  
+  friction_ratio           = Fr 
+  contact_plane_vector = (-1,0,0);
+
+ add element #9 type ForceBasedSoftContact with nodes (11,27) 
+  initial_axial_stiffness = Ki/ShearZoneThickness*m^2
+  stiffening_rate          = Sr/ShearZoneThickness
+  max_axial_stiffness     = Kn/ShearZoneThickness*m^2
+  shear_stiffness          = Kt/ShearZoneThickness*m^2
+  axial_viscous_damping    = Cn/ShearZoneThickness*m^2
+  shear_viscous_damping    = Ct/ShearZoneThickness*m^2  
+  friction_ratio           = Fr 
+  contact_plane_vector = (1,0,0);
+
+ add element #10 type ForceBasedSoftContact with nodes (12,28) 
+  initial_axial_stiffness = Ki/ShearZoneThickness*m^2
+  stiffening_rate          = Sr/ShearZoneThickness
+  max_axial_stiffness     = Kn/ShearZoneThickness*m^2
+  shear_stiffness          = Kt/ShearZoneThickness*m^2
+  axial_viscous_damping    = Cn/ShearZoneThickness*m^2
+  shear_viscous_damping    = Ct/ShearZoneThickness*m^2  
+  friction_ratio           = Fr 
+  contact_plane_vector = (-1,0,0);
+
+ add element #11 type ForceBasedSoftContact with nodes (21,29) 
+  initial_axial_stiffness = Ki/ShearZoneThickness*m^2
+  stiffening_rate          = Sr/ShearZoneThickness
+  max_axial_stiffness     = Kn/ShearZoneThickness*m^2
+  shear_stiffness          = Kt/ShearZoneThickness*m^2
+  axial_viscous_damping    = Cn/ShearZoneThickness*m^2
+  shear_viscous_damping    = Ct/ShearZoneThickness*m^2  
+  friction_ratio           = Fr 
+  contact_plane_vector = (1,0,0);
+
+ add element #12 type ForceBasedSoftContact with nodes (22,30) 
+  initial_axial_stiffness = Ki/ShearZoneThickness*m^2
+  stiffening_rate          = Sr/ShearZoneThickness
+  max_axial_stiffness     = Kn/ShearZoneThickness*m^2
+  shear_stiffness          = Kt/ShearZoneThickness*m^2
+  axial_viscous_damping    = Cn/ShearZoneThickness*m^2
+  shear_viscous_damping    = Ct/ShearZoneThickness*m^2  
+  friction_ratio           = Fr 
+  contact_plane_vector = (-1,0,0);
+
+ add element #13 type ForceBasedSoftContact with nodes (23,31) 
+  initial_axial_stiffness = Ki/ShearZoneThickness*m^2
+  stiffening_rate          = Sr/ShearZoneThickness
+  max_axial_stiffness     = Kn/ShearZoneThickness*m^2
+  shear_stiffness          = Kt/ShearZoneThickness*m^2
+  axial_viscous_damping    = Cn/ShearZoneThickness*m^2
+  shear_viscous_damping    = Ct/ShearZoneThickness*m^2  
+  friction_ratio           = Fr  
+  contact_plane_vector = (1,0,0);
+
+ add element #14 type ForceBasedSoftContact with nodes (24,32) 
+  initial_axial_stiffness = Ki/ShearZoneThickness*m^2
+  stiffening_rate          = Sr/ShearZoneThickness
+  max_axial_stiffness     = Kn/ShearZoneThickness*m^2
+  shear_stiffness          = Kt/ShearZoneThickness*m^2
+  axial_viscous_damping    = Cn/ShearZoneThickness*m^2
+  shear_viscous_damping    = Ct/ShearZoneThickness*m^2  
+  friction_ratio           = Fr 
+  contact_plane_vector = (-1,0,0);
+
+ add element #15 type ForceBasedSoftContact with nodes (21,29) 
+  initial_axial_stiffness = Ki/ShearZoneThickness*m^2
+  stiffening_rate          = Sr/ShearZoneThickness
+  max_axial_stiffness     = Kn/ShearZoneThickness*m^2
+  shear_stiffness          = Kt/ShearZoneThickness*m^2
+  axial_viscous_damping    = Cn/ShearZoneThickness*m^2
+  shear_viscous_damping    = Ct/ShearZoneThickness*m^2  
+  friction_ratio           = Fr  
+  contact_plane_vector = (0,0,1);
+
+ add element #16 type ForceBasedSoftContact with nodes (22,30) 
+  initial_axial_stiffness = Ki/ShearZoneThickness*m^2
+  stiffening_rate          = Sr/ShearZoneThickness
+  max_axial_stiffness     = Kn/ShearZoneThickness*m^2
+  shear_stiffness          = Kt/ShearZoneThickness*m^2
+  axial_viscous_damping    = Cn/ShearZoneThickness*m^2
+  shear_viscous_damping    = Ct/ShearZoneThickness*m^2  
+  friction_ratio           = Fr 
+  contact_plane_vector = (0,0,1);
+
+ add element #17 type ForceBasedSoftContact with nodes (23,31) 
+  initial_axial_stiffness = Ki/ShearZoneThickness*m^2
+  stiffening_rate          = Sr/ShearZoneThickness
+  max_axial_stiffness     = Kn/ShearZoneThickness*m^2
+  shear_stiffness          = Kt/ShearZoneThickness*m^2
+  axial_viscous_damping    = Cn/ShearZoneThickness*m^2
+  shear_viscous_damping    = Ct/ShearZoneThickness*m^2  
+  friction_ratio           = Fr 
+  contact_plane_vector = (0,0,1);
+
+ add element #18 type ForceBasedSoftContact with nodes (24,32) 
+  initial_axial_stiffness = Ki/ShearZoneThickness*m^2
+  stiffening_rate          = Sr/ShearZoneThickness
+  max_axial_stiffness     = Kn/ShearZoneThickness*m^2
+  shear_stiffness          = Kt/ShearZoneThickness*m^2
+  axial_viscous_damping    = Cn/ShearZoneThickness*m^2
+  shear_viscous_damping    = Ct/ShearZoneThickness*m^2  
+  friction_ratio           = Fr 
+  contact_plane_vector = (0,0,1);

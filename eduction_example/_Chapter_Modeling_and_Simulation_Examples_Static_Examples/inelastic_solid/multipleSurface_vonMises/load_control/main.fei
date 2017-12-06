@@ -111,6 +111,9 @@ Nsteps = 100;
 define load factor increment 1/Nsteps;
 // define static integrator displacement_control using node # 1 dof ux increment 1E-3*m ;
 simulate Nsteps steps using static algorithm;
+
+
+
 new loading stage "3unloading";
 add load # 105 to node # 1 type linear Fx =  -40 * kN;
 add load # 106 to node # 2 type linear Fx =  -40 * kN;
@@ -122,6 +125,7 @@ define convergence test Absolute_Norm_Displacement_Increment
     maximum_iterations =  50
     ;
 define algorithm Newton ;
+// define algorithm BFGS;
 define NDMaterial constitutive integration algorithm Backward_Euler
     yield_function_relative_tolerance =  1E-7
     stress_relative_tolerance =  1E-7
@@ -130,6 +134,8 @@ Nsteps = 100;
 define load factor increment 1/Nsteps;
 // define static integrator displacement_control using node # 1 dof ux increment -1E-3*m ;
 simulate 2*Nsteps steps using static algorithm;
+
+
 new loading stage "4reloading" ;
 add load # 115 to node # 1 type linear Fx =  40 * kN;
 add load # 116 to node # 2 type linear Fx =  40 * kN;
@@ -141,6 +147,7 @@ define convergence test Absolute_Norm_Displacement_Increment
     maximum_iterations =  50
     ;
 define algorithm Newton ;
+// define algorithm BFGS;
 define NDMaterial constitutive integration algorithm Backward_Euler
     yield_function_relative_tolerance =  1E-7
     stress_relative_tolerance =  1E-7

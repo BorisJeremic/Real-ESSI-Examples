@@ -1,8 +1,0 @@
-Version Name   : Academic Version. Release date: May 21 2017 at 23:14:06. Tag: ea4f9915c6
-Version Branch : master
-Compile Date   : May 25 2017 at 17:23:27
-Compile User   : sumeet
-Compile Sysinfo: cml06 4.4.0-78-generic x86_64 GNU/Linux
-Runtime User   : sumeet
-Runtime Sysinfo: cml06 4.4.0-78-generic x86_64 GNU/Linux
-Time Now       : May 25 2017 at 19:07:50
