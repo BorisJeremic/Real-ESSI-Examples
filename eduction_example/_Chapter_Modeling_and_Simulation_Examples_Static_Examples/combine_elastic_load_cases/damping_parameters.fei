@@ -1,0 +1,39 @@
+
+// Damping Period
+T1 = 2*s; 
+T2 = 0.2*s; 
+w1 = 2*pi/T1; 
+w2 = 2*pi/T2; 
+
+// Structural Rayleigh Damping Ratio 
+xi_1 = 0.03; 
+rayl_1_a1 = 2*xi_1/(w1+w2); 
+rayl_1_a0 = rayl_1_a1*w1*w2; 
+
+// Foundation Rayleigh Damping Ratio 
+xi_2 = 0.06; 
+rayl_2_a1 = 2*xi_2/(w1+w2); 
+rayl_2_a0 = rayl_2_a1*w1*w2; 
+
+// Soil Layer Rayleigh Damping Ratio 
+xi_3 = 0.09; 
+rayl_3_a1 = 2*xi_3/(w1+w2); 
+rayl_3_a0 = rayl_3_a1*w1*w2; 
+
+// DRM Layer Rayleigh Damping Ratio 
+xi_4 = 0.0 ; 
+rayl_4_a1 = 2*xi_4/(w1+w2); 
+rayl_4_a0 = rayl_4_a1*w1*w2; 
+
+// Damping Period layer Damping 
+xi_5 = 0.5 ; 
+rayl_5_a1 = 2*xi_5/(w1+w2); 
+rayl_5_a0 = rayl_5_a1*w1*w2; 
+
+add damping # 1 type Rayleigh with a0 = rayl_1_a0 a1 = rayl_1_a1 stiffness_to_use = Initial_Stiffness; 
+add damping # 2 type Rayleigh with a0 = rayl_2_a0 a1 = rayl_2_a1 stiffness_to_use = Initial_Stiffness; 
+add damping # 3 type Rayleigh with a0 = rayl_3_a0 a1 = rayl_3_a1 stiffness_to_use = Initial_Stiffness; 
+add damping # 4 type Rayleigh with a0 = rayl_4_a0 a1 = rayl_4_a1 stiffness_to_use = Initial_Stiffness; 
+add damping # 5 type Rayleigh with a0 = rayl_5_a0 a1 = rayl_5_a1 stiffness_to_use = Initial_Stiffness; 
+
+

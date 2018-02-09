@@ -1,0 +1,83 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// http://real-essi.info
+// //
+model name "test" ;
+
+// Define Material and Geometry
+
+include "material_set.fei";
+include "node.fei";
+include "element.fei";
+include "boundary_condition.fei";
+include "damping_parameters.fei";
+include "damping.fei";
+
+// It is recommended to run check model before any simulation.
+// The hdf5 output can be visualized to check the boundary conditions.
+
+// check model;
+
+
+new loading stage "case1";
+add acceleration field # 1 
+  ax =  10*g
+  ay =  0*g
+  az =  0*g ;
+add load # 1 to all elements type self_weight use acceleration field # 1;
+
+// Simulation Options:
+define algorithm With_no_convergence_check ;
+if(IS_PARALLEL==0)
+{define solver UMFPack;}
+else
+{define solver parallel;}
+
+// Static loading increments:
+define load factor increment 1;
+simulate 1 steps using static algorithm;
+
+
+
+
+
+
+
+
+
+
+
+
+
+new elastic loading case "case2";
+add acceleration field # 2 
+  ax =  10*g
+  ay =  0*g
+  az =  0*g ;
+add load # 2 to all elements type self_weight use acceleration field # 2;
+
+// Simulation Options:
+define algorithm With_no_convergence_check ;
+if(IS_PARALLEL==0)
+{define solver UMFPack;}
+else
+{define solver parallel;}
+
+// Static loading increments:
+define load factor increment 1;
+simulate 1 steps using static algorithm;
+
+
+
+
+
+combine elastic load cases 
+	hdf5_filenames_list = "test_case1.h5.feioutput test_case2.h5.feioutput"
+	load_factors_list = "1.2 1.5"
+	output_filename = "combine.h5.feioutput" 
+	;
+
+
+bye;
+

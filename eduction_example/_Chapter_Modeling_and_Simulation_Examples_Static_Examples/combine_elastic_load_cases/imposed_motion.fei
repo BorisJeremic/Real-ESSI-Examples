@@ -1,0 +1,182 @@
+
+//*************************************************************************************************************************
+//							Free_Dofs{Physical_Group#foundation_bottom_surfaces, DofTypes:= ux}Starts
+//*************************************************************************************************************************
+
+free node # 643 dofs ux; 
+free node # 644 dofs ux; 
+free node # 645 dofs ux; 
+free node # 646 dofs ux; 
+free node # 647 dofs ux; 
+free node # 648 dofs ux; 
+free node # 1 dofs ux; 
+free node # 2 dofs ux; 
+free node # 3 dofs ux; 
+free node # 649 dofs ux; 
+free node # 650 dofs ux; 
+free node # 4 dofs ux; 
+free node # 5 dofs ux; 
+free node # 6 dofs ux; 
+free node # 651 dofs ux; 
+free node # 652 dofs ux; 
+free node # 7 dofs ux; 
+free node # 8 dofs ux; 
+free node # 9 dofs ux; 
+free node # 653 dofs ux; 
+free node # 654 dofs ux; 
+free node # 655 dofs ux; 
+free node # 656 dofs ux; 
+free node # 657 dofs ux; 
+free node # 658 dofs ux; 
+free node # 675 dofs ux; 
+free node # 676 dofs ux; 
+free node # 677 dofs ux; 
+free node # 678 dofs ux; 
+free node # 46 dofs ux; 
+free node # 47 dofs ux; 
+free node # 48 dofs ux; 
+free node # 49 dofs ux; 
+free node # 679 dofs ux; 
+free node # 680 dofs ux; 
+free node # 50 dofs ux; 
+free node # 51 dofs ux; 
+free node # 52 dofs ux; 
+free node # 53 dofs ux; 
+free node # 54 dofs ux; 
+free node # 55 dofs ux; 
+free node # 56 dofs ux; 
+free node # 57 dofs ux; 
+free node # 58 dofs ux; 
+free node # 59 dofs ux; 
+free node # 681 dofs ux; 
+free node # 682 dofs ux; 
+free node # 683 dofs ux; 
+free node # 684 dofs ux; 
+free node # 60 dofs ux; 
+free node # 61 dofs ux; 
+free node # 62 dofs ux; 
+free node # 63 dofs ux; 
+free node # 64 dofs ux; 
+free node # 65 dofs ux; 
+free node # 66 dofs ux; 
+free node # 67 dofs ux; 
+free node # 68 dofs ux; 
+free node # 69 dofs ux; 
+free node # 685 dofs ux; 
+free node # 686 dofs ux; 
+free node # 687 dofs ux; 
+free node # 688 dofs ux; 
+free node # 689 dofs ux; 
+free node # 690 dofs ux; 
+free node # 771 dofs ux; 
+free node # 772 dofs ux; 
+free node # 773 dofs ux; 
+free node # 774 dofs ux; 
+free node # 775 dofs ux; 
+free node # 776 dofs ux; 
+free node # 777 dofs ux; 
+free node # 778 dofs ux; 
+free node # 779 dofs ux; 
+free node # 780 dofs ux; 
+free node # 781 dofs ux; 
+free node # 782 dofs ux; 
+free node # 783 dofs ux; 
+free node # 784 dofs ux; 
+free node # 785 dofs ux; 
+free node # 786 dofs ux; 
+
+//*************************************************************************************************************************
+//							Free_Dofs{Physical_Group#foundation_bottom_surfaces, DofTypes:= ux}Ends
+//*************************************************************************************************************************
+
+
+//*************************************************************************************************************************
+//							Add_Node_Load_Imposed_Motion_Series{Physical_Group#foundation_bottom_surfaces, DofType:= ux, DispScale:= 1*cm, DispFile:= "./motion/sw4_free_field_center_ux.txt" , VelScale:= 1*m/s , VelFile:= "./motion/sw4_free_field_center_vx.txt", AccScale:= 1*m/s^2, AccFile:= "./motion/sw4_free_field_center_ax.txt"}Starts
+//*************************************************************************************************************************
+
+add imposed motion # 1 to node # 643 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 2 to node # 644 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 3 to node # 645 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 4 to node # 646 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 5 to node # 647 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 6 to node # 648 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 7 to node # 1 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 8 to node # 2 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 9 to node # 3 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 10 to node # 649 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 11 to node # 650 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 12 to node # 4 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 13 to node # 5 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 14 to node # 6 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 15 to node # 651 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 16 to node # 652 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 17 to node # 7 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 18 to node # 8 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 19 to node # 9 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 20 to node # 653 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 21 to node # 654 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 22 to node # 655 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 23 to node # 656 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 24 to node # 657 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 25 to node # 658 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 26 to node # 675 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 27 to node # 676 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 28 to node # 677 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 29 to node # 678 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 30 to node # 46 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 31 to node # 47 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 32 to node # 48 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 33 to node # 49 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 34 to node # 679 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 35 to node # 680 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 36 to node # 50 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 37 to node # 51 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 38 to node # 52 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 39 to node # 53 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 40 to node # 54 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 41 to node # 55 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 42 to node # 56 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 43 to node # 57 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 44 to node # 58 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 45 to node # 59 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 46 to node # 681 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 47 to node # 682 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 48 to node # 683 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 49 to node # 684 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 50 to node # 60 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 51 to node # 61 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 52 to node # 62 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 53 to node # 63 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 54 to node # 64 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 55 to node # 65 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 56 to node # 66 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 57 to node # 67 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 58 to node # 68 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 59 to node # 69 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 60 to node # 685 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 61 to node # 686 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 62 to node # 687 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 63 to node # 688 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 64 to node # 689 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 65 to node # 690 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 66 to node # 771 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 67 to node # 772 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 68 to node # 773 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 69 to node # 774 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 70 to node # 775 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 71 to node # 776 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 72 to node # 777 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 73 to node # 778 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 74 to node # 779 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 75 to node # 780 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 76 to node # 781 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 77 to node # 782 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 78 to node # 783 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 79 to node # 784 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 80 to node # 785 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+add imposed motion # 81 to node # 786 dof ux displacement_scale_unit = 1*m displacement_file = "./motion/sw4_free_field_center_ux.txt" velocity_scale_unit = 1*m/s velocity_file = "./motion/sw4_free_field_center_vx.txt" acceleration_scale_unit = 1*m/s^2 acceleration_file = "./motion/sw4_free_field_center_ax.txt"; 
+
+//*************************************************************************************************************************
+//							Add_Node_Load_Imposed_Motion_Series{Physical_Group#foundation_bottom_surfaces, DofType:= ux, DispScale:= 1*cm, DispFile:= "./motion/sw4_free_field_center_ux.txt" , VelScale:= 1*m/s , VelFile:= "./motion/sw4_free_field_center_vx.txt", AccScale:= 1*m/s^2, AccFile:= "./motion/sw4_free_field_center_ax.txt"}Ends
+//*************************************************************************************************************************
+

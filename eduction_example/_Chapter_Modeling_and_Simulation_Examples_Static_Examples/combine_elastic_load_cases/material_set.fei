@@ -1,0 +1,54 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// http://real-essi.info
+//
+
+// Support Variable Definition and Calculation with Units
+
+// rho = 2000*kg/m^3
+// Vs = 500 * m/s ;
+// G = Vs^2 * rho ;
+// nu = 0.1 ;        
+// E = 2 * ( 1 + nu )  * G ; 
+
+
+
+// Soil layers material properties
+
+add material # 1 type linear_elastic_isotropic_3d
+  mass_density = 2000*kg/m^3 
+  elastic_modulus = 1.1e9*N/m^2   // for shear wave velocity Vs = 500 m/s
+  poisson_ratio = 0.1;
+
+
+// DRM layers material properties
+
+add material # 2 type linear_elastic_isotropic_3d
+  mass_density = 2000*kg/m^3 
+  elastic_modulus = 1.1e9*N/m^2   // for shear wave velocity Vs = 500 m/s
+  poisson_ratio = 0.1;
+
+
+// Damping layers material properties
+
+add material # 3 type linear_elastic_isotropic_3d
+  mass_density = 2000*kg/m^3 
+  elastic_modulus = 1.1e9*N/m^2   // for shear wave velocity Vs = 500 m/s
+  poisson_ratio = 0.1;
+
+
+// Foundation material properties
+
+add material # 4 type linear_elastic_isotropic_3d
+  mass_density = 2500*kg/m^3
+  elastic_modulus = 3e10*N/m^2
+  poisson_ratio =  0.2 ;
+
+
+// Structure material properties
+
+add material # 5 type linear_elastic_isotropic_3d
+  mass_density = 2500*kg/m^3 
+  elastic_modulus = 3e10*N/m^2
+  poisson_ratio = 0.2 ;
