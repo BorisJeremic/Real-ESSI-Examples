@@ -20,15 +20,15 @@ include "damping.fei";
 // check model;
 
 
-new loading stage "case1";
+new elastic loading case "case1";
 add acceleration field # 1 
-  ax =  10*g
+  ax =  0*g
   ay =  0*g
-  az =  0*g ;
+  az =  10*g ;
 add load # 1 to all elements type self_weight use acceleration field # 1;
 
 // Simulation Options:
-define algorithm With_no_convergence_check ;
+define algorithm linear_elastic ;
 if(IS_PARALLEL==0)
 {define solver UMFPack;}
 else
@@ -58,7 +58,7 @@ add acceleration field # 2
 add load # 2 to all elements type self_weight use acceleration field # 2;
 
 // Simulation Options:
-define algorithm With_no_convergence_check ;
+define algorithm linear_elastic ;
 if(IS_PARALLEL==0)
 {define solver UMFPack;}
 else
