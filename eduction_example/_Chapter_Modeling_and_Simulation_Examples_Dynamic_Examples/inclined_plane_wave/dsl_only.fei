@@ -1,0 +1,20 @@
+
+
+
+
+
+add wave field # 1 type inclined_plane_wave with 
+		clockwise_angle_from x =  30 
+		sv_incident_magnitude =  3
+		sv_incident_angle =  4
+		soil_profile_filename =  "str5"
+		soil_surface at z =  6 * m
+		unit_of_vs_and_vp =  7*m/s
+		unit_of_rho =  8*kg/m^3
+		unit_of_damping =  percent
+		unit_of_thickness =  9*m ;
+
+
+
+bye; 
+
