@@ -1,0 +1,285 @@
+
+// model name "full_box";
+model name "full_box_D";
+
+//
+// model
+// units: m, kPa
+
+////////////////////////////////////////////
+// NODE COORDINATES
+////////////////////////////////////////////
+
+include "NodeCoord.fei"
+include "Soil_NodeCoord.fei"
+
+////////////////////////////////////////////
+// CONSTRAINTS
+////////////////////////////////////////////
+
+ii = 1;
+while (ii<65) {
+    fix node # ii dofs  all;
+    ii+=1;
+}
+
+ii = 1281;
+while (ii<1642) {
+    fix node # ii dofs  all;
+    ii+=1;
+}
+
+////////////////////////////////////////////
+// MASTER-SLAVE
+////////////////////////////////////////////
+
+include "Tied_Nodes.fei"
+
+////////////////////////////////////////////
+// MATERIALS
+////////////////////////////////////////////
+
+include "Materials_0elastic.fei";
+// include "Materials_1bilinear.fei";
+// include "Materials_2nonlinear.fei";
+// include "Materials_3piecewise_linear.fei";
+
+////////////////////////////////////////////
+// ELEMENTS
+////////////////////////////////////////////
+
+include "Elements_Base_Plate.fei"
+
+include "Elements_HSS.fei"
+
+include "Elements_LDB_P_Set1.fei"
+include "Elements_LDB_P_Set2.fei"
+include "Elements_LDB_P_Set3.fei"
+include "Elements_LDB_P_Set4.fei"
+
+include "Elements_Soil.fei"
+
+
+////////////////////////////////////////////
+// DAMPING
+////////////////////////////////////////////
+
+
+wall_damping = 0.10 ;
+soil_damping = 0.30 ;
+
+// Rayleigh Damping Parameters
+ f_1 = 0.1*Hz; 
+ f_2 = 15.0*Hz; 
+ xi_1 = 1; 
+ xi_2 = 1; 
+ a_0 = 4*pi*f_1*f_2*(f_1*xi_2 - f_2*xi_1)/(f_1^2 - f_2^2); 
+ a_1 = (f_1*xi_1 - f_2*xi_2)/(pi*(f_1^2 - f_2^2)); 
+
+print a_0 ;
+print a_1 ;
+
+
+// Defining Damping
+add damping # 1 type Rayleigh with 
+    a0 = a_0 * wall_damping 
+    a1 = a_1 * wall_damping 
+    stiffness_to_use = Initial_Stiffness; // wall Dampin; 
+
+add damping # 2 type Rayleigh with 
+    a0 = a_0 * soil_damping 
+    a1 = a_1 * soil_damping 
+    stiffness_to_use = Initial_Stiffness; // soil Dampin; 
+
+////////////////////////////////////////////
+
+// add damping # 1 type Rayleigh with
+//     a0 = 2.3368/s
+//     a1 = 0.001*s
+//     stiffness_to_use = Initial_Stiffness;
+    
+ii = 1;
+while (ii<1689) {
+    add damping #1 to element # ii;
+    ii+=1;
+}
+
+
+// add damping # 2 type Rayleigh with
+//     a0 = 0.9347/s
+//     a1 = 4.0872e-4*s
+//     stiffness_to_use = Initial_Stiffness;
+    
+ii = 1689;
+while (ii<7921) {
+    add damping #2 to element # ii;
+    ii+=1;
+}
+
+
+
+
+
+////////////////////////////////////////////
+// CONFINING LOADING STAGE
+////////////////////////////////////////////
+new loading stage "Fz";
+add acceleration field # 1 
+ ax =  0*g
+ ay =  0*g
+ az =  - 9.81*m/s^2;
+
+// box elements
+ ii = 1;
+while (ii<1280) {
+    add load # ii to element # ii type self_weight use acceleration field # 1;
+    ii+=1;
+}
+
+// bearing elements
+ii = 65;
+jj = 1281;
+
+while (ii<384) {
+    add load # jj to node # ii type linear Fz =  -711.7155 * N;
+    ii+=2;
+    jj+=1;
+}
+
+ii = 385;
+while (ii<642) {
+    add load # jj to node # ii type linear Fz =  -711.7155 * N;
+    ii+=2;
+    jj+=1;
+}
+
+ii = 645;
+while (ii<958) {
+    add load # jj to node # ii type linear Fz =  -711.7155 * N;
+    ii+=4;
+    jj+=1;
+}
+
+ii = 965;
+while (ii<1086) {
+    add load # jj to node # ii type linear Fz =  -711.7155 * N;
+    ii+=8;
+    jj+=1;
+}
+
+ii = 1093;
+while (ii<1278) {
+    add load # jj to node # ii type linear Fz =  -711.7155 * N;
+    ii+=8;
+    jj+=1;
+}
+
+// soil elements
+ ii = 1689;
+while (ii<7921) {
+    add load # ii to element # ii type self_weight use acceleration field # 1;
+    ii+=1;
+}
+
+define NDMaterial constitutive integration algorithm Backward_Euler
+    yield_function_relative_tolerance =  1E-8
+    stress_relative_tolerance =  1E-8
+    maximum_iterations = 20;
+
+if (IS_PARALLEL == 0 ) { 
+    define solver UMFPack;
+}else{
+    define solver parallel petsc "-pc_type lu -pc_factor_mat_solver_package mumps" ;
+}
+
+
+// define convergence test Absolute_Norm_Displacement_Increment
+//     tolerance = 1E-5
+//     maximum_iterations =  20
+//     ;
+
+tol = 1e-3;
+define convergence test Relative_Norm_Unbalanced_Force 
+    tolerance = tol 
+    minimum_absolute_tolerance = 1e3 
+    maximum_iterations = 50 ;
+
+// Load Control
+define algorithm NewtonLineSearch;
+enable subincrement using minimum_time_step = 0.0001;
+Nstep = 1;
+define load factor increment 1/Nstep;
+simulate Nstep steps using static algorithm;
+
+
+
+
+
+
+// bye;
+
+////////////////////////////////////////////
+// DYNAMIC
+////////////////////////////////////////////
+
+new loading stage "imposed_motion";
+
+enable acceleration output;
+
+include "imposed_motion.fei" ; 
+
+// add uniform acceleration # 7921 to all nodes dof ux 
+//     time_step = 0.01*s
+//     scale_factor = 1*m/s^2
+//     initial_velocity = 0*m/s
+//     acceleration_file = "Cerro237_US_1col.txt";
+
+gamma_val=0.6;
+beta_val= 0.25*(0.5 + gamma_val)^2;
+
+define dynamic integrator Newmark with 
+    gamma =  gamma_val   
+    beta = beta_val ;
+
+define NDMaterial constitutive integration algorithm Backward_Euler
+    yield_function_relative_tolerance =  1E-8
+    stress_relative_tolerance =  1E-8
+    maximum_iterations = 20;
+define load factor increment 0.01;
+
+
+tol = 1e-3;
+define convergence test Relative_Norm_Unbalanced_Force 
+    tolerance = tol 
+    minimum_absolute_tolerance = 1e3 
+    maximum_iterations = 50 ;
+
+enable subincrement using minimum_time_step = 0.0001;
+define algorithm NewtonLineSearch; //With_no_convergence_check;
+enable subincrement using minimum_time_step = 0.0001;
+if (IS_PARALLEL == 0 ) { 
+    define solver UMFPack;
+}else{
+    define solver parallel petsc "-pc_type lu -pc_factor_mat_solver_package mumps" ;
+}
+// simulate 100 steps using transient algorithm time_step = 0.01*s;
+simulate 3 steps using transient algorithm time_step = 0.01*s;
+
+
+
+
+
+
+bye;
+
+
+
+
+
+
+
+
+    
+
+
+

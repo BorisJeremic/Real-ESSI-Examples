@@ -1,0 +1,95 @@
+// Materials.fei 
+
+// Soil Materials
+den = 1922.5;
+poisson = 0.3 ; 
+
+add material # 5 type linear_elastic_isotropic_3d
+	mass_density = den*kg/m^3 
+	elastic_modulus = 94255.16 * kPa  * 2 * (1+poisson)
+	poisson_ratio = poisson
+	;
+
+add material # 6 type linear_elastic_isotropic_3d
+	mass_density = den*kg/m^3 
+	elastic_modulus = 90946.93* kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	;
+
+add material # 7 type linear_elastic_isotropic_3d
+	mass_density = den*kg/m^3 
+	elastic_modulus = 87513.72 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	;
+
+add material # 8 type linear_elastic_isotropic_3d
+	mass_density = den*kg/m^3 
+	elastic_modulus = 83940.21 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	;
+
+add material # 9 type linear_elastic_isotropic_3d
+	mass_density = den*kg/m^3 
+	elastic_modulus = 80207.65 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	;
+
+add material # 10 type linear_elastic_isotropic_3d
+	mass_density = den*kg/m^3 
+	elastic_modulus = 76292.69 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	;
+
+add material # 11 type linear_elastic_isotropic_3d
+	mass_density = den*kg/m^3 
+	elastic_modulus = 72165.66 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	;
+
+add material # 12 type linear_elastic_isotropic_3d
+	mass_density = den*kg/m^3 
+	elastic_modulus = 67787.84 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	;
+
+add material # 13 type linear_elastic_isotropic_3d
+	mass_density = den*kg/m^3 
+	elastic_modulus = 63107.04 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	;
+
+add material # 14 type linear_elastic_isotropic_3d
+	mass_density = den*kg/m^3 
+	elastic_modulus = 58050.04 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	;
+
+add material # 15 type linear_elastic_isotropic_3d
+	mass_density = den*kg/m^3 
+	elastic_modulus = 52508.23 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	;
+
+add material # 16 type linear_elastic_isotropic_3d
+	mass_density = den*kg/m^3 
+	elastic_modulus = 46307.91 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	;
+
+add material # 17 type linear_elastic_isotropic_3d
+	mass_density = den*kg/m^3 
+	elastic_modulus = 39137.33 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	;
+
+add material # 18 type linear_elastic_isotropic_3d
+	mass_density = den*kg/m^3 
+	elastic_modulus = 30315.64 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	;
+
+add material # 19 type linear_elastic_isotropic_3d
+	mass_density = den*kg/m^3 
+	elastic_modulus = 17502.74 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	;

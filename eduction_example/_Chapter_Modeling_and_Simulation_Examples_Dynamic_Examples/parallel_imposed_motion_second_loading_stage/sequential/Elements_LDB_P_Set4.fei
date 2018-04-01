@@ -1,0 +1,343 @@
+// Elements_LDB_P_Set4.fei 
+
+// elastomeric bearing parameters 
+add material #4 type uniaxial_elastic 
+    elastic_modulus = 4230600*kPa 
+    viscoelastic_modulus =  1*kPa*s;
+
+add element #1665  type bearing_elastomeric_plasticity3d with nodes (1093,1029 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1666  type bearing_elastomeric_plasticity3d with nodes (1101,1037 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1667  type bearing_elastomeric_plasticity3d with nodes (1109,1045 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1668  type bearing_elastomeric_plasticity3d with nodes (1117,1053 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1669  type bearing_elastomeric_plasticity3d with nodes (1125,1061 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1670  type bearing_elastomeric_plasticity3d with nodes (1133,1069 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1671  type bearing_elastomeric_plasticity3d with nodes (1141,1077 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1672  type bearing_elastomeric_plasticity3d with nodes (1149,1085 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1673  type bearing_elastomeric_plasticity3d with nodes (1157,1093 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1674  type bearing_elastomeric_plasticity3d with nodes (1165,1101 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1675  type bearing_elastomeric_plasticity3d with nodes (1173,1109 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1676  type bearing_elastomeric_plasticity3d with nodes (1181,1117 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1677  type bearing_elastomeric_plasticity3d with nodes (1189,1125 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1678  type bearing_elastomeric_plasticity3d with nodes (1197,1133 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1679  type bearing_elastomeric_plasticity3d with nodes (1205,1141 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1680  type bearing_elastomeric_plasticity3d with nodes (1213,1149 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1681  type bearing_elastomeric_plasticity3d with nodes (1221,1157 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1682  type bearing_elastomeric_plasticity3d with nodes (1229,1165 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1683  type bearing_elastomeric_plasticity3d with nodes (1237,1173 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1684  type bearing_elastomeric_plasticity3d with nodes (1245,1181 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1685  type bearing_elastomeric_plasticity3d with nodes (1253,1189 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1686  type bearing_elastomeric_plasticity3d with nodes (1261,1197 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1687  type bearing_elastomeric_plasticity3d with nodes (1269,1205 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+
+add element #1688  type bearing_elastomeric_plasticity3d with nodes (1277,1213 ) use material # 4 
+    mass = 45.3439*kg
+    initial_elastic_modulus = 15444*kPa
+    characteristic_strength = 6.8948e+09*kPa
+    alpha1 = 1
+    alpha2 = 0
+    mu     = 3
+    torsional_stiffness = 4810800*kPa
+    moment_x_stiffness  = 4810800*kPa
+    moment_y_stiffness  = 4810800*kPa
+    local_y_vector = ( 0 ,  1 ,  0 )
+    local_z_vector = ( 0 ,  0 ,  1 )
+    shear_length_ratio  = 0.5 ;
+

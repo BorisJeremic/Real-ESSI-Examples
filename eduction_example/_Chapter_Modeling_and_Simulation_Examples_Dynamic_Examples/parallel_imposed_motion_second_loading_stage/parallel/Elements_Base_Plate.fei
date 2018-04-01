@@ -1,0 +1,772 @@
+// Elements_Base_Plate.fei 
+	
+// ELASTIC beams 
+//----------------- 
+add element # 1 type beam_elastic with nodes (1, 2)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 2 type beam_elastic with nodes (2, 3)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 3 type beam_elastic with nodes (3, 4)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 4 type beam_elastic with nodes (4, 5)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 5 type beam_elastic with nodes (5, 6)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 6 type beam_elastic with nodes (6, 7)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 7 type beam_elastic with nodes (7, 8)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 8 type beam_elastic with nodes (8, 9)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 9 type beam_elastic with nodes (9, 10)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 10 type beam_elastic with nodes (10, 11)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 11 type beam_elastic with nodes (11, 12)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 12 type beam_elastic with nodes (12, 13)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 13 type beam_elastic with nodes (13, 14)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 14 type beam_elastic with nodes (14, 15)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 15 type beam_elastic with nodes (15, 16)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 16 type beam_elastic with nodes (16, 17)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 17 type beam_elastic with nodes (17, 18)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 18 type beam_elastic with nodes (18, 19)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 19 type beam_elastic with nodes (19, 20)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 20 type beam_elastic with nodes (20, 21)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 21 type beam_elastic with nodes (21, 22)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 22 type beam_elastic with nodes (22, 23)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 23 type beam_elastic with nodes (23, 24)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 24 type beam_elastic with nodes (24, 25)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 25 type beam_elastic with nodes (25, 26)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 26 type beam_elastic with nodes (26, 27)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 27 type beam_elastic with nodes (27, 28)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 28 type beam_elastic with nodes (28, 29)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 29 type beam_elastic with nodes (29, 30)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 30 type beam_elastic with nodes (30, 31)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 31 type beam_elastic with nodes (31, 32)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 32 type beam_elastic with nodes (32, 33)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 33 type beam_elastic with nodes (33, 34)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 34 type beam_elastic with nodes (34, 35)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 35 type beam_elastic with nodes (35, 36)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 36 type beam_elastic with nodes (36, 37)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 37 type beam_elastic with nodes (37, 38)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 38 type beam_elastic with nodes (38, 39)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 39 type beam_elastic with nodes (39, 40)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 40 type beam_elastic with nodes (40, 41)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 41 type beam_elastic with nodes (41, 42)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 42 type beam_elastic with nodes (42, 43)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 43 type beam_elastic with nodes (43, 44)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 44 type beam_elastic with nodes (44, 45)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 45 type beam_elastic with nodes (45, 46)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 46 type beam_elastic with nodes (46, 47)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 47 type beam_elastic with nodes (47, 48)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 48 type beam_elastic with nodes (48, 49)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 49 type beam_elastic with nodes (49, 50)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 50 type beam_elastic with nodes (50, 51)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 51 type beam_elastic with nodes (51, 52)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 52 type beam_elastic with nodes (52, 53)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 53 type beam_elastic with nodes (53, 54)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 54 type beam_elastic with nodes (54, 55)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 55 type beam_elastic with nodes (55, 56)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 56 type beam_elastic with nodes (56, 57)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 57 type beam_elastic with nodes (57, 58)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 58 type beam_elastic with nodes (58, 59)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 59 type beam_elastic with nodes (59, 60)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 60 type beam_elastic with nodes (60, 61)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 61 type beam_elastic with nodes (61, 62)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 62 type beam_elastic with nodes (62, 63)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 63 type beam_elastic with nodes (63, 64)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+
+add element # 64 type beam_elastic with nodes (64, 1)
+cross_section = 0.0206*m^2  
+elastic_modulus =  199950000*kPa 
+shear_modulus =  75153000*kPa 
+torsion_Jx =  1.6361e-05*m^4  
+bending_Iy =  682.667*m^4  
+bending_Iz =  2.8415e-04*m^4  
+mass_density =   7849.6* kg/m^3    
+xz_plane_vector = (0, 0, 1 )    
+joint_1_offset = (0*m, 0*m , 0*m ) 
+joint_2_offset = (0*m, 0*m , 0*m ); 
+

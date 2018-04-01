@@ -1,0 +1,142 @@
+// Materials.fei 
+
+// Soil Materials
+den = 1922.5;
+poisson = 0.3 ; 
+kine_rate = 1e5 * kPa ; 
+radius_vm_scale = 10 * Pa ; 
+
+add material # 5 type vonMises
+	mass_density = den*kg/m^3 
+	elastic_modulus = 94255.16 * kPa  * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  94255.16
+	kinematic_hardening_rate = kine_rate
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 6 type vonMises
+	mass_density = den*kg/m^3 
+	elastic_modulus = 90946.93* kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  90946.93
+	kinematic_hardening_rate = kine_rate
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 7 type vonMises
+	mass_density = den*kg/m^3 
+	elastic_modulus = 87513.72 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  87513.72
+	kinematic_hardening_rate = kine_rate
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 8 type vonMises
+	mass_density = den*kg/m^3 
+	elastic_modulus = 83940.21 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  83940.21
+	kinematic_hardening_rate = kine_rate
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 9 type vonMises
+	mass_density = den*kg/m^3 
+	elastic_modulus = 80207.65 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  80207.65
+	kinematic_hardening_rate = kine_rate
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 10 type vonMises
+	mass_density = den*kg/m^3 
+	elastic_modulus = 76292.69 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  76292.69
+	kinematic_hardening_rate = kine_rate
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 11 type vonMises
+	mass_density = den*kg/m^3 
+	elastic_modulus = 72165.66 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  72165.66
+	kinematic_hardening_rate = kine_rate
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 12 type vonMises
+	mass_density = den*kg/m^3 
+	elastic_modulus = 67787.84 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  67787.84
+	kinematic_hardening_rate = kine_rate
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 13 type vonMises
+	mass_density = den*kg/m^3 
+	elastic_modulus = 63107.04 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  63107.04
+	kinematic_hardening_rate = kine_rate
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 14 type vonMises
+	mass_density = den*kg/m^3 
+	elastic_modulus = 58050.04 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  58050.04
+	kinematic_hardening_rate = kine_rate
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 15 type vonMises
+	mass_density = den*kg/m^3 
+	elastic_modulus = 52508.23 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  52508.23
+	kinematic_hardening_rate = kine_rate
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 16 type vonMises
+	mass_density = den*kg/m^3 
+	elastic_modulus = 46307.91 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  46307.91
+	kinematic_hardening_rate = kine_rate
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 17 type vonMises
+	mass_density = den*kg/m^3 
+	elastic_modulus = 39137.33 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  39137.33
+	kinematic_hardening_rate = kine_rate
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 18 type vonMises
+	mass_density = den*kg/m^3 
+	elastic_modulus = 30315.64 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  30315.64
+	kinematic_hardening_rate = kine_rate
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 19 type vonMises
+	mass_density = den*kg/m^3 
+	elastic_modulus = 17502.74 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  17502.74
+	kinematic_hardening_rate = kine_rate
+	isotropic_hardening_rate = 0*Pa;
+	;

@@ -1,0 +1,157 @@
+// Materials.fei 
+
+// Soil Materials
+den = 1922.5;
+poisson = 0.3 ; 
+kine_rate = 1e5 * kPa ; 
+radius_vm_scale = 0.1 * Pa ; 
+
+add material # 5 type vonMisesArmstrongFrederick
+	mass_density = den*kg/m^3 
+	elastic_modulus = 94255.16 * kPa  * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  94255.16
+	armstrong_frederick_ha = 94255.16 * kPa  * 2 * (1+poisson) 
+	armstrong_frederick_cr = 2000
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 6 type vonMisesArmstrongFrederick
+	mass_density = den*kg/m^3 
+	elastic_modulus = 90946.93* kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  90946.93
+	armstrong_frederick_ha = 90946.93* kPa * 2 * (1+poisson) 
+	armstrong_frederick_cr = 2000
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 7 type vonMisesArmstrongFrederick
+	mass_density = den*kg/m^3 
+	elastic_modulus = 87513.72 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  87513.72
+	armstrong_frederick_ha = 87513.72 * kPa * 2 * (1+poisson) 
+	armstrong_frederick_cr = 2000
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 8 type vonMisesArmstrongFrederick
+	mass_density = den*kg/m^3 
+	elastic_modulus = 83940.21 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  83940.21
+	armstrong_frederick_ha = 83940.21 * kPa * 2 * (1+poisson) 
+	armstrong_frederick_cr = 2000
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 9 type vonMisesArmstrongFrederick
+	mass_density = den*kg/m^3 
+	elastic_modulus = 80207.65 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  80207.65
+	armstrong_frederick_ha = 80207.65 * kPa * 2 * (1+poisson) 
+	armstrong_frederick_cr = 2000
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 10 type vonMisesArmstrongFrederick
+	mass_density = den*kg/m^3 
+	elastic_modulus = 76292.69 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  76292.69
+	armstrong_frederick_ha = 76292.69 * kPa * 2 * (1+poisson) 
+	armstrong_frederick_cr = 2000
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 11 type vonMisesArmstrongFrederick
+	mass_density = den*kg/m^3 
+	elastic_modulus = 72165.66 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  72165.66
+	armstrong_frederick_ha = 72165.66 * kPa * 2 * (1+poisson) 
+	armstrong_frederick_cr = 2000
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 12 type vonMisesArmstrongFrederick
+	mass_density = den*kg/m^3 
+	elastic_modulus = 67787.84 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  67787.84
+	armstrong_frederick_ha = 67787.84 * kPa * 2 * (1+poisson) 
+	armstrong_frederick_cr = 2000
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 13 type vonMisesArmstrongFrederick
+	mass_density = den*kg/m^3 
+	elastic_modulus = 63107.04 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  63107.04
+	armstrong_frederick_ha = 63107.04 * kPa * 2 * (1+poisson) 
+	armstrong_frederick_cr = 2000
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 14 type vonMisesArmstrongFrederick
+	mass_density = den*kg/m^3 
+	elastic_modulus = 58050.04 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  58050.04
+	armstrong_frederick_ha = 58050.04 * kPa * 2 * (1+poisson) 
+	armstrong_frederick_cr = 2000
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 15 type vonMisesArmstrongFrederick
+	mass_density = den*kg/m^3 
+	elastic_modulus = 52508.23 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  52508.23
+	armstrong_frederick_ha = 52508.23 * kPa * 2 * (1+poisson) 
+	armstrong_frederick_cr = 2000
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 16 type vonMisesArmstrongFrederick
+	mass_density = den*kg/m^3 
+	elastic_modulus = 46307.91 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  46307.91
+	armstrong_frederick_ha = 46307.91 * kPa * 2 * (1+poisson) 
+	armstrong_frederick_cr = 2000
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 17 type vonMisesArmstrongFrederick
+	mass_density = den*kg/m^3 
+	elastic_modulus = 39137.33 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  39137.33
+	armstrong_frederick_ha = 39137.33 * kPa * 2 * (1+poisson) 
+	armstrong_frederick_cr = 2000
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 18 type vonMisesArmstrongFrederick
+	mass_density = den*kg/m^3 
+	elastic_modulus = 30315.64 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  30315.64
+	armstrong_frederick_ha = 30315.64 * kPa * 2 * (1+poisson) 
+	armstrong_frederick_cr = 2000
+	isotropic_hardening_rate = 0*Pa;
+	;
+
+add material # 19 type vonMisesArmstrongFrederick
+	mass_density = den*kg/m^3 
+	elastic_modulus = 17502.74 * kPa * 2 * (1+poisson)
+	poisson_ratio = poisson
+	von_mises_radius = radius_vm_scale *  17502.74
+	armstrong_frederick_ha = 17502.74 * kPa * 2 * (1+poisson) 
+	armstrong_frederick_cr = 2000
+	isotropic_hardening_rate = 0*Pa;
+	;

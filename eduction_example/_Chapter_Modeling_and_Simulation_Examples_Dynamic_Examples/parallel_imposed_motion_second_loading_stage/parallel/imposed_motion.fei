@@ -1,0 +1,47 @@
+ii = 1;
+while (ii<65) {
+    free node # ii dofs ux;
+    ii+=1;
+}
+
+ii = 1281;
+while (ii<1642) {
+    free node # ii dofs ux;
+    ii+=1;
+}
+
+	
+
+
+ii = 1;
+while (ii<65) {
+    add imposed motion # 10000 + ii to node # ii dof ux 
+		// time_step =  0.01*s
+		displacement_scale_unit = 1*m
+		displacement_file =  "input_motion/disp.txt"
+		velocity_scale_unit =  1*m/s
+		velocity_file =  "input_motion/velo.txt" 
+		acceleration_scale_unit =  1*m/s^2
+		acceleration_file = "input_motion/acce.txt" ;
+
+    ii+=1;
+}
+
+ii = 1281;
+while (ii<1642) {
+    add imposed motion # 10000 + ii to node # ii dof ux 
+		// time_step =  0.01*s
+		displacement_scale_unit = 1*m
+		displacement_file =  "input_motion/disp.txt" 
+		velocity_scale_unit =  1*m/s
+		velocity_file =  "input_motion/velo.txt" 
+		acceleration_scale_unit =  1*m/s^2
+		acceleration_file = "input_motion/acce.txt" ;
+
+    ii+=1;
+}
+
+
+
+
+

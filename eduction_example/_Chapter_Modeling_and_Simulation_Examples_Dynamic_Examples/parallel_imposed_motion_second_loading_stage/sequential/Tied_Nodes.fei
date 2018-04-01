@@ -1,0 +1,6418 @@
+// 1281 - 1344 exterior Boundary nodes.
+// both master and slave nodes are fixed.
+// So remove the master-slave to fix the multi-constraint warning
+
+// add constraint equal_dof with
+//     master node # 1 and 
+//     slave node # 1281 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 2 and 
+//     slave node # 1282 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 3 and 
+//     slave node # 1283 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 4 and 
+//     slave node # 1284 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 5 and 
+//     slave node # 1285 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 6 and 
+//     slave node # 1286 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 7 and 
+//     slave node # 1287 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 8 and 
+//     slave node # 1288 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 9 and 
+//     slave node # 1289 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 10 and 
+//     slave node # 1290 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 11 and 
+//     slave node # 1291 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 12 and 
+//     slave node # 1292 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 13 and 
+//     slave node # 1293 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 14 and 
+//     slave node # 1294 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 15 and 
+//     slave node # 1295 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 16 and 
+//     slave node # 1296 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 17 and 
+//     slave node # 1297 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 18 and 
+//     slave node # 1298 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 19 and 
+//     slave node # 1299 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 20 and 
+//     slave node # 1300 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 21 and 
+//     slave node # 1301 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 22 and 
+//     slave node # 1302 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 23 and 
+//     slave node # 1303 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 24 and 
+//     slave node # 1304 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 25 and 
+//     slave node # 1305 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 26 and 
+//     slave node # 1306 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 27 and 
+//     slave node # 1307 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 28 and 
+//     slave node # 1308 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 29 and 
+//     slave node # 1309 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 30 and 
+//     slave node # 1310 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 31 and 
+//     slave node # 1311 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 32 and 
+//     slave node # 1312 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 33 and 
+//     slave node # 1313 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 34 and 
+//     slave node # 1314 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 35 and 
+//     slave node # 1315 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 36 and 
+//     slave node # 1316 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 37 and 
+//     slave node # 1317 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 38 and 
+//     slave node # 1318 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 39 and 
+//     slave node # 1319 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 40 and 
+//     slave node # 1320 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 41 and 
+//     slave node # 1321 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 42 and 
+//     slave node # 1322 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 43 and 
+//     slave node # 1323 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 44 and 
+//     slave node # 1324 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 45 and 
+//     slave node # 1325 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 46 and 
+//     slave node # 1326 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 47 and 
+//     slave node # 1327 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 48 and 
+//     slave node # 1328 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 49 and 
+//     slave node # 1329 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 50 and 
+//     slave node # 1330 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 51 and 
+//     slave node # 1331 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 52 and 
+//     slave node # 1332 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 53 and 
+//     slave node # 1333 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 54 and 
+//     slave node # 1334 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 55 and 
+//     slave node # 1335 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 56 and 
+//     slave node # 1336 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 57 and 
+//     slave node # 1337 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 58 and 
+//     slave node # 1338 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 59 and 
+//     slave node # 1339 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 60 and 
+//     slave node # 1340 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 61 and 
+//     slave node # 1341 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 62 and 
+//     slave node # 1342 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 63 and 
+//     slave node # 1343 
+//     dof to constrain ux uy uz; 
+
+// add constraint equal_dof with
+//     master node # 64 and 
+//     slave node # 1344 
+//     dof to constrain ux uy uz; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+add constraint equal_dof with
+    master node # 65 and 
+    slave node # 1642 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 66 and 
+    slave node # 1643 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 67 and 
+    slave node # 1644 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 68 and 
+    slave node # 1645 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 69 and 
+    slave node # 1646 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 70 and 
+    slave node # 1647 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 71 and 
+    slave node # 1648 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 72 and 
+    slave node # 1649 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 73 and 
+    slave node # 1650 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 74 and 
+    slave node # 1651 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 75 and 
+    slave node # 1652 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 76 and 
+    slave node # 1653 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 77 and 
+    slave node # 1654 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 78 and 
+    slave node # 1655 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 79 and 
+    slave node # 1656 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 80 and 
+    slave node # 1657 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 81 and 
+    slave node # 1658 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 82 and 
+    slave node # 1659 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 83 and 
+    slave node # 1660 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 84 and 
+    slave node # 1661 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 85 and 
+    slave node # 1662 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 86 and 
+    slave node # 1663 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 87 and 
+    slave node # 1664 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 88 and 
+    slave node # 1665 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 89 and 
+    slave node # 1666 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 90 and 
+    slave node # 1667 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 91 and 
+    slave node # 1668 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 92 and 
+    slave node # 1669 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 93 and 
+    slave node # 1670 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 94 and 
+    slave node # 1671 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 95 and 
+    slave node # 1672 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 96 and 
+    slave node # 1673 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 97 and 
+    slave node # 1674 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 98 and 
+    slave node # 1675 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 99 and 
+    slave node # 1676 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 100 and 
+    slave node # 1677 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 101 and 
+    slave node # 1678 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 102 and 
+    slave node # 1679 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 103 and 
+    slave node # 1680 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 104 and 
+    slave node # 1681 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 105 and 
+    slave node # 1682 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 106 and 
+    slave node # 1683 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 107 and 
+    slave node # 1684 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 108 and 
+    slave node # 1685 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 109 and 
+    slave node # 1686 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 110 and 
+    slave node # 1687 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 111 and 
+    slave node # 1688 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 112 and 
+    slave node # 1689 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 113 and 
+    slave node # 1690 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 114 and 
+    slave node # 1691 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 115 and 
+    slave node # 1692 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 116 and 
+    slave node # 1693 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 117 and 
+    slave node # 1694 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 118 and 
+    slave node # 1695 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 119 and 
+    slave node # 1696 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 120 and 
+    slave node # 1697 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 121 and 
+    slave node # 1698 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 122 and 
+    slave node # 1699 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 123 and 
+    slave node # 1700 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 124 and 
+    slave node # 1701 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 125 and 
+    slave node # 1702 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 126 and 
+    slave node # 1703 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 127 and 
+    slave node # 1704 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 128 and 
+    slave node # 1705 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 129 and 
+    slave node # 2003 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 130 and 
+    slave node # 2004 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 131 and 
+    slave node # 2005 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 132 and 
+    slave node # 2006 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 133 and 
+    slave node # 2007 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 134 and 
+    slave node # 2008 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 135 and 
+    slave node # 2009 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 136 and 
+    slave node # 2010 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 137 and 
+    slave node # 2011 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 138 and 
+    slave node # 2012 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 139 and 
+    slave node # 2013 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 140 and 
+    slave node # 2014 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 141 and 
+    slave node # 2015 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 142 and 
+    slave node # 2016 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 143 and 
+    slave node # 2017 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 144 and 
+    slave node # 2018 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 145 and 
+    slave node # 2019 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 146 and 
+    slave node # 2020 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 147 and 
+    slave node # 2021 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 148 and 
+    slave node # 2022 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 149 and 
+    slave node # 2023 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 150 and 
+    slave node # 2024 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 151 and 
+    slave node # 2025 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 152 and 
+    slave node # 2026 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 153 and 
+    slave node # 2027 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 154 and 
+    slave node # 2028 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 155 and 
+    slave node # 2029 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 156 and 
+    slave node # 2030 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 157 and 
+    slave node # 2031 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 158 and 
+    slave node # 2032 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 159 and 
+    slave node # 2033 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 160 and 
+    slave node # 2034 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 161 and 
+    slave node # 2035 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 162 and 
+    slave node # 2036 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 163 and 
+    slave node # 2037 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 164 and 
+    slave node # 2038 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 165 and 
+    slave node # 2039 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 166 and 
+    slave node # 2040 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 167 and 
+    slave node # 2041 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 168 and 
+    slave node # 2042 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 169 and 
+    slave node # 2043 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 170 and 
+    slave node # 2044 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 171 and 
+    slave node # 2045 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 172 and 
+    slave node # 2046 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 173 and 
+    slave node # 2047 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 174 and 
+    slave node # 2048 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 175 and 
+    slave node # 2049 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 176 and 
+    slave node # 2050 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 177 and 
+    slave node # 2051 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 178 and 
+    slave node # 2052 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 179 and 
+    slave node # 2053 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 180 and 
+    slave node # 2054 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 181 and 
+    slave node # 2055 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 182 and 
+    slave node # 2056 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 183 and 
+    slave node # 2057 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 184 and 
+    slave node # 2058 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 185 and 
+    slave node # 2059 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 186 and 
+    slave node # 2060 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 187 and 
+    slave node # 2061 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 188 and 
+    slave node # 2062 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 189 and 
+    slave node # 2063 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 190 and 
+    slave node # 2064 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 191 and 
+    slave node # 2065 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 192 and 
+    slave node # 2066 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 193 and 
+    slave node # 2364 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 194 and 
+    slave node # 2365 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 195 and 
+    slave node # 2366 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 196 and 
+    slave node # 2367 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 197 and 
+    slave node # 2368 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 198 and 
+    slave node # 2369 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 199 and 
+    slave node # 2370 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 200 and 
+    slave node # 2371 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 201 and 
+    slave node # 2372 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 202 and 
+    slave node # 2373 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 203 and 
+    slave node # 2374 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 204 and 
+    slave node # 2375 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 205 and 
+    slave node # 2376 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 206 and 
+    slave node # 2377 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 207 and 
+    slave node # 2378 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 208 and 
+    slave node # 2379 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 209 and 
+    slave node # 2380 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 210 and 
+    slave node # 2381 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 211 and 
+    slave node # 2382 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 212 and 
+    slave node # 2383 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 213 and 
+    slave node # 2384 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 214 and 
+    slave node # 2385 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 215 and 
+    slave node # 2386 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 216 and 
+    slave node # 2387 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 217 and 
+    slave node # 2388 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 218 and 
+    slave node # 2389 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 219 and 
+    slave node # 2390 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 220 and 
+    slave node # 2391 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 221 and 
+    slave node # 2392 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 222 and 
+    slave node # 2393 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 223 and 
+    slave node # 2394 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 224 and 
+    slave node # 2395 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 225 and 
+    slave node # 2396 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 226 and 
+    slave node # 2397 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 227 and 
+    slave node # 2398 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 228 and 
+    slave node # 2399 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 229 and 
+    slave node # 2400 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 230 and 
+    slave node # 2401 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 231 and 
+    slave node # 2402 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 232 and 
+    slave node # 2403 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 233 and 
+    slave node # 2404 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 234 and 
+    slave node # 2405 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 235 and 
+    slave node # 2406 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 236 and 
+    slave node # 2407 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 237 and 
+    slave node # 2408 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 238 and 
+    slave node # 2409 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 239 and 
+    slave node # 2410 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 240 and 
+    slave node # 2411 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 241 and 
+    slave node # 2412 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 242 and 
+    slave node # 2413 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 243 and 
+    slave node # 2414 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 244 and 
+    slave node # 2415 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 245 and 
+    slave node # 2416 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 246 and 
+    slave node # 2417 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 247 and 
+    slave node # 2418 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 248 and 
+    slave node # 2419 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 249 and 
+    slave node # 2420 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 250 and 
+    slave node # 2421 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 251 and 
+    slave node # 2422 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 252 and 
+    slave node # 2423 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 253 and 
+    slave node # 2424 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 254 and 
+    slave node # 2425 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 255 and 
+    slave node # 2426 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 256 and 
+    slave node # 2427 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 257 and 
+    slave node # 2725 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 258 and 
+    slave node # 2726 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 259 and 
+    slave node # 2727 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 260 and 
+    slave node # 2728 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 261 and 
+    slave node # 2729 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 262 and 
+    slave node # 2730 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 263 and 
+    slave node # 2731 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 264 and 
+    slave node # 2732 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 265 and 
+    slave node # 2733 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 266 and 
+    slave node # 2734 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 267 and 
+    slave node # 2735 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 268 and 
+    slave node # 2736 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 269 and 
+    slave node # 2737 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 270 and 
+    slave node # 2738 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 271 and 
+    slave node # 2739 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 272 and 
+    slave node # 2740 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 273 and 
+    slave node # 2741 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 274 and 
+    slave node # 2742 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 275 and 
+    slave node # 2743 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 276 and 
+    slave node # 2744 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 277 and 
+    slave node # 2745 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 278 and 
+    slave node # 2746 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 279 and 
+    slave node # 2747 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 280 and 
+    slave node # 2748 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 281 and 
+    slave node # 2749 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 282 and 
+    slave node # 2750 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 283 and 
+    slave node # 2751 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 284 and 
+    slave node # 2752 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 285 and 
+    slave node # 2753 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 286 and 
+    slave node # 2754 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 287 and 
+    slave node # 2755 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 288 and 
+    slave node # 2756 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 289 and 
+    slave node # 2757 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 290 and 
+    slave node # 2758 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 291 and 
+    slave node # 2759 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 292 and 
+    slave node # 2760 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 293 and 
+    slave node # 2761 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 294 and 
+    slave node # 2762 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 295 and 
+    slave node # 2763 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 296 and 
+    slave node # 2764 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 297 and 
+    slave node # 2765 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 298 and 
+    slave node # 2766 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 299 and 
+    slave node # 2767 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 300 and 
+    slave node # 2768 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 301 and 
+    slave node # 2769 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 302 and 
+    slave node # 2770 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 303 and 
+    slave node # 2771 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 304 and 
+    slave node # 2772 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 305 and 
+    slave node # 2773 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 306 and 
+    slave node # 2774 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 307 and 
+    slave node # 2775 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 308 and 
+    slave node # 2776 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 309 and 
+    slave node # 2777 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 310 and 
+    slave node # 2778 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 311 and 
+    slave node # 2779 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 312 and 
+    slave node # 2780 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 313 and 
+    slave node # 2781 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 314 and 
+    slave node # 2782 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 315 and 
+    slave node # 2783 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 316 and 
+    slave node # 2784 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 317 and 
+    slave node # 2785 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 318 and 
+    slave node # 2786 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 319 and 
+    slave node # 2787 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 320 and 
+    slave node # 2788 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 321 and 
+    slave node # 3086 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 322 and 
+    slave node # 3087 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 323 and 
+    slave node # 3088 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 324 and 
+    slave node # 3089 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 325 and 
+    slave node # 3090 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 326 and 
+    slave node # 3091 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 327 and 
+    slave node # 3092 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 328 and 
+    slave node # 3093 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 329 and 
+    slave node # 3094 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 330 and 
+    slave node # 3095 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 331 and 
+    slave node # 3096 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 332 and 
+    slave node # 3097 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 333 and 
+    slave node # 3098 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 334 and 
+    slave node # 3099 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 335 and 
+    slave node # 3100 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 336 and 
+    slave node # 3101 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 337 and 
+    slave node # 3102 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 338 and 
+    slave node # 3103 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 339 and 
+    slave node # 3104 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 340 and 
+    slave node # 3105 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 341 and 
+    slave node # 3106 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 342 and 
+    slave node # 3107 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 343 and 
+    slave node # 3108 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 344 and 
+    slave node # 3109 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 345 and 
+    slave node # 3110 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 346 and 
+    slave node # 3111 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 347 and 
+    slave node # 3112 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 348 and 
+    slave node # 3113 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 349 and 
+    slave node # 3114 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 350 and 
+    slave node # 3115 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 351 and 
+    slave node # 3116 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 352 and 
+    slave node # 3117 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 353 and 
+    slave node # 3118 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 354 and 
+    slave node # 3119 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 355 and 
+    slave node # 3120 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 356 and 
+    slave node # 3121 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 357 and 
+    slave node # 3122 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 358 and 
+    slave node # 3123 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 359 and 
+    slave node # 3124 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 360 and 
+    slave node # 3125 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 361 and 
+    slave node # 3126 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 362 and 
+    slave node # 3127 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 363 and 
+    slave node # 3128 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 364 and 
+    slave node # 3129 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 365 and 
+    slave node # 3130 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 366 and 
+    slave node # 3131 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 367 and 
+    slave node # 3132 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 368 and 
+    slave node # 3133 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 369 and 
+    slave node # 3134 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 370 and 
+    slave node # 3135 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 371 and 
+    slave node # 3136 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 372 and 
+    slave node # 3137 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 373 and 
+    slave node # 3138 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 374 and 
+    slave node # 3139 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 375 and 
+    slave node # 3140 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 376 and 
+    slave node # 3141 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 377 and 
+    slave node # 3142 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 378 and 
+    slave node # 3143 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 379 and 
+    slave node # 3144 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 380 and 
+    slave node # 3145 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 381 and 
+    slave node # 3146 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 382 and 
+    slave node # 3147 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 383 and 
+    slave node # 3148 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 384 and 
+    slave node # 3149 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 385 and 
+    slave node # 3447 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 386 and 
+    slave node # 3448 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 387 and 
+    slave node # 3449 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 388 and 
+    slave node # 3450 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 389 and 
+    slave node # 3451 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 390 and 
+    slave node # 3452 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 391 and 
+    slave node # 3453 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 392 and 
+    slave node # 3454 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 393 and 
+    slave node # 3455 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 394 and 
+    slave node # 3456 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 395 and 
+    slave node # 3457 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 396 and 
+    slave node # 3458 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 397 and 
+    slave node # 3459 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 398 and 
+    slave node # 3460 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 399 and 
+    slave node # 3461 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 400 and 
+    slave node # 3462 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 401 and 
+    slave node # 3463 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 402 and 
+    slave node # 3464 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 403 and 
+    slave node # 3465 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 404 and 
+    slave node # 3466 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 405 and 
+    slave node # 3467 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 406 and 
+    slave node # 3468 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 407 and 
+    slave node # 3469 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 408 and 
+    slave node # 3470 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 409 and 
+    slave node # 3471 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 410 and 
+    slave node # 3472 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 411 and 
+    slave node # 3473 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 412 and 
+    slave node # 3474 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 413 and 
+    slave node # 3475 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 414 and 
+    slave node # 3476 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 415 and 
+    slave node # 3477 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 416 and 
+    slave node # 3478 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 417 and 
+    slave node # 3479 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 418 and 
+    slave node # 3480 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 419 and 
+    slave node # 3481 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 420 and 
+    slave node # 3482 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 421 and 
+    slave node # 3483 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 422 and 
+    slave node # 3484 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 423 and 
+    slave node # 3485 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 424 and 
+    slave node # 3486 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 425 and 
+    slave node # 3487 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 426 and 
+    slave node # 3488 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 427 and 
+    slave node # 3489 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 428 and 
+    slave node # 3490 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 429 and 
+    slave node # 3491 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 430 and 
+    slave node # 3492 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 431 and 
+    slave node # 3493 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 432 and 
+    slave node # 3494 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 433 and 
+    slave node # 3495 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 434 and 
+    slave node # 3496 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 435 and 
+    slave node # 3497 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 436 and 
+    slave node # 3498 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 437 and 
+    slave node # 3499 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 438 and 
+    slave node # 3500 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 439 and 
+    slave node # 3501 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 440 and 
+    slave node # 3502 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 441 and 
+    slave node # 3503 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 442 and 
+    slave node # 3504 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 443 and 
+    slave node # 3505 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 444 and 
+    slave node # 3506 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 445 and 
+    slave node # 3507 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 446 and 
+    slave node # 3508 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 447 and 
+    slave node # 3509 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 448 and 
+    slave node # 3510 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 449 and 
+    slave node # 3808 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 450 and 
+    slave node # 3809 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 451 and 
+    slave node # 3810 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 452 and 
+    slave node # 3811 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 453 and 
+    slave node # 3812 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 454 and 
+    slave node # 3813 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 455 and 
+    slave node # 3814 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 456 and 
+    slave node # 3815 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 457 and 
+    slave node # 3816 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 458 and 
+    slave node # 3817 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 459 and 
+    slave node # 3818 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 460 and 
+    slave node # 3819 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 461 and 
+    slave node # 3820 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 462 and 
+    slave node # 3821 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 463 and 
+    slave node # 3822 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 464 and 
+    slave node # 3823 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 465 and 
+    slave node # 3824 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 466 and 
+    slave node # 3825 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 467 and 
+    slave node # 3826 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 468 and 
+    slave node # 3827 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 469 and 
+    slave node # 3828 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 470 and 
+    slave node # 3829 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 471 and 
+    slave node # 3830 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 472 and 
+    slave node # 3831 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 473 and 
+    slave node # 3832 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 474 and 
+    slave node # 3833 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 475 and 
+    slave node # 3834 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 476 and 
+    slave node # 3835 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 477 and 
+    slave node # 3836 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 478 and 
+    slave node # 3837 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 479 and 
+    slave node # 3838 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 480 and 
+    slave node # 3839 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 481 and 
+    slave node # 3840 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 482 and 
+    slave node # 3841 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 483 and 
+    slave node # 3842 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 484 and 
+    slave node # 3843 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 485 and 
+    slave node # 3844 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 486 and 
+    slave node # 3845 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 487 and 
+    slave node # 3846 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 488 and 
+    slave node # 3847 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 489 and 
+    slave node # 3848 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 490 and 
+    slave node # 3849 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 491 and 
+    slave node # 3850 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 492 and 
+    slave node # 3851 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 493 and 
+    slave node # 3852 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 494 and 
+    slave node # 3853 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 495 and 
+    slave node # 3854 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 496 and 
+    slave node # 3855 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 497 and 
+    slave node # 3856 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 498 and 
+    slave node # 3857 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 499 and 
+    slave node # 3858 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 500 and 
+    slave node # 3859 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 501 and 
+    slave node # 3860 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 502 and 
+    slave node # 3861 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 503 and 
+    slave node # 3862 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 504 and 
+    slave node # 3863 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 505 and 
+    slave node # 3864 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 506 and 
+    slave node # 3865 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 507 and 
+    slave node # 3866 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 508 and 
+    slave node # 3867 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 509 and 
+    slave node # 3868 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 510 and 
+    slave node # 3869 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 511 and 
+    slave node # 3870 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 512 and 
+    slave node # 3871 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 513 and 
+    slave node # 4169 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 514 and 
+    slave node # 4170 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 515 and 
+    slave node # 4171 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 516 and 
+    slave node # 4172 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 517 and 
+    slave node # 4173 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 518 and 
+    slave node # 4174 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 519 and 
+    slave node # 4175 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 520 and 
+    slave node # 4176 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 521 and 
+    slave node # 4177 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 522 and 
+    slave node # 4178 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 523 and 
+    slave node # 4179 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 524 and 
+    slave node # 4180 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 525 and 
+    slave node # 4181 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 526 and 
+    slave node # 4182 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 527 and 
+    slave node # 4183 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 528 and 
+    slave node # 4184 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 529 and 
+    slave node # 4185 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 530 and 
+    slave node # 4186 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 531 and 
+    slave node # 4187 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 532 and 
+    slave node # 4188 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 533 and 
+    slave node # 4189 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 534 and 
+    slave node # 4190 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 535 and 
+    slave node # 4191 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 536 and 
+    slave node # 4192 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 537 and 
+    slave node # 4193 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 538 and 
+    slave node # 4194 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 539 and 
+    slave node # 4195 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 540 and 
+    slave node # 4196 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 541 and 
+    slave node # 4197 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 542 and 
+    slave node # 4198 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 543 and 
+    slave node # 4199 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 544 and 
+    slave node # 4200 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 545 and 
+    slave node # 4201 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 546 and 
+    slave node # 4202 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 547 and 
+    slave node # 4203 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 548 and 
+    slave node # 4204 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 549 and 
+    slave node # 4205 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 550 and 
+    slave node # 4206 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 551 and 
+    slave node # 4207 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 552 and 
+    slave node # 4208 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 553 and 
+    slave node # 4209 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 554 and 
+    slave node # 4210 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 555 and 
+    slave node # 4211 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 556 and 
+    slave node # 4212 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 557 and 
+    slave node # 4213 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 558 and 
+    slave node # 4214 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 559 and 
+    slave node # 4215 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 560 and 
+    slave node # 4216 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 561 and 
+    slave node # 4217 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 562 and 
+    slave node # 4218 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 563 and 
+    slave node # 4219 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 564 and 
+    slave node # 4220 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 565 and 
+    slave node # 4221 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 566 and 
+    slave node # 4222 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 567 and 
+    slave node # 4223 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 568 and 
+    slave node # 4224 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 569 and 
+    slave node # 4225 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 570 and 
+    slave node # 4226 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 571 and 
+    slave node # 4227 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 572 and 
+    slave node # 4228 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 573 and 
+    slave node # 4229 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 574 and 
+    slave node # 4230 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 575 and 
+    slave node # 4231 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 576 and 
+    slave node # 4232 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 577 and 
+    slave node # 4530 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 578 and 
+    slave node # 4531 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 579 and 
+    slave node # 4532 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 580 and 
+    slave node # 4533 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 581 and 
+    slave node # 4534 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 582 and 
+    slave node # 4535 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 583 and 
+    slave node # 4536 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 584 and 
+    slave node # 4537 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 585 and 
+    slave node # 4538 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 586 and 
+    slave node # 4539 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 587 and 
+    slave node # 4540 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 588 and 
+    slave node # 4541 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 589 and 
+    slave node # 4542 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 590 and 
+    slave node # 4543 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 591 and 
+    slave node # 4544 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 592 and 
+    slave node # 4545 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 593 and 
+    slave node # 4546 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 594 and 
+    slave node # 4547 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 595 and 
+    slave node # 4548 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 596 and 
+    slave node # 4549 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 597 and 
+    slave node # 4550 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 598 and 
+    slave node # 4551 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 599 and 
+    slave node # 4552 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 600 and 
+    slave node # 4553 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 601 and 
+    slave node # 4554 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 602 and 
+    slave node # 4555 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 603 and 
+    slave node # 4556 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 604 and 
+    slave node # 4557 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 605 and 
+    slave node # 4558 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 606 and 
+    slave node # 4559 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 607 and 
+    slave node # 4560 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 608 and 
+    slave node # 4561 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 609 and 
+    slave node # 4562 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 610 and 
+    slave node # 4563 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 611 and 
+    slave node # 4564 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 612 and 
+    slave node # 4565 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 613 and 
+    slave node # 4566 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 614 and 
+    slave node # 4567 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 615 and 
+    slave node # 4568 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 616 and 
+    slave node # 4569 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 617 and 
+    slave node # 4570 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 618 and 
+    slave node # 4571 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 619 and 
+    slave node # 4572 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 620 and 
+    slave node # 4573 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 621 and 
+    slave node # 4574 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 622 and 
+    slave node # 4575 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 623 and 
+    slave node # 4576 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 624 and 
+    slave node # 4577 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 625 and 
+    slave node # 4578 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 626 and 
+    slave node # 4579 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 627 and 
+    slave node # 4580 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 628 and 
+    slave node # 4581 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 629 and 
+    slave node # 4582 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 630 and 
+    slave node # 4583 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 631 and 
+    slave node # 4584 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 632 and 
+    slave node # 4585 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 633 and 
+    slave node # 4586 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 634 and 
+    slave node # 4587 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 635 and 
+    slave node # 4588 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 636 and 
+    slave node # 4589 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 637 and 
+    slave node # 4590 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 638 and 
+    slave node # 4591 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 639 and 
+    slave node # 4592 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 640 and 
+    slave node # 4593 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 641 and 
+    slave node # 4891 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 642 and 
+    slave node # 4892 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 643 and 
+    slave node # 4893 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 644 and 
+    slave node # 4894 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 645 and 
+    slave node # 4895 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 646 and 
+    slave node # 4896 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 647 and 
+    slave node # 4897 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 648 and 
+    slave node # 4898 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 649 and 
+    slave node # 4899 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 650 and 
+    slave node # 4900 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 651 and 
+    slave node # 4901 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 652 and 
+    slave node # 4902 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 653 and 
+    slave node # 4903 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 654 and 
+    slave node # 4904 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 655 and 
+    slave node # 4905 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 656 and 
+    slave node # 4906 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 657 and 
+    slave node # 4907 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 658 and 
+    slave node # 4908 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 659 and 
+    slave node # 4909 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 660 and 
+    slave node # 4910 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 661 and 
+    slave node # 4911 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 662 and 
+    slave node # 4912 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 663 and 
+    slave node # 4913 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 664 and 
+    slave node # 4914 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 665 and 
+    slave node # 4915 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 666 and 
+    slave node # 4916 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 667 and 
+    slave node # 4917 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 668 and 
+    slave node # 4918 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 669 and 
+    slave node # 4919 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 670 and 
+    slave node # 4920 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 671 and 
+    slave node # 4921 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 672 and 
+    slave node # 4922 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 673 and 
+    slave node # 4923 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 674 and 
+    slave node # 4924 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 675 and 
+    slave node # 4925 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 676 and 
+    slave node # 4926 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 677 and 
+    slave node # 4927 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 678 and 
+    slave node # 4928 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 679 and 
+    slave node # 4929 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 680 and 
+    slave node # 4930 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 681 and 
+    slave node # 4931 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 682 and 
+    slave node # 4932 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 683 and 
+    slave node # 4933 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 684 and 
+    slave node # 4934 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 685 and 
+    slave node # 4935 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 686 and 
+    slave node # 4936 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 687 and 
+    slave node # 4937 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 688 and 
+    slave node # 4938 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 689 and 
+    slave node # 4939 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 690 and 
+    slave node # 4940 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 691 and 
+    slave node # 4941 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 692 and 
+    slave node # 4942 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 693 and 
+    slave node # 4943 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 694 and 
+    slave node # 4944 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 695 and 
+    slave node # 4945 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 696 and 
+    slave node # 4946 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 697 and 
+    slave node # 4947 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 698 and 
+    slave node # 4948 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 699 and 
+    slave node # 4949 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 700 and 
+    slave node # 4950 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 701 and 
+    slave node # 4951 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 702 and 
+    slave node # 4952 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 703 and 
+    slave node # 4953 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 704 and 
+    slave node # 4954 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 705 and 
+    slave node # 5252 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 706 and 
+    slave node # 5253 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 707 and 
+    slave node # 5254 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 708 and 
+    slave node # 5255 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 709 and 
+    slave node # 5256 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 710 and 
+    slave node # 5257 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 711 and 
+    slave node # 5258 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 712 and 
+    slave node # 5259 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 713 and 
+    slave node # 5260 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 714 and 
+    slave node # 5261 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 715 and 
+    slave node # 5262 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 716 and 
+    slave node # 5263 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 717 and 
+    slave node # 5264 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 718 and 
+    slave node # 5265 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 719 and 
+    slave node # 5266 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 720 and 
+    slave node # 5267 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 721 and 
+    slave node # 5268 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 722 and 
+    slave node # 5269 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 723 and 
+    slave node # 5270 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 724 and 
+    slave node # 5271 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 725 and 
+    slave node # 5272 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 726 and 
+    slave node # 5273 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 727 and 
+    slave node # 5274 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 728 and 
+    slave node # 5275 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 729 and 
+    slave node # 5276 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 730 and 
+    slave node # 5277 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 731 and 
+    slave node # 5278 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 732 and 
+    slave node # 5279 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 733 and 
+    slave node # 5280 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 734 and 
+    slave node # 5281 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 735 and 
+    slave node # 5282 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 736 and 
+    slave node # 5283 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 737 and 
+    slave node # 5284 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 738 and 
+    slave node # 5285 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 739 and 
+    slave node # 5286 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 740 and 
+    slave node # 5287 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 741 and 
+    slave node # 5288 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 742 and 
+    slave node # 5289 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 743 and 
+    slave node # 5290 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 744 and 
+    slave node # 5291 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 745 and 
+    slave node # 5292 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 746 and 
+    slave node # 5293 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 747 and 
+    slave node # 5294 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 748 and 
+    slave node # 5295 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 749 and 
+    slave node # 5296 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 750 and 
+    slave node # 5297 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 751 and 
+    slave node # 5298 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 752 and 
+    slave node # 5299 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 753 and 
+    slave node # 5300 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 754 and 
+    slave node # 5301 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 755 and 
+    slave node # 5302 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 756 and 
+    slave node # 5303 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 757 and 
+    slave node # 5304 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 758 and 
+    slave node # 5305 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 759 and 
+    slave node # 5306 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 760 and 
+    slave node # 5307 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 761 and 
+    slave node # 5308 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 762 and 
+    slave node # 5309 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 763 and 
+    slave node # 5310 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 764 and 
+    slave node # 5311 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 765 and 
+    slave node # 5312 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 766 and 
+    slave node # 5313 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 767 and 
+    slave node # 5314 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 768 and 
+    slave node # 5315 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 769 and 
+    slave node # 5613 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 770 and 
+    slave node # 5614 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 771 and 
+    slave node # 5615 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 772 and 
+    slave node # 5616 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 773 and 
+    slave node # 5617 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 774 and 
+    slave node # 5618 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 775 and 
+    slave node # 5619 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 776 and 
+    slave node # 5620 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 777 and 
+    slave node # 5621 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 778 and 
+    slave node # 5622 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 779 and 
+    slave node # 5623 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 780 and 
+    slave node # 5624 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 781 and 
+    slave node # 5625 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 782 and 
+    slave node # 5626 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 783 and 
+    slave node # 5627 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 784 and 
+    slave node # 5628 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 785 and 
+    slave node # 5629 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 786 and 
+    slave node # 5630 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 787 and 
+    slave node # 5631 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 788 and 
+    slave node # 5632 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 789 and 
+    slave node # 5633 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 790 and 
+    slave node # 5634 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 791 and 
+    slave node # 5635 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 792 and 
+    slave node # 5636 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 793 and 
+    slave node # 5637 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 794 and 
+    slave node # 5638 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 795 and 
+    slave node # 5639 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 796 and 
+    slave node # 5640 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 797 and 
+    slave node # 5641 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 798 and 
+    slave node # 5642 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 799 and 
+    slave node # 5643 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 800 and 
+    slave node # 5644 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 801 and 
+    slave node # 5645 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 802 and 
+    slave node # 5646 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 803 and 
+    slave node # 5647 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 804 and 
+    slave node # 5648 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 805 and 
+    slave node # 5649 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 806 and 
+    slave node # 5650 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 807 and 
+    slave node # 5651 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 808 and 
+    slave node # 5652 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 809 and 
+    slave node # 5653 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 810 and 
+    slave node # 5654 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 811 and 
+    slave node # 5655 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 812 and 
+    slave node # 5656 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 813 and 
+    slave node # 5657 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 814 and 
+    slave node # 5658 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 815 and 
+    slave node # 5659 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 816 and 
+    slave node # 5660 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 817 and 
+    slave node # 5661 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 818 and 
+    slave node # 5662 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 819 and 
+    slave node # 5663 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 820 and 
+    slave node # 5664 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 821 and 
+    slave node # 5665 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 822 and 
+    slave node # 5666 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 823 and 
+    slave node # 5667 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 824 and 
+    slave node # 5668 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 825 and 
+    slave node # 5669 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 826 and 
+    slave node # 5670 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 827 and 
+    slave node # 5671 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 828 and 
+    slave node # 5672 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 829 and 
+    slave node # 5673 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 830 and 
+    slave node # 5674 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 831 and 
+    slave node # 5675 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 832 and 
+    slave node # 5676 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 833 and 
+    slave node # 5974 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 834 and 
+    slave node # 5975 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 835 and 
+    slave node # 5976 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 836 and 
+    slave node # 5977 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 837 and 
+    slave node # 5978 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 838 and 
+    slave node # 5979 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 839 and 
+    slave node # 5980 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 840 and 
+    slave node # 5981 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 841 and 
+    slave node # 5982 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 842 and 
+    slave node # 5983 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 843 and 
+    slave node # 5984 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 844 and 
+    slave node # 5985 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 845 and 
+    slave node # 5986 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 846 and 
+    slave node # 5987 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 847 and 
+    slave node # 5988 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 848 and 
+    slave node # 5989 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 849 and 
+    slave node # 5990 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 850 and 
+    slave node # 5991 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 851 and 
+    slave node # 5992 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 852 and 
+    slave node # 5993 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 853 and 
+    slave node # 5994 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 854 and 
+    slave node # 5995 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 855 and 
+    slave node # 5996 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 856 and 
+    slave node # 5997 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 857 and 
+    slave node # 5998 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 858 and 
+    slave node # 5999 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 859 and 
+    slave node # 6000 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 860 and 
+    slave node # 6001 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 861 and 
+    slave node # 6002 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 862 and 
+    slave node # 6003 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 863 and 
+    slave node # 6004 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 864 and 
+    slave node # 6005 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 865 and 
+    slave node # 6006 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 866 and 
+    slave node # 6007 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 867 and 
+    slave node # 6008 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 868 and 
+    slave node # 6009 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 869 and 
+    slave node # 6010 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 870 and 
+    slave node # 6011 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 871 and 
+    slave node # 6012 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 872 and 
+    slave node # 6013 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 873 and 
+    slave node # 6014 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 874 and 
+    slave node # 6015 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 875 and 
+    slave node # 6016 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 876 and 
+    slave node # 6017 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 877 and 
+    slave node # 6018 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 878 and 
+    slave node # 6019 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 879 and 
+    slave node # 6020 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 880 and 
+    slave node # 6021 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 881 and 
+    slave node # 6022 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 882 and 
+    slave node # 6023 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 883 and 
+    slave node # 6024 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 884 and 
+    slave node # 6025 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 885 and 
+    slave node # 6026 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 886 and 
+    slave node # 6027 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 887 and 
+    slave node # 6028 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 888 and 
+    slave node # 6029 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 889 and 
+    slave node # 6030 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 890 and 
+    slave node # 6031 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 891 and 
+    slave node # 6032 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 892 and 
+    slave node # 6033 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 893 and 
+    slave node # 6034 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 894 and 
+    slave node # 6035 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 895 and 
+    slave node # 6036 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 896 and 
+    slave node # 6037 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 897 and 
+    slave node # 6335 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 898 and 
+    slave node # 6336 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 899 and 
+    slave node # 6337 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 900 and 
+    slave node # 6338 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 901 and 
+    slave node # 6339 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 902 and 
+    slave node # 6340 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 903 and 
+    slave node # 6341 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 904 and 
+    slave node # 6342 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 905 and 
+    slave node # 6343 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 906 and 
+    slave node # 6344 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 907 and 
+    slave node # 6345 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 908 and 
+    slave node # 6346 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 909 and 
+    slave node # 6347 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 910 and 
+    slave node # 6348 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 911 and 
+    slave node # 6349 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 912 and 
+    slave node # 6350 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 913 and 
+    slave node # 6351 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 914 and 
+    slave node # 6352 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 915 and 
+    slave node # 6353 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 916 and 
+    slave node # 6354 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 917 and 
+    slave node # 6355 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 918 and 
+    slave node # 6356 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 919 and 
+    slave node # 6357 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 920 and 
+    slave node # 6358 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 921 and 
+    slave node # 6359 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 922 and 
+    slave node # 6360 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 923 and 
+    slave node # 6361 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 924 and 
+    slave node # 6362 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 925 and 
+    slave node # 6363 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 926 and 
+    slave node # 6364 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 927 and 
+    slave node # 6365 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 928 and 
+    slave node # 6366 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 929 and 
+    slave node # 6367 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 930 and 
+    slave node # 6368 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 931 and 
+    slave node # 6369 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 932 and 
+    slave node # 6370 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 933 and 
+    slave node # 6371 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 934 and 
+    slave node # 6372 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 935 and 
+    slave node # 6373 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 936 and 
+    slave node # 6374 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 937 and 
+    slave node # 6375 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 938 and 
+    slave node # 6376 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 939 and 
+    slave node # 6377 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 940 and 
+    slave node # 6378 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 941 and 
+    slave node # 6379 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 942 and 
+    slave node # 6380 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 943 and 
+    slave node # 6381 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 944 and 
+    slave node # 6382 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 945 and 
+    slave node # 6383 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 946 and 
+    slave node # 6384 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 947 and 
+    slave node # 6385 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 948 and 
+    slave node # 6386 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 949 and 
+    slave node # 6387 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 950 and 
+    slave node # 6388 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 951 and 
+    slave node # 6389 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 952 and 
+    slave node # 6390 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 953 and 
+    slave node # 6391 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 954 and 
+    slave node # 6392 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 955 and 
+    slave node # 6393 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 956 and 
+    slave node # 6394 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 957 and 
+    slave node # 6395 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 958 and 
+    slave node # 6396 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 959 and 
+    slave node # 6397 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 960 and 
+    slave node # 6398 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 961 and 
+    slave node # 6696 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 962 and 
+    slave node # 6697 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 963 and 
+    slave node # 6698 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 964 and 
+    slave node # 6699 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 965 and 
+    slave node # 6700 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 966 and 
+    slave node # 6701 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 967 and 
+    slave node # 6702 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 968 and 
+    slave node # 6703 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 969 and 
+    slave node # 6704 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 970 and 
+    slave node # 6705 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 971 and 
+    slave node # 6706 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 972 and 
+    slave node # 6707 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 973 and 
+    slave node # 6708 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 974 and 
+    slave node # 6709 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 975 and 
+    slave node # 6710 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 976 and 
+    slave node # 6711 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 977 and 
+    slave node # 6712 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 978 and 
+    slave node # 6713 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 979 and 
+    slave node # 6714 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 980 and 
+    slave node # 6715 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 981 and 
+    slave node # 6716 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 982 and 
+    slave node # 6717 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 983 and 
+    slave node # 6718 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 984 and 
+    slave node # 6719 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 985 and 
+    slave node # 6720 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 986 and 
+    slave node # 6721 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 987 and 
+    slave node # 6722 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 988 and 
+    slave node # 6723 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 989 and 
+    slave node # 6724 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 990 and 
+    slave node # 6725 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 991 and 
+    slave node # 6726 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 992 and 
+    slave node # 6727 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 993 and 
+    slave node # 6728 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 994 and 
+    slave node # 6729 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 995 and 
+    slave node # 6730 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 996 and 
+    slave node # 6731 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 997 and 
+    slave node # 6732 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 998 and 
+    slave node # 6733 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 999 and 
+    slave node # 6734 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1000 and 
+    slave node # 6735 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1001 and 
+    slave node # 6736 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1002 and 
+    slave node # 6737 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1003 and 
+    slave node # 6738 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1004 and 
+    slave node # 6739 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1005 and 
+    slave node # 6740 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1006 and 
+    slave node # 6741 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1007 and 
+    slave node # 6742 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1008 and 
+    slave node # 6743 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1009 and 
+    slave node # 6744 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1010 and 
+    slave node # 6745 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1011 and 
+    slave node # 6746 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1012 and 
+    slave node # 6747 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1013 and 
+    slave node # 6748 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1014 and 
+    slave node # 6749 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1015 and 
+    slave node # 6750 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1016 and 
+    slave node # 6751 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1017 and 
+    slave node # 6752 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1018 and 
+    slave node # 6753 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1019 and 
+    slave node # 6754 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1020 and 
+    slave node # 6755 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1021 and 
+    slave node # 6756 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1022 and 
+    slave node # 6757 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1023 and 
+    slave node # 6758 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1024 and 
+    slave node # 6759 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1025 and 
+    slave node # 7057 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1026 and 
+    slave node # 7058 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1027 and 
+    slave node # 7059 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1028 and 
+    slave node # 7060 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1029 and 
+    slave node # 7061 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1030 and 
+    slave node # 7062 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1031 and 
+    slave node # 7063 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1032 and 
+    slave node # 7064 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1033 and 
+    slave node # 7065 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1034 and 
+    slave node # 7066 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1035 and 
+    slave node # 7067 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1036 and 
+    slave node # 7068 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1037 and 
+    slave node # 7069 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1038 and 
+    slave node # 7070 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1039 and 
+    slave node # 7071 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1040 and 
+    slave node # 7072 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1041 and 
+    slave node # 7073 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1042 and 
+    slave node # 7074 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1043 and 
+    slave node # 7075 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1044 and 
+    slave node # 7076 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1045 and 
+    slave node # 7077 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1046 and 
+    slave node # 7078 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1047 and 
+    slave node # 7079 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1048 and 
+    slave node # 7080 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1049 and 
+    slave node # 7081 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1050 and 
+    slave node # 7082 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1051 and 
+    slave node # 7083 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1052 and 
+    slave node # 7084 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1053 and 
+    slave node # 7085 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1054 and 
+    slave node # 7086 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1055 and 
+    slave node # 7087 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1056 and 
+    slave node # 7088 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1057 and 
+    slave node # 7089 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1058 and 
+    slave node # 7090 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1059 and 
+    slave node # 7091 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1060 and 
+    slave node # 7092 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1061 and 
+    slave node # 7093 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1062 and 
+    slave node # 7094 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1063 and 
+    slave node # 7095 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1064 and 
+    slave node # 7096 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1065 and 
+    slave node # 7097 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1066 and 
+    slave node # 7098 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1067 and 
+    slave node # 7099 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1068 and 
+    slave node # 7100 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1069 and 
+    slave node # 7101 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1070 and 
+    slave node # 7102 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1071 and 
+    slave node # 7103 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1072 and 
+    slave node # 7104 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1073 and 
+    slave node # 7105 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1074 and 
+    slave node # 7106 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1075 and 
+    slave node # 7107 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1076 and 
+    slave node # 7108 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1077 and 
+    slave node # 7109 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1078 and 
+    slave node # 7110 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1079 and 
+    slave node # 7111 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1080 and 
+    slave node # 7112 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1081 and 
+    slave node # 7113 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1082 and 
+    slave node # 7114 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1083 and 
+    slave node # 7115 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1084 and 
+    slave node # 7116 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1085 and 
+    slave node # 7117 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1086 and 
+    slave node # 7118 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1087 and 
+    slave node # 7119 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1088 and 
+    slave node # 7120 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1089 and 
+    slave node # 7418 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1090 and 
+    slave node # 7419 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1091 and 
+    slave node # 7420 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1092 and 
+    slave node # 7421 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1093 and 
+    slave node # 7422 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1094 and 
+    slave node # 7423 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1095 and 
+    slave node # 7424 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1096 and 
+    slave node # 7425 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1097 and 
+    slave node # 7426 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1098 and 
+    slave node # 7427 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1099 and 
+    slave node # 7428 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1100 and 
+    slave node # 7429 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1101 and 
+    slave node # 7430 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1102 and 
+    slave node # 7431 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1103 and 
+    slave node # 7432 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1104 and 
+    slave node # 7433 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1105 and 
+    slave node # 7434 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1106 and 
+    slave node # 7435 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1107 and 
+    slave node # 7436 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1108 and 
+    slave node # 7437 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1109 and 
+    slave node # 7438 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1110 and 
+    slave node # 7439 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1111 and 
+    slave node # 7440 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1112 and 
+    slave node # 7441 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1113 and 
+    slave node # 7442 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1114 and 
+    slave node # 7443 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1115 and 
+    slave node # 7444 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1116 and 
+    slave node # 7445 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1117 and 
+    slave node # 7446 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1118 and 
+    slave node # 7447 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1119 and 
+    slave node # 7448 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1120 and 
+    slave node # 7449 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1121 and 
+    slave node # 7450 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1122 and 
+    slave node # 7451 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1123 and 
+    slave node # 7452 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1124 and 
+    slave node # 7453 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1125 and 
+    slave node # 7454 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1126 and 
+    slave node # 7455 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1127 and 
+    slave node # 7456 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1128 and 
+    slave node # 7457 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1129 and 
+    slave node # 7458 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1130 and 
+    slave node # 7459 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1131 and 
+    slave node # 7460 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1132 and 
+    slave node # 7461 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1133 and 
+    slave node # 7462 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1134 and 
+    slave node # 7463 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1135 and 
+    slave node # 7464 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1136 and 
+    slave node # 7465 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1137 and 
+    slave node # 7466 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1138 and 
+    slave node # 7467 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1139 and 
+    slave node # 7468 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1140 and 
+    slave node # 7469 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1141 and 
+    slave node # 7470 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1142 and 
+    slave node # 7471 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1143 and 
+    slave node # 7472 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1144 and 
+    slave node # 7473 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1145 and 
+    slave node # 7474 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1146 and 
+    slave node # 7475 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1147 and 
+    slave node # 7476 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1148 and 
+    slave node # 7477 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1149 and 
+    slave node # 7478 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1150 and 
+    slave node # 7479 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1151 and 
+    slave node # 7480 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1152 and 
+    slave node # 7481 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1153 and 
+    slave node # 7779 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1154 and 
+    slave node # 7780 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1155 and 
+    slave node # 7781 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1156 and 
+    slave node # 7782 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1157 and 
+    slave node # 7783 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1158 and 
+    slave node # 7784 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1159 and 
+    slave node # 7785 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1160 and 
+    slave node # 7786 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1161 and 
+    slave node # 7787 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1162 and 
+    slave node # 7788 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1163 and 
+    slave node # 7789 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1164 and 
+    slave node # 7790 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1165 and 
+    slave node # 7791 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1166 and 
+    slave node # 7792 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1167 and 
+    slave node # 7793 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1168 and 
+    slave node # 7794 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1169 and 
+    slave node # 7795 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1170 and 
+    slave node # 7796 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1171 and 
+    slave node # 7797 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1172 and 
+    slave node # 7798 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1173 and 
+    slave node # 7799 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1174 and 
+    slave node # 7800 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1175 and 
+    slave node # 7801 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1176 and 
+    slave node # 7802 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1177 and 
+    slave node # 7803 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1178 and 
+    slave node # 7804 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1179 and 
+    slave node # 7805 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1180 and 
+    slave node # 7806 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1181 and 
+    slave node # 7807 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1182 and 
+    slave node # 7808 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1183 and 
+    slave node # 7809 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1184 and 
+    slave node # 7810 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1185 and 
+    slave node # 7811 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1186 and 
+    slave node # 7812 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1187 and 
+    slave node # 7813 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1188 and 
+    slave node # 7814 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1189 and 
+    slave node # 7815 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1190 and 
+    slave node # 7816 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1191 and 
+    slave node # 7817 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1192 and 
+    slave node # 7818 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1193 and 
+    slave node # 7819 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1194 and 
+    slave node # 7820 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1195 and 
+    slave node # 7821 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1196 and 
+    slave node # 7822 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1197 and 
+    slave node # 7823 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1198 and 
+    slave node # 7824 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1199 and 
+    slave node # 7825 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1200 and 
+    slave node # 7826 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1201 and 
+    slave node # 7827 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1202 and 
+    slave node # 7828 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1203 and 
+    slave node # 7829 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1204 and 
+    slave node # 7830 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1205 and 
+    slave node # 7831 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1206 and 
+    slave node # 7832 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1207 and 
+    slave node # 7833 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1208 and 
+    slave node # 7834 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1209 and 
+    slave node # 7835 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1210 and 
+    slave node # 7836 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1211 and 
+    slave node # 7837 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1212 and 
+    slave node # 7838 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1213 and 
+    slave node # 7839 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1214 and 
+    slave node # 7840 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1215 and 
+    slave node # 7841 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1216 and 
+    slave node # 7842 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1217 and 
+    slave node # 8140 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1218 and 
+    slave node # 8141 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1219 and 
+    slave node # 8142 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1220 and 
+    slave node # 8143 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1221 and 
+    slave node # 8144 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1222 and 
+    slave node # 8145 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1223 and 
+    slave node # 8146 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1224 and 
+    slave node # 8147 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1225 and 
+    slave node # 8148 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1226 and 
+    slave node # 8149 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1227 and 
+    slave node # 8150 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1228 and 
+    slave node # 8151 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1229 and 
+    slave node # 8152 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1230 and 
+    slave node # 8153 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1231 and 
+    slave node # 8154 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1232 and 
+    slave node # 8155 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1233 and 
+    slave node # 8156 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1234 and 
+    slave node # 8157 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1235 and 
+    slave node # 8158 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1236 and 
+    slave node # 8159 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1237 and 
+    slave node # 8160 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1238 and 
+    slave node # 8161 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1239 and 
+    slave node # 8162 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1240 and 
+    slave node # 8163 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1241 and 
+    slave node # 8164 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1242 and 
+    slave node # 8165 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1243 and 
+    slave node # 8166 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1244 and 
+    slave node # 8167 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1245 and 
+    slave node # 8168 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1246 and 
+    slave node # 8169 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1247 and 
+    slave node # 8170 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1248 and 
+    slave node # 8171 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1249 and 
+    slave node # 8172 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1250 and 
+    slave node # 8173 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1251 and 
+    slave node # 8174 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1252 and 
+    slave node # 8175 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1253 and 
+    slave node # 8176 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1254 and 
+    slave node # 8177 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1255 and 
+    slave node # 8178 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1256 and 
+    slave node # 8179 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1257 and 
+    slave node # 8180 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1258 and 
+    slave node # 8181 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1259 and 
+    slave node # 8182 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1260 and 
+    slave node # 8183 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1261 and 
+    slave node # 8184 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1262 and 
+    slave node # 8185 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1263 and 
+    slave node # 8186 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1264 and 
+    slave node # 8187 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1265 and 
+    slave node # 8188 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1266 and 
+    slave node # 8189 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1267 and 
+    slave node # 8190 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1268 and 
+    slave node # 8191 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1269 and 
+    slave node # 8192 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1270 and 
+    slave node # 8193 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1271 and 
+    slave node # 8194 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1272 and 
+    slave node # 8195 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1273 and 
+    slave node # 8196 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1274 and 
+    slave node # 8197 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1275 and 
+    slave node # 8198 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1276 and 
+    slave node # 8199 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1277 and 
+    slave node # 8200 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1278 and 
+    slave node # 8201 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1279 and 
+    slave node # 8202 
+    dof to constrain ux uy uz; 
+
+add constraint equal_dof with
+    master node # 1280 and 
+    slave node # 8203 
+    dof to constrain ux uy uz; 
+

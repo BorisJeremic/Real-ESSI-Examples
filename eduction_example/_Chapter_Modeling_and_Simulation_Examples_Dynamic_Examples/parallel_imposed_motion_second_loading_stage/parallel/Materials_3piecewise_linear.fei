@@ -1,0 +1,169 @@
+// Materials.fei 
+
+// Soil Materials
+den = 1922.5;
+
+add material # 5 type vonMisesMultipleYieldSurfaceGoverGmax
+	mass_density = den*kg/m^3 
+	initial_shear_modulus = 94255.16 * kPa 
+	poisson_ratio = 0.3 
+	total_number_of_shear_modulus = 11
+	GoverGmax = 
+	"1, 0.994019462, .984941702, 0.958692886, 0.900717518, 0.764196441, 0.55885398, 0.311549656, 0.150306652, 0.078954505, 0.059435155"
+	ShearStrainGamma = 
+	"0.0, 0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 0.7, 1"
+	;
+
+add material # 6 type vonMisesMultipleYieldSurfaceGoverGmax
+	mass_density = den*kg/m^3 
+	initial_shear_modulus = 90946.93* kPa
+	poisson_ratio = 0.3 
+	total_number_of_shear_modulus = 11
+	GoverGmax = 
+	"1, 0.994019462, .984941702, 0.958692886, 0.900717518, 0.764196441, 0.55885398, 0.311549656, 0.150306652, 0.078954505, 0.059435155"
+	ShearStrainGamma = 
+	"0.0, 0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 0.7, 1"
+	;
+
+add material # 7 type vonMisesMultipleYieldSurfaceGoverGmax
+	mass_density = den*kg/m^3 
+	initial_shear_modulus = 87513.72 * kPa
+	poisson_ratio = 0.3 
+	total_number_of_shear_modulus = 11
+	GoverGmax = 
+	"1, 0.994019462, .984941702, 0.958692886, 0.900717518, 0.764196441, 0.55885398, 0.311549656, 0.150306652, 0.078954505, 0.059435155"
+	ShearStrainGamma = 
+	"0.0, 0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 0.7, 1"
+	;
+
+add material # 8 type vonMisesMultipleYieldSurfaceGoverGmax
+	mass_density = den*kg/m^3 
+	initial_shear_modulus = 83940.21 * kPa
+	poisson_ratio = 0.3 
+	total_number_of_shear_modulus = 11
+	GoverGmax = 
+	"1, 0.994019462, .984941702, 0.958692886, 0.900717518, 0.764196441, 0.55885398, 0.311549656, 0.150306652, 0.078954505, 0.059435155"
+	ShearStrainGamma = 
+	"0.0, 0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 0.7, 1"
+	;
+
+add material # 9 type vonMisesMultipleYieldSurfaceGoverGmax
+	mass_density = den*kg/m^3 
+	initial_shear_modulus = 80207.65 * kPa
+	poisson_ratio = 0.3 
+	total_number_of_shear_modulus = 11
+	GoverGmax = 
+	"1, 0.994019462, .984941702, 0.958692886, 0.900717518, 0.764196441, 0.55885398, 0.311549656, 0.150306652, 0.078954505, 0.059435155"
+	ShearStrainGamma = 
+	"0.0, 0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 0.7, 1"
+	;
+
+add material # 10 type vonMisesMultipleYieldSurfaceGoverGmax
+	mass_density = den*kg/m^3 
+	initial_shear_modulus = 76292.69 * kPa
+	poisson_ratio = 0.3 
+	total_number_of_shear_modulus = 11
+	GoverGmax = 
+	"1, 0.994019462, .984941702, 0.958692886, 0.900717518, 0.764196441, 0.55885398, 0.311549656, 0.150306652, 0.078954505, 0.059435155"
+	ShearStrainGamma = 
+	"0.0, 0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 0.7, 1"
+	;
+
+add material # 11 type vonMisesMultipleYieldSurfaceGoverGmax
+	mass_density = den*kg/m^3 
+	initial_shear_modulus = 72165.66 * kPa
+	poisson_ratio = 0.3 
+	total_number_of_shear_modulus = 11
+	GoverGmax = 
+	"1, 0.994019462, .984941702, 0.958692886, 0.900717518, 0.764196441, 0.55885398, 0.311549656, 0.150306652, 0.078954505, 0.059435155"
+	ShearStrainGamma = 
+	"0.0, 0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 0.7, 1"
+	;
+
+add material # 12 type vonMisesMultipleYieldSurfaceGoverGmax
+	mass_density = den*kg/m^3 
+	initial_shear_modulus = 67787.84 * kPa
+	poisson_ratio = 0.3 
+	total_number_of_shear_modulus = 11
+	GoverGmax = 
+	"1, 0.994019462, .984941702, 0.958692886, 0.900717518, 0.764196441, 0.55885398, 0.311549656, 0.150306652, 0.078954505, 0.059435155"
+	ShearStrainGamma = 
+	"0.0, 0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 0.7, 1"
+	;
+
+add material # 13 type vonMisesMultipleYieldSurfaceGoverGmax
+	mass_density = den*kg/m^3 
+	initial_shear_modulus = 63107.04 * kPa
+	poisson_ratio = 0.3 
+	total_number_of_shear_modulus = 11
+	GoverGmax = 
+	"1, 0.994019462, .984941702, 0.958692886, 0.900717518, 0.764196441, 0.55885398, 0.311549656, 0.150306652, 0.078954505, 0.059435155"
+	ShearStrainGamma = 
+	"0.0, 0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 0.7, 1"
+	;
+
+add material # 14 type vonMisesMultipleYieldSurfaceGoverGmax
+	mass_density = den*kg/m^3 
+	initial_shear_modulus = 58050.04 * kPa
+	poisson_ratio = 0.3 
+	total_number_of_shear_modulus = 11
+	GoverGmax = 
+	"1, 0.994019462, .984941702, 0.958692886, 0.900717518, 0.764196441, 0.55885398, 0.311549656, 0.150306652, 0.078954505, 0.059435155"
+	ShearStrainGamma = 
+	"0.0, 0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 0.7, 1"
+	;
+
+add material # 15 type vonMisesMultipleYieldSurfaceGoverGmax
+	mass_density = den*kg/m^3 
+	initial_shear_modulus = 52508.23 * kPa
+	poisson_ratio = 0.3 
+	total_number_of_shear_modulus = 11
+	GoverGmax = 
+	"1, 0.994019462, .984941702, 0.958692886, 0.900717518, 0.764196441, 0.55885398, 0.311549656, 0.150306652, 0.078954505, 0.059435155"
+	ShearStrainGamma = 
+	"0.0, 0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 0.7, 1"
+	;
+
+add material # 16 type vonMisesMultipleYieldSurfaceGoverGmax
+	mass_density = den*kg/m^3 
+	initial_shear_modulus = 46307.91 * kPa
+	poisson_ratio = 0.3 
+	total_number_of_shear_modulus = 11
+	GoverGmax = 
+	"1, 0.994019462, .984941702, 0.958692886, 0.900717518, 0.764196441, 0.55885398, 0.311549656, 0.150306652, 0.078954505, 0.059435155"
+	ShearStrainGamma = 
+	"0.0, 0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 0.7, 1"
+	;
+
+add material # 17 type vonMisesMultipleYieldSurfaceGoverGmax
+	mass_density = den*kg/m^3 
+	initial_shear_modulus = 39137.33 * kPa
+	poisson_ratio = 0.3 
+	total_number_of_shear_modulus = 11
+	GoverGmax = 
+	"1, 0.994019462, .984941702, 0.958692886, 0.900717518, 0.764196441, 0.55885398, 0.311549656, 0.150306652, 0.078954505, 0.059435155"
+	ShearStrainGamma = 
+	"0.0, 0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 0.7, 1"
+	;
+
+add material # 18 type vonMisesMultipleYieldSurfaceGoverGmax
+	mass_density = den*kg/m^3 
+	initial_shear_modulus = 30315.64 * kPa
+	poisson_ratio = 0.3 
+	total_number_of_shear_modulus = 11
+	GoverGmax = 
+	"1, 0.994019462, .984941702, 0.958692886, 0.900717518, 0.764196441, 0.55885398, 0.311549656, 0.150306652, 0.078954505, 0.059435155"
+	ShearStrainGamma = 
+	"0.0, 0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 0.7, 1"
+	;
+
+add material # 19 type vonMisesMultipleYieldSurfaceGoverGmax
+	mass_density = den*kg/m^3 
+	initial_shear_modulus = 17502.74 * kPa
+	poisson_ratio = 0.3 
+	total_number_of_shear_modulus = 11
+	GoverGmax = 
+	"1, 0.994019462, .984941702, 0.958692886, 0.900717518, 0.764196441, 0.55885398, 0.311549656, 0.150306652, 0.078954505, 0.059435155"
+	ShearStrainGamma = 
+	"0.0, 0.0001, 0.0003, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 0.7, 1"
+	;
