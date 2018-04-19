@@ -63,7 +63,7 @@ essiGamma = [100* x for x in essiGamma]
 gamma = [100* x for x in gamma]
 # stress_plot = [1./1000* x for x in stress]
 plt.semilogx(essiGamma[:-2] , essiGGmax[:-2] , 'b-', label='ESSI', linewidth = 5.0 )
-plt.semilogx(gamma[:-2] , GGmax[:-2] , 'r--', label='Input', linewidth = 5.0 )
+plt.semilogx(gamma[:-2] , GGmax[:-2] , 'r--', label='Seed & Idriss', linewidth = 5.0 )
 
 # plt.legend(loc=3)
 plt.legend(loc=3, prop={'size':fontSIZE})
@@ -71,6 +71,7 @@ plt.legend(loc=3, prop={'size':fontSIZE})
 plt.xlabel('Strain [%] ',fontsize=fontSIZE)
 plt.ylabel('G/Gmax ',fontsize=fontSIZE)
 plt.xlim((1e-4,1e-1))
+# plt.ylim((0,0.3))
 plt.grid()
 plt.box()
 plt.savefig('GGmax.pdf', transparent=True, bbox_inches='tight')

@@ -101,12 +101,19 @@ label_size = fontSIZE
 mpl.rcParams['xtick.labelsize'] = label_size 
 mpl.rcParams['ytick.labelsize'] = label_size 
 
+ESSIStrain = [100* x for x in ESSIStrain]
+InputStrain = [100* x for x in InputStrain]
+
 plt.semilogx(ESSIStrain, ESSIDamping,  'b-', label=' ESSI',  linewidth = 5.0 )
-plt.semilogx(InputStrain, InputDamping,'r--', label='Input',  linewidth = 5.0 )
+plt.semilogx(InputStrain, InputDamping,'r--', label='Seed & Idriss',  linewidth = 5.0 )
 plt.legend(loc=2, prop={'size':fontSIZE})
-plt.xlabel('Strain / (unitless)',fontsize=fontSIZE)
-plt.ylabel('Damping Ratio/ (unitless)',fontsize=fontSIZE)
+plt.xlabel('Strain [%] ',fontsize=fontSIZE)
+plt.ylabel('Damping Ratio',fontsize=fontSIZE)
 plt.title('Damping Plot',fontsize=fontSIZE)
+
+plt.xlim((1e-3,1e-1))
+plt.ylim((0,0.3))
+
 plt.grid()
 plt.box()
 plt.savefig('damping.pdf', transparent=True, bbox_inches='tight')
