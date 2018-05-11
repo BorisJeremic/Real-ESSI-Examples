@@ -1,17 +1,11 @@
 model name "test";
 
-rho = 0.0*kg/m^3;
-nu = 0.0;
-E = 3E7*N/m^2;
-phi   = 5;
-phirad = pi*phi/180;
-eta = 6*sin(phirad)/(3-sin(phirad));
 add material # 1 type vonMisesArmstrongFrederick
-    mass_density = rho
-    elastic_modulus = E
-    poisson_ratio = nu
+    mass_density = 2500.0*kg/m^3
+    elastic_modulus = 3E7*N/m^2
+    poisson_ratio = 0.2
     von_mises_radius = 300 * Pa
-    armstrong_frederick_ha = E*5
+    armstrong_frederick_ha = 5*3E7*N/m^2
     armstrong_frederick_cr = 25000 
     isotropic_hardening_rate = 0*Pa
     ;
