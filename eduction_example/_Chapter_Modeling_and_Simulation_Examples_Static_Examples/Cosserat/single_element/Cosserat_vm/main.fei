@@ -1,0 +1,97 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// http://real-essi.info
+//
+// for more information, see: http://real-essi.info
+
+
+
+model name "Cosserat";
+rho = 0.0*kg/m^3;
+nu = 0.0;
+E = 2E7*N/m^2;
+phi   = 5;
+phirad = pi*phi/180;
+eta = 6*sin(phirad)/(3-sin(phirad));
+
+add material # 1 type Cosserat_von_Mises
+    mass_density = 1000*kg/m^3
+    lambda = 2e7*Pa
+    mu = 1e7*Pa
+    chi = 0*Pa
+    pi1 = 0*N
+    pi2 = 0*N
+    pi3 = 1e6*N
+    plastic_internal_length = 1 * mm
+    von_mises_radius = 1 * Pa
+    isotropic_hardening_rate = 5e6 * Pa
+    ;
+
+add node # 1 at (0*m,0*m,1*m)  with 6 dofs;
+add node # 2 at (1*m,0*m,1*m)  with 6 dofs;
+add node # 3 at (1*m,1*m,1*m)  with 6 dofs;
+add node # 4 at (0*m,1*m,1*m)  with 6 dofs;
+add node # 5 at (0*m,0*m,0*m)  with 6 dofs;
+add node # 6 at (1*m,0*m,0*m)  with 6 dofs;
+add node # 7 at (1*m,1*m,0*m)  with 6 dofs;
+add node # 8 at (0*m,1*m,0*m)  with 6 dofs;
+
+add element # 1 type Cosserat8NodeBrick
+ with nodes (1, 2, 3, 4, 5, 6, 7, 8) use material # 1;
+
+
+new loading stage "load" ;
+
+fix node # 5 dofs ux uz ry;
+fix node # 6 dofs ux uz ry; 
+fix node # 7 dofs ux uz ry; 
+fix node # 8 dofs ux uz ry; 
+
+
+i = 1 ; 
+while (i<9) {
+    fix node # i dofs rx rz uy ;
+    i = i + 1 ; 
+};
+
+// add acceleration field # <.> ax = <accel> ay = <accel> az = <aaccel> ;
+add acceleration field # 1 
+    ax = 1*g 
+    ay = 0*g 
+    az = 0*g ;
+    
+add load # 1 to element # 1 type self_weight use acceleration field # 1;
+    
+define NDMaterial constitutive integration algorithm Backward_Euler
+    yield_function_relative_tolerance =  1E-7
+    stress_relative_tolerance =  1E-7
+    maximum_iterations = 100;
+define solver UMFPack;
+define convergence test Absolute_Norm_Displacement_Increment
+    tolerance = 1E-5
+    maximum_iterations =  30
+    ;
+define algorithm Newton;
+Nstep = 10;
+
+define load factor increment 1/Nstep;
+
+// define static integrator displacement_control using node # 1 dof uz increment -1E-1*m ;
+
+simulate Nstep steps using static algorithm;
+
+bye;  
+    
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    
+    
+    

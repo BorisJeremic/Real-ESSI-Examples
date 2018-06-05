@@ -1,0 +1,151 @@
+
+//*************************************************************************************************************************
+//							Add_8NodeBrick_SurfaceLoad{Physical_Group#vol_all, Physical_Group#left_surface, Pressure:= 100 * Pa}Starts
+//*************************************************************************************************************************
+
+add load # 1 to element # 1 type surface at nodes (3 , 33 , 952 , 295) with magnitude 100 * Pa; 
+add load # 2 to element # 2 type surface at nodes (295 , 952 , 951 , 296) with magnitude 100 * Pa; 
+add load # 3 to element # 3 type surface at nodes (296 , 951 , 950 , 297) with magnitude 100 * Pa; 
+add load # 4 to element # 4 type surface at nodes (297 , 950 , 949 , 298) with magnitude 100 * Pa; 
+add load # 5 to element # 5 type surface at nodes (298 , 949 , 948 , 299) with magnitude 100 * Pa; 
+add load # 6 to element # 6 type surface at nodes (299 , 948 , 947 , 300) with magnitude 100 * Pa; 
+add load # 7 to element # 7 type surface at nodes (300 , 947 , 946 , 301) with magnitude 100 * Pa; 
+add load # 8 to element # 8 type surface at nodes (301 , 946 , 945 , 302) with magnitude 100 * Pa; 
+add load # 9 to element # 9 type surface at nodes (302 , 945 , 944 , 303) with magnitude 100 * Pa; 
+add load # 10 to element # 10 type surface at nodes (303 , 944 , 943 , 304) with magnitude 100 * Pa; 
+add load # 11 to element # 11 type surface at nodes (304 , 943 , 942 , 305) with magnitude 100 * Pa; 
+add load # 12 to element # 12 type surface at nodes (305 , 942 , 941 , 306) with magnitude 100 * Pa; 
+add load # 13 to element # 13 type surface at nodes (306 , 941 , 940 , 307) with magnitude 100 * Pa; 
+add load # 14 to element # 14 type surface at nodes (307 , 940 , 939 , 308) with magnitude 100 * Pa; 
+add load # 15 to element # 15 type surface at nodes (308 , 939 , 938 , 309) with magnitude 100 * Pa; 
+add load # 16 to element # 16 type surface at nodes (309 , 938 , 937 , 310) with magnitude 100 * Pa; 
+add load # 17 to element # 17 type surface at nodes (310 , 937 , 936 , 311) with magnitude 100 * Pa; 
+add load # 18 to element # 18 type surface at nodes (311 , 936 , 935 , 312) with magnitude 100 * Pa; 
+add load # 19 to element # 19 type surface at nodes (312 , 935 , 36 , 4) with magnitude 100 * Pa; 
+add load # 20 to element # 627 type surface at nodes (21 , 282 , 984 , 38) with magnitude 100 * Pa; 
+add load # 21 to element # 608 type surface at nodes (282 , 283 , 985 , 984) with magnitude 100 * Pa; 
+add load # 22 to element # 589 type surface at nodes (283 , 284 , 986 , 985) with magnitude 100 * Pa; 
+add load # 23 to element # 570 type surface at nodes (284 , 285 , 987 , 986) with magnitude 100 * Pa; 
+add load # 24 to element # 551 type surface at nodes (285 , 286 , 988 , 987) with magnitude 100 * Pa; 
+add load # 25 to element # 532 type surface at nodes (286 , 287 , 989 , 988) with magnitude 100 * Pa; 
+add load # 26 to element # 513 type surface at nodes (287 , 288 , 990 , 989) with magnitude 100 * Pa; 
+add load # 27 to element # 494 type surface at nodes (288 , 289 , 991 , 990) with magnitude 100 * Pa; 
+add load # 28 to element # 475 type surface at nodes (289 , 290 , 992 , 991) with magnitude 100 * Pa; 
+add load # 29 to element # 456 type surface at nodes (290 , 291 , 993 , 992) with magnitude 100 * Pa; 
+add load # 30 to element # 437 type surface at nodes (291 , 292 , 994 , 993) with magnitude 100 * Pa; 
+add load # 31 to element # 418 type surface at nodes (292 , 293 , 995 , 994) with magnitude 100 * Pa; 
+add load # 32 to element # 399 type surface at nodes (293 , 294 , 996 , 995) with magnitude 100 * Pa; 
+add load # 33 to element # 380 type surface at nodes (294 , 3 , 33 , 996) with magnitude 100 * Pa; 
+add load # 34 to element # 628 type surface at nodes (2 , 39 , 1040 , 269) with magnitude 100 * Pa; 
+add load # 35 to element # 629 type surface at nodes (269 , 1040 , 1039 , 270) with magnitude 100 * Pa; 
+add load # 36 to element # 630 type surface at nodes (270 , 1039 , 1038 , 271) with magnitude 100 * Pa; 
+add load # 37 to element # 631 type surface at nodes (271 , 1038 , 1037 , 272) with magnitude 100 * Pa; 
+add load # 38 to element # 632 type surface at nodes (272 , 1037 , 1036 , 273) with magnitude 100 * Pa; 
+add load # 39 to element # 633 type surface at nodes (273 , 1036 , 1035 , 274) with magnitude 100 * Pa; 
+add load # 40 to element # 634 type surface at nodes (274 , 1035 , 1034 , 275) with magnitude 100 * Pa; 
+add load # 41 to element # 635 type surface at nodes (275 , 1034 , 1033 , 276) with magnitude 100 * Pa; 
+add load # 42 to element # 636 type surface at nodes (276 , 1033 , 1032 , 277) with magnitude 100 * Pa; 
+add load # 43 to element # 637 type surface at nodes (277 , 1032 , 1031 , 278) with magnitude 100 * Pa; 
+add load # 44 to element # 638 type surface at nodes (278 , 1031 , 1030 , 279) with magnitude 100 * Pa; 
+add load # 45 to element # 639 type surface at nodes (279 , 1030 , 1029 , 280) with magnitude 100 * Pa; 
+add load # 46 to element # 640 type surface at nodes (280 , 1029 , 1028 , 281) with magnitude 100 * Pa; 
+add load # 47 to element # 641 type surface at nodes (281 , 1028 , 38 , 21) with magnitude 100 * Pa; 
+add load # 48 to element # 1236 type surface at nodes (1 , 251 , 1059 , 42) with magnitude 100 * Pa; 
+add load # 49 to element # 1237 type surface at nodes (251 , 252 , 1060 , 1059) with magnitude 100 * Pa; 
+add load # 50 to element # 1238 type surface at nodes (252 , 253 , 1061 , 1060) with magnitude 100 * Pa; 
+add load # 51 to element # 1239 type surface at nodes (253 , 254 , 1062 , 1061) with magnitude 100 * Pa; 
+add load # 52 to element # 1240 type surface at nodes (254 , 255 , 1063 , 1062) with magnitude 100 * Pa; 
+add load # 53 to element # 1241 type surface at nodes (255 , 256 , 1064 , 1063) with magnitude 100 * Pa; 
+add load # 54 to element # 1242 type surface at nodes (256 , 257 , 1065 , 1064) with magnitude 100 * Pa; 
+add load # 55 to element # 1243 type surface at nodes (257 , 258 , 1066 , 1065) with magnitude 100 * Pa; 
+add load # 56 to element # 1244 type surface at nodes (258 , 259 , 1067 , 1066) with magnitude 100 * Pa; 
+add load # 57 to element # 1245 type surface at nodes (259 , 260 , 1068 , 1067) with magnitude 100 * Pa; 
+add load # 58 to element # 1246 type surface at nodes (260 , 261 , 1069 , 1068) with magnitude 100 * Pa; 
+add load # 59 to element # 1247 type surface at nodes (261 , 262 , 1070 , 1069) with magnitude 100 * Pa; 
+add load # 60 to element # 1248 type surface at nodes (262 , 263 , 1071 , 1070) with magnitude 100 * Pa; 
+add load # 61 to element # 1249 type surface at nodes (263 , 264 , 1072 , 1071) with magnitude 100 * Pa; 
+add load # 62 to element # 1250 type surface at nodes (264 , 265 , 1073 , 1072) with magnitude 100 * Pa; 
+add load # 63 to element # 1251 type surface at nodes (265 , 266 , 1074 , 1073) with magnitude 100 * Pa; 
+add load # 64 to element # 1252 type surface at nodes (266 , 267 , 1075 , 1074) with magnitude 100 * Pa; 
+add load # 65 to element # 1253 type surface at nodes (267 , 268 , 1076 , 1075) with magnitude 100 * Pa; 
+add load # 66 to element # 1254 type surface at nodes (268 , 2 , 39 , 1076) with magnitude 100 * Pa; 
+
+//*************************************************************************************************************************
+//							Add_8NodeBrick_SurfaceLoad{Physical_Group#vol_all, Physical_Group#left_surface, Pressure:= 100 * Pa}Ends
+//*************************************************************************************************************************
+
+
+//*************************************************************************************************************************
+//							Add_8NodeBrick_SurfaceLoad{Physical_Group#vol_all, Physical_Group#right_surface, Pressure:= 100 * Pa}Starts
+//*************************************************************************************************************************
+
+add load # 67 to element # 4447 type surface at nodes (18 , 171 , 1545 , 60) with magnitude 100 * Pa; 
+add load # 68 to element # 4466 type surface at nodes (171 , 172 , 1546 , 1545) with magnitude 100 * Pa; 
+add load # 69 to element # 4485 type surface at nodes (172 , 173 , 1547 , 1546) with magnitude 100 * Pa; 
+add load # 70 to element # 4504 type surface at nodes (173 , 174 , 1548 , 1547) with magnitude 100 * Pa; 
+add load # 71 to element # 4523 type surface at nodes (174 , 175 , 1549 , 1548) with magnitude 100 * Pa; 
+add load # 72 to element # 4542 type surface at nodes (175 , 176 , 1550 , 1549) with magnitude 100 * Pa; 
+add load # 73 to element # 4561 type surface at nodes (176 , 177 , 1551 , 1550) with magnitude 100 * Pa; 
+add load # 74 to element # 4580 type surface at nodes (177 , 178 , 1552 , 1551) with magnitude 100 * Pa; 
+add load # 75 to element # 4599 type surface at nodes (178 , 179 , 1553 , 1552) with magnitude 100 * Pa; 
+add load # 76 to element # 4618 type surface at nodes (179 , 180 , 1554 , 1553) with magnitude 100 * Pa; 
+add load # 77 to element # 4637 type surface at nodes (180 , 181 , 1555 , 1554) with magnitude 100 * Pa; 
+add load # 78 to element # 4656 type surface at nodes (181 , 182 , 1556 , 1555) with magnitude 100 * Pa; 
+add load # 79 to element # 4675 type surface at nodes (182 , 183 , 1557 , 1556) with magnitude 100 * Pa; 
+add load # 80 to element # 4694 type surface at nodes (183 , 184 , 1558 , 1557) with magnitude 100 * Pa; 
+add load # 81 to element # 4713 type surface at nodes (184 , 185 , 1559 , 1558) with magnitude 100 * Pa; 
+add load # 82 to element # 4732 type surface at nodes (185 , 186 , 1560 , 1559) with magnitude 100 * Pa; 
+add load # 83 to element # 4751 type surface at nodes (186 , 187 , 1561 , 1560) with magnitude 100 * Pa; 
+add load # 84 to element # 4770 type surface at nodes (187 , 188 , 1562 , 1561) with magnitude 100 * Pa; 
+add load # 85 to element # 4789 type surface at nodes (188 , 17 , 61 , 1562) with magnitude 100 * Pa; 
+add load # 86 to element # 5073 type surface at nodes (24 , 158 , 1617 , 62) with magnitude 100 * Pa; 
+add load # 87 to element # 5054 type surface at nodes (158 , 159 , 1618 , 1617) with magnitude 100 * Pa; 
+add load # 88 to element # 5035 type surface at nodes (159 , 160 , 1619 , 1618) with magnitude 100 * Pa; 
+add load # 89 to element # 5016 type surface at nodes (160 , 161 , 1620 , 1619) with magnitude 100 * Pa; 
+add load # 90 to element # 4997 type surface at nodes (161 , 162 , 1621 , 1620) with magnitude 100 * Pa; 
+add load # 91 to element # 4978 type surface at nodes (162 , 163 , 1622 , 1621) with magnitude 100 * Pa; 
+add load # 92 to element # 4959 type surface at nodes (163 , 164 , 1623 , 1622) with magnitude 100 * Pa; 
+add load # 93 to element # 4940 type surface at nodes (164 , 165 , 1624 , 1623) with magnitude 100 * Pa; 
+add load # 94 to element # 4921 type surface at nodes (165 , 166 , 1625 , 1624) with magnitude 100 * Pa; 
+add load # 95 to element # 4902 type surface at nodes (166 , 167 , 1626 , 1625) with magnitude 100 * Pa; 
+add load # 96 to element # 4883 type surface at nodes (167 , 168 , 1627 , 1626) with magnitude 100 * Pa; 
+add load # 97 to element # 4864 type surface at nodes (168 , 169 , 1628 , 1627) with magnitude 100 * Pa; 
+add load # 98 to element # 4845 type surface at nodes (169 , 170 , 1629 , 1628) with magnitude 100 * Pa; 
+add load # 99 to element # 4826 type surface at nodes (170 , 18 , 60 , 1629) with magnitude 100 * Pa; 
+add load # 100 to element # 5087 type surface at nodes (19 , 145 , 1648 , 63) with magnitude 100 * Pa; 
+add load # 101 to element # 5086 type surface at nodes (145 , 146 , 1649 , 1648) with magnitude 100 * Pa; 
+add load # 102 to element # 5085 type surface at nodes (146 , 147 , 1650 , 1649) with magnitude 100 * Pa; 
+add load # 103 to element # 5084 type surface at nodes (147 , 148 , 1651 , 1650) with magnitude 100 * Pa; 
+add load # 104 to element # 5083 type surface at nodes (148 , 149 , 1652 , 1651) with magnitude 100 * Pa; 
+add load # 105 to element # 5082 type surface at nodes (149 , 150 , 1653 , 1652) with magnitude 100 * Pa; 
+add load # 106 to element # 5081 type surface at nodes (150 , 151 , 1654 , 1653) with magnitude 100 * Pa; 
+add load # 107 to element # 5080 type surface at nodes (151 , 152 , 1655 , 1654) with magnitude 100 * Pa; 
+add load # 108 to element # 5079 type surface at nodes (152 , 153 , 1656 , 1655) with magnitude 100 * Pa; 
+add load # 109 to element # 5078 type surface at nodes (153 , 154 , 1657 , 1656) with magnitude 100 * Pa; 
+add load # 110 to element # 5077 type surface at nodes (154 , 155 , 1658 , 1657) with magnitude 100 * Pa; 
+add load # 111 to element # 5076 type surface at nodes (155 , 156 , 1659 , 1658) with magnitude 100 * Pa; 
+add load # 112 to element # 5075 type surface at nodes (156 , 157 , 1660 , 1659) with magnitude 100 * Pa; 
+add load # 113 to element # 5074 type surface at nodes (157 , 24 , 62 , 1660) with magnitude 100 * Pa; 
+add load # 114 to element # 5700 type surface at nodes (20 , 64 , 1678 , 127) with magnitude 100 * Pa; 
+add load # 115 to element # 5699 type surface at nodes (127 , 1678 , 1677 , 128) with magnitude 100 * Pa; 
+add load # 116 to element # 5698 type surface at nodes (128 , 1677 , 1676 , 129) with magnitude 100 * Pa; 
+add load # 117 to element # 5697 type surface at nodes (129 , 1676 , 1675 , 130) with magnitude 100 * Pa; 
+add load # 118 to element # 5696 type surface at nodes (130 , 1675 , 1674 , 131) with magnitude 100 * Pa; 
+add load # 119 to element # 5695 type surface at nodes (131 , 1674 , 1673 , 132) with magnitude 100 * Pa; 
+add load # 120 to element # 5694 type surface at nodes (132 , 1673 , 1672 , 133) with magnitude 100 * Pa; 
+add load # 121 to element # 5693 type surface at nodes (133 , 1672 , 1671 , 134) with magnitude 100 * Pa; 
+add load # 122 to element # 5692 type surface at nodes (134 , 1671 , 1670 , 135) with magnitude 100 * Pa; 
+add load # 123 to element # 5691 type surface at nodes (135 , 1670 , 1669 , 136) with magnitude 100 * Pa; 
+add load # 124 to element # 5690 type surface at nodes (136 , 1669 , 1668 , 137) with magnitude 100 * Pa; 
+add load # 125 to element # 5689 type surface at nodes (137 , 1668 , 1667 , 138) with magnitude 100 * Pa; 
+add load # 126 to element # 5688 type surface at nodes (138 , 1667 , 1666 , 139) with magnitude 100 * Pa; 
+add load # 127 to element # 5687 type surface at nodes (139 , 1666 , 1665 , 140) with magnitude 100 * Pa; 
+add load # 128 to element # 5686 type surface at nodes (140 , 1665 , 1664 , 141) with magnitude 100 * Pa; 
+add load # 129 to element # 5685 type surface at nodes (141 , 1664 , 1663 , 142) with magnitude 100 * Pa; 
+add load # 130 to element # 5684 type surface at nodes (142 , 1663 , 1662 , 143) with magnitude 100 * Pa; 
+add load # 131 to element # 5683 type surface at nodes (143 , 1662 , 1661 , 144) with magnitude 100 * Pa; 
+add load # 132 to element # 5682 type surface at nodes (144 , 1661 , 63 , 19) with magnitude 100 * Pa; 
+
+//*************************************************************************************************************************
+//							Add_8NodeBrick_SurfaceLoad{Physical_Group#vol_all, Physical_Group#right_surface, Pressure:= 100 * Pa}Ends
+//*************************************************************************************************************************

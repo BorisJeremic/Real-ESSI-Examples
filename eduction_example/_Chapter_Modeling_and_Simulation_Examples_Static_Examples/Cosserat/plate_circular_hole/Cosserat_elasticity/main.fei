@@ -1,0 +1,76 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// http://real-essi.info
+//
+// for more information, see: http://real-essi.info
+
+
+
+model name "Cosserat";
+rho = 0.0*kg/m^3;
+nu = 0.0;
+E = 2E7*N/m^2;
+phi   = 5;
+phirad = pi*phi/180;
+eta = 6*sin(phirad)/(3-sin(phirad));
+
+elastic_val = 2e7 *Pa;
+poisson_val = 0.0 ; 
+
+// add material # 1 type Cosserat_linear_elastic_isotropic_3d
+//     mass_density = 0.0*kg/m^3
+//     lambda = 0*Pa
+//     mu = 1e7*Pa
+//     chi = 0*Pa
+//     pi1 = 0*N
+//     pi2 = 0*N
+//     pi3 = 0*N
+//     ;
+
+
+add material # 1 type Cosserat_linear_elastic_isotropic_3d
+    mass_density = 0.0*kg/m^3
+    lambda = 0*Pa
+    mu = 1e7*Pa
+    chi = 0*Pa
+    pi1 = 0*N
+    pi2 = 0*N
+    pi3 = 0*N
+    ;
+
+
+
+
+include "node.fei";
+include "element.fei";
+include "boundary_condition.fei";
+// include "fix_rxyz.fei";
+
+new loading stage "tension" ;
+include "tension_load.fei";
+define solver UMFPack;
+define algorithm With_no_convergence_check;
+Nstep = 1;
+define load factor increment 1/Nstep;
+simulate Nstep steps using static algorithm;
+
+
+
+
+
+
+bye;  
+    
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    
+    
+    

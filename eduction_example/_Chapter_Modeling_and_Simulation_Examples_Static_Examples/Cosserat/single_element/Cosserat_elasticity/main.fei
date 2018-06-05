@@ -15,17 +15,14 @@ phi   = 5;
 phirad = pi*phi/180;
 eta = 6*sin(phirad)/(3-sin(phirad));
 
-lambda_val = 2E7*Pa;
-mu_val = 1E7*Pa ; 
-elastic_val = mu_val * (3 * lambda_val + 2 * mu_val ) / ( lambda_val + mu_val) ; 
-poisson_val = elastic_val  / 2. / mu_val - 1. ; 
-
 add material # 1 type Cosserat_linear_elastic_isotropic_3d
     mass_density = 0.0*kg/m^3
-    elastic_modulus = elastic_val
-    poisson_ratio = poisson_val
-    characteristic_length = 0 * m 
-    elastic_constant_eta = 0.0
+    lambda = 2e7*Pa
+    mu = 1e7*Pa
+    chi = 0*Pa
+    pi1 = 0*N
+    pi2 = 0*N
+    pi3 = 0*N
     ;
 
 add node # 1 at (0*m,0*m,1*m)  with 6 dofs;
@@ -85,16 +82,20 @@ add load # 21 to node # 3 type linear Fy = - press *m^2 ;
 add load # 22 to node # 7 type linear Fy = - press *m^2 ;
 add load # 23 to node # 8 type linear Fy = - press *m^2 ;
 add load # 24 to node # 4 type linear Fy = - press *m^2 ;
-define NDMaterial constitutive integration algorithm Backward_Euler
-    yield_function_relative_tolerance =  1E-7
-    stress_relative_tolerance =  1E-7
-    maximum_iterations = 100;
+// define NDMaterial constitutive integration algorithm Backward_Euler
+//     yield_function_relative_tolerance =  1E-7
+//     stress_relative_tolerance =  1E-7
+//     maximum_iterations = 100;
 define solver UMFPack;
-define convergence test Absolute_Norm_Displacement_Increment
-    tolerance = 1E-6
-    maximum_iterations =  5
-    ;
-define algorithm Newton;
+// define solver ProfileSPD;
+// define convergence test Absolute_Norm_Displacement_Increment
+//     tolerance = 1E-6
+//     maximum_iterations =  5
+//     ;
+// define algorithm Newton;
+define algorithm With_no_convergence_check;
+
+
 Nstep = 10;
 define load factor increment 1/Nstep;
 simulate Nstep steps using static algorithm;

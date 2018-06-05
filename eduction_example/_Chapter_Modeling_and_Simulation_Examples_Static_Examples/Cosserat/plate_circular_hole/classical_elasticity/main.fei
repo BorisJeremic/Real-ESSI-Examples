@@ -1,0 +1,86 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// http://real-essi.info
+//
+// for more information, see: http://real-essi.info
+
+
+
+model name "elastic";
+rho = 0.0*kg/m^3;
+nu = 0.0;
+E = 2E7*N/m^2;
+phi   = 5;
+phirad = pi*phi/180;
+eta = 6*sin(phirad)/(3-sin(phirad));
+
+// add material # <.> type linear_elastic_isotropic_3d_LT mass_density = <M/L^3> elastic_modulus = <F/L^2> poisson_ratio = <.>;
+lambda_val = 2E7*Pa;
+mu_val = 1E7*Pa ; 
+elastic_val = mu_val * (3 * lambda_val + 2 * mu_val ) / ( lambda_val + mu_val) ; 
+poisson_val = elastic_val  / 2. / mu_val - 1. ; 
+
+print lambda_val  ;
+print mu_val      ;
+print elastic_val ; 
+elastic_val = 2e7 *Pa;
+poisson_val = 0.0 ; 
+print poisson_val ;
+
+add material # 1 type linear_elastic_isotropic_3d_LT 
+    mass_density =  0.0*kg/m^3
+    elastic_modulus =  elastic_val
+    poisson_ratio = poisson_val ;
+
+
+include "node.fei";
+include "element.fei";
+include "boundary_condition.fei";
+
+new loading stage "tension" ;
+include "tension_load.fei";
+// fix node # 5 dofs all;
+// fix node # 1 dofs ux uy ;
+// fix node # 6 dofs uy uz ;
+// fix node # 8 dofs ux uz ;
+// fix node # 7 dofs uz; 
+// fix node # 2 dofs uy;
+// fix node # 4 dofs ux; 
+
+// i = 1 ; 
+// while (i<9) {
+//     fix node # i dofs rx ry rz ;
+//     i = i + 1 ; 
+// };
+
+
+ 
+// define convergence test Absolute_Norm_Displacement_Increment
+//     tolerance = 1E-6
+//     maximum_iterations =  5
+//     ;
+// define algorithm Newton;
+
+define solver UMFPack;
+define algorithm With_no_convergence_check;
+Nstep = 10;
+define load factor increment 1/Nstep;
+simulate Nstep steps using static algorithm;
+
+
+
+bye;  
+    
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    
+    
+    

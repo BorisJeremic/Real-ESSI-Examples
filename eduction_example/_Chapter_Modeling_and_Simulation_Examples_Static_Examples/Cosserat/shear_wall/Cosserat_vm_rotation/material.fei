@@ -1,0 +1,76 @@
+rho = 0.0*kg/m^3;
+nu = 0.0;
+E = 2E7*N/m^2;
+phi   = 5;
+phirad = pi*phi/180;
+eta = 6*sin(phirad)/(3-sin(phirad));
+
+// add material # <.> type linear_elastic_isotropic_3d_LT mass_density = <M/L^3> elastic_modulus = <F/L^2> poisson_ratio = <.>;
+lambda_val = 2E7*Pa;
+mu_val = 1E7*Pa ; 
+elastic_val = mu_val * (3 * lambda_val + 2 * mu_val ) / ( lambda_val + mu_val) ; 
+poisson_val = elastic_val  / 2. / mu_val - 1. ; 
+
+print lambda_val  ;
+print mu_val      ;
+print elastic_val ; 
+elastic_val = 2e7 *Pa;
+poisson_val = 0.0 ; 
+print poisson_val ;
+
+// add material # 1 type linear_elastic_isotropic_3d_LT 
+//     mass_density =  0.0*kg/m^3
+//     elastic_modulus =  elastic_val
+//     poisson_ratio = poisson_val ;
+
+// add material # 1 type Cosserat_linear_elastic_isotropic_3d
+//     mass_density = 0.0*kg/m^3
+//     lambda = 0*Pa
+//     mu = 1e7*Pa
+//     chi = 100*Pa
+//     pi1 = 0*N
+//     pi2 = 0*N
+//     pi3 = 1e9*N
+//     ;
+
+
+add material # 1 type Cosserat_von_Mises
+    mass_density = 0.0*kg/m^3
+    lambda = 2e7*Pa
+    mu = 1e7*Pa
+    chi = 0*Pa
+    pi1 = 2*N
+    pi2 = 1*N
+    pi3 = 10*N
+   	plastic_internal_length = 1 * m
+   	von_mises_radius = 50 * kPa
+   	isotropic_hardening_rate = -5e5 * Pa
+    ;
+
+add material # 2 type Cosserat_von_Mises
+    mass_density = 0.0*kg/m^3
+    lambda = 2e7*Pa
+    mu = 1e7*Pa
+    chi = 0*Pa
+    pi1 = 2*N
+    pi2 = 1*N
+    pi3 = 10*N
+   	plastic_internal_length = 1 * m
+   	von_mises_radius = 48 * kPa
+   	isotropic_hardening_rate = -5e5 * Pa
+    ;
+
+
+
+	// | MATERIAL TEXTNUMBER exp TYPE Cosserat_von_Mises
+	// 	mass_density '=' exp
+	// 	lambda '=' exp
+	// 	mu '=' exp
+	// 	chi '=' exp
+	// 	pi1 '=' exp 
+	// 	pi2 '=' exp 
+	// 	pi3 '=' exp 
+	// 	plastic_internal_length '=' exp
+	// 	von_mises_radius '=' exp
+	// 	isotropic_hardening_rate '=' exp
+	// 	

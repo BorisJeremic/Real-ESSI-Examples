@@ -1,0 +1,35 @@
+#****************************************************************
+# DRM 3D Example 
+#****************************************************************
+
+gmESSI.loadGmshFile("shear_wall.msh")
+gmESSI.setSimulationDir("./shear_wall_fei",1)
+gmESSI.setMainFile(gmESSI.SimulationDir+ "main.fei")
+gmESSI.setNodeFile(gmESSI.SimulationDir+ "node.fei")
+gmESSI.setElementFile(gmESSI.SimulationDir+ "element.fei")
+gmESSI.setLoadFile(gmESSI.SimulationDir+ "load.fei")
+
+#7
+#2 2 "y_l"
+#2 3 "y_h"
+#2 4 "x_l"
+#2 5 "x_h"
+#2 6 "z_l"
+#2 7 "z_h"
+#3 1 "vol_wall"
+
+[Add_Node{Physical_Group#vol_wall, Unit:= m, NumDofs:= 3}]
+
+## wall
+[Fix_Dofs{Physical_Group#vol_wall, DofTypes:= uz}]
+[Fix_Dofs{Physical_Group#y_l, DofTypes:= ux uy}]
+[Fix_Dofs{Physical_Group#vol_wall, DofTypes:= rx ry rz}]
+
+[Add_8NodeBrick{Physical_Group#vol_wall, MaterialNo:= 1}]
+
+#[Add_Node_Load_Linear{Physical_Group#left_surface, ForceType:= Fx, Mag:= - 100 * kN }]
+#[Add_Node_Load_Linear{Physical_Group#right_surface, ForceType:= Fx, Mag:=  100 * kN }]
+[Add_8NodeBrick_SurfaceLoad{Physical_Group#vol_wall, Physical_Group#y_h, Pressure:= 100 * Pa}]
+#### ======================================================
+#### Foudantion
+#### ======================================================

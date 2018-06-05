@@ -1,0 +1,21 @@
+
+
+//*************************************************************************************************************************
+//							Add_8NodeBrick_SurfaceLoad{Physical_Group#vol_wall, Physical_Group#y_h, Pressure:= -100 * Pa}Starts
+//*************************************************************************************************************************
+
+add load # 1 to element # 20 type surface at nodes (3 , 8 , 101 , 18) with magnitude 100 * Pa; 
+add load # 2 to element # 40 type surface at nodes (18 , 101 , 100 , 19) with magnitude 100 * Pa; 
+add load # 3 to element # 60 type surface at nodes (19 , 100 , 99 , 20) with magnitude 100 * Pa; 
+add load # 4 to element # 80 type surface at nodes (20 , 99 , 98 , 21) with magnitude 100 * Pa; 
+add load # 5 to element # 100 type surface at nodes (21 , 98 , 97 , 22) with magnitude 100 * Pa; 
+add load # 6 to element # 120 type surface at nodes (22 , 97 , 96 , 23) with magnitude 100 * Pa; 
+add load # 7 to element # 140 type surface at nodes (23 , 96 , 95 , 24) with magnitude 100 * Pa; 
+add load # 8 to element # 160 type surface at nodes (24 , 95 , 94 , 25) with magnitude 100 * Pa; 
+add load # 9 to element # 180 type surface at nodes (25 , 94 , 93 , 26) with magnitude 100 * Pa; 
+add load # 10 to element # 200 type surface at nodes (26 , 93 , 7 , 4) with magnitude 100 * Pa; 
+
+//*************************************************************************************************************************
+//							Add_8NodeBrick_SurfaceLoad{Physical_Group#vol_wall, Physical_Group#y_h, Pressure:= -100 * Pa}Ends
+//*************************************************************************************************************************
+

@@ -1,0 +1,53 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// http://real-essi.info
+//
+// for more information, see: http://real-essi.info
+
+
+
+model name "Cosserat";
+
+
+
+include "material.fei";
+include "node.fei";
+include "element.fei";
+include "boundary_condition.fei";
+// include "fix_rxyz.fei";
+include "fix_rxy.fei";
+
+// add constraint equal_dof with master node # <.> and slave node # <.> dof to constrain <.>;
+add constraint equal_dof with master node # 3 and slave node # 4 dof to constrain uy ;
+add constraint equal_dof with master node # 3 and slave node # 7 dof to constrain uy ;
+add constraint equal_dof with master node # 3 and slave node # 8 dof to constrain uy ;
+
+
+new loading stage "load" ;
+include "load_top_surface.fei";
+
+
+define convergence test Absolute_Norm_Displacement_Increment
+    tolerance = 2E-4
+    maximum_iterations =  100
+    ;
+define algorithm Newton;
+
+// define algorithm With_no_convergence_check;
+
+define solver UMFPack;
+
+Nstep = 100;
+
+// define load factor increment 1/Nstep;
+
+define static integrator displacement_control using node # 3 dof uy increment -1E-3*m ;
+
+simulate Nstep steps using static algorithm;
+
+
+
+bye;  
+
+

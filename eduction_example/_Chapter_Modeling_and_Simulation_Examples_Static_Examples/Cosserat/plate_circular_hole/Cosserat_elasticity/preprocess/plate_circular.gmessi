@@ -1,0 +1,38 @@
+#****************************************************************
+# DRM 3D Example 
+#****************************************************************
+
+gmESSI.loadGmshFile("plate_circular.msh")
+gmESSI.setSimulationDir("./plate_circular_fei",1)
+gmESSI.setMainFile(gmESSI.SimulationDir+ "main.fei")
+gmESSI.setNodeFile(gmESSI.SimulationDir+ "node.fei")
+gmESSI.setElementFile(gmESSI.SimulationDir+ "element.fei")
+gmESSI.setLoadFile(gmESSI.SimulationDir+ "load.fei")
+
+#2 1 "left_surface"
+#2 2 "right_surface"
+#2 3 "down_surface"
+#2 4 "up_surface"
+#2 5 "cylinder_surfaces"
+#2 6 "z_top_surface"
+#2 7 "z_bottom_surface"
+#3 8 "vol_all"
+
+[Add_Node{Physical_Group#vol_all, Unit:= m, NumDofs:= 6}]
+
+## Soil 
+#[Fix_Dofs{Physical_Group#z_top_surface, DofTypes:= uz}]
+#[Fix_Dofs{Physical_Group#z_bottom_surface, DofTypes:= uz}]
+
+#[Fix_Dofs{Physical_Group#down_surface, DofTypes:= uy}]
+[Fix_Dofs{Physical_Group#vol_all, DofTypes:= rx ry rz}]
+
+#[Add_8NodeBrick{Physical_Group#vol_all, MaterialNo:= 1}]
+
+##[Add_Node_Load_Linear{Physical_Group#left_surface, ForceType:= Fx, Mag:= - 100 * kN }]
+##[Add_Node_Load_Linear{Physical_Group#right_surface, ForceType:= Fx, Mag:=  100 * kN }]
+#[Add_8NodeBrick_SurfaceLoad{Physical_Group#vol_all, Physical_Group#left_surface, Pressure:= 100 * Pa}]
+#[Add_8NodeBrick_SurfaceLoad{Physical_Group#vol_all, Physical_Group#right_surface, Pressure:= 100 * Pa}]
+##### ======================================================
+##### Foudantion
+##### ======================================================

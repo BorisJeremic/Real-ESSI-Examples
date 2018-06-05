@@ -8,5 +8,5 @@ rm -f essi*.log
 essi -f main.fei
 
 # postprocessing: plot results
-# python plot.py *h5.feioutput
+python plot.py *h5.feioutput
 
