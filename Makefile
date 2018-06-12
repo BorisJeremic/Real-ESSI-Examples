@@ -9,6 +9,7 @@ clean:
 	find eduction_example/ -name "essi_*.log" -delete
 	find eduction_example/ -name "log" -delete
 	find eduction_example/ -name "RealESSI_VERSION_INFO.txt" -delete
+	find eduction_example/ -name "MSESSI_VERSION_INFO.txt" -delete
 	find eduction_example/ -name "petsc_log.txt" -delete
 	find eduction_example/ -name "*.pyc" -delete
 	
