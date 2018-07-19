@@ -1,0 +1,115 @@
+// 
+// MS-ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://ms-essi.info
+// 
+
+model name "block";
+
+
+// Material parameters
+soil_shear_wave_velocity = 700*m/s;
+soil_density = 1800*kg/m^3;
+soil_poisson = 0.3;
+concrete_shear_wave_velocity = 2500*m/s;
+concrete_density = 2400*kg/m^3;
+concrete_poisson = 0.0;
+
+soil_shear_modulus = soil_density*soil_shear_wave_velocity^2;
+soil_elastic_modulus = 2 * (1 + soil_poisson ) * soil_shear_modulus;
+concrete_shear_modulus = concrete_density * concrete_shear_wave_velocity ^2;
+concrete_elastic_modulus = 2 * (1 + concrete_poisson ) * concrete_shear_modulus;
+
+
+print soil_elastic_modulus;
+print concrete_elastic_modulus;
+
+//Adding material
+add material #    1 type linear_elastic_isotropic_3d mass_density =      soil_density elastic_modulus =      soil_elastic_modulus poisson_ratio =      soil_poisson;
+add material #    2 type linear_elastic_isotropic_3d mass_density =      concrete_density elastic_modulus =      concrete_elastic_modulus poisson_ratio =      concrete_poisson;
+
+
+include "nodes.fei";
+include "elements.fei";
+include "fixities.fei";
+
+
+//Contact Element Parameters variables
+ Kn = 500*MPa; // normal stiffness
+ Kt = 800*kPa; // tangential stiffness
+ Cn = 0*Pa*s; // normal damping 
+ Ct = 0*Pa*s; // tangential damping
+ Fr = 0.68;  // residual friction coefficient
+ ShearZoneThickness = 5e-3*m; // Shear Zone Thickness
+
+ // Nonlinear Hardening Softening Contact Shear Model Additional Parameters 
+ Softening_rate = 40;
+ Pleateau_Size = 8;
+ mu_p0 = 0.9;
+ mu_k  = 0.1;
+
+// include "Contact_EPPSM.fei"; // Including Perfectly Plastic Contact Shear Model
+include "Contact_NLHSM.fei"; // Including Nonlinear Hardening Contact Shear Model 
+// include "Contact_NLHSSM.fei"; // Including Nonlinear Hardening Contact Shear Model 
+
+
+new loading stage "static";
+
+ add load # 1 to node # 321 type linear Fz = -10*kN;
+ add load # 2 to node # 322 type linear Fz = -10*kN;
+ add load # 3 to node # 323 type linear Fz = -10*kN;
+ add load # 4 to node # 324 type linear Fz = -10*kN;
+
+
+ tol = 1e-3;
+ define convergence test Relative_Norm_Unbalanced_Force tolerance = tol minimum_absolute_tolerance = 1 maximum_iterations = 20 ;
+ define algorithm Newton ;
+
+
+ if(IS_PARALLEL == 0)
+ {
+   define solver UMFPack;
+ }
+ else
+ {
+   define solver parallel;
+ }
+
+ Nsteps = 10;
+ define load factor increment 1/Nsteps;
+
+ simulate Nsteps steps using static algorithm;
+
+
+new loading stage "lateral";
+
+ add load # 5 to node # 321 type linear Fx = -10*kN;
+ add load # 6 to node # 322 type linear Fx = -10*kN;
+ add load # 7 to node # 323 type linear Fx = -10*kN;
+ add load # 8 to node # 324 type linear Fx = -10*kN;
+
+
+ tol = 1e-3;
+ define convergence test Relative_Norm_Unbalanced_Force tolerance = tol minimum_absolute_tolerance = 1 maximum_iterations = 10 ;
+ define algorithm Newton ;
+
+
+ if(IS_PARALLEL == 0)
+ {
+   define solver UMFPack;
+ }
+ else
+ {
+   define solver parallel;
+ }
+
+ Nsteps = 1000;
+ define load factor increment 1/Nsteps;
+ simulate Nsteps steps using static algorithm;
+
+
+
+
+
+bye;
+ 
