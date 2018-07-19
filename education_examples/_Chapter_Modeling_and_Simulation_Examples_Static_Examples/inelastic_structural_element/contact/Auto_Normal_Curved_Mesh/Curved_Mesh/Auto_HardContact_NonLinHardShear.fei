@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 //*************************************************************************************************************************
 //							Add_StressBasedHardContact_NonLinHardShear{Physical_Group#Contact_Node_Pairs, NormalStiffness:= Kn, TangentialStiffness:= Kt, Normalviscous_Damping:= Cn, Tangentialviscous_Damping:= Ct, FrictionRatio:= Fr, NormVect_x:= 0, NormVect_y:= 0, NormVect_z:= 1}Starts
 //*************************************************************************************************************************

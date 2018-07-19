@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 rho = 0.0*kg/m^3;
 nu = 0.0;
 E = 2E7*N/m^2;

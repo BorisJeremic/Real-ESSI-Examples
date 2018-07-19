@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 // adding coupled contact element 
 add element #3  type StressBasedCoupledSoftContact_ElPPlShear with nodes ( 1, 13)
 	initial_axial_stiffness       =  800*MPa    

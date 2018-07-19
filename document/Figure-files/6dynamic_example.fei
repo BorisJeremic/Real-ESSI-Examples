@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 model name "dynamic_example";
 
 add material # 1 type linear_elastic_isotropic_3d_LT

@@ -4,6 +4,12 @@
 // for more information, see: http://real-essi.info
 // 
 
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 
 
 add element # 1 type 4NodeShell_ANDES with nodes (1,3,14,9) use material # 1 thickness = h ; 

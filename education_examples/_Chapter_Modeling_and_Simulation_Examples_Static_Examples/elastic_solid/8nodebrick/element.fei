@@ -4,6 +4,12 @@
 // for more information, see: http://real-essi.info
 // 
 
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 
 
 add element #       1 type 8NodeBrick using 2 Gauss points each direction with nodes(      2,      1,      8,     10,     15,     23,     28,     17) use material #   1;

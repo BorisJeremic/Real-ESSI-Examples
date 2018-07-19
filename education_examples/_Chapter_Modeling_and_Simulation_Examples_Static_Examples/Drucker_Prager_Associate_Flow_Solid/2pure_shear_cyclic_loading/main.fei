@@ -4,6 +4,18 @@
 // for more information, see: http://real-essi.info
 // 
 
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 
 model name "DP";
 rho = 0.0*kg/m^3;

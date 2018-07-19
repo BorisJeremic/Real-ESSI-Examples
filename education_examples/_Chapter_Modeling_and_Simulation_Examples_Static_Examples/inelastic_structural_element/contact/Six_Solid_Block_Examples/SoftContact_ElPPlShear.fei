@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 add element #7 type StressBasedSoftContact_ElPPlShear with nodes (9,25) 
 	initial_axial_stiffness = Ki
 	stiffening_rate         = Sr

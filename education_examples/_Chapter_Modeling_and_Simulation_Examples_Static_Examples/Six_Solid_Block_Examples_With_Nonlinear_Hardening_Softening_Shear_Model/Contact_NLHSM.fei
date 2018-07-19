@@ -1,4 +1,10 @@
-	add element #7 type StressBasedHardContact_ElPPlShear with nodes (9,25) 
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+	add element #7 type StressBasedHardContact_NonLinHardShear with nodes (9,25) 
 		axial_stiffness =Kn
 		initial_shear_stiffness =  Kt 
 		axial_viscous_damping =  Cn
@@ -8,7 +14,7 @@
 		contact_plane_vector = (1,0,0);
 
 
-	add element #8 type StressBasedHardContact_ElPPlShear with nodes (10,26) 
+	add element #8 type StressBasedHardContact_NonLinHardShear with nodes (10,26) 
 		axial_stiffness =Kn
 		initial_shear_stiffness =  Kt 
 		axial_viscous_damping =  Cn
@@ -18,7 +24,7 @@
 		contact_plane_vector =  (-1,0,0);
 
 
-	add element #9 type StressBasedHardContact_ElPPlShear with nodes (11,27) 
+	add element #9 type StressBasedHardContact_NonLinHardShear with nodes (11,27) 
 		axial_stiffness =Kn
 		initial_shear_stiffness =  Kt 
 		axial_viscous_damping =  Cn
@@ -28,7 +34,7 @@
 		contact_plane_vector = (1,0,0);
 
 
-	add element #10 type StressBasedHardContact_ElPPlShear with nodes (12,28) 
+	add element #10 type StressBasedHardContact_NonLinHardShear with nodes (12,28) 
 		axial_stiffness =Kn
 		initial_shear_stiffness =  Kt 
 		axial_viscous_damping =  Cn
@@ -38,7 +44,7 @@
 		contact_plane_vector =  (-1,0,0);
 
 
-	add element #11 type StressBasedHardContact_ElPPlShear with nodes (21,29) 
+	add element #11 type StressBasedHardContact_NonLinHardShear with nodes (21,29) 
 		axial_stiffness =Kn
 		initial_shear_stiffness =  Kt 
 		axial_viscous_damping =  Cn
@@ -48,7 +54,7 @@
 		contact_plane_vector = (1,0,0);
 
 
-	add element #12 type StressBasedHardContact_ElPPlShear with nodes (22,30) 
+	add element #12 type StressBasedHardContact_NonLinHardShear with nodes (22,30) 
 		axial_stiffness =Kn
 		initial_shear_stiffness =  Kt 
 		axial_viscous_damping =  Cn
@@ -57,7 +63,7 @@
 		shear_zone_thickness = ShearZoneThickness
 		contact_plane_vector =  (-1,0,0);
 
-	add element #13 type StressBasedHardContact_ElPPlShear with nodes (23,31) 
+	add element #13 type StressBasedHardContact_NonLinHardShear with nodes (23,31) 
 		axial_stiffness =Kn
 		initial_shear_stiffness =  Kt 
 		axial_viscous_damping =  Cn
@@ -67,7 +73,7 @@
 		contact_plane_vector = (1,0,0);
 
 
-	add element #14 type StressBasedHardContact_ElPPlShear with nodes (24,32) 
+	add element #14 type StressBasedHardContact_NonLinHardShear with nodes (24,32) 
 		axial_stiffness =Kn
 		initial_shear_stiffness =  Kt 
 		axial_viscous_damping =  Cn
@@ -77,7 +83,7 @@
 		contact_plane_vector = (-1,0,0);
 
 
-	add element #15 type StressBasedHardContact_ElPPlShear with nodes (21,29) 
+	add element #15 type StressBasedHardContact_NonLinHardShear with nodes (21,29) 
 		axial_stiffness =Kn
 		initial_shear_stiffness =  Kt 
 		axial_viscous_damping =  Cn
@@ -87,7 +93,7 @@
 		contact_plane_vector = (0,0,1);
 
 
-	add element #16 type StressBasedHardContact_ElPPlShear with nodes (22,30) 
+	add element #16 type StressBasedHardContact_NonLinHardShear with nodes (22,30) 
 		axial_stiffness =Kn
 		initial_shear_stiffness =  Kt 
 		axial_viscous_damping =  Cn
@@ -97,7 +103,7 @@
 		contact_plane_vector = (0,0,1);
 
 
-	add element #17 type StressBasedHardContact_ElPPlShear with nodes (23,31) 
+	add element #17 type StressBasedHardContact_NonLinHardShear with nodes (23,31) 
 		axial_stiffness =Kn
 		initial_shear_stiffness =  Kt 
 		axial_viscous_damping =  Cn
@@ -107,7 +113,7 @@
 		contact_plane_vector = (0,0,1);
 
 
-	add element #18 type StressBasedHardContact_ElPPlShear with nodes (24,32) 
+	add element #18 type StressBasedHardContact_NonLinHardShear with nodes (24,32) 
 		axial_stiffness =Kn
 		initial_shear_stiffness =  Kt 
 		axial_viscous_damping =  Cn

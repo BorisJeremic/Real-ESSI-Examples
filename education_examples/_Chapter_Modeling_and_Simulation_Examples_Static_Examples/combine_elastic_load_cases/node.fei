@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 
 //*************************************************************************************************************************
 //							Add_Node{Physical_Group#shell_all_surfaces, Unit:= m, NumDofs:= 6}Starts

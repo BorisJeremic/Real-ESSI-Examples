@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 add element # 197 type StressBasedHardContact_NonLinHardSoftShear with nodes (1, 321) 
    axial_stiffness =  Kn
    initial_shear_stiffness =  Kt

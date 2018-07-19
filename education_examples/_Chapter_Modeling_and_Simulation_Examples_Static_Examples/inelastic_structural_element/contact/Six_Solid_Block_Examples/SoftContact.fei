@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 // Adding Contact Element
  add element #7 type ForceBasedSoftContact with nodes (9,25) 
   initial_axial_stiffness = Ki/ShearZoneThickness*m^2

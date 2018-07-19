@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 
 //*************************************************************************************************************************
 //							Add_Damping_To_Element{Physical_Group#shell_all_surfaces, DampingNo:= 1}Starts

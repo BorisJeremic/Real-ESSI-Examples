@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 	add element #7 type StressBasedHardContact_ElPPlShear with nodes (9,25) 
 		axial_stiffness =Kn
 		initial_shear_stiffness =  Kt 

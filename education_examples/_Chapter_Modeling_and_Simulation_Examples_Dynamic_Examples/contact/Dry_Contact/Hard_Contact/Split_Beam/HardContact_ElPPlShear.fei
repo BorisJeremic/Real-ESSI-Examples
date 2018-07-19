@@ -4,6 +4,12 @@
 // for more information, see: http://real-essi.info
 // 
 
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 add element # 1281 type StressBasedHardContact_ElPPlShear with nodes (2, 3) axial_stiffness = Kn initial_shear_stiffness = Kt axial_viscous_damping = Cn shear_viscous_damping = Ct residual_friction_coefficient = Fr shear_zone_thickness = ShearZoneThickness contact_plane_vector = (-0, 1, 0 );  
 add element # 1282 type StressBasedHardContact_ElPPlShear with nodes (7, 6) axial_stiffness = Kn initial_shear_stiffness = Kt axial_viscous_damping = Cn shear_viscous_damping = Ct residual_friction_coefficient = Fr shear_zone_thickness = ShearZoneThickness contact_plane_vector = (-0, 1, 0 );  
 add element # 1283 type StressBasedHardContact_ElPPlShear with nodes (9, 14) axial_stiffness = Kn initial_shear_stiffness = Kt axial_viscous_damping = Cn shear_viscous_damping = Ct residual_friction_coefficient = Fr shear_zone_thickness = ShearZoneThickness contact_plane_vector = (-0, 1, 0 );  

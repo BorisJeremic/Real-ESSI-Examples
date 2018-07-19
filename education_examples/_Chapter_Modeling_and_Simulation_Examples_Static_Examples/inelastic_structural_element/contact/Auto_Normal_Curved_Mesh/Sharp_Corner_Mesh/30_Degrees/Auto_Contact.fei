@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 //*************************************************************************************************************************
 //							Vary_HardContact{Physical_Group#Contact_Node_Pairs, NormalStiffness:= 'Kn', TangentialStiffness:= 'Kt', NormalDamping:= 'Cn', TangentialDamping:= 'Ct', FrictionRatio:= 'Fr', NormVect_x:= -x, NormVect_y:= -y, NormVect_z:= -z}Starts
 //*************************************************************************************************************************

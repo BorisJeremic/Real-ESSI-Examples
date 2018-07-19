@@ -4,6 +4,12 @@
 // for more information, see: http://real-essi.info
 // 
 
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 
 
 add element #         1 type 27NodeBrick using 3 Gauss points each direction with nodes(       1,      40,      41,       3,     150,     441,     603,     151,    2926,    2927,    2928,    2929,    2930,    2931,    2932,    2933,    2934,    2935,    2936,    2937,    2938,    2939,    2940,    2941,    2942,    2943,    2944) use material #        1; 

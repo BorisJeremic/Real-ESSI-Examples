@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 // NodeCoord.fei 
 
 add node # 1 at (-3.454400E+00*m, 1.280160E-15*m, 0.000000E+00*m)  with 6 dofs;

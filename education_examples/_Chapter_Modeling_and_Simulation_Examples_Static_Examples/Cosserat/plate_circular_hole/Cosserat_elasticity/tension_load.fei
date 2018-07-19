@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 
 //*************************************************************************************************************************
 //							Add_8NodeBrick_SurfaceLoad{Physical_Group#vol_all, Physical_Group#left_surface, Pressure:= 100 * Pa}Starts

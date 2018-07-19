@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 remove load # 1 ;
 remove load # 2 ;
 remove load # 3 ;

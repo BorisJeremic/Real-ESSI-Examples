@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 add element #       1689 type 8NodeBrick using 2 Gauss points each direction with nodes(      1755,      1725,      1726,     1781,     1394,     1364,     1365,     1420) use material #   5;
 add element #       1690 type 8NodeBrick using 2 Gauss points each direction with nodes(      1756,      1712,      1711,     1770,     1395,     1351,     1350,     1409) use material #   5;
 add element #       1691 type 8NodeBrick using 2 Gauss points each direction with nodes(      1697,      1698,      1761,     1752,     1336,     1337,     1400,     1391) use material #   5;

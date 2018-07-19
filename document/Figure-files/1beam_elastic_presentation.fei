@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 model name "beam_element_presentation" ;
 
 add node #      1 at (          0.000000*m,          0.000000*m,          0.000000*m) with 6 dofs;

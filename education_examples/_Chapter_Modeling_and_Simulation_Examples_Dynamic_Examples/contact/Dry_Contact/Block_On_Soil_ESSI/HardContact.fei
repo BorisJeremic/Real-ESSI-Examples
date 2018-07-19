@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 
 //*************************************************************************************************************************
 //       Add_ForceBasedHardContact{Physical_Group#Soil_Contact_z, axial_stiffness:= Kn, shear_stiffness:=Ktt, axial_viscous_damping:= Cn, shear_viscous_damping:=Cct, friction_ratio:Frnu, contact_plane_vector_x:= 0, contact_plane_vector_y:= 0, contact_plane_vector_z:= 1}Starts

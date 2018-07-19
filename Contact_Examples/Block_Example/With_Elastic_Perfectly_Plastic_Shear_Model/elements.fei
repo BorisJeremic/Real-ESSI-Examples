@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 add element # 1 type 8NodeBrick with nodes (322, 326, 327, 323, 321, 325, 328, 324) 
 	    use material # 2; // slab Element in contact! 
 add element # 2 type 8NodeBrick with nodes (9, 4, 8, 12, 10, 1, 5, 11) 

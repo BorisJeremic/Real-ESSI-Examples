@@ -4,6 +4,18 @@
 // for more information, see: http://real-essi.info
 // 
 
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 
 model name "8nodebrick";
 add material # 1 type linear_elastic_isotropic_3d mass_density=0.0*kg/m^3 elastic_modulus = 1.0*N/m^2 poisson_ratio=0.0;

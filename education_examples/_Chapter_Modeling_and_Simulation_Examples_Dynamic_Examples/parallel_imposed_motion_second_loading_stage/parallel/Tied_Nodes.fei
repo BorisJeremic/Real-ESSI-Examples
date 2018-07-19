@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 // 1281 - 1344 exterior Boundary nodes.
 // both master and slave nodes are fixed.
 // So remove the master-slave to fix the multi-constraint warning

@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 add element #         1 type 27NodeBrickLT with nodes(       1,      40,      41,       3,     150,     441,     603,     151,    2926,    2927,    2928,    2929,    2930,    2931,    2932,    2933,    2934,    2935,    2936,    2937,    2938,    2939,    2940,    2941,    2942,    2943,    2944) use material #        1; 
 add element #         2 type 27NodeBrickLT with nodes(       3,      41,      50,       4,     151,     603,     684,     160,    2928,    2945,    2946,    2947,    2932,    2948,    2949,    2950,    2937,    2936,    2951,    2952,    2953,    2941,    2954,    2955,    2956,    2957,    2958) use material #        1; 
 add element #         3 type 27NodeBrickLT with nodes(       4,      50,      59,       5,     160,     684,     765,     169,    2946,    2959,    2960,    2961,    2949,    2962,    2963,    2964,    2952,    2951,    2965,    2966,    2967,    2955,    2968,    2969,    2970,    2971,    2972) use material #        1; 

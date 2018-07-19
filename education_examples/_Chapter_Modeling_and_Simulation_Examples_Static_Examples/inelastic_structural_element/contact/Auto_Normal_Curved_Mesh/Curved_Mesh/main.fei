@@ -1,3 +1,15 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 model name "Curved_Auto_Contact"; 
 
 add acceleration field # 1 ax = 0*g ay = -100*g az = -0*g ; 

@@ -4,6 +4,12 @@
 // for more information, see: http://real-essi.info
 // 
 
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 //*************************************************************************************************************************
 //       Add_HardContact{Physical_Group#Soil_Contact_z, axial_stiffness:= kn, initial_shear_stiffness:= kt, axial_viscous_damping:= cn, shear_viscous_damping:= ct, peak_friction_coefficient_limit = mu_p0  peak_friction_coefficient_rate_of_decrease    = mu_k  residual_friction_coefficient:= nu, contact_plane_vector_x:= 0, contact_plane_vector_y:= 0, contact_plane_vector_z:= 1}Starts
 //*************************************************************************************************************************

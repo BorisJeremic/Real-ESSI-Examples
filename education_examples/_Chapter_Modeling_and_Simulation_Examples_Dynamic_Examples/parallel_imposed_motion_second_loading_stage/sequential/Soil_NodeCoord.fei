@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 // Soil_NodeCoord.fei 
 
 add node # 1281 at (-3.454400E+00*m, 0.000000E+00*m, 0.000000E+00*m)  with 3 dofs;

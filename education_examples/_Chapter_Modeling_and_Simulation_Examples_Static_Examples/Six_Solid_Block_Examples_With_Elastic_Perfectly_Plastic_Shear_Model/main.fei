@@ -1,3 +1,14 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+// 
+// MS-ESSI Simulator
+// Modeling and Simulation Examples
+// http://ms-essi.info
+//
 
 model name "Six_Solid_Blocks_Example_With_Contact";
 

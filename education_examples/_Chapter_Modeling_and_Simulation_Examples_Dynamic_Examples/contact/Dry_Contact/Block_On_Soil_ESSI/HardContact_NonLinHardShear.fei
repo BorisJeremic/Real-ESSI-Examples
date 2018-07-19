@@ -4,6 +4,12 @@
 // for more information, see: http://real-essi.info
 // 
 
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 
 //*************************************************************************************************************************
 //       Add_StressBasedHardContact_NonLinHardShearl_stiffness:= kn, initial_shear_stiffness:= kt, axial_viscous_damping:= cn, shear_viscous_damping:= ct, residual_friction_coefficient:= nu, contact_plane_vector_x:= 0, contact_plane_vector_y:= 0, contact_plane_vector_z:= 1}Starts

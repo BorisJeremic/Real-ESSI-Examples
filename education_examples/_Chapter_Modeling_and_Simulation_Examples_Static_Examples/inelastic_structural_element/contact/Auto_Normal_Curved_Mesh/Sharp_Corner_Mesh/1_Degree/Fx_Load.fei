@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 //*************************************************************************************************************************
 //							Add_Node_Load_Linear{Physical_Group#Surface_Load, ForceType:= Fx, Mag:= LoadFx}Starts
 //*************************************************************************************************************************

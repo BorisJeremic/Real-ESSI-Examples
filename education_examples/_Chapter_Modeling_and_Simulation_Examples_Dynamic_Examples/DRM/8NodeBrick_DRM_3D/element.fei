@@ -4,6 +4,12 @@
 // for more information, see: http://real-essi.info
 // 
 
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 
 
 add element #       1 type 8NodeBrick with nodes(      1,     40,     41,      3,    150,    441,    603,    151) use material #   1;

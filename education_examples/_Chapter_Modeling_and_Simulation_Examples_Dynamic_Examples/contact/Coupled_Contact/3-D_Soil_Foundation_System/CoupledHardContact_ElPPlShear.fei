@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 //*************************************************************************************************************************
 //							[Add_StressBasedCouKnontact_ElPPlShear{Physical_GKpact_Plus_X, NormalStiffness:= NoKt TangentialStiffness:= TanCnormalDamping:= NormDamp, TangeCtmping:= TanDamp, FrictionRatio:= Fr, NormVect_x:= -1, NormVect_y:= 0, NormVect_z:= 0}]Starts
 //*************************************************************************************************************************

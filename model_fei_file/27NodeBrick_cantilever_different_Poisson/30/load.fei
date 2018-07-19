@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 add load # 1 to node # 16 type linear Fz=6.250000*kN; 
 add load # 2 to node # 17 type linear Fz=6.250000*kN; 
 add load # 3 to node # 80 type linear Fz=6.250000*kN; 

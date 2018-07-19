@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 //*************************************************************************************************************************
 //							[Add_Self_Weight_To_Element{Physical_Group#Solid, FieldNo:= 1}]Starts
 //*************************************************************************************************************************

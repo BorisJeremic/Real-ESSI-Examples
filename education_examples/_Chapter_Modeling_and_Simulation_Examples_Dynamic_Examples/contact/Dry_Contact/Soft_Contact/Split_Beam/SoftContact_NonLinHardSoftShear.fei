@@ -4,6 +4,12 @@
 // for more information, see: http://real-essi.info
 // 
 
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 add element # 1281 type StressBasedSoftContact_NonLinHardSoftShear with nodes (2, 3) initial_axial_stiffness = Ki  stiffening_rate = Sr max_axial_stiffness = Kn initial_shear_stiffness = Kt rate_of_softening = Softening_rate  size_of_peak_plateau = Pleateau_Size  axial_viscous_damping = Cn shear_viscous_damping = Ct peak_friction_coefficient_limit = mu_p0  peak_friction_coefficient_rate_of_decrease    = mu_k  residual_friction_coefficient = Fr shear_zone_thickness = ShearZoneThickness contact_plane_vector = (-0, 1, 0 );  
 add element # 1282 type StressBasedSoftContact_NonLinHardSoftShear with nodes (7, 6) initial_axial_stiffness = Ki  stiffening_rate = Sr max_axial_stiffness = Kn initial_shear_stiffness = Kt rate_of_softening = Softening_rate  size_of_peak_plateau = Pleateau_Size  axial_viscous_damping = Cn shear_viscous_damping = Ct peak_friction_coefficient_limit = mu_p0  peak_friction_coefficient_rate_of_decrease    = mu_k  residual_friction_coefficient = Fr shear_zone_thickness = ShearZoneThickness contact_plane_vector = (-0, 1, 0 );  
 add element # 1283 type StressBasedSoftContact_NonLinHardSoftShear with nodes (9, 14) initial_axial_stiffness = Ki  stiffening_rate = Sr max_axial_stiffness = Kn initial_shear_stiffness = Kt rate_of_softening = Softening_rate  size_of_peak_plateau = Pleateau_Size  axial_viscous_damping = Cn shear_viscous_damping = Ct peak_friction_coefficient_limit = mu_p0  peak_friction_coefficient_rate_of_decrease    = mu_k  residual_friction_coefficient = Fr shear_zone_thickness = ShearZoneThickness contact_plane_vector = (-0, 1, 0 );  

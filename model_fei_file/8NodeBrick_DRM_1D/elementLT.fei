@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 add element #       1 type 8NodeBrickLT with nodes(      1,      4,      3,      2,     24,     44,     34,      6) use material #   2;
 add element #       2 type 8NodeBrickLT with nodes(     24,     44,     34,      6,     23,     43,     33,      7) use material #   1;
 add element #       3 type 8NodeBrickLT with nodes(     23,     43,     33,      7,     22,     42,     32,      8) use material #   1;

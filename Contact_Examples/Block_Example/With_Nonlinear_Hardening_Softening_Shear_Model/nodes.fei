@@ -1,3 +1,9 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
 add node # 1 at (-0.5*m,-0.5*m,0.0*m)  with 3 dofs;
 add node # 321 at (-0.5*m,-0.5*m,0.0*m)  with 3 dofs; // Contact! 
 add node # 2 at (0.5*m,-0.5*m,0.0*m)  with 3 dofs;
