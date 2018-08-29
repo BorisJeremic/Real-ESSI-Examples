@@ -2,22 +2,22 @@
 
 # rm -f resultHHT.tex
 
-if [ "$1" != "" ]; then
-    if command -v $1 1>/dev/null 2>&1; then
-        echo " "
-        # echo "$1 is available"
-    else
-        echo "ERROR! User input argument $1 is not available" 
-        echo "$1 is not available" 
-        exit
-    fi
-else
-    echo "ERROR! Argument 1 is empty! "
-    echo "Please provide the ESSI executable!"
-    exit
-fi
+# if [ "$1" != "" ]; then
+#     if command -v $1 1>/dev/null 2>&1; then
+#         echo " "
+#         # echo "$1 is available"
+#     else
+#         echo "ERROR! User input argument $1 is not available" 
+#         echo "$1 is not available" 
+#         exit
+#     fi
+# else
+#     echo "ERROR! Argument 1 is empty! "
+#     echo "Please provide the ESSI executable!"
+#     exit
+# fi
 
-
+essiExecutable=$1
 
 for folder in */;
 do
