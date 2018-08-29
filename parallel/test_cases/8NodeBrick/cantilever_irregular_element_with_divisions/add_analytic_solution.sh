@@ -1,0 +1,20 @@
+cp analytic_solution.txt shape1/NumberOfDivision4/horizontal_load
+cp analytic_solution.txt shape1/NumberOfDivision4/vertical_load
+cp analytic_solution.txt shape2/NumberOfDivision4/horizontal_load
+cp analytic_solution.txt shape2/NumberOfDivision4/vertical_load
+cp analytic_solution.txt shape3/NumberOfDivision4/horizontal_load
+cp analytic_solution.txt shape3/NumberOfDivision4/vertical_load
+
+cp analytic_solution.txt shape1/NumberOfDivision2/horizontal_load
+cp analytic_solution.txt shape1/NumberOfDivision2/vertical_load
+cp analytic_solution.txt shape2/NumberOfDivision2/horizontal_load
+cp analytic_solution.txt shape2/NumberOfDivision2/vertical_load
+cp analytic_solution.txt shape3/NumberOfDivision2/horizontal_load
+cp analytic_solution.txt shape3/NumberOfDivision2/vertical_load
+
+cp analytic_solution.txt shape1/NumberOfDivision1/horizontal_load
+cp analytic_solution.txt shape1/NumberOfDivision1/vertical_load
+cp analytic_solution.txt shape2/NumberOfDivision1/horizontal_load
+cp analytic_solution.txt shape2/NumberOfDivision1/vertical_load
+cp analytic_solution.txt shape3/NumberOfDivision1/horizontal_load
+cp analytic_solution.txt shape3/NumberOfDivision1/vertical_load

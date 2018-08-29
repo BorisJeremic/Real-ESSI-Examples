@@ -1,0 +1,217 @@
+
+// model name <string>;
+model name "Interface_Surface";
+
+
+
+/// Adding Nodes ///////////////////////////////
+// //********** Interface_Type_1
+// add node # 1 at (0*m,0*m,0*m) with 3 dofs; 
+// add node # 2 at (2*m,0*m,0*m) with 3 dofs; 
+// add node # 3 at (2*m,2*m,0*m) with 3 dofs; 
+// add node # 4 at (0*m,2*m,0*m) with 3 dofs; 
+// add node # 5 at (1*m,0*m,0*m) with 3 dofs; 
+// add node # 6 at (2*m,1*m,0*m) with 3 dofs; 
+// add node # 7 at (1*m,2*m,0*m) with 3 dofs; 
+// add node # 8 at (0*m,1*m,0*m) with 3 dofs; 
+// add node # 9 at (1*m,1*m,0*m) with 3 dofs; 
+// add node # 10 at (0*m,1*m,-1*m) with 3 dofs; 
+// add node # 11 at (0*m,0*m,-1*m) with 3 dofs; 
+// add node # 12 at (1*m,0*m,-1*m) with 3 dofs; 
+// add node # 13 at (1*m,1*m,-1*m) with 3 dofs; 
+// add node # 14 at (2*m,0*m,-1*m) with 3 dofs; 
+// add node # 15 at (2*m,1*m,-1*m) with 3 dofs; 
+// add node # 16 at (1*m,2*m,-1*m) with 3 dofs; 
+// add node # 17 at (2*m,2*m,-1*m) with 3 dofs; 
+// add node # 18 at (0*m,2*m,-1*m) with 3 dofs; 
+
+// coord_x = 1;
+// coord_y = 1;
+
+// //// ************* Interface_Type_2
+add node # 1 at (0*m,0*m,0*m) with 3 dofs; 
+add node # 2 at (2*m,0*m,0*m) with 3 dofs; 
+add node # 3 at (2*m,2*m,0*m) with 3 dofs; 
+add node # 4 at (0*m,2*m,0*m) with 3 dofs; 
+add node # 5 at (1.9*m,0*m,0*m) with 3 dofs; 
+add node # 6 at (2*m,1.9*m,0*m) with 3 dofs; 
+add node # 7 at (1.9*m,2*m,0*m) with 3 dofs; 
+add node # 8 at (0*m,1.9*m,0*m) with 3 dofs; 
+add node # 9 at (1.9*m,1.9*m,0*m) with 3 dofs; 
+add node # 10 at (0*m,1.9*m,-1*m) with 3 dofs; 
+add node # 11 at (0*m,0*m,-1*m) with 3 dofs; 
+add node # 12 at (1.9*m,0*m,-1*m) with 3 dofs; 
+add node # 13 at (1.9*m,1.9*m,-1*m) with 3 dofs; 
+add node # 14 at (2*m,0*m,-1*m) with 3 dofs; 
+add node # 15 at (2*m,1.9*m,-1*m) with 3 dofs; 
+add node # 16 at (1.9*m,2*m,-1*m) with 3 dofs; 
+add node # 17 at (2*m,2*m,-1*m) with 3 dofs; 
+add node # 18 at (0*m,2*m,-1*m) with 3 dofs; 
+
+coord_x = 1.9;
+coord_y = 1.9;
+
+// // ***************** Interface_Type_3
+// add node # 1 at (0*m,0*m,0*m) with 3 dofs; 
+// add node # 2 at (2*m,0*m,0*m) with 3 dofs; 
+// add node # 3 at (2*m,2*m,0*m) with 3 dofs; 
+// add node # 4 at (0*m,2*m,0*m) with 3 dofs; 
+// add node # 5 at (1.9*m,0*m,0*m) with 3 dofs; 
+// add node # 6 at (2*m,1.9*m,0*m) with 3 dofs; 
+// add node # 7 at (1.9*m,2*m,0*m) with 3 dofs; 
+// add node # 8 at (0*m,1.9*m,0*m) with 3 dofs; 
+// add node # 9 at (0.4*m,0.4*m,0*m) with 3 dofs; 
+// add node # 10 at (0*m,1.9*m,-1*m) with 3 dofs; 
+// add node # 11 at (0*m,0*m,-1*m) with 3 dofs; 
+// add node # 12 at (1.9*m,0*m,-1*m) with 3 dofs; 
+// add node # 13 at (0.4*m,0.4*m,-1*m) with 3 dofs; 
+// add node # 14 at (2*m,0*m,-1*m) with 3 dofs; 
+// add node # 15 at (2*m,1.9*m,-1*m) with 3 dofs; 
+// add node # 16 at (1.9*m,2*m,-1*m) with 3 dofs; 
+// add node # 17 at (2*m,2*m,-1*m) with 3 dofs; 
+// add node # 18 at (0*m,2*m,-1*m) with 3 dofs; 
+
+// coord_x = 0.4;
+// coord_y = 0.4;
+
+// ***************** Interface_Type_4
+// add node # 1 at (0*m,0*m,0*m) with 3 dofs; 
+// add node # 2 at (2*m,0*m,0*m) with 3 dofs; 
+// add node # 3 at (2*m,2*m,0*m) with 3 dofs; 
+// add node # 4 at (0*m,2*m,0*m) with 3 dofs; 
+// add node # 5 at (1*m,0*m,0*m) with 3 dofs; 
+// add node # 6 at (2*m,1*m,0*m) with 3 dofs; 
+// add node # 7 at (1*m,2*m,0*m) with 3 dofs; 
+// add node # 8 at (0*m,1*m,0*m) with 3 dofs; 
+// add node # 9 at (0.6*m,0.6*m,0*m) with 3 dofs; 
+// add node # 10 at (0*m,1*m,-1*m) with 3 dofs; 
+// add node # 11 at (0*m,0*m,-1*m) with 3 dofs; 
+// add node # 12 at (1*m,0*m,-1*m) with 3 dofs; 
+// add node # 13 at (0.6*m,0.6*m,-1*m) with 3 dofs; 
+// add node # 14 at (2*m,0*m,-1*m) with 3 dofs; 
+// add node # 15 at (2*m,1*m,-1*m) with 3 dofs; 
+// add node # 16 at (1*m,2*m,-1*m) with 3 dofs; 
+// add node # 17 at (2*m,2*m,-1*m) with 3 dofs; 
+// add node # 18 at (0*m,2*m,-1*m) with 3 dofs; 
+
+
+// coord_x = 0.6;
+// coord_y = 0.6;
+
+
+// // ***************** Interface_Type_5
+// add node # 1 at (0*m,0*m,0*m) with 3 dofs; 
+// add node # 2 at (2*m,0*m,0*m) with 3 dofs; 
+// add node # 3 at (2*m,2*m,0*m) with 3 dofs; 
+// add node # 4 at (0*m,2*m,0*m) with 3 dofs; 
+// add node # 5 at (1*m,0*m,0*m) with 3 dofs; 
+// add node # 6 at (2*m,1*m,0*m) with 3 dofs; 
+// add node # 7 at (1*m,2*m,0*m) with 3 dofs; 
+// add node # 8 at (0*m,1*m,0*m) with 3 dofs; 
+// add node # 9 at (1.9*m,1.9*m,0*m) with 3 dofs; 
+// add node # 10 at (0*m,1*m,-1*m) with 3 dofs; 
+// add node # 11 at (0*m,0*m,-1*m) with 3 dofs; 
+// add node # 12 at (1*m,0*m,-1*m) with 3 dofs; 
+// add node # 13 at (1.9*m,1.9*m,-1*m) with 3 dofs; 
+// add node # 14 at (2*m,0*m,-1*m) with 3 dofs; 
+// add node # 15 at (2*m,1*m,-1*m) with 3 dofs; 
+// add node # 16 at (1*m,2*m,-1*m) with 3 dofs; 
+// add node # 17 at (2*m,2*m,-1*m) with 3 dofs; 
+// add node # 18 at (0*m,2*m,-1*m) with 3 dofs; 
+
+// coord_x = 1.9;
+// coord_y = 1.9;
+
+
+add node #19 at (coord_x*m,coord_y*m,0*m) with 3 dofs; 
+add node #20 at ((coord_x+1)*m,coord_y*m,0*m) with 3 dofs; 
+add node #21 at ((coord_x)*m,(coord_y+1)*m,0*m) with 3 dofs; 
+fix node #20 dofs ux uy uz;
+fix node #21 dofs ux uy uz;
+
+// Fix Bottom surface 
+fix node # 10 dofs all; 
+fix node # 11 dofs all; 
+fix node # 12 dofs all; 
+fix node # 13 dofs all; 
+fix node # 14 dofs all; 
+fix node # 15 dofs all; 
+fix node # 16 dofs all; 
+fix node # 17 dofs all; 
+fix node # 18 dofs all; 
+
+// fix node # 1 dofs all; 
+// fix node # 2 dofs all; 
+// fix node # 3 dofs all; 
+// fix node # 4 dofs all; 
+// fix node # 5 dofs all; 
+// fix node # 6 dofs all; 
+// fix node # 7 dofs all; 
+// fix node # 8 dofs all; 
+// fix node # 9 dofs all; 
+
+
+
+
+// Adding Element 
+add material # 1 type linear_elastic_isotropic_3d mass_density = 2000*kg/m^3 elastic_modulus = 200*MPa poisson_ratio = 0.3; 
+add element # 1 type 8NodeBrick with nodes (10, 13, 12, 11, 8, 9, 5, 1) use material # 1; 
+add element # 2 type 8NodeBrick with nodes (13, 15, 14, 12, 9, 6, 2, 5) use material # 1; 
+add element # 3 type 8NodeBrick with nodes (17, 15, 13, 16, 3, 6, 9, 7) use material # 1; 
+add element # 4 type 8NodeBrick with nodes (13, 10, 18, 16, 9, 8, 4, 7) use material # 1; 
+
+
+// Adding Truss Element 
+add material #2 type uniaxial_elastic elastic_modulus =  1e3*Pa viscoelastic_modulus =  0*Pa*s;
+add element  #5 type truss with nodes (19,20) use material # 2 cross_section = 1*m^2 mass_density =  0*kg/m^3;
+add element  #6 type truss with nodes (19,21) use material # 2 cross_section = 1*m^2 mass_density =  0*kg/m^3;
+
+// =============================================================================
+// Different Contact Models Available in Real-ESSI Simulator System 
+// =============================================================================
+
+// Hard Contact With nonlinear_hardening_shear_model
+add element #7  type StressBasedHardContact_NonLinHardShear with nodes (9,19)
+	axial_stiffness =20*GPa
+	initial_shear_stiffness =  1000*kPa 
+	axial_viscous_damping =  0*Pa*s
+	shear_viscous_damping =   0*Pa*s
+	residual_friction_coefficient =  0.68 
+	shear_zone_thickness = 5e-3*m
+	contact_plane_vector = (0,0,1);
+
+new loading stage "Adding_axial_Load";
+
+add load #1 to node #19  type linear Fz=-105.3e3*N;
+// add load # <.> to element # <.> type surface at nodes (<.> , <.> , <.> , <.>, <.>, <.>, <.>, <.>, <.>) with magnitudes (<Pa> , <Pa> , <Pa> , <Pa>, <Pa>, <Pa>, <Pa>, <Pa>, <Pa>);
+// add load #101 to element #1  type surface at nodes (1,5,9,8) with magnitude -600*kPa;
+// add load #102 to element #2  type surface at nodes (5,2,6,9) with magnitude -600*kPa;
+// add load #103 to element #3  type surface at nodes (9,6,3,7) with magnitude -600*kPa;
+// add load #104 to element #4  type surface at nodes (9,7,4,8) with magnitude -600*kPa;
+
+
+
+Nsteps = 100;
+tol = 1e-3;
+define convergence test Relative_Norm_Unbalanced_Force tolerance =  tol minimum_absolute_tolerance = 100 maximum_iterations = 40;
+define algorithm Newton ;
+define solver UMFPack ;
+
+define load factor increment 1/Nsteps;
+simulate Nsteps steps using static algorithm;
+
+
+new loading stage "Interface";
+
+tan_load = 67*N;
+add load #2 to node #19 type linear Fx =  tan_load;
+
+Nsteps = 800;
+tol = 1e-3;
+define convergence test Relative_Norm_Unbalanced_Force tolerance =  tol minimum_absolute_tolerance = 1000 maximum_iterations = 5;
+define algorithm Newton;
+define solver UMFPack ;
+define static integrator displacement_control using node #19  dof ux increment 1e-5*m;
+simulate Nsteps steps using static algorithm;
+
+bye;

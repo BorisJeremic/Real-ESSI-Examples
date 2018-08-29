@@ -1,0 +1,18 @@
+run_essi:
+	@essi_verify -f main.fei > new.log 
+	
+compare_txt:
+	@python extract_numerical_solution.py *.h5.feioutput
+	@python compare_txt.py
+
+compare_HDF5_ALL:
+	@python compare_HDF5_ALL.py
+
+compare:
+	@bash compare.sh
+
+clean:
+	@find -name "*[^original].feioutput" -delete
+
+cleanall:
+	@find -name "*.feioutput" -delete

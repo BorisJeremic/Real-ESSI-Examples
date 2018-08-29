@@ -1,0 +1,72 @@
+model name "t" ;
+
+h     = 1*m;       
+Eshell  = 1e8*N/m^2; 
+nu    = 0.0;        // Poisson's ratio
+rho   = 1*kg/m^3;     // Mass density
+
+add material # 1 type linear_elastic_isotropic_3d
+  mass_density = rho
+  elastic_modulus = Eshell
+  poisson_ratio = nu;
+
+include "add_node.include";
+include "add_element.include";
+include "add_constraint.include"';
+	
+
+new loading stage "1";
+
+add acceleration field # 1 
+	ax =  0*g
+	ay =  0*g
+	az =  1*g;
+
+add load # 1 to element # 1 type self_weight use acceleration field # 1 ;
+add load # 2 to element # 2 type self_weight use acceleration field # 1 ;
+add load # 3 to element # 3 type self_weight use acceleration field # 1 ;
+add load # 4 to element # 4 type self_weight use acceleration field # 1 ;
+add load # 5 to element # 5 type self_weight use acceleration field # 1 ;
+add load # 6 to element # 6 type self_weight use acceleration field # 1 ;
+
+// Test remove load 
+add load # 105 to element # 6 type self_weight use acceleration field # 1 ;
+remove load # 105;
+
+// Test remove node
+add node #     101 at (101.000000*m,1.000000*m,1.000000*m) with 3 dofs;
+remove node #  101;
+
+// Test remove element
+add element #       106 type 8NodeBrick with nodes(14,21,24,4,9,16,22,3) use material #   1;
+remove element #    106;
+
+	
+define algorithm With_no_convergence_check ;
+define solver ProfileSPD;
+
+define load factor increment 1;
+simulate 1 steps using static algorithm;
+
+
+// new loading stage "Fy";
+// remove load # 1;
+// remove load # 2;
+// remove load # 3;
+// remove load # 4;
+
+// add load # 5 to node #   3 type linear Fy=25*N;
+// add load # 6 to node #   9 type linear Fy=25*N;
+// add load # 7 to node #  16 type linear Fy=25*N;
+// add load # 8 to node #  22 type linear Fy=25*N;
+
+// define algorithm With_no_convergence_check ;
+// define solver UMFPack;
+
+// define load factor increment 1;
+// simulate 1 steps using static algorithm;
+
+
+
+
+bye;

@@ -1,0 +1,190 @@
+// %%%%%%% Test script for 3D wave implementation %%%%%%%%%%%%
+
+// %%%%%%% All tested DSLs for inclined plane wave %%%%%%%%%%%
+
+
+// add wave field # 1 type inclined_plane_wave with 
+
+// 	anticlockwise_angle_from x=0 
+
+// 	sv_incident_magnitude = 2*m^2
+
+// 	sv_incident_angle = 60
+
+// 	sv_incident_frequency = 5/s
+
+// 	motion_time_step = 0.01*s
+
+// 	no_time_step = 601
+
+// 	soil_profile_filename = "soil.txt"
+
+// 	soil_surface at z = 0*m 
+
+// 	unit_of_vs_and_vp = 1*m/s 
+
+// 	unit_of_rho = 1*kg/m^3
+
+// 	unit_of_damping = absolute
+
+// 	unit_of_thickness = 1*m; 
+
+
+add wave field # 1 type inclined_plane_wave with 
+
+	anticlockwise_angle_of_SV_wave_plane_from x=0 
+
+	sv_incident_magnitude = 2*m^2
+
+	sv_incident_angle = 10
+
+	sv_incident_frequency = 5/s
+
+	motion_time_step = 0.005*s
+
+	no_time_step = 1001
+
+	soil_profile_filename = "soil.txt"
+
+	soil_surface at z = 0*m 
+
+	unit_of_vs_and_vp = 1*m/s 
+
+	unit_of_rho = 1*kg/m^3
+
+	unit_of_damping = absolute
+
+	unit_of_thickness = 1*m; 
+
+
+// add wave field # 1 type inclined_plane_wave with 
+
+// 	anticlockwise_angle_of_SV_wave_plane_from x=0 
+
+// 	sv_incident_magnitude = 2*m^2
+
+// 	sv_incident_angle = 60
+
+// 	sv_incident_frequency = 5/s
+
+// 	motion_time_step = 0.01*s
+
+// 	number_of_time_steps = 601
+
+// 	soil_profile_filename = "soil.txt"
+
+// 	soil_surface at z = 0*m 
+
+// 	unit_of_vs_and_vp = 1*m/s 
+
+// 	unit_of_rho = 1*kg/m^3
+
+// 	unit_of_damping = absolute
+
+// 	unit_of_thickness = 1*m; 
+
+
+
+
+
+// add wave field # 2 type inclined_plane_wave with 
+
+// 	anticlockwise_angle_from x=0 
+
+// 	p_incident_magnitude = 2*m^2
+
+// 	p_incident_angle = 60
+
+// 	p_incident_frequency = 5/s
+
+// 	motion_time_step = 0.01*s
+
+// 	no_time_step = 601
+
+// 	soil_profile_filename = "soil.txt"
+
+// 	soil_surface at z = 0*m 
+
+// 	unit_of_vs_and_vp = 1*m/s 
+
+// 	unit_of_rho = 1*kg/m^3
+
+// 	unit_of_damping = absolute
+
+// 	unit_of_thickness = 1*m; 
+
+
+
+
+
+// add wave field # 2 type inclined_plane_wave with 
+
+// 	anticlockwise_angle_of_P_wave_plane_from x=0 
+
+// 	p_incident_magnitude = 2*m^2
+
+// 	p_incident_angle = 60
+
+// 	p_incident_frequency = 5/s
+
+// 	motion_time_step = 0.01*s
+
+// 	no_time_step = 601
+
+// 	soil_profile_filename = "soil.txt"
+
+// 	soil_surface at z = 0*m 
+
+// 	unit_of_vs_and_vp = 1*m/s 
+
+// 	unit_of_rho = 1*kg/m^3
+
+// 	unit_of_damping = absolute
+
+// 	unit_of_thickness = 1*m; 
+
+
+
+
+
+// add wave field # 2 type inclined_plane_wave with 
+
+// 	anticlockwise_angle_of_P_wave_plane_from x=0 
+
+// 	p_incident_magnitude = 2*m^2
+
+// 	p_incident_angle = 60
+
+// 	p_incident_frequency = 5/s
+
+// 	motion_time_step = 0.01*s
+
+// 	number_of_time_steps = 601
+
+// 	soil_profile_filename = "soil.txt"
+
+// 	soil_surface at z = 0*m 
+
+// 	unit_of_vs_and_vp = 1*m/s 
+
+// 	unit_of_rho = 1*kg/m^3
+
+// 	unit_of_damping = absolute
+
+// 	unit_of_thickness = 1*m; 
+
+
+
+
+
+generate DRM motion file from wave field # 1 hdf5_file = "../../../DRMinput.hdf5"; 
+
+// generate DRM motion file from wave field # 2 hdf5_file = "DRMinput.hdf5"; 
+
+bye; 
+
+// generate DRM motion file from inclined wave field # 1 hdf5_file = "DRMinput.hdf5"; 
+
+
+
+

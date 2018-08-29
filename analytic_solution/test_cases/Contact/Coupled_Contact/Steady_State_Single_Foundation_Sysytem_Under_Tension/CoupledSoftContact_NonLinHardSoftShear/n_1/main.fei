@@ -1,0 +1,176 @@
+model name "Soil_Foundation_System";
+
+// input for gravel
+ v     = 0.25             ;  // Poison's ratio []
+ n     = 0.99             ;  // Porosity []
+ EG    = 9.81             ;  // gravity constant g [m/s^2]
+ k_xyz = 1e-4             ;  // permeability [m/s]
+ P_s   = 2650             ;  // Specific gravity of solid [kg/m^3]
+ P_w   = 1000             ;  // Specific gravity of fluid [kg/m^3]
+ P_a   = 1.2754           ;  // Specific gravity of air [kg/m^3]
+ md    = n*P_w +(1-n)*P_s ;  // Mixture Density [kg/m^3]
+ EM    = 12e4             ;  // Elastic Modulus of Solid [Pa]
+ SBM   = 5e6              ;  // Solid Bulk Modulus [Pa]
+ FBM   = 2.15e6           ;  // Fluid Bulk Modulus [Pa]
+ ABM   = 101              ;  // Air Bulk Modulus [Pa]
+ a     = 1                ;  // Biot's Constant [Pa]
+ k_all = k_xyz/P_w/EG     ;  // Permeability in all direction [m^3*s/kg]
+ S_1   = 1                ;  // Saturation []
+
+// material
+add material # 1 type linear_elastic_isotropic_3d 
+     mass_density = md *kg/m^3
+     elastic_modulus = EM *kN/m^2
+     poisson_ratio = v;
+add material    # 2   type linear_elastic_isotropic_3d 
+    mass_density    = 2400*kg/m^3
+    elastic_modulus = 15*GPa
+    poisson_ratio   = 0.3;
+
+//time
+T_t1 = 1000       ;
+N_s1 = 1000       ;
+d_t1 = T_t1/N_s1 ;
+T_t2 = 1         ;
+N_s2 = 50        ;
+d_t2 = T_t2/N_s2 ;
+
+// add nodes and constrains of soil
+ add node #  1 at (  0.5*m ,  0.5*m ,  0.0*m  ) with 7 dofs;
+ add node #  2 at ( -0.5*m ,  0.5*m ,  0.0*m  ) with 7 dofs;
+ add node #  3 at ( -0.5*m , -0.5*m ,  0.0*m  ) with 7 dofs;
+ add node #  4 at (  0.5*m , -0.5*m ,  0.0*m  ) with 7 dofs;
+ add node #  5 at (  0.5*m ,  0.5*m , -1.0*m  ) with 7 dofs;
+ add node #  6 at ( -0.5*m ,  0.5*m , -1.0*m  ) with 7 dofs;
+ add node #  7 at ( -0.5*m , -0.5*m , -1.0*m  ) with 7 dofs;
+ add node #  8 at (  0.5*m , -0.5*m , -1.0*m  ) with 7 dofs;
+ add node #  9 at (  0.5*m ,  0.5*m ,  1.0*m  ) with 3 dofs;
+ add node # 10 at ( -0.5*m ,  0.5*m ,  1.0*m  ) with 3 dofs;
+ add node # 11 at ( -0.5*m , -0.5*m ,  1.0*m  ) with 3 dofs;
+ add node # 12 at (  0.5*m , -0.5*m ,  1.0*m  ) with 3 dofs;
+ add node # 13 at (  0.5*m ,  0.5*m ,  0.0*m  ) with 3 dofs;
+ add node # 14 at ( -0.5*m ,  0.5*m ,  0.0*m  ) with 3 dofs;
+ add node # 15 at ( -0.5*m , -0.5*m ,  0.0*m  ) with 3 dofs;
+ add node # 16 at (  0.5*m , -0.5*m ,  0.0*m  ) with 3 dofs;
+
+ fix node #  1 dofs ux uy    Ux Uy      ;
+ fix node #  2 dofs ux uy    Ux Uy      ;
+ fix node #  3 dofs ux uy    Ux Uy      ;
+ fix node #  4 dofs ux uy    Ux Uy      ;
+ fix node #  5 dofs ux uy uz Ux Uy Uz   ;
+ fix node #  6 dofs ux uy uz Ux Uy Uz   ;
+ fix node #  7 dofs ux uy uz Ux Uy Uz   ;
+ fix node #  8 dofs ux uy uz Ux Uy Uz   ;
+ fix node #  9 dofs ux uy   ;
+ fix node # 10 dofs ux uy   ;
+ fix node # 11 dofs ux uy   ;
+ fix node # 12 dofs ux uy   ;
+ fix node # 13 dofs ux uy   ;
+ fix node # 14 dofs ux uy   ;
+ fix node # 15 dofs ux uy   ;
+ fix node # 16 dofs ux uy   ;
+
+
+// DOS
+
+// adding upU element 
+add element # 1 type 8NodeBrick_upU with nodes ( 1,  2,  3,  4,  5,  6,  7,  8) use material # 1 
+ porosity = n                 alpha    = a                 rho_s    = P_s    *kg/m^3    
+ rho_f    = P_w    *kg/m^3    k_x      = k_all  *m^3*s/kg  k_y      = k_all  *m^3*s/kg
+ k_z      = k_all  *m^3*s/kg  K_s      = SBM    *kN/m^2    K_f      = FBM    *kN/m^2;  
+
+// adding 8 node brick element 
+add element #2 type 8NodeBrick with nodes ( 9, 10, 11, 12, 13, 14, 15, 16) use material # 2;
+
+
+// adding coupled contact element 
+add element #3  type StressBasedCoupledSoftContact_NonLinHardSoftShear with nodes ( 1, 13)
+	initial_axial_stiffness       =  800*MPa    
+	stiffening_rate               =  1000
+	max_axial_stiffness           =  10*GPa      
+	axial_penalty_stiffness       =  10*GPa	
+	initial_shear_stiffness       =  1500*kPa 
+	rate_of_softening             =  40
+	size_of_peak_plateau          =  8
+	axial_viscous_damping         =  0*Pa*s
+	shear_viscous_damping         =  0*Pa*s
+	peak_friction_coefficient_limit = 0.76
+	peak_friction_coefficient_rate_of_decrease = 0.5
+	residual_friction_coefficient =  0.68 
+	shear_zone_thickness          = 5e-3*m
+	contact_plane_vector          = (0,0,1);
+
+add element #4  type StressBasedCoupledSoftContact_NonLinHardSoftShear with nodes ( 2, 14) 
+	initial_axial_stiffness       =  800*MPa    
+	stiffening_rate               =  1000
+	max_axial_stiffness           =  10*GPa      
+	axial_penalty_stiffness       =  10*GPa	
+	initial_shear_stiffness       =  1500*kPa 
+	rate_of_softening             =  40
+	size_of_peak_plateau          =  8
+	axial_viscous_damping         =  0*Pa*s
+	shear_viscous_damping         =  0*Pa*s
+	peak_friction_coefficient_limit = 0.76
+	peak_friction_coefficient_rate_of_decrease = 0.5
+	residual_friction_coefficient =  0.68 
+	shear_zone_thickness          = 5e-3*m
+	contact_plane_vector          = (0,0,1);
+	
+add element #5  type StressBasedCoupledSoftContact_NonLinHardSoftShear with nodes ( 3, 15) 
+	initial_axial_stiffness       =  800*MPa    
+	stiffening_rate               =  1000
+	max_axial_stiffness           =  10*GPa      
+	axial_penalty_stiffness       =  10*GPa	
+	initial_shear_stiffness       =  1500*kPa 
+	rate_of_softening             =  40
+	size_of_peak_plateau          =  8
+	axial_viscous_damping         =  0*Pa*s
+	shear_viscous_damping         =  0*Pa*s
+	peak_friction_coefficient_limit = 0.76
+	peak_friction_coefficient_rate_of_decrease = 0.5
+	residual_friction_coefficient =  0.68 
+	shear_zone_thickness          = 5e-3*m
+	contact_plane_vector          = (0,0,1);
+
+add element #6  type StressBasedCoupledSoftContact_NonLinHardSoftShear with nodes ( 4, 16) 
+	initial_axial_stiffness       =  800*MPa    
+	stiffening_rate               =  1000
+	max_axial_stiffness           =  10*GPa      
+	axial_penalty_stiffness       =  10*GPa	
+	initial_shear_stiffness       =  1500*kPa 
+	rate_of_softening             =  40
+	size_of_peak_plateau          =  8
+	axial_viscous_damping         =  0*Pa*s
+	shear_viscous_damping         =  0*Pa*s
+	peak_friction_coefficient_limit = 0.76
+	peak_friction_coefficient_rate_of_decrease = 0.5
+	residual_friction_coefficient =  0.68 
+	shear_zone_thickness          = 5e-3*m
+	contact_plane_vector          = (0,0,1);
+
+
+//loading stage adding surface load 
+new loading stage "Surface_Load";
+ add load # 1 to node #   9 type linear Fz =100/T_t1*N;
+ add load # 2 to node #  10 type linear Fz =100/T_t1*N;
+ add load # 3 to node #  11 type linear Fz =100/T_t1*N;
+ add load # 4 to node #  12 type linear Fz =100/T_t1*N;
+define convergence test Relative_Norm_Unbalanced_Force tolerance = 1e-3 minimum_absolute_tolerance = 1e-2 maximum_iterations = 500;            
+define algorithm Newton; 
+define solver UMFPack; 
+enable acceleration output;
+gam = 2/3;
+define dynamic integrator Newmark with gamma = gam beta = 0.25*(gam+0.5)^2; 
+simulate N_s1 steps using transient algorithm time_step = d_t1*s; 
+
+// loading stage 'Consolidation' 
+// new loading stage "Consolidation";
+// define convergence test Relative_Norm_Unbalanced_Force tolerance = 1e-3 minimum_absolute_tolerance = 1 maximum_iterations = 50;            
+// define algorithm Newton; 
+// define solver UMFPack; 
+// gam = 0.5;
+// define dynamic integrator Newmark with gamma = gam beta = 0.25*(gam+0.5)^2; 
+// simulate N_s2 steps using transient algorithm time_step = d_t2*s; 
+
+
+bye;

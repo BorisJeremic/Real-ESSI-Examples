@@ -1,0 +1,80 @@
+model name "t" ;
+
+h     = 1*m;       
+Eshell  = 1e8*N/m^2; 
+nu    = 0.0;        // Poisson's ratio
+rho   = 1*kg/m^3;     // Mass density
+
+add material # 1 type Cosserat_linear_elastic_isotropic_3d
+    mass_density = 1.0*kg/m^3
+    lambda = 2e7*Pa
+    mu = 1e7*Pa
+    chi = 0*Pa
+    pi1 = 0*N
+    pi2 = 0*N
+    pi3 = 0*N
+    ;
+
+add node #      1 at (  1.000000*m,   1.000000*m,  1.000000*m) with 6 dofs;
+add node #      2 at (  0.000000*m,   1.000000*m,  1.000000*m) with 6 dofs;
+add node #      3 at (  0.000000*m,   0.000000*m,  1.000000*m) with 6 dofs;
+add node #      4 at (  1.000000*m,   0.000000*m,  1.000000*m) with 6 dofs;
+add node #      5 at (  1.000000*m,   1.000000*m,  0.000000*m) with 6 dofs;
+add node #      6 at (  0.000000*m,   1.000000*m,  0.000000*m) with 6 dofs;
+add node #      7 at (  0.000000*m,   0.000000*m,  0.000000*m) with 6 dofs;
+add node #      8 at (  1.000000*m,   0.000000*m,  0.000000*m) with 6 dofs;
+
+add element #   1 type Cosserat8NodeBrick with nodes(1,2,3,4,5,6,7,8) use material # 1;
+
+fix node # 1 dofs all;
+fix node # 2 dofs all;
+fix node # 3 dofs all;
+fix node # 4 dofs all;
+
+fix node # 5 dofs rx ry rz;
+fix node # 6 dofs rx ry rz;
+fix node # 7 dofs rx ry rz;
+fix node # 8 dofs rx ry rz;
+
+new loading stage "1";
+
+add acceleration field # 1 
+	ax =  0*g
+	ay =  0*g
+	az =  1*g;
+
+add load # 1 to element # 1 type self_weight use acceleration field # 1 ;
+// add load # 2 to element # 2 type self_weight use acceleration field # 1 ;
+// add load # 3 to element # 3 type self_weight use acceleration field # 1 ;
+// add load # 4 to element # 4 type self_weight use acceleration field # 1 ;
+// add load # 5 to element # 5 type self_weight use acceleration field # 1 ;
+// add load # 6 to element # 6 type self_weight use acceleration field # 1 ;
+	
+define algorithm With_no_convergence_check ;
+define solver ProfileSPD;
+
+define load factor increment 1;
+simulate 1 steps using static algorithm;
+
+
+// new loading stage "Fy";
+// remove load # 1;
+// remove load # 2;
+// remove load # 3;
+// remove load # 4;
+
+// add load # 5 to node #   3 type linear Fy=25*N;
+// add load # 6 to node #   9 type linear Fy=25*N;
+// add load # 7 to node #  16 type linear Fy=25*N;
+// add load # 8 to node #  22 type linear Fy=25*N;
+
+// define algorithm With_no_convergence_check ;
+// define solver UMFPack;
+
+// define load factor increment 1;
+// simulate 1 steps using static algorithm;
+
+
+
+
+bye;

@@ -1,0 +1,56 @@
+//==================================================================================================
+// ESSI Test Suite
+//==================================================================================================
+
+// -------------------------------------------------------------------------------------------------
+//  Model parameters
+// -------------------------------------------------------------------------------------------------
+model name "8NodeBrick_Cantilever";
+
+E = 1e9*N/m^2;
+nu    = 0.30;        // Poisson's ratio
+rho   = 2000*kg/m^3;     // Mass density
+
+/// Define the material:
+add material # 1 type VonMises
+    mass_density = rho
+    elastic_modulus = E
+    poisson_ratio = nu
+    von_mises_radius = 60*kPa
+    kinematic_hardening_rate = 100000*kPa
+    isotropic_hardening_rate = 00000*kPa;
+
+
+include "nodes.fei.aux";
+include "elements.fei.aux";
+include "constraints.fei.aux"';
+
+
+// Add new loading stage:
+new loading stage "Fx";
+include "loads.fei.aux";
+
+
+if(IS_PARALLEL==0)
+{define solver UMFPack;}
+else
+{define solver parallel;}
+
+define convergence test Norm_Unbalance
+    tolerance =  1
+    maximum_iterations =  50
+    verbose_level = 4;
+define algorithm NewtonLineSearch ;
+
+// Multistep_Forward_Euler
+define NDMaterial constitutive integration algorithm Backward_Euler
+    yield_function_relative_tolerance =  0.000002
+    stress_relative_tolerance =  0.00002
+    maximum_iterations = 50;
+
+Nsteps = 100;
+define load factor increment 1/Nsteps;
+simulate Nsteps steps using static algorithm;
+
+
+bye;

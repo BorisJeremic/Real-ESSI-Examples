@@ -1,0 +1,69 @@
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+//Adding Model Name
+model name "2D_free_field_model"; 
+
+//Adding all nodes of the model
+
+
+add material # 1 type linear_elastic_isotropic_3d mass_density = 2300.000000*kg/m^3 elastic_modulus = 3363.75*MPa poisson_ratio = 0.3; 
+add material # 2 type linear_elastic_isotropic_3d mass_density = 2300.000000*kg/m^3 elastic_modulus = 3363.75*MPa poisson_ratio = 0.3; 
+add material # 3 type linear_elastic_isotropic_3d mass_density = 2300.000000*kg/m^3 elastic_modulus = 3363.75*MPa poisson_ratio = 0.3; 
+
+Gamma = 0.504; 
+Beta = 0.25*(0.5+Gamma)*(0.5+Gamma); 
+
+
+T1 = 2*s; 
+T2 = 0.2*s; 
+w1 = 2*pi/T1; 
+w2 = 2*pi/T2; 
+
+
+xi_1 = 0.07; 
+rayl_1_a1 = 2*xi_1/(w1+w2); 
+rayl_1_a0 = rayl_1_a1*w1*w2; 
+
+// foundation Damping 
+xi_2 = 0.20; 
+rayl_2_a1 = 2*xi_2/(w1+w2); 
+rayl_2_a0 = rayl_2_a1*w1*w2; 
+
+// Soil layer Damping 
+xi_3 = 0.40; 
+rayl_3_a1 = 2*xi_3/(w1+w2); 
+rayl_3_a0 = rayl_3_a1*w1*w2; 
+
+
+add damping # 1 type Rayleigh with a0 = rayl_1_a0 a1 = rayl_1_a1 stiffness_to_use = Initial_Stiffness; 
+add damping # 2 type Rayleigh with a0 = rayl_2_a0 a1 = rayl_2_a1 stiffness_to_use = Initial_Stiffness; 
+add damping # 3 type Rayleigh with a0 = rayl_3_a0 a1 = rayl_3_a1 stiffness_to_use = Initial_Stiffness; 
+
+include "../../../2D_free_field_model_geometry.fei"; 
+
+include "../../../2D_free_field_model_load.fei"; 
+
+new loading stage "SV_wave_layering";
+
+add load # 2 type domain reduction method 
+   hdf5_file = "../../../DRMinput.hdf5" ;
+
+
+define convergence test Norm_Unbalance tolerance = 100 maximum_iterations = 20 verbose_level = 1; 
+
+define algorithm Newton; 
+
+if(IS_PARALLEL==0)
+{define solver UMFPack;}
+else
+{define solver parallel;}
+
+define dynamic integrator Newmark with 
+   gamma = Gamma
+   beta = Beta;
+
+simulate 999 steps using transient algorithm 
+    time_step = 0.005*s ;
+
+ bye; 
+

@@ -1,0 +1,11 @@
+run_essi:
+	@mpirun -np 4 essi_verify_parallel -f main.fei  > new.log 
+
+compare_txt:
+	@python compare_txt.py
+
+clean:
+	@find -name "*[^original].feioutput" -delete
+
+cleanall:
+	@find -name "*.feioutput" -delete

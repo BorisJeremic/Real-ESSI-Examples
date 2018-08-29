@@ -1,0 +1,12 @@
+==6093== LEAK SUMMARY:
+==6093==    definitely lost: 19,368 bytes in 645 blocks
+==6093==    indirectly lost: 11,892 bytes in 352 blocks
+==6093==      possibly lost: 0 bytes in 0 blocks
+==6093==    still reachable: 117,045 bytes in 25 blocks
+==6093==                       of which reachable via heuristic:
+==6093==                         stdstring          : 71 bytes in 2 blocks
+==6093==         suppressed: 0 bytes in 0 blocks
+==6093== 
+==6093== For counts of detected and suppressed errors, rerun with: -v
+==6093== Use --track-origins=yes to see where uninitialised values come from
+==6093== ERROR SUMMARY: 33 errors from 32 contexts (suppressed: 0 from 0)

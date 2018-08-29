@@ -1,0 +1,79 @@
+model name "Verification_of_contact_yield_surface" ;
+
+
+Angle                 = 0;
+kt                    = 1e10;
+
+// Total Shear Force Applied 
+Shear_Force_Magnitude = 0.5*N;
+Px = Shear_Force_Magnitude*cos(Angle);
+Py = Shear_Force_Magnitude*sin(Angle);
+
+
+// Adding material
+add material #1 type uniaxial_elastic elastic_modulus =  1*Pa viscoelastic_modulus =  0*Pa*s;
+
+// Adding Nodes 
+add node #1 at (0*m,0*m,0*m)   with  3 dofs;
+add node #2 at (0*m,0*m,0*m)   with  3 dofs;
+add node #3 at (-1*m,0*m,0*m)  with  3 dofs;
+add node #4 at (0*m,1*m,0*m)   with  3 dofs;
+add node #5 at (0*m,0*m,1*m)   with  3 dofs;
+
+// Adding Fixities
+fix node #1 dofs ux uy uz;
+fix node #3 dofs ux uy uz;
+fix node #4 dofs ux uy uz;
+fix node #5 dofs ux uy uz;
+
+// Adding Truss Elements
+add element #1  type truss with nodes (2,3) use material # 1 cross_section = 1*m^2 mass_density =  1*kg/m^3;
+add element #2  type truss with nodes (2,4) use material # 1 cross_section = 1*m^2 mass_density =  1*kg/m^3;
+add element #3  type truss with nodes (2,5) use material # 1 cross_section = 1*m^2 mass_density =  1*kg/m^3;
+
+// Adding Contact Element
+add element #4  type ForceBasedHardContact with nodes (1,2) 
+	axial_stiffness =1e10*N/m 
+	shear_stiffness =  kt*Pa*m
+	axial_viscous_damping =  0*kN/m*s
+	shear_viscous_damping =   0*kN/m*s
+	friction_ratio =  0.2   
+	contact_plane_vector = (0,0,1);
+
+new loading stage "Adding_Normal_Load";
+
+	add load #1  to node #2  type linear Fz = -0.5*N;
+
+	Nsteps = 1;
+
+	tol = 1e-3;
+	define convergence test Norm_Unbalance 
+	  tolerance =  tol
+	  maximum_iterations = 10000 
+	  verbose_level = 4;
+
+	define algorithm Newton;
+	define solver UMFPack;
+
+	define load factor increment 1/Nsteps;
+	simulate Nsteps steps using static algorithm;
+
+new loading stage "Shear_Loading";
+
+	add load #2  to node #2  type linear Fx = Px; // Px will be set from external matlab script
+	add load #3  to node #2  type linear Fy = Py; // Py will be set from external matlab script
+
+	tol = 1e-3;
+	define convergence test Norm_Unbalance 
+	  tolerance =  tol
+	  maximum_iterations = 10000
+	  verbose_level = 4;
+
+	define algorithm Newton;
+
+	Nsteps= 200;
+	define solver UMFPack;
+	define load factor increment 1/Nsteps;
+	simulate Nsteps steps using static algorithm;
+
+bye; 	

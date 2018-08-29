@@ -1,0 +1,34 @@
+model name "Shear_Box_Full_small_Analysis";
+press=1000*Pa;
+add material # 1 type linear_elastic_isotropic_3d_LT
+	mass_density =  1922.5*kg/m^3 
+	elastic_modulus =   5.57888e+06 * Pa 
+	poisson_ratio = 0.3 ;
+
+define NDMaterial constitutive integration algorithm Backward_Euler yield_function_relative_tolerance = 1.0   stress_relative_tolerance = 1E-4    maximum_iterations = 30;
+
+include "node.fei";
+include "element.fei";
+include "constraint_bottom.fei";
+
+new loading stage "self_weight" ;
+include "constraint_wall_horizontal.fei";
+add acceleration field #1 ax=0*g ay=0*g az= -g;
+add load # NUMBER_OF_LOADS+1 to all elements type self_weight use acceleration field # 1;
+
+if(IS_PARALLEL==0)
+{define solver ProfileSPD;}
+else
+{define solver parallel;}
+unbalanced_force_tol = 1E-3;
+define convergence test Norm_Unbalance tolerance =  unbalanced_force_tol maximum_iterations =  20 verbose_level = 4;
+// define algorithm NewtonLineSearch;
+define algorithm Newton;
+
+simulate using eigen algorithm 
+	number_of_modes = 20;
+
+
+	
+
+bye;

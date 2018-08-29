@@ -1,0 +1,93 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+model name "Monotonic_Contact_Behaviour" ;
+
+add acceleration field #1 
+ ax = 0*m/s^2 
+ ay = 0*m/s^2 
+ az = 10*m/s^2 ;
+
+///=====================================================================================================
+// Adding 8 node brick element to get the area for the contact element
+Half_Size = 1*m;  // Half_Size of a ------> means 2a x 2a x 2a
+add node # 1 at (-Half_Size,-Half_Size,-Half_Size) with 3 dofs; 
+add node # 2 at (Half_Size,-Half_Size,-Half_Size) with 3 dofs; 
+add node # 3 at (-Half_Size,Half_Size,-Half_Size) with 3 dofs; 
+add node # 4 at (Half_Size,Half_Size,-Half_Size) with 3 dofs; 
+add node # 5 at (-Half_Size,-Half_Size,Half_Size) with 3 dofs; 
+add node # 6 at (Half_Size,-Half_Size,Half_Size) with 3 dofs; 
+add node # 7 at (Half_Size,Half_Size,Half_Size) with 3 dofs; 
+add node # 8 at (-Half_Size,Half_Size,Half_Size) with 3 dofs;
+
+fix node #1 dofs all;
+fix node #2 dofs all;
+fix node #3 dofs all;
+fix node #4 dofs all;
+fix node #5 dofs all;
+fix node #6 dofs all;
+fix node #7 dofs all;
+fix node #8 dofs all;
+
+add material # 1 type linear_elastic_isotropic_3d mass_density = 2000*kg/m^3 elastic_modulus = 200*MPa poisson_ratio = 0.3; 
+add element  # 1 type 8NodeBrick with nodes (7, 8, 5, 6, 4, 3, 1, 2) use material # 1; 
+/// =====================================================================================================
+
+
+add node #9  at (Half_Size,Half_Size,Half_Size)   with  3 dofs;
+add node #10 at (Half_Size+100*m,Half_Size,Half_Size)   with  3 dofs;
+add node #11 at (Half_Size,Half_Size+100*m,Half_Size)   with  3 dofs;
+
+fix node #10 dofs ux uy uz;
+fix node #11 dofs ux uy uz;
+
+add material #2 type uniaxial_elastic elastic_modulus =  1e3*Pa viscoelastic_modulus =  0*Pa*s;
+add element  #2 type truss with nodes (9,10) use material # 2 cross_section = 1*m^2 mass_density =  0*kg/m^3;
+add element  #3 type truss with nodes (9,11) use material # 2 cross_section = 1*m^2 mass_density =  0*kg/m^3;
+
+// =============================================================================
+// Different Contact Models Available in Real-ESSI Simulator System 
+// =============================================================================
+
+add element #4  type StressBasedSoftContact_ElPPlShear with nodes (7,9)
+	initial_axial_stiffness = 1*MPa
+	stiffening_rate         = 100
+	max_axial_stiffness     = 10*GPa 
+	initial_shear_stiffness       =  400*kPa 
+	axial_viscous_damping         =  0*Pa*s
+	shear_viscous_damping         =  0*Pa*s
+	residual_friction_coefficient =  0.68  
+	shear_zone_thickness          =  0.005*m
+	contact_plane_vector          =  (0,0,1);
+
+new loading stage "Adding_Normal_Load";
+
+add load #1 to node #9  type linear Fz=-1*kN;
+
+Nsteps = 100;
+tol = 1e-3;
+define convergence test Relative_Norm_Unbalanced_Force tolerance =  tol minimum_absolute_tolerance = 1 maximum_iterations = 100;
+define algorithm Newton ;
+define solver UMFPack ;
+
+define load factor increment 1/Nsteps;
+simulate Nsteps steps using static algorithm;
+
+
+new loading stage "Adding_Tangential_Load";
+
+tan_load = 67*N;
+add load #2 to node #9 type linear Fx =  tan_load;
+
+Nsteps = 800;
+tol = 1e-4;
+define convergence test Relative_Norm_Unbalanced_Force tolerance =  tol minimum_absolute_tolerance = 1 maximum_iterations = 20;
+define algorithm Newton;
+define solver UMFPack ;
+define static integrator displacement_control using node #9  dof ux increment 1e-5*m;
+simulate Nsteps steps using static algorithm;
+
+bye;

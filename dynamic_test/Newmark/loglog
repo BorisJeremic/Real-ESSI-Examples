@@ -1,0 +1,103 @@
+Script started on Wed 19 Apr 2017 02:20:38 PM PDT
+[92m[RUN        ][0m -----------Testing results-----------------
+[92m[-----------][0m Newmark: dt = 0.005   gamma = 0.5
+[92m[-----------][0m Analytic    ESSI       Absolute_Error     Relative_Error
+[93m[Damping    ][0m +1.77e-14   -4.31e-07        +0.00         +1.00
+[93m[PeriodShift][0m +8.22e-05   -2.24e-08        +0.00         +1.00
+[92m[RUN        ][0m -----------Testing results-----------------
+[92m[-----------][0m Newmark: dt = 0.01   gamma = 0.5
+[92m[-----------][0m Analytic    ESSI       Absolute_Error     Relative_Error
+[93m[Damping    ][0m +6.19e-15   -1.85e-06        +0.00         +1.00
+[93m[PeriodShift][0m +3.29e-04   -2.24e-08        +0.00         +1.00
+[92m[RUN        ][0m -----------Testing results-----------------
+[92m[-----------][0m Newmark: dt = 0.05   gamma = 0.5
+[92m[-----------][0m Analytic    ESSI       Absolute_Error     Relative_Error
+[93m[Damping    ][0m +1.07e-15   -1.93e-05        +0.00         +1.00
+[93m[PeriodShift][0m +8.17e-03   +1.01e-02        +0.00         +0.24
+[92m[RUN        ][0m -----------Testing results-----------------
+[92m[-----------][0m Newmark: dt = 0.1   gamma = 0.5
+[92m[-----------][0m Analytic    ESSI       Absolute_Error     Relative_Error
+[93m[Damping    ][0m +1.82e-15   +7.60e-05        +0.00         +1.00
+[93m[PeriodShift][0m +3.21e-02   +3.09e-02        +0.00         +0.04
+[92m[RUN        ][0m -----------Testing results-----------------
+[92m[-----------][0m Newmark: dt = 0.005   gamma = 0.6
+[92m[-----------][0m Analytic    ESSI       Absolute_Error     Relative_Error
+[93m[Damping    ][0m +1.57e-03   +1.57e-03        +0.00         +0.00
+[93m[PeriodShift][0m +8.47e-05   -2.24e-08        +0.00         +1.00
+[92m[RUN        ][0m -----------Testing results-----------------
+[92m[-----------][0m Newmark: dt = 0.01   gamma = 0.6
+[92m[-----------][0m Analytic    ESSI       Absolute_Error     Relative_Error
+[93m[Damping    ][0m +3.14e-03   +3.14e-03        +0.00         +0.00
+[93m[PeriodShift][0m +3.39e-04   -2.24e-08        +0.00         +1.00
+[92m[RUN        ][0m -----------Testing results-----------------
+[92m[-----------][0m Newmark: dt = 0.05   gamma = 0.6
+[92m[-----------][0m Analytic    ESSI       Absolute_Error     Relative_Error
+[93m[Damping    ][0m +1.55e-02   +1.54e-02        +0.00         +0.00
+[93m[PeriodShift][0m +8.41e-03   +1.01e-02        +0.00         +0.20
+[92m[RUN        ][0m -----------Testing results-----------------
+[92m[-----------][0m Newmark: dt = 0.1   gamma = 0.6
+[92m[-----------][0m Analytic    ESSI       Absolute_Error     Relative_Error
+[93m[Damping    ][0m +2.95e-02   +2.95e-02        +0.00         +0.00
+[93m[PeriodShift][0m +3.29e-02   +3.09e-02        +0.00         +0.06
+[92m[RUN        ][0m -----------Testing results-----------------
+[92m[-----------][0m Newmark: dt = 0.005   gamma = 0.7
+[92m[-----------][0m Analytic    ESSI       Absolute_Error     Relative_Error
+[93m[Damping    ][0m +3.14e-03   +3.14e-03        +0.00         +0.00
+[93m[PeriodShift][0m +9.21e-05   -2.24e-08        +0.00         +1.00
+[92m[RUN        ][0m -----------Testing results-----------------
+[92m[-----------][0m Newmark: dt = 0.01   gamma = 0.7
+[92m[-----------][0m Analytic    ESSI       Absolute_Error     Relative_Error
+[93m[Damping    ][0m +6.28e-03   +6.28e-03        +0.00         +0.00
+[93m[PeriodShift][0m +3.68e-04   -2.24e-08        +0.00         +1.00
+[92m[RUN        ][0m -----------Testing results-----------------
+[92m[-----------][0m Newmark: dt = 0.05   gamma = 0.7
+[92m[-----------][0m Analytic    ESSI       Absolute_Error     Relative_Error
+[93m[Damping    ][0m +3.09e-02   +3.08e-02        +0.00         +0.00
+[93m[PeriodShift][0m +9.13e-03   +1.01e-02        +0.00         +0.11
+[92m[RUN        ][0m -----------Testing results-----------------
+[92m[-----------][0m Newmark: dt = 0.1   gamma = 0.7
+[92m[-----------][0m Analytic    ESSI       Absolute_Error     Relative_Error
+[93m[Damping    ][0m +5.90e-02   +5.90e-02        +0.00         +0.00
+[93m[PeriodShift][0m +3.56e-02   +3.09e-02        +0.00         +0.13
+[92m[RUN        ][0m -----------Testing results-----------------
+[92m[-----------][0m Newmark: dt = 0.005   gamma = 0.8
+[92m[-----------][0m Analytic    ESSI       Absolute_Error     Relative_Error
+[93m[Damping    ][0m +4.71e-03   +4.71e-03        +0.00         +0.00
+[93m[PeriodShift][0m +1.04e-04   -2.24e-08        +0.00         +1.00
+[92m[RUN        ][0m -----------Testing results-----------------
+[92m[-----------][0m Newmark: dt = 0.01   gamma = 0.8
+[92m[-----------][0m Analytic    ESSI       Absolute_Error     Relative_Error
+[93m[Damping    ][0m +9.42e-03   +9.42e-03        +0.00         +0.00
+[93m[PeriodShift][0m +4.18e-04   -2.24e-08        +0.00         +1.00
+[92m[RUN        ][0m -----------Testing results-----------------
+[92m[-----------][0m Newmark: dt = 0.05   gamma = 0.8
+[92m[-----------][0m Analytic    ESSI       Absolute_Error     Relative_Error
+[93m[Damping    ][0m +4.64e-02   +4.63e-02        +0.00         +0.00
+[93m[PeriodShift][0m +1.03e-02   +1.01e-02        +0.00         +0.02
+[92m[RUN        ][0m -----------Testing results-----------------
+[92m[-----------][0m Newmark: dt = 0.1   gamma = 0.8
+[92m[-----------][0m Analytic    ESSI       Absolute_Error     Relative_Error
+[93m[Damping    ][0m +8.86e-02   +8.84e-02        +0.00         +0.00
+[93m[PeriodShift][0m +3.99e-02   +4.17e-02        +0.00         +0.04
+[92m[RUN        ][0m -----------Testing results-----------------
+[92m[-----------][0m Newmark: dt = 0.005   gamma = 0.9
+[92m[-----------][0m Analytic    ESSI       Absolute_Error     Relative_Error
+[93m[Damping    ][0m +6.28e-03   +6.28e-03        +0.00         +0.00
+[93m[PeriodShift][0m +1.22e-04   -2.24e-08        +0.00         +1.00
+[92m[RUN        ][0m -----------Testing results-----------------
+[92m[-----------][0m Newmark: dt = 0.01   gamma = 0.9
+[92m[-----------][0m Analytic    ESSI       Absolute_Error     Relative_Error
+[93m[Damping    ][0m +1.26e-02   +1.26e-02        +0.00         +0.00
+[93m[PeriodShift][0m +4.87e-04   -2.24e-08        +0.00         +1.00
+[92m[RUN        ][0m -----------Testing results-----------------
+[92m[-----------][0m Newmark: dt = 0.05   gamma = 0.9
+[92m[-----------][0m Analytic    ESSI       Absolute_Error     Relative_Error
+[93m[Damping    ][0m +6.18e-02   +6.18e-02        +0.00         +0.00
+[93m[PeriodShift][0m +1.20e-02   +1.01e-02        +0.00         +0.16
+[92m[RUN        ][0m -----------Testing results-----------------
+[92m[-----------][0m Newmark: dt = 0.1   gamma = 0.9
+[92m[-----------][0m Analytic    ESSI       Absolute_Error     Relative_Error
+[93m[Damping    ][0m +1.18e-01   +1.18e-01        +0.00         +0.00
+[93m[PeriodShift][0m +4.60e-02   +4.17e-02        +0.00         +0.09
+
+Script done on Wed 19 Apr 2017 02:20:56 PM PDT

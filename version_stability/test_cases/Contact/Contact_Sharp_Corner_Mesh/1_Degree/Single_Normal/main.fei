@@ -1,0 +1,79 @@
+model name "Corner_Mesh"; 
+
+add acceleration field # 1 ax = 0*g ay = -1*g az = -0*g ; 
+
+
+
+
+// Soil Material Parameters
+ ShearVelocity = 250*m/s; 
+ PoisonRatio = 0.3; 
+ Density = 2000*kg/m^3; 
+ ShearModulus = Density*ShearVelocity^2; 
+ ElasticModulus = ShearModulus*2*(1+PoisonRatio); 
+
+// Adding Material
+add material # 1 type linear_elastic_isotropic_3d mass_density = Density elastic_modulus = ElasticModulus poisson_ratio = PoisonRatio; 
+add material # 2 type linear_elastic_isotropic_3d mass_density = Density elastic_modulus = ElasticModulus poisson_ratio = PoisonRatio; 
+add material # 3 type linear_elastic_isotropic_3d mass_density = Density elastic_modulus = ElasticModulus poisson_ratio = PoisonRatio; 
+
+
+
+
+//Contact Parameters
+ Kn = 500*MPa; 
+ Sr = 100/m; 
+ Kn_max = 1e12*N/m; 
+ Kt = 400*kPa; 
+ Cn = 0*Pa*s; 
+ Ct = 0*Pa*s; 
+ Fr = 1; 
+Shear_Zone = 1e-3*m;
+Tolerance = 0.01;
+theta = 1;
+
+
+// Including the files
+include "geometry.fei"; 
+include "HardContact_One_Normal.fei"; 
+// include "HardContact_Auto_Normal.fei"; 
+include "fixities.fei"; 
+
+
+	
+
+new loading stage "Self_Weight"; 
+
+	add load # 1 to all elements type self_weight use acceleration field # 1; 
+
+	NumSteps = 10; 
+
+	// Carrying out the simulation
+	define convergence test Norm_Unbalance tolerance = 1 maximum_iterations = 20 verbose_level = 1; 
+	define load factor increment 1/NumSteps; 
+	define algorithm Newton; 
+	define solver UMFPack; 
+	simulate NumSteps steps using static algorithm; 
+
+// new loading stage "name_string";
+new loading stage "Shear_Loading";
+	
+	// Surface_Load = -5*kPa; 
+	// include "load.fei"; 
+
+	LoadFx = 1*N;
+	include "Fx_Load.fei"; 
+
+	NumSteps = 100; 
+
+	// Carrying out the simulation
+	define convergence test Norm_Unbalance tolerance = 0.1 maximum_iterations = 20 verbose_level = 1; 
+	define load factor increment 1/NumSteps; 
+	define algorithm Newton_With_Subincrement using minimum_time_step = 0.0001; 
+	define solver UMFPack; 
+	simulate NumSteps steps using static algorithm; 
+
+bye; 
+
+// include "Curved_Mesh_load.fei"; 
+ // Surface_Load = -10*Pa; 

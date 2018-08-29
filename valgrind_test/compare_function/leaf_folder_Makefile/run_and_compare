@@ -1,0 +1,10 @@
+run_essi:
+	@bash valgrind_memcheck.sh essi_verify -f main.fei > new.log 
+compare_txt:
+	@python compare_txt.py
+
+clean:
+	@find -name "*[^original].feioutput" -delete
+
+cleanall:
+	@find -name "*.feioutput" -delete

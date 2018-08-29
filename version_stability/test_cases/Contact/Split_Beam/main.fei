@@ -1,0 +1,85 @@
+// 
+// Real ESSI Simulator
+// Modeling and Simulation Examples
+// for more information, see: http://real-essi.info
+// 
+
+
+
+model name "Split_Beam_Analysis";  
+
+add acceleration field # 1 ax = 0*g ay = 0*g az = 1*g ;  
+
+ // O = 0*m; 
+ // kn_init = 1e9*N/m ;
+ // kn = 1e11*N/m;  
+ // Sr = 1000/m;
+ // max_kn = 1e11*N/m;
+ // kt = 1e7*N/m;  
+ // Normal_Load = 50*Pa; 
+ // Cn = 0*N/m*s; 
+ // fr = 0.3;  
+
+
+//Contact Parameters
+Kn = 5*GPa;
+Kt = 300*kPa ; 
+Cn = 0*Pa*s; 
+Ct = 0*Pa*s; 
+Fr = 0.68; 
+Kinit = 400*MPa;
+Sr    = 1000;
+Tolerance = 0.01;
+Shear_Zone = 5*mm;
+
+
+add material # 1 type linear_elastic_isotropic_3d mass_density = 2000*kg/m^3 elastic_modulus = 200*MPa poisson_ratio = 0.3;  
+
+include "geometry.fei"; 
+// include "HardContact.fei"
+include "HardContact_ElPPlShear.fei"
+
+ 
+new loading stage "Normal_Loading";
+
+Normal_Load = 50*Pa; 
+include "load.fei";  
+
+NumSteps = 1;
+tol = 1e-3;
+define convergence test Relative_Norm_Unbalanced_Force tolerance =  tol minimum_absolute_tolerance = 10 maximum_iterations = 100;
+define algorithm Newton;  
+define solver UMFPack    ;  
+define load factor increment 1;  
+simulate NumSteps steps using static algorithm;  
+
+new loading stage "Free_Vibration";
+
+i=1;
+while (i<160)
+{
+remove load # i;
+i=i+1;
+}
+
+NumSteps = 800;
+total_Time = 4*s;
+tol = 1e-3;
+define convergence test Relative_Norm_Unbalanced_Force tolerance =  tol minimum_absolute_tolerance = 10 maximum_iterations = 100;
+
+define algorithm Newton;  
+define solver UMFPack;  
+
+gam = 0.65;
+bet = 0.15*(1+gam)^2;
+define dynamic integrator Newmark with 
+ gamma = gam
+ beta = bet;
+
+simulate NumSteps steps using transient algorithm 
+ time_step = total_Time/NumSteps;
+
+bye;  
+
+
+

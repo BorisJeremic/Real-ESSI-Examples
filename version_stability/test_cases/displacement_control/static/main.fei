@@ -1,0 +1,77 @@
+// Drucker Prager Armstrong Frederick
+// This model is created by Jose.
+model name "vonMises";
+
+// Parameters:
+rho = 8050*kg/m^3;
+nu = 0.3;
+E = 200e9*N/m^2;
+
+// Define the material:
+add material # 1 type VonMises
+    mass_density = rho
+    elastic_modulus = E
+    poisson_ratio = nu
+    von_mises_radius = 250e6*Pa
+    kinematic_hardening_rate = 0e11*Pa
+    isotropic_hardening_rate = 0e11*Pa;
+
+// define the node:
+add node # 1 at (0*m,0*m,1*m)  with 3 dofs;
+add node # 2 at (1*m,0*m,1*m)  with 3 dofs;
+add node # 3 at (1*m,1*m,1*m)  with 3 dofs;
+add node # 4 at (0*m,1*m,1*m)  with 3 dofs;
+
+add node # 5 at (0*m,0*m,0*m)  with 3 dofs;
+add node # 6 at (1*m,0*m,0*m)  with 3 dofs;
+add node # 7 at (1*m,1*m,0*m)  with 3 dofs;
+add node # 8 at (0*m,1*m,0*m)  with 3 dofs;
+
+// Define the element.
+add element # 1 type 8NodeBrick with nodes (1, 2, 3, 4, 5, 6, 7, 8) use material # 1;
+
+new loading stage "shearing";
+
+fix node # 1 dofs uy uz;
+fix node # 2 dofs uy uz;
+fix node # 3 dofs uy uz;
+fix node # 4 dofs uy uz;
+
+fix node # 5 dofs all;
+fix node # 6 dofs all;
+fix node # 7 dofs all;
+fix node # 8 dofs all;
+
+nodal_load = 1e10*N;
+// nodal_load = 1e5*N; This does not converge. 
+// Why the load affects the results?
+add load # 1001 to node # 1 type path_time_series Fx = nodal_load/4 series_file = "path.txt";    
+add load # 1002 to node # 2 type path_time_series Fx = nodal_load/4 series_file = "path.txt";    
+add load # 1003 to node # 3 type path_time_series Fx = nodal_load/4 series_file = "path.txt";    
+add load # 1004 to node # 4 type path_time_series Fx = nodal_load/4 series_file = "path.txt";  
+
+
+// define static integrator displacement_control using node # <.> dof DOFTYPE increment <length>;
+define static integrator displacement_control using node # 1 dof ux increment 1E-4*m ;
+  
+Ncyc = 5;
+Nsteps = 100;
+//define load factor increment 1/Nsteps;
+
+define solver ProfileSPD;
+
+// define convergence test Norm_Displacement_Increment / Energy_Increment / Norm_Unbalance tolerance = <.> maximum_iterations = <.> verbose_level = <0>|<1>|<2>;
+define convergence test Norm_Displacement_Increment
+    tolerance =  1e-4
+    maximum_iterations =  20
+    verbose_level = 4;
+define algorithm Newton ;
+
+define NDMaterial constitutive integration algorithm Forward_Euler
+    yield_function_relative_tolerance =  0.000002
+    stress_relative_tolerance =  0.00002
+    maximum_iterations = 1000;
+
+simulate Ncyc*Nsteps steps using static algorithm;
+
+bye;  
