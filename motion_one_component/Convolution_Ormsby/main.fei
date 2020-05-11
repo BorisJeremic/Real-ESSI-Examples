@@ -1,0 +1,23 @@
+model name "Convolution_Ormsby";
+
+add wave field # 1 with
+acceleration_filename = "Ormsby_depth_12_acc.txt"
+unit_of_acceleration = 1*m/s^2  
+displacement_filename = "Ormsby_depth_12_dis.txt"
+unit_of_displacement = 1*m
+add_compensation_time = 0*s  
+motion_depth = 12.0*m  // means the input signal is motion at 12m depth  
+monitoring_location = within_soil_layer
+soil_profile_filename = "soil_profile.txt"
+unit_of_Vs = 1 * m/s
+unit_of_rho = 1 * kg/m^3
+unit_of_damping = absolute
+unit_of_thickness = 1*m;
+
+generate wave propagation results of wave field # 1 at depth 0.0*m to file "z" ;  // convolution analysis to generate motion at ground surface 
+
+bye;  
+
+//=================================================================================
+//=================================================================================
+//=================================================================================
