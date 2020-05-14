@@ -1,0 +1,204 @@
+model name "Motion1C";
+
+
+add material # 1 type linear_elastic_isotropic_3d mass_density = 2100.000000*kg/m^3 elastic_modulus = 1260.000000*MPa poisson_ratio = 0.2; 
+
+add material # 2 type linear_elastic_isotropic_3d mass_density = 2100.000000*kg/m^3 elastic_modulus = 1260.000000*MPa poisson_ratio = 0.2; 
+
+// ### for DRM and damping layer 
+
+add material # 3 type linear_elastic_isotropic_3d mass_density = 2100.000000*kg/m^3 elastic_modulus = 1260.000000*MPa poisson_ratio = 0.2; 
+
+
+// define the node:
+b = 0.2;
+dz = 0.2;
+
+
+a_0 = 10/s;
+a_1 = 0.06*s;
+
+damping_layer = 0.10;
+
+add damping # 1 type Rayleigh with a0 = a_0*damping_layer a1 = a_1*damping_layer stiffness_to_use = Initial_Stiffness; 
+
+add node # 5 at (b*m, b*m , 0*m) with 3 dofs;
+add node # 6 at (0*m, b*m , 0*m) with 3 dofs;
+add node # 7 at (0*m, 0*m , 0*m) with 3 dofs;
+add node # 8 at (b*m, 0*m , 0*m) with 3 dofs;
+
+fix node # 5 dofs uy uz;
+fix node # 6 dofs uy uz;
+fix node # 7 dofs uy uz;
+fix node # 8 dofs uy uz;
+
+
+num_el_ele = 21;
+num_total_ele = 61;
+
+outgoing_layer = 3; 
+
+
+
+e = 1;
+while (e < (num_el_ele+1))
+{
+
+	add node # (5+4*e) at (b*m, b*m , e*dz*m) with 3 dofs;      
+	add node # (6+4*e) at (0*m, b*m , e*dz*m) with 3 dofs;      
+	add node # (7+4*e) at (0*m, 0*m , e*dz*m) with 3 dofs;      
+	add node # (8+4*e) at (b*m, 0*m , e*dz*m) with 3 dofs; 
+
+
+	fix node # (5+4*e) dofs uy uz;
+	fix node # (6+4*e) dofs uy uz;
+	fix node # (7+4*e) dofs uy uz;
+	fix node # (8+4*e) dofs uy uz;
+
+	add element # e+4 type 8NodeBrick with nodes 
+		(4*e+5, 4*e+6,
+		 4*e+7, 4*e+8,
+		 4*e+1, 4*e+2,
+		 4*e+3, 4*e+4) 
+		use material # 2;
+
+	e += 1;
+};
+while (e < (num_total_ele+1))
+{
+
+	add node # (5+4*e) at (b*m, b*m , e*dz*m) with 3 dofs;      
+	add node # (6+4*e) at (0*m, b*m , e*dz*m) with 3 dofs;      
+	add node # (7+4*e) at (0*m, 0*m , e*dz*m) with 3 dofs;      
+	add node # (8+4*e) at (b*m, 0*m , e*dz*m) with 3 dofs; 
+
+	fix node # (5+4*e) dofs uy uz;
+	fix node # (6+4*e) dofs uy uz;
+	fix node # (7+4*e) dofs uy uz;
+	fix node # (8+4*e) dofs uy uz;
+
+	add element # e+4 type 8NodeBrick with nodes 
+		(4*e+5, 4*e+6,
+		 4*e+7, 4*e+8,
+		 4*e+1, 4*e+2,
+		 4*e+3, 4*e+4) 
+		use material # 1;
+
+	e += 1;
+};
+
+
+// // ### DRM layer 
+
+add node # (5+4*e) at (b*m, b*m , -1.0*dz*m) with 3 dofs;      
+add node # (6+4*e) at (0*m, b*m , -1.0*dz*m) with 3 dofs;      
+add node # (7+4*e) at (0*m, 0*m , -1.0*dz*m) with 3 dofs;      
+add node # (8+4*e) at (b*m, 0*m , -1.0*dz*m) with 3 dofs; 
+
+fix node # (5+4*e) dofs uy uz;
+fix node # (6+4*e) dofs uy uz;
+fix node # (7+4*e) dofs uy uz;
+fix node # (8+4*e) dofs uy uz;
+
+add element # e+4 type 8NodeBrick with nodes (5, 6, 7, 8, 4*e+5, 4*e+6, 4*e+7, 4*e+8) use material # 3;
+
+e = e +1; 
+
+count = 1; 
+
+while (count < outgoing_layer)
+{
+	add node # (5+4*e) at (b*m, b*m , -1.0*(count+1)*dz*m) with 3 dofs;      
+	add node # (6+4*e) at (0*m, b*m , -1.0*(count+1)*dz*m) with 3 dofs;      
+	add node # (7+4*e) at (0*m, 0*m , -1.0*(count+1)*dz*m) with 3 dofs;      
+	add node # (8+4*e) at (b*m, 0*m , -1.0*(count+1)*dz*m) with 3 dofs; 
+
+	fix node # (5+4*e) dofs uy uz;
+	fix node # (6+4*e) dofs uy uz;
+	fix node # (7+4*e) dofs uy uz;
+	fix node # (8+4*e) dofs uy uz;
+
+	add element # e+4 type 8NodeBrick with nodes 
+		(4*e+1, 4*e+2,
+		4*e+3, 4*e+4,  
+		4*e+5, 4*e+6,
+		4*e+7, 4*e+8)
+		use material # 3;
+
+	add damping # 1 to element # e+4; 	
+
+	e += 1;
+	count += 1; 
+};
+
+// ### fix bottom 
+
+fix node # (1+4*e) dofs ux;
+fix node # (2+4*e) dofs ux;
+fix node # (3+4*e) dofs ux;
+fix node # (4+4*e) dofs ux;
+
+
+
+//============= 1D wave field deconvolution/convolution analyiss ====================
+
+add wave field # 1 with
+// acceleration_filename = "Kobe_acc.txt"
+acceleration_filename = "scaled_northridge_acc.dat"
+unit_of_acceleration = 1*m/s^2  
+// displacement_filename = "Kobe_disp.txt"
+displacement_filename = "scaled_northridge_dis.dat"
+unit_of_displacement = 1*m
+add_compensation_time = 2.0*s  // compensation time will help avoid non-zero start for motion in-depth 
+motion_depth = 0.0*m
+monitoring_location = within_soil_layer
+soil_profile_filename = "soil_profile.txt"
+unit_of_Vs = 1 * m/s
+unit_of_rho = 1 * kg/m^3
+unit_of_damping = absolute
+unit_of_thickness = 1*m;
+
+generate domain reduction method motion file 
+  from wave field 
+  # 1 in direction ux 
+  soil_surface at z = 12.2*m   // note that ground surface elevation is 12.2m 
+  hdf5_file = "DRMinput.hdf5";
+
+
+//============= 1D wave propagation with domain reduction method ====================
+
+new loading stage "DRM_propagation";
+
+add domain reduction method loading # 2000 hdf5_file = "DRMinput.hdf5";  
+
+if(IS_PARALLEL==0)
+{define solver UMFPack;}
+else
+{define solver parallel petsc "-pc_type lu -pc_factor_mat_solver_package mumps";}
+
+define convergence test Relative_Norm_Unbalanced_Force tolerance = 1e-3 minimum_absolute_tolerance = 100 maximum_iterations = 50;
+
+define algorithm NewtonLineSearch; 
+
+// define NDMaterial constitutive integration algorithm Backward_Euler 
+//   yield_function_relative_tolerance =  1e-6
+//   stress_relative_tolerance =  1e-6
+//   maximum_iterations = 100;
+
+
+Newmark_gamma = 0.505;
+
+Newmark_beta = 0.25*(Newmark_gamma+0.5)*(Newmark_gamma+0.5);
+
+define dynamic integrator Newmark with 
+  gamma = Newmark_gamma
+  beta = Newmark_beta;
+
+simulate 4000 steps using transient algorithm 
+  time_step = 0.01*s;
+
+bye;  
+
+//=================================================================================
+//=================================================================================
+//=================================================================================
