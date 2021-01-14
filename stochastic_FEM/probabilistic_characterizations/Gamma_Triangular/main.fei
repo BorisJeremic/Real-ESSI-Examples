@@ -1,0 +1,21 @@
+// %%%%%%% Test script for stochastic FEM implementation %%%%%%%%%%%%
+
+add random variable # 1 with Gamma distribution mean = 3.0 standard_deviation = 1.0 at (0*m, 0*m, 0*m);  
+add random variable # 2 with Gamma distribution mean = 5.0 standard_deviation = 2.0 at (3*m, 0*m, 0*m);  
+add random variable # 3 with Gamma distribution mean = 7.0 standard_deviation = 3.0 at (6*m, 0*m, 0*m);  
+add random variable # 4 with Gamma distribution mean = 9.0 standard_deviation = 4.0 at (9*m, 0*m, 0*m);  
+
+add random field # 1 with triangular correlation correlation_length = 10*m;   
+
+add random variable # 1 to random field # 1; 
+add random variable # 2 to random field # 1; 
+add random variable # 3 to random field # 1; 
+add random variable # 4 to random field # 1; 
+
+Hermite polynomial chaos Karhunen Loeve expansion to random field # 1 with Hermite polynomial chaos dimension 4 order 4 correlation_kernel_inverse_order = 4; 
+
+generate Hermite polynomial chaos Karhunen Loeve expansion file from random field # 1 hdf5_file = "PC_RF1.hdf5"; 
+
+bye; 
+
+

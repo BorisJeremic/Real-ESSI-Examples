@@ -1,0 +1,19 @@
+// %%%%%%% Test script for stochastic FEM implementation %%%%%%%%%%%%
+
+add random variable # 1 with Weibull distribution shape_parameter = 3.0 scale_parameter = 1.0 at (0*m, 0*m, 0*m);  
+add random variable # 2 with Weibull distribution shape_parameter = 5.0 scale_parameter = 2.0 at (3*m, 0*m, 0*m);  
+add random variable # 3 with Weibull distribution shape_parameter = 7.0 scale_parameter = 3.0 at (6*m, 0*m, 0*m);  
+add random variable # 4 with Weibull distribution shape_parameter = 9.0 scale_parameter = 4.0 at (9*m, 0*m, 0*m);  
+
+add random field # 1 with exponentially damped cosine correlation correlation_length = 10*m;   
+
+add random variable # 1 to random field # 1; 
+add random variable # 2 to random field # 1; 
+add random variable # 3 to random field # 1; 
+add random variable # 4 to random field # 1; 
+
+Hermite polynomial chaos Karhunen Loeve expansion to random field # 1 with Hermite polynomial chaos dimension 4 order 6 correlation_kernel_inverse_order = 6; 
+
+generate Hermite polynomial chaos Karhunen Loeve expansion file from random field # 1 hdf5_file = "PC_RF1.hdf5"; 
+
+bye; 

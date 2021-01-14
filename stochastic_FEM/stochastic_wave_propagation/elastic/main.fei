@@ -1,0 +1,78 @@
+model name "stochastic_elastic"; 
+
+//====== Define material stochastic property ========
+
+add random field # 1 with Hermite polynomial chaos Karhunen Loeve expansion hdf5_file = "stiffness_PC.hdf5";
+add material # 1 type stochastic_uniaxial_elastic uncertain_elastic_modulus = random variable # 1 elastic_modulus_scale_unit = 1*Pa;  
+
+
+////=== for displacement random field 
+add random field # 2 with Hermite polynomial chaos hdf5_file = "displacement_PC_153(2)_dr.hdf5";  // used for dimension-reduced PC 
+set random field # 2 polynomial_chaos_terms = 150; 
+
+add random field # 3 with Hermite polynomial chaos dimension 150 order 1;  // corresponding to dimension 4, 5, ..., 153
+define random field # 3 Hermite polynomial chaos dimension from dimension_file = "dimension_info_RF3_motion.txt";  // two column text: first column is local dimension ID, second column is mapped global dimension ID  
+
+
+// generate triple product of Hermite polynomial chaos from random field (1, 2, 2) hdf5_file = "tripleproduct_3(2)_153(2)_153(2)_dimension_reduction_ESSI.hdf5";  // generate hdf5 by ESSI 
+add triple product # 1 from hdf5_file = "tripleproduct_3(2)_153(2)_153(2)_dr.hdf5";   // this hdf5 is from matlab 
+// add triple product # 1 with Hermite polynomial chaos from random field (1, 2, 2); 
+
+// generate double product of Hermite polynomial chaos from random field (2, 3) hdf5_file = "doubleproduct_153(2)_150(1)_dimension_reduction.hdf5"; 
+add double product # 1 from hdf5_file = "doubleproduct_153(2)_150(1)_dr.hdf5"; 
+// add double product # 1 with Hermite polynomial chaos from random field (2, 3);  // Note that: for forming stochastic force vector, the first tag should be displacement random field and the second tag should be the random motion 
+
+
+//=== Define geomtry === 
+
+//==== Y horizontal bar ====
+
+// add node # 1 at (0*m, 0*m, 0*m) with 3 dofs polynomial_chaos_terms as random field # 2;
+// add node # 2 at (0*m, 1*m, 0*m) with 3 dofs polynomial_chaos_terms as random field # 2;
+
+add node # 1 at (0*m, 0*m, 0*m) with 3 dofs polynomial_chaos_terms = 150; // Be careful with the number of DOFs 
+add node # 2 at (0*m, 1*m, 0*m) with 3 dofs polynomial_chaos_terms = 150;
+
+section_area = 1*m^2; 
+density = 2000*kg/m^3; 
+
+add element # 1 type stochastic_shear_beam with nodes (1, 2) use material # 1 triple product # 1 cross_section = section_area mass_density = density;
+
+// a_0 = 10/s;
+// a_1 = 0.06*s;
+
+// soil_damping = 0.07; 
+// add damping # 1 type Rayleigh with a0 = a_0*soil_damping a1 = a_1*soil_damping stiffness_to_use = Initial_Stiffness; 
+
+// add damping # 1 to element # 1;
+
+
+//=== Boundary condition 
+fix node # 1 stochastic dofs uz uy;
+fix node # 2 stochastic dofs uz uy;
+
+// //=================================================================================
+// //======================= Stochastic imposed motion ===============================
+// //=================================================================================
+new loading stage "dynamic_analysis";
+
+add load # 1 type imposed random motions to node # 1 dof ux time_step = 0.025*s displacement_scale_unit = 1*m displacement_file = "input_disp_PC.txt" 
+velocity_scale_unit = 1*m/s velocity_file = "input_velo_PC.txt"
+acceleration_scale_unit = 1*m/s^2 acceleration_file = "input_acc_PC.txt" penalty_stiffness = 1e12*N/m using double product # 1; 
+
+if(IS_PARALLEL==0)
+{define solver UMFPack;}
+else
+{define solver parallel petsc "-pc_type lu -pc_factor_mat_solver_package mumps";}
+
+newmark_gamma = 0.505; 
+newmark_beta = 0.25*(0.5+newmark_gamma)*(0.5+newmark_gamma); 
+
+define dynamic integrator Newmark with gamma = newmark_gamma beta = newmark_beta; 
+define algorithm With_no_convergence_check ;
+
+simulate 1598 steps using transient algorithm time_step = 0.025*s; 
+
+bye; 
+
+

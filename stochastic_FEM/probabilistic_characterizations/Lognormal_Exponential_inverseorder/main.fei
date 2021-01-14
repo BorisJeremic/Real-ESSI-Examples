@@ -1,0 +1,321 @@
+// %%%%%%% Test script for stochastic FEM implementation %%%%%%%%%%%%
+
+// %%%%%%% All tested DSLs for Stochastic FEM  %%%%%%%%%%%
+
+//======================================================================
+//========= Define marginal distribution of random variable ============
+//======================================================================
+
+
+// add random variable # 1 with Gaussian distribution mean = 3.0 standard_deviation = 1.0 at (0*m, 0*m, 0*m);   
+
+// add random variable # 2 with Gaussian distribution mean = 5.0 standard_deviation = 2.0 at (3*m, 0*m, 0*m);   
+
+// add random variable # 3 with Gaussian distribution mean = 7.0 standard_deviation = 3.0 at (6*m, 0*m, 0*m);   
+
+// add random variable # 4 with Gaussian distribution mean = 9.0 standard_deviation = 4.0 at (9*m, 0*m, 0*m);   
+
+
+
+//=============================================================================================
+// // Note:: random variable can be other type of marginal distribution like lognormal, e.g.,  
+//=============================================================================================
+
+//=== Lognormal Distribution =====
+
+// this is mean and std of sample values, which is the statistics of sample obeservations 
+// conversion equation comes from:  https://www.mathworks.com/help/stats/lognstat.html
+
+// log_mean = 5; 
+
+// log_sigma = 0.3; 
+
+// marginal_mean = exp(log_mean + log_sigma*log_sigma/2.0); 
+
+// marginal_var = exp(2.0*log_mean + log_sigma*log_sigma)*(exp(log_sigma*log_sigma)-1.0); 
+
+// marginal_std = sqrt(marginal_var); 
+
+// add random variable # 1 with Lognormal distribution mean = marginal_mean standard_deviation = marginal_std at (0*m, 0*m, 0*m);  
+
+
+add random variable # 1 with Lognormal distribution mean = 3.0 standard_deviation = 1.0 at (0*m, 0*m, 0*m);  
+
+add random variable # 2 with Lognormal distribution mean = 5.0 standard_deviation = 2.0 at (3*m, 0*m, 0*m);  
+
+add random variable # 3 with Lognormal distribution mean = 7.0 standard_deviation = 3.0 at (6*m, 0*m, 0*m);  
+
+add random variable # 4 with Lognormal distribution mean = 9.0 standard_deviation = 4.0 at (9*m, 0*m, 0*m);  
+
+
+// this is mean and std of logarithmic values, which is the true parameter to characterize lognormal distribution 
+
+// add random variable # 2 with Lognormal distribution lognormal_mean = log_mean lognormal_standard_deviation = log_sigma at (1*m, 0*m, 2*m);  
+
+// add random variable # 2 with Lognormal distribution lognormal_mean = 2.191013317336941 lognormal_standard_deviation = 0.472380727077439 at (1*m, 0*m, 2*m);  
+
+
+//==== Gamma Distribution ====
+
+// this is mean and std of sample values, which is the statistics of sample obeservations 
+// conversion equation comes from:  https://www.mathworks.com/help/stats/lognstat.html
+
+// marginal_mean = 5; 
+
+// marginal_std = 2; 
+
+// scale_para = marginal_std*marginal_std/marginal_mean; 
+
+// shape_para = marginal_mean/scale_para; 
+
+
+// add random variable # 1 with Gamma distribution mean = marginal_mean standard_deviation = marginal_std at (0*m, 0*m, 0*m);  
+
+// add random variable # 2 with Gamma distribution shape_parameter = shape_para scale_parameter = scale_para at (0*m, 0*m, 0*m);  
+
+//==== Weibull distribution ==== 
+
+// shape_para = 5; 
+
+// scale_para = 2; 
+
+// add random variable # 1 with Weibull distribution shape_parameter = shape_para scale_parameter = scale_para at (0*m, 0*m, 0*m);  
+
+
+
+//=======================================================================
+//=== plain marginal random variable without location information =======
+//=======================================================================
+
+//=== Gaussian Distribution ====
+
+// add random variable # 1 with Gaussian distribution mean = 3.0 standard_deviation = 1.0;   
+
+// add random variable # 2 with Gaussian distribution mean = 5.0 standard_deviation = 1.0;   
+
+// add random variable # 3 with Gaussian distribution mean = 7.0 standard_deviation = 1.0;   
+
+//=== Lognormal Distribution ====
+
+// marginal_mean = 10; 
+
+// marginal_var = 3; 
+
+// marginal_std = sqrt(marginal_var); 
+
+// log_mu = log(marginal_mean*marginal_mean/sqrt(marginal_var+marginal_mean*marginal_mean)); 
+
+// log_sigma = sqrt(log(marginal_var/(marginal_mean*marginal_mean)+1)); 
+
+
+// add random variable # 3 with Lognormal distribution mean = marginal_mean standard_deviation = marginal_std;  
+
+// add random variable # 4 with Lognormal distribution lognormal_mean = log_mu lognormal_standard_deviation = log_sigma;  
+
+//=== Gamma Distribution ====
+
+// shape_para = 5; 
+
+// scale_para = 2; 
+
+// marginal_mean = shape_para*scale_para; 
+
+// marginal_var = shape_para*scale_para*scale_para; 
+
+// marginal_std = sqrt(marginal_var); 
+
+// add random variable # 3 with Gamma distribution mean = marginal_mean standard_deviation = marginal_std;  
+
+// add random variable # 4 with Gamma distribution shape_parameter = shape_para scale_parameter = scale_para;  
+
+//=== Weibull Distribution ====
+
+// shape_para = 10; 
+
+// scale_para = 3; 
+
+// add random variable # 2 with Weibull distribution shape_parameter = shape_para scale_parameter = scale_para;  
+
+//=======================================================================
+//==== Remove random variable from the domain ====
+//=======================================================================
+
+// remove random variable # 1; 
+
+//=======================================================================
+//============= Perform PC expansion for single random variable ==================
+//=======================================================================
+
+// Hermite polynomial chaos expansion to random variable # 1 with order 6; 
+
+// Hermite polynomial chaos expansion to random variable # 2 with order 6; 
+
+
+//=== generate marginal PC input === 
+
+// generate Hermite polynomial chaos expansion file from random variable # 1 hdf5_file = "PC_RV1.hdf5"; 
+
+//=== Perform marginal PC expansion and generate PC input ===
+
+// generate Hermite polynomial chaos expansion file from random variable # 2 with order 6 hdf5_file = "PC_RV2.hdf5";  
+
+
+
+//===========================================================================================
+////====== Define random field with random variables including correlation information ======
+//===========================================================================================
+
+add random field # 1 with exponential correlation correlation_length = 10*m;   
+
+// // Note:: random field can be random variable can be other type of correlation like , e.g.,  
+
+// add random field # 1 with triangular correlation correlation_length = 10*m;   
+
+// add random field # 1 with exponentially damped cosine correlation correlation_length = 10*m;   
+
+
+//=======================================================================
+//==== Remove random field from the domain ====
+//=======================================================================
+
+// remove random field # 1; 
+
+
+add random variable # 1 to random field # 1; 
+
+add random variable # 2 to random field # 1; 
+
+add random variable # 3 to random field # 1; 
+
+add random variable # 4 to random field # 1; 
+
+
+
+//=======================================================================
+//==== Remove random variable from random field ====
+//=======================================================================
+
+// remove random variable # 4 from random field # 1; 
+
+
+//=======================================================================
+//======= Specify control paramters for PC-KL expansionn =======
+//=======================================================================
+
+
+// Hermite polynomial chaos Karhunen Loeve expansion to random field # 1 with Hermite polynomial chaos dimension 4 order 4; 
+
+Hermite polynomial chaos Karhunen Loeve expansion to random field # 1 with Hermite polynomial chaos dimension 4 order 4 correlation_kernel_inverse_order = 4; 
+
+
+////==== Set up the dimension information for PC basis 
+
+// define random field # 1 Karhunen Loeve dimension # 1 as global dimension # 100;  
+
+// define random field # 1 Karhunen Loeve dimension # 2 as global dimension # 101; 
+
+// define random field # 1 Karhunen Loeve dimension from dimension_file = "dimension_info_RF1.txt";  // two column text: first column is local dimension ID, second column is mapped global dimension ID  
+
+
+
+////=== This command creates random field and performs PC-KL expansion with input statistics (marginal mean, variance and correlation) defined in hdf5 === 
+
+// Hermite polynomial chaos Karhunen Loeve expansion to random field # 4 with Hermite polynomial chaos dimension 4 order 4 correlation_kernel_inverse_order = 3 hdf5_file = "PC_RF4.hdf5";  
+
+// Hermite polynomial chaos Karhunen Loeve expansion to random field # 4 with Hermite polynomial chaos dimension 4 order 4 hdf5_file = "PC_RF4.hdf5"; 
+
+
+
+////==== Command that output PC-KL expansion results into hdf5 file ====
+
+generate Hermite polynomial chaos Karhunen Loeve expansion file from random field # 1 hdf5_file = "PC_RF1.hdf5"; 
+
+// generate Hermite polynomial chaos Karhunen Loeve expansion file from random field # 3 hdf5_file = "PC_RF3_check.hdf5"; 
+
+
+////==== Set up and add random field with hdf5 contains all the PC-KL information ===== 
+
+// add random field # 3 with Hermite polynomial chaos Karhunen Loeve expansion hdf5_file = "PC_RF3.hdf5";
+
+
+
+
+
+
+//=======================================================================
+//======= Triple control paramters for PC-KL expansion =======
+//=======================================================================
+
+////=============== case 1 ==================
+////==  vector<int> dim_1{1, 2, 3, 4};
+////==  vector<int> dim_2{1, 2, 3, 4}; 
+////==  vector<int> dim_3{1, 2, 3, 4}; 
+////==  int order_1 = 3; 
+////==  int order_2 = 3; 
+////==  int order_3 = 3;
+////==  vector<int> test_triple_product = compute_triple_product(dim_1, dim_2, dim_3, order_1, order_2, order_3);
+
+// add random field # 1 with Hermite polynomial chaos dimension 4 order 3;
+
+// add random field # 2 with Hermite polynomial chaos dimension 4 order 3;
+
+// add random field # 3 with Hermite polynomial chaos dimension 4 order 3;
+
+// generate triple product of Hermite polynomial chaos from random field (1, 2, 3) hdf5_file = "Triple_product_4(3)_4(3)_4(3).hdf5"; 
+
+
+////=============== case 2 ==================
+////==  vector<int> dim_1{1, 2, 3, 4};
+////==  vector<int> dim_2{2, 3, 5}; 
+////==  vector<int> dim_3{1, 2, 5, 4}; 
+////==  int order_1 = 2; 
+////==  int order_2 = 2; 
+////==  int order_3 = 4;
+////==  vector<int> test_triple_product = compute_triple_product(dim_1, dim_2, dim_3, order_1, order_2, order_3);
+
+// add random field # 1 with Hermite polynomial chaos dimension 4 order 2;
+
+// add random field # 2 with Hermite polynomial chaos dimension 3 order 2;
+
+
+// define random field # 2 Karhunen Loeve dimension # 1 as global dimension # 2;  
+
+// define random field # 2 Karhunen Loeve dimension # 2 as global dimension # 3;  
+
+// define random field # 2 Karhunen Loeve dimension # 3 as global dimension # 5;  
+
+
+// add random field # 3 with Hermite polynomial chaos dimension 4 order 4;
+
+// define random field # 3 Karhunen Loeve dimension # 1 as global dimension # 1;  
+
+// define random field # 3 Karhunen Loeve dimension # 2 as global dimension # 2;  
+
+// define random field # 3 Karhunen Loeve dimension # 3 as global dimension # 5;  
+
+// define random field # 3 Karhunen Loeve dimension # 4 as global dimension # 4;  
+
+
+// generate triple product of Hermite polynomial chaos from random field (1, 2, 3) hdf5_file = "Triple_product_4(2)_3(2)_4(4).hdf5"; 
+
+
+
+// // ====== Define stochastic material with specified random variable ====== 
+
+// // E is uncertrain 
+
+// add material # 1 type stochastic_linear_elastic_isotropic_3d mass_density = 0*kg/m^3 uncertain_elastic_modulus = random variable # 1 elastic_modulus_scale_factor = 1*GPa  poisson_ratio = 0.2; 
+
+// add material # 2 type stochastic_linear_elastic_isotropic_3d mass_density = 0*kg/m^3 uncertain_elastic_modulus = random variable # 2 elastic_modulus_scale_factor = 1*GPa  poisson_ratio = 0.2; 
+
+// add material # 3 type stochastic_linear_elastic_isotropic_3d mass_density = 0*kg/m^3 uncertain_elastic_modulus = random variable # 3 elastic_modulus_scale_factor = 1*GPa  poisson_ratio = 0.2; 
+
+// // Note: both E and nu can be uncertain, for example, 
+
+// // add material # 4 type stochastic_linear_elastic_isotropic_3d mass_density = 0*kg/m^3 uncertain_elastic_modulus = random variable # 1 elastic_modulus_scale_factor = 1*GPa uncertain_poisson_ratio = random variable # 4 poisson_ratio_scale_factor = 1.0; 
+
+
+
+bye; 
+
+
