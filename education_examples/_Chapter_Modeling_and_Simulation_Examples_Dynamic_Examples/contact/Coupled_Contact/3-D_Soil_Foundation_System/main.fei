@@ -88,17 +88,8 @@ include "self_weight.fei";
 tol = 1e-3; define convergence test Relative_Norm_Unbalanced_Force tolerance = tol minimum_absolute_tolerance = 1 maximum_iterations = 20 ;
 define algorithm Newton;  
 define solver umfpack;
-Gamma = 0.5; define dynamic integrator Newmark with gamma = Gamma beta = 0.25*(Gamma+0.5)^2;    
-simulate NumSteps1 steps using transient algorithm time_step = DeltaT1;  
 
-new loading stage "Consolidation";  
+define dynamic integrator Newmark with gamma = 0.5 beta = 0.25; 
+simulate 100 steps using transient algorithm time_step = 0.01*s; 
 
-tol = 1e-2; define convergence test Relative_Norm_Unbalanced_Force tolerance = tol minimum_absolute_tolerance = 100 maximum_iterations = 20 ;
-define algorithm Newton; 
-define solver umfpack;
-Gamma = 0.5; define dynamic integrator Newmark with gamma = Gamma beta = 0.25*(Gamma+0.5)^2;  
-simulate NumSteps2 steps using transient algorithm time_step = DeltaT2;  
-
-bye;  
-
-
+bye;
